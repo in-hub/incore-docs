@@ -1,0 +1,573 @@
+
+.. _object_MobileNetworkInterface:
+
+
+:index:`MobileNetworkInterface`
+-------------------------------
+
+Description
+***********
+
+The MobileNetworkInterface object represents a mobile network interface (i.e. a modem device such as an LTE USB stick) and manages connections to a mobile (cellular) network. In order to start a connection, the :ref:`apn <property_MobileNetworkInterface_apn>`, :ref:`username <property_MobileNetworkInterface_username>` and :ref:`password <property_MobileNetworkInterface_password>` need to be set. A connection will be established to available networks automatically. The current modem and connectivity state can always be read through the :ref:`state <property_MobileNetworkInterface_state>` property.
+
+.. important:: A MobileNetworkInterface object always has to be a child of a :ref:`NetworkConfiguration <object_NetworkConfiguration>` object in order to work properly. Otherwise the modem device will connect to the mobile network only without establishing a data connection.
+
+:**› Inherits**: :ref:`NetworkInterface <object_NetworkInterface>`
+
+Overview
+********
+
+Properties
+++++++++++
+
+.. hlist::
+  :columns: 3
+
+  * :ref:`allowRoaming <property_MobileNetworkInterface_allowRoaming>`
+  * :ref:`allowRoamingItem <property_MobileNetworkInterface_allowRoamingItem>`
+  * :ref:`apn <property_MobileNetworkInterface_apn>`
+  * :ref:`apnItem <property_MobileNetworkInterface_apnItem>`
+  * :ref:`deviceModel <property_MobileNetworkInterface_deviceModel>`
+  * :ref:`iccid <property_MobileNetworkInterface_iccid>`
+  * :ref:`imei <property_MobileNetworkInterface_imei>`
+  * :ref:`imsi <property_MobileNetworkInterface_imsi>`
+  * :ref:`number <property_MobileNetworkInterface_number>`
+  * :ref:`numberItem <property_MobileNetworkInterface_numberItem>`
+  * :ref:`password <property_MobileNetworkInterface_password>`
+  * :ref:`passwordItem <property_MobileNetworkInterface_passwordItem>`
+  * :ref:`pin <property_MobileNetworkInterface_pin>`
+  * :ref:`pinItem <property_MobileNetworkInterface_pinItem>`
+  * :ref:`signalQuality <property_MobileNetworkInterface_signalQuality>`
+  * :ref:`state <property_MobileNetworkInterface_state>`
+  * :ref:`username <property_MobileNetworkInterface_username>`
+  * :ref:`usernameItem <property_MobileNetworkInterface_usernameItem>`
+  * :ref:`NetworkInterface.dhcpClientIdentifier <property_NetworkInterface_dhcpClientIdentifier>`
+  * :ref:`NetworkInterface.enabled <property_NetworkInterface_enabled>`
+  * :ref:`NetworkInterface.enabledItem <property_NetworkInterface_enabledItem>`
+  * :ref:`NetworkInterface.error <property_NetworkInterface_error>`
+  * :ref:`NetworkInterface.errorString <property_NetworkInterface_errorString>`
+  * :ref:`NetworkInterface.hardwareAddress <property_NetworkInterface_hardwareAddress>`
+  * :ref:`NetworkInterface.hardwareAddressItem <property_NetworkInterface_hardwareAddressItem>`
+  * :ref:`NetworkInterface.hardwareName <property_NetworkInterface_hardwareName>`
+  * :ref:`NetworkInterface.networkAddresses <property_NetworkInterface_networkAddresses>`
+  * :ref:`NetworkInterface.operationalState <property_NetworkInterface_operationalState>`
+  * :ref:`NetworkInterface.setupState <property_NetworkInterface_setupState>`
+  * :ref:`NetworkInterface.useRoutes <property_NetworkInterface_useRoutes>`
+  * :ref:`NetworkInterface.useRoutesItem <property_NetworkInterface_useRoutesItem>`
+  * :ref:`ConfigurationObject.items <property_ConfigurationObject_items>`
+  * :ref:`ConfigurationObject.name <property_ConfigurationObject_name>`
+  * :ref:`ConfigurationObject.nameItem <property_ConfigurationObject_nameItem>`
+  * :ref:`Object.objectId <property_Object_objectId>`
+  * :ref:`Object.parent <property_Object_parent>`
+
+Methods
++++++++
+
+.. hlist::
+  :columns: 1
+
+  * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.toJson() <method_Object_toJson>`
+
+Signals
++++++++
+
+.. hlist::
+  :columns: 1
+
+  * :ref:`connected() <signal_MobileNetworkInterface_connected>`
+  * :ref:`disconnected() <signal_MobileNetworkInterface_disconnected>`
+  * :ref:`NetworkInterface.errorOccurred() <signal_NetworkInterface_errorOccurred>`
+  * :ref:`ConfigurationObject.itemsDataChanged() <signal_ConfigurationObject_itemsDataChanged>`
+  * :ref:`Object.completed() <signal_Object_completed>`
+
+Enumerations
+++++++++++++
+
+.. hlist::
+  :columns: 1
+
+  * :ref:`State <enum_MobileNetworkInterface_State>`
+  * :ref:`NetworkInterface.DhcpClientIdentifier <enum_NetworkInterface_DhcpClientIdentifier>`
+  * :ref:`NetworkInterface.Error <enum_NetworkInterface_Error>`
+  * :ref:`NetworkInterface.OperationalState <enum_NetworkInterface_OperationalState>`
+  * :ref:`NetworkInterface.SetupState <enum_NetworkInterface_SetupState>`
+
+
+
+Properties
+**********
+
+
+.. _property_MobileNetworkInterface_allowRoaming:
+
+.. _signal_MobileNetworkInterface_allowRoamingChanged:
+
+.. index::
+   single: allowRoaming
+
+allowRoaming
+++++++++++++
+
+This property holds whether data connections are allowed during roaming. If disabled the device will be offline if the home network is not available.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: allowRoamingChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MobileNetworkInterface_allowRoamingItem:
+
+.. index::
+   single: allowRoamingItem
+
+allowRoamingItem
+++++++++++++++++
+
+This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`allowRoaming <property_MobileNetworkInterface_allowRoaming>` property.
+
+:**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_apn:
+
+.. _signal_MobileNetworkInterface_apnChanged:
+
+.. index::
+   single: apn
+
+apn
++++
+
+This property holds the `access point name <https://en.wikipedia.org/wiki/Access_Point_Name>`_ to use for the mobile connection.
+
+:**› Type**: String
+:**› Signal**: apnChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MobileNetworkInterface_apnItem:
+
+.. index::
+   single: apnItem
+
+apnItem
++++++++
+
+This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`apn <property_MobileNetworkInterface_apn>` property.
+
+:**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_deviceModel:
+
+.. _signal_MobileNetworkInterface_deviceModelChanged:
+
+.. index::
+   single: deviceModel
+
+deviceModel
++++++++++++
+
+This property holds the model name of the modem device.
+
+:**› Type**: String
+:**› Signal**: deviceModelChanged()
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_iccid:
+
+.. _signal_MobileNetworkInterface_iccidChanged:
+
+.. index::
+   single: iccid
+
+iccid
++++++
+
+This property holds the `ICCID <https://en.wikipedia.org/wiki/SIM_card#ICCID>`_ of the currently used SIM card.
+
+:**› Type**: String
+:**› Signal**: iccidChanged()
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_imei:
+
+.. _signal_MobileNetworkInterface_imeiChanged:
+
+.. index::
+   single: imei
+
+imei
+++++
+
+This property holds the `IMEI <https://en.wikipedia.org/wiki/International_Mobile_Equipment_Identity>`_ of the modem device.
+
+:**› Type**: String
+:**› Signal**: imeiChanged()
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_imsi:
+
+.. _signal_MobileNetworkInterface_imsiChanged:
+
+.. index::
+   single: imsi
+
+imsi
+++++
+
+This property holds the `IMSI <https://en.wikipedia.org/wiki/International_mobile_subscriber_identity>`_ of the currently used SIM card.
+
+:**› Type**: String
+:**› Signal**: imsiChanged()
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_number:
+
+.. _signal_MobileNetworkInterface_numberChanged:
+
+.. index::
+   single: number
+
+number
+++++++
+
+This property holds the telephone number to dial for establishing a data connection.
+
+:**› Type**: String
+:**› Default**: ``*99#``
+:**› Signal**: numberChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MobileNetworkInterface_numberItem:
+
+.. index::
+   single: numberItem
+
+numberItem
+++++++++++
+
+This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`number <property_MobileNetworkInterface_number>` property.
+
+:**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_password:
+
+.. _signal_MobileNetworkInterface_passwordChanged:
+
+.. index::
+   single: password
+
+password
+++++++++
+
+This property holds the password for authenticating with the mobile network.
+
+:**› Type**: String
+:**› Signal**: passwordChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MobileNetworkInterface_passwordItem:
+
+.. index::
+   single: passwordItem
+
+passwordItem
+++++++++++++
+
+This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`password <property_MobileNetworkInterface_password>` property.
+
+:**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_pin:
+
+.. _signal_MobileNetworkInterface_pinChanged:
+
+.. index::
+   single: pin
+
+pin
++++
+
+This property holds the PIN used to unlock the SIM card. It's only required if the SIM card needs to be unlocked.
+
+:**› Type**: String
+:**› Signal**: pinChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MobileNetworkInterface_pinItem:
+
+.. index::
+   single: pinItem
+
+pinItem
++++++++
+
+This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`pin <property_MobileNetworkInterface_pin>` property.
+
+:**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_signalQuality:
+
+.. _signal_MobileNetworkInterface_signalQualityChanged:
+
+.. index::
+   single: signalQuality
+
+signalQuality
++++++++++++++
+
+This property holds the current signal quality in percent (0-100) of the dominant access technology the device is using to communicate with the network.
+
+:**› Type**: SignedInteger
+:**› Signal**: signalQualityChanged()
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_state:
+
+.. _signal_MobileNetworkInterface_stateChanged:
+
+.. index::
+   single: state
+
+state
++++++
+
+This property holds the current state of the modem device and its connectivity.
+
+:**› Type**: :ref:`State <enum_MobileNetworkInterface_State>`
+:**› Signal**: stateChanged()
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_username:
+
+.. _signal_MobileNetworkInterface_usernameChanged:
+
+.. index::
+   single: username
+
+username
+++++++++
+
+This property holds the username for authenticating with the mobile network.
+
+:**› Type**: String
+:**› Signal**: usernameChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MobileNetworkInterface_usernameItem:
+
+.. index::
+   single: usernameItem
+
+usernameItem
+++++++++++++
+
+This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`username <property_MobileNetworkInterface_username>` property.
+
+:**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
+:**› Attributes**: Readonly
+
+Signals
+*******
+
+
+.. _signal_MobileNetworkInterface_connected:
+
+.. index::
+   single: connected
+
+connected()
++++++++++++
+
+This signal is emitted when a data connection has been established, i.e. :ref:`state <property_MobileNetworkInterface_state>` changed to :ref:`MobileNetworkInterface.StateConnected <enumitem_MobileNetworkInterface_StateConnected>`.
+
+
+
+.. _signal_MobileNetworkInterface_disconnected:
+
+.. index::
+   single: disconnected
+
+disconnected()
+++++++++++++++
+
+This signal is emitted when the connection to the mobile network has been closed, i.e. :ref:`state <property_MobileNetworkInterface_state>` is not :ref:`MobileNetworkInterface.StateConnected <enumitem_MobileNetworkInterface_StateConnected>` yet/any longer.
+
+
+Enumerations
+************
+
+
+.. _enum_MobileNetworkInterface_State:
+
+.. index::
+   single: State
+
+State
++++++
+
+This enumeration describes all possible states of the modem device represented by the object.
+
+.. index::
+   single: MobileNetworkInterface.StateNoDevice
+.. index::
+   single: MobileNetworkInterface.StateFailed
+.. index::
+   single: MobileNetworkInterface.StateUnknown
+.. index::
+   single: MobileNetworkInterface.StateInitializing
+.. index::
+   single: MobileNetworkInterface.StateLocked
+.. index::
+   single: MobileNetworkInterface.StateDisabled
+.. index::
+   single: MobileNetworkInterface.StateDisabling
+.. index::
+   single: MobileNetworkInterface.StateEnabling
+.. index::
+   single: MobileNetworkInterface.StateEnabled
+.. index::
+   single: MobileNetworkInterface.StateSearching
+.. index::
+   single: MobileNetworkInterface.StateRegistered
+.. index::
+   single: MobileNetworkInterface.StateDisconnecting
+.. index::
+   single: MobileNetworkInterface.StateConnecting
+.. index::
+   single: MobileNetworkInterface.StateConnected
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+
+      .. _enumitem_MobileNetworkInterface_StateNoDevice:
+  * - ``MobileNetworkInterface.StateNoDevice``
+    - ``0``
+    - Could not find a modem device.
+
+      .. _enumitem_MobileNetworkInterface_StateFailed:
+  * - ``MobileNetworkInterface.StateFailed``
+    - ``1``
+    - The modem is unusable.
+
+      .. _enumitem_MobileNetworkInterface_StateUnknown:
+  * - ``MobileNetworkInterface.StateUnknown``
+    - ``2``
+    - The modem is in an unknown state.
+
+      .. _enumitem_MobileNetworkInterface_StateInitializing:
+  * - ``MobileNetworkInterface.StateInitializing``
+    - ``3``
+    - The modem is currently being initialized.
+
+      .. _enumitem_MobileNetworkInterface_StateLocked:
+  * - ``MobileNetworkInterface.StateLocked``
+    - ``4``
+    - The modem needs to be unlocked with a PIN.
+
+      .. _enumitem_MobileNetworkInterface_StateDisabled:
+  * - ``MobileNetworkInterface.StateDisabled``
+    - ``5``
+    - The modem is not enabled and is powered down.
+
+      .. _enumitem_MobileNetworkInterface_StateDisabling:
+  * - ``MobileNetworkInterface.StateDisabling``
+    - ``6``
+    - The modem is currently transitioning to the :ref:`MobileNetworkInterface.StateDisabled <enumitem_MobileNetworkInterface_StateDisabled>` state.
+
+      .. _enumitem_MobileNetworkInterface_StateEnabling:
+  * - ``MobileNetworkInterface.StateEnabling``
+    - ``7``
+    - The modem is currently transitioning to the :ref:`MobileNetworkInterface.StateEnabled <enumitem_MobileNetworkInterface_StateEnabled>` state.
+
+      .. _enumitem_MobileNetworkInterface_StateEnabled:
+  * - ``MobileNetworkInterface.StateEnabled``
+    - ``8``
+    - The modem is enabled and powered on but not registered with a network provider and not available for data connections.
+
+      .. _enumitem_MobileNetworkInterface_StateSearching:
+  * - ``MobileNetworkInterface.StateSearching``
+    - ``9``
+    - The modem is searching for a network provider to register with.
+
+      .. _enumitem_MobileNetworkInterface_StateRegistered:
+  * - ``MobileNetworkInterface.StateRegistered``
+    - ``10``
+    - The modem is registered with a network provider and data connections may be available for use.
+
+      .. _enumitem_MobileNetworkInterface_StateDisconnecting:
+  * - ``MobileNetworkInterface.StateDisconnecting``
+    - ``11``
+    - The modem is disconnecting and deactivating the last active packet data bearer. This state will not be entered if more than one packet data bearer is active and one of the active bearers is deactivated.
+
+      .. _enumitem_MobileNetworkInterface_StateConnecting:
+  * - ``MobileNetworkInterface.StateConnecting``
+    - ``12``
+    - The modem is activating and connecting the first packet data bearer. Subsequent bearer activations when another bearer is already active do not cause this state to be entered.
+
+      .. _enumitem_MobileNetworkInterface_StateConnected:
+  * - ``MobileNetworkInterface.StateConnected``
+    - ``13``
+    - One or more packet data bearers is active and connected, i.e. the device is online.
+
+
+.. _example_MobileNetworkInterface:
+
+
+Example
+*******
+
+.. code-block:: qml
+
+    import InCore.Foundation 2.0
+    
+    Application {
+        NetworkConfiguration {
+            MobileNetworkInterface {
+                // configure connection parameters
+                apn: "internet.myprovider.de"
+                username: "inhub"
+                password: "MyS3cr3tP4ssw0rd"
+                // print basic information when completed
+                onCompleted: {
+                    console.log("Device model:", deviceModel)
+                    console.log("IMEI:", imei)
+                    console.log("IMSI:", imsi)
+                }
+                // continuously print signal quality
+                onSignalQualityChanged: {
+                    console.log("Signal quality:", signalQuality)
+                }
+                // print state information
+                onConnected: console.log("I'm online :-)")
+                onDisconnected: console.log("I'm offline :-(")
+                onStateChanged: console.log("Modem state", state)
+            }
+        }
+    }
+    
