@@ -1,0 +1,869 @@
+
+.. _object_Application:
+
+
+:index:`Application`
+--------------------
+
+Description
+***********
+
+The Application object is the root object for all other objects and represents the application instance. It provides properties for global settings such as :ref:`country <property_Application_country>`, :ref:`language <property_Application_language>`, :ref:`timeZone <property_Application_timeZone>` and :ref:`measurementSystem <property_Application_measurementSystem>`. The application also has meta data properties such as :ref:`name <property_Application_name>`, :ref:`description <property_Application_description>` and :ref:`version <property_Application_version>`.
+
+:**› Inherits**: :ref:`ObjectArray <object_ObjectArray>`
+
+Overview
+********
+
+Properties
+++++++++++
+
+.. hlist::
+  :columns: 3
+
+  * :ref:`commandLineArguments <property_Application_commandLineArguments>`
+  * :ref:`country <property_Application_country>`
+  * :ref:`debug <property_Application_debug>`
+  * :ref:`description <property_Application_description>`
+  * :ref:`language <property_Application_language>`
+  * :ref:`measurementSystem <property_Application_measurementSystem>`
+  * :ref:`messageLoggingFilterRules <property_Application_messageLoggingFilterRules>`
+  * :ref:`messageLoggingPattern <property_Application_messageLoggingPattern>`
+  * :ref:`name <property_Application_name>`
+  * :ref:`system <property_Application_system>`
+  * :ref:`timeZone <property_Application_timeZone>`
+  * :ref:`trace <property_Application_trace>`
+  * :ref:`url <property_Application_url>`
+  * :ref:`vendor <property_Application_vendor>`
+  * :ref:`version <property_Application_version>`
+  * :ref:`ObjectArray.objects <property_ObjectArray_objects>`
+  * :ref:`Object.objectId <property_Object_objectId>`
+  * :ref:`Object.parent <property_Object_parent>`
+
+Methods
++++++++
+
+.. hlist::
+  :columns: 1
+
+  * :ref:`dumpBacktrace() <method_Application_dumpBacktrace>`
+  * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.toJson() <method_Object_toJson>`
+
+Signals
++++++++
+
+.. hlist::
+  :columns: 1
+
+  * :ref:`ObjectArray.objectsDataChanged() <signal_ObjectArray_objectsDataChanged>`
+  * :ref:`Object.completed() <signal_Object_completed>`
+
+Enumerations
+++++++++++++
+
+.. hlist::
+  :columns: 1
+
+  * :ref:`Country <enum_Application_Country>`
+  * :ref:`Language <enum_Application_Language>`
+
+
+
+Properties
+**********
+
+
+.. _property_Application_commandLineArguments:
+
+.. _signal_Application_commandLineArgumentsChanged:
+
+.. index::
+   single: commandLineArguments
+
+commandLineArguments
+++++++++++++++++++++
+
+This property holds the arguments passed to the application when run manually at the command line. This can be used to implement simple CLI applications, e.g. for testing purposes.
+
+This property was introduced in InCore 1.1.
+
+:**› Type**: StringList
+:**› Signal**: commandLineArgumentsChanged()
+:**› Attributes**: Readonly
+
+
+.. _property_Application_country:
+
+.. _signal_Application_countryChanged:
+
+.. index::
+   single: country
+
+country
++++++++
+
+This property holds the country the application is configured for. This information is used for localization purposes and influences how numbers and dates are formatted.
+
+:**› Type**: :ref:`Country <enum_Application_Country>`
+:**› Default**: :ref:`Application.Germany <enumitem_Application_Germany>`
+:**› Signal**: countryChanged()
+:**› Attributes**: Writable
+
+
+.. _property_Application_debug:
+
+.. _signal_Application_debugChanged:
+
+.. index::
+   single: debug
+
+debug
++++++
+
+This property holds whether to log internal debug messages to the console. When enabled additionally all errors occurring in any object are logged to the console automatically.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: debugChanged()
+:**› Attributes**: Writable, Optional
+
+
+.. _property_Application_description:
+
+.. _signal_Application_descriptionChanged:
+
+.. index::
+   single: description
+
+description
++++++++++++
+
+This property holds a description for the application. It currently does not serve any special purposes but can be used to document and describe the application in a program-accessible manner.
+
+:**› Type**: String
+:**› Signal**: descriptionChanged()
+:**› Attributes**: Writable, Optional
+
+
+.. _property_Application_language:
+
+.. _signal_Application_languageChanged:
+
+.. index::
+   single: language
+
+language
+++++++++
+
+This property holds the language the application is configured for. Changing this property from :ref:`Application.English <enumitem_Application_English>` to a different language may - depending on the current translation and language support state - make the individual InCore objects return translated messages and error strings.
+
+:**› Type**: :ref:`Language <enum_Application_Language>`
+:**› Default**: :ref:`Application.English <enumitem_Application_English>`
+:**› Signal**: languageChanged()
+:**› Attributes**: Writable
+
+
+.. _property_Application_measurementSystem:
+
+.. _signal_Application_measurementSystemChanged:
+
+.. index::
+   single: measurementSystem
+
+measurementSystem
++++++++++++++++++
+
+This property holds the measurement system the application is configured for. Various objects derived from the :ref:`Measurement <object_Measurement>` object depend on this setting and return values converted for the appropriate measurement system. For example the :ref:`Temperature <object_Temperature>` object provides the formatted temperature in the :ref:`Measurement.displayString <property_Measurement_displayString>` property. It is converted to °F if :ref:`measurementSystem <property_Application_measurementSystem>` is set to :ref:`Measurement.ImperialUSSystem <enumitem_Measurement_ImperialUSSystem>`.
+
+:**› Type**: :ref:`Measurement.System <enum_Measurement_System>`
+:**› Default**: :ref:`Measurement.MetricSystem <enumitem_Measurement_MetricSystem>`
+:**› Signal**: measurementSystemChanged()
+:**› Attributes**: Writable
+
+
+.. _property_Application_messageLoggingFilterRules:
+
+.. _signal_Application_messageLoggingFilterRulesChanged:
+
+.. index::
+   single: messageLoggingFilterRules
+
+messageLoggingFilterRules
++++++++++++++++++++++++++
+
+This property holds rules for filtering log messages based on their respective logging category. To disable all debug messages but e.g. networking-related ones, set this property to ``*.debug=false
+foundation.network=true``. The logging categories of a message can be found at the beginning of a message per default. It can be changed through the :ref:`messageLoggingPattern <property_Application_messageLoggingPattern>` property.
+
+.. seealso:: `Qt documentation on configuring logging categories <https://doc.qt.io/qt-5/qloggingcategory.html#configuring-categories>`_
+
+This property was introduced in InCore 2.0.
+
+:**› Type**: String
+:**› Signal**: messageLoggingFilterRulesChanged()
+:**› Attributes**: Writable, Optional
+
+
+.. _property_Application_messageLoggingPattern:
+
+.. _signal_Application_messageLoggingPatternChanged:
+
+.. index::
+   single: messageLoggingPattern
+
+messageLoggingPattern
++++++++++++++++++++++
+
+This property holds a pattern including placeholders which can be used for customizing the log message format and content. See the `Qt documentation on message patterns <https://doc.qt.io/qt-5/qtglobal.html#qSetMessagePattern>`_ for details and all supported placeholders.
+
+This property was introduced in InCore 2.0.
+
+:**› Type**: String
+:**› Default**: ``%{if-category}%{category}.%{type}: %{endif}%{message}``
+:**› Signal**: messageLoggingPatternChanged()
+:**› Attributes**: Writable, Optional
+
+
+.. _property_Application_name:
+
+.. _signal_Application_nameChanged:
+
+.. index::
+   single: name
+
+name
+++++
+
+This property holds the name of the application. This property is used to determine settings and storage paths and should therefore consist of alphanumeric characters only.
+
+:**› Type**: String
+:**› Default**: ``Default App``
+:**› Signal**: nameChanged()
+:**› Attributes**: Writable
+
+
+.. _property_Application_system:
+
+.. _signal_Application_systemChanged:
+
+.. index::
+   single: system
+
+system
+++++++
+
+This property holds a global instance of a :ref:`System <object_System>` object. It's available for convenience so that no separate instances have to be defined manually.
+
+:**› Type**: :ref:`System <object_System>`
+:**› Signal**: systemChanged()
+:**› Attributes**: Readonly
+
+
+.. _property_Application_timeZone:
+
+.. _signal_Application_timeZoneChanged:
+
+.. index::
+   single: timeZone
+
+timeZone
+++++++++
+
+This property holds the timezone for the location at which the application or device is running. Setting this property affects all :ref:`DateTime <object_DateTime>` objects which do not have the :ref:`DateTime.timezone <property_DateTime_timezone>` property set explicitely.
+
+:**› Type**: String
+:**› Default**: ``UTC``
+:**› Signal**: timeZoneChanged()
+:**› Attributes**: Writable
+
+
+.. _property_Application_trace:
+
+.. _signal_Application_traceChanged:
+
+.. index::
+   single: trace
+
+trace
++++++
+
+This property holds whether to log internal trace messages to the console. This allows analysing internal function call sequences more closely.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: traceChanged()
+:**› Attributes**: Writable, Optional
+
+
+.. _property_Application_url:
+
+.. _signal_Application_urlChanged:
+
+.. index::
+   single: url
+
+url
++++
+
+This property holds a URL of the application or the application vendor. It currently is not evaluated within the InCore framework.
+
+:**› Type**: String
+:**› Default**: ``https://inhub.de``
+:**› Signal**: urlChanged()
+:**› Attributes**: Writable, Optional
+
+
+.. _property_Application_vendor:
+
+.. _signal_Application_vendorChanged:
+
+.. index::
+   single: vendor
+
+vendor
+++++++
+
+This property holds the name of the application vendor. It may be formatted arbitrarily and currently is not evaluated within the InCore framework.
+
+:**› Type**: String
+:**› Default**: ``in.hub GmbH``
+:**› Signal**: vendorChanged()
+:**› Attributes**: Writable, Optional
+
+
+.. _property_Application_version:
+
+.. _signal_Application_versionChanged:
+
+.. index::
+   single: version
+
+version
++++++++
+
+This property holds a version string for the application. It may be formatted arbitrarily and currently is not evaluated within the InCore framework.
+
+:**› Type**: String
+:**› Signal**: versionChanged()
+:**› Attributes**: Writable, Optional
+
+Methods
+*******
+
+
+.. _method_Application_dumpBacktrace:
+
+.. index::
+   single: dumpBacktrace
+
+dumpBacktrace()
++++++++++++++++
+
+This method dumps an internal function call backtrace to the console. Except for troubleshooting in contact with the InCore developers you'll never need to call this function.
+
+
+Enumerations
+************
+
+
+.. _enum_Application_Country:
+
+.. index::
+   single: Country
+
+Country
++++++++
+
+This enumeration is used to specify a country.
+
+.. index::
+   single: Application.Argentina
+.. index::
+   single: Application.Australia
+.. index::
+   single: Application.Austria
+.. index::
+   single: Application.Belgium
+.. index::
+   single: Application.Brazil
+.. index::
+   single: Application.Canada
+.. index::
+   single: Application.China
+.. index::
+   single: Application.CzechRepublic
+.. index::
+   single: Application.Denmark
+.. index::
+   single: Application.Estonia
+.. index::
+   single: Application.Finland
+.. index::
+   single: Application.France
+.. index::
+   single: Application.Germany
+.. index::
+   single: Application.India
+.. index::
+   single: Application.Indonesia
+.. index::
+   single: Application.Iran
+.. index::
+   single: Application.Italy
+.. index::
+   single: Application.Japan
+.. index::
+   single: Application.Latvia
+.. index::
+   single: Application.Lithuania
+.. index::
+   single: Application.Luxembourg
+.. index::
+   single: Application.Mexico
+.. index::
+   single: Application.Netherlands
+.. index::
+   single: Application.Norway
+.. index::
+   single: Application.Pakistan
+.. index::
+   single: Application.Poland
+.. index::
+   single: Application.Portugal
+.. index::
+   single: Application.Russia
+.. index::
+   single: Application.Spain
+.. index::
+   single: Application.Sweden
+.. index::
+   single: Application.Switzerland
+.. index::
+   single: Application.Turkey
+.. index::
+   single: Application.Ukraine
+.. index::
+   single: Application.UnitedKingdom
+.. index::
+   single: Application.UnitedStates
+.. index::
+   single: Application.Vietnam
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+
+      .. _enumitem_Application_Argentina:
+  * - ``Application.Argentina``
+    - ``10``
+    -  
+
+      .. _enumitem_Application_Australia:
+  * - ``Application.Australia``
+    - ``13``
+    -  
+
+      .. _enumitem_Application_Austria:
+  * - ``Application.Austria``
+    - ``14``
+    -  
+
+      .. _enumitem_Application_Belgium:
+  * - ``Application.Belgium``
+    - ``21``
+    -  
+
+      .. _enumitem_Application_Brazil:
+  * - ``Application.Brazil``
+    - ``30``
+    -  
+
+      .. _enumitem_Application_Canada:
+  * - ``Application.Canada``
+    - ``38``
+    -  
+
+      .. _enumitem_Application_China:
+  * - ``Application.China``
+    - ``44``
+    -  
+
+      .. _enumitem_Application_CzechRepublic:
+  * - ``Application.CzechRepublic``
+    - ``57``
+    -  
+
+      .. _enumitem_Application_Denmark:
+  * - ``Application.Denmark``
+    - ``58``
+    -  
+
+      .. _enumitem_Application_Estonia:
+  * - ``Application.Estonia``
+    - ``68``
+    -  
+
+      .. _enumitem_Application_Finland:
+  * - ``Application.Finland``
+    - ``73``
+    -  
+
+      .. _enumitem_Application_France:
+  * - ``Application.France``
+    - ``74``
+    -  
+
+      .. _enumitem_Application_Germany:
+  * - ``Application.Germany``
+    - ``82``
+    -  
+
+      .. _enumitem_Application_India:
+  * - ``Application.India``
+    - ``100``
+    -  
+
+      .. _enumitem_Application_Indonesia:
+  * - ``Application.Indonesia``
+    - ``101``
+    -  
+
+      .. _enumitem_Application_Iran:
+  * - ``Application.Iran``
+    - ``102``
+    -  
+
+      .. _enumitem_Application_Italy:
+  * - ``Application.Italy``
+    - ``106``
+    -  
+
+      .. _enumitem_Application_Japan:
+  * - ``Application.Japan``
+    - ``108``
+    -  
+
+      .. _enumitem_Application_Latvia:
+  * - ``Application.Latvia``
+    - ``118``
+    -  
+
+      .. _enumitem_Application_Lithuania:
+  * - ``Application.Lithuania``
+    - ``124``
+    -  
+
+      .. _enumitem_Application_Luxembourg:
+  * - ``Application.Luxembourg``
+    - ``125``
+    -  
+
+      .. _enumitem_Application_Mexico:
+  * - ``Application.Mexico``
+    - ``139``
+    -  
+
+      .. _enumitem_Application_Netherlands:
+  * - ``Application.Netherlands``
+    - ``151``
+    -  
+
+      .. _enumitem_Application_Norway:
+  * - ``Application.Norway``
+    - ``161``
+    -  
+
+      .. _enumitem_Application_Pakistan:
+  * - ``Application.Pakistan``
+    - ``163``
+    -  
+
+      .. _enumitem_Application_Poland:
+  * - ``Application.Poland``
+    - ``172``
+    -  
+
+      .. _enumitem_Application_Portugal:
+  * - ``Application.Portugal``
+    - ``173``
+    -  
+
+      .. _enumitem_Application_Russia:
+  * - ``Application.Russia``
+    - ``178``
+    -  
+
+      .. _enumitem_Application_Spain:
+  * - ``Application.Spain``
+    - ``197``
+    -  
+
+      .. _enumitem_Application_Sweden:
+  * - ``Application.Sweden``
+    - ``205``
+    -  
+
+      .. _enumitem_Application_Switzerland:
+  * - ``Application.Switzerland``
+    - ``206``
+    -  
+
+      .. _enumitem_Application_Turkey:
+  * - ``Application.Turkey``
+    - ``217``
+    -  
+
+      .. _enumitem_Application_Ukraine:
+  * - ``Application.Ukraine``
+    - ``222``
+    -  
+
+      .. _enumitem_Application_UnitedKingdom:
+  * - ``Application.UnitedKingdom``
+    - ``224``
+    -  
+
+      .. _enumitem_Application_UnitedStates:
+  * - ``Application.UnitedStates``
+    - ``225``
+    -  
+
+      .. _enumitem_Application_Vietnam:
+  * - ``Application.Vietnam``
+    - ``232``
+    -  
+
+
+.. _enum_Application_Language:
+
+.. index::
+   single: Language
+
+Language
+++++++++
+
+This enumeration is used to specify a language.
+
+.. index::
+   single: Application.Arabic
+.. index::
+   single: Application.Chinese
+.. index::
+   single: Application.Czech
+.. index::
+   single: Application.Danish
+.. index::
+   single: Application.Dutch
+.. index::
+   single: Application.English
+.. index::
+   single: Application.Estonian
+.. index::
+   single: Application.Finnish
+.. index::
+   single: Application.French
+.. index::
+   single: Application.German
+.. index::
+   single: Application.Hebrew
+.. index::
+   single: Application.Hindi
+.. index::
+   single: Application.Indonesian
+.. index::
+   single: Application.Italian
+.. index::
+   single: Application.Japanese
+.. index::
+   single: Application.Latvian
+.. index::
+   single: Application.Lithuanian
+.. index::
+   single: Application.Persian
+.. index::
+   single: Application.Polish
+.. index::
+   single: Application.Portuguese
+.. index::
+   single: Application.Russian
+.. index::
+   single: Application.Spanish
+.. index::
+   single: Application.Swedish
+.. index::
+   single: Application.Ukrainian
+.. index::
+   single: Application.Urdu
+.. index::
+   single: Application.Vietnamese
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+
+      .. _enumitem_Application_Arabic:
+  * - ``Application.Arabic``
+    - ``8``
+    -  
+
+      .. _enumitem_Application_Chinese:
+  * - ``Application.Chinese``
+    - ``25``
+    -  
+
+      .. _enumitem_Application_Czech:
+  * - ``Application.Czech``
+    - ``28``
+    -  
+
+      .. _enumitem_Application_Danish:
+  * - ``Application.Danish``
+    - ``29``
+    -  
+
+      .. _enumitem_Application_Dutch:
+  * - ``Application.Dutch``
+    - ``30``
+    -  
+
+      .. _enumitem_Application_English:
+  * - ``Application.English``
+    - ``31``
+    -  
+
+      .. _enumitem_Application_Estonian:
+  * - ``Application.Estonian``
+    - ``33``
+    -  
+
+      .. _enumitem_Application_Finnish:
+  * - ``Application.Finnish``
+    - ``36``
+    -  
+
+      .. _enumitem_Application_French:
+  * - ``Application.French``
+    - ``37``
+    -  
+
+      .. _enumitem_Application_German:
+  * - ``Application.German``
+    - ``42``
+    -  
+
+      .. _enumitem_Application_Hebrew:
+  * - ``Application.Hebrew``
+    - ``48``
+    -  
+
+      .. _enumitem_Application_Hindi:
+  * - ``Application.Hindi``
+    - ``49``
+    -  
+
+      .. _enumitem_Application_Indonesian:
+  * - ``Application.Indonesian``
+    - ``52``
+    -  
+
+      .. _enumitem_Application_Italian:
+  * - ``Application.Italian``
+    - ``58``
+    -  
+
+      .. _enumitem_Application_Japanese:
+  * - ``Application.Japanese``
+    - ``59``
+    -  
+
+      .. _enumitem_Application_Latvian:
+  * - ``Application.Latvian``
+    - ``71``
+    -  
+
+      .. _enumitem_Application_Lithuanian:
+  * - ``Application.Lithuanian``
+    - ``73``
+    -  
+
+      .. _enumitem_Application_Persian:
+  * - ``Application.Persian``
+    - ``89``
+    -  
+
+      .. _enumitem_Application_Polish:
+  * - ``Application.Polish``
+    - ``90``
+    -  
+
+      .. _enumitem_Application_Portuguese:
+  * - ``Application.Portuguese``
+    - ``91``
+    -  
+
+      .. _enumitem_Application_Russian:
+  * - ``Application.Russian``
+    - ``96``
+    -  
+
+      .. _enumitem_Application_Spanish:
+  * - ``Application.Spanish``
+    - ``111``
+    -  
+
+      .. _enumitem_Application_Swedish:
+  * - ``Application.Swedish``
+    - ``114``
+    -  
+
+      .. _enumitem_Application_Ukrainian:
+  * - ``Application.Ukrainian``
+    - ``129``
+    -  
+
+      .. _enumitem_Application_Urdu:
+  * - ``Application.Urdu``
+    - ``130``
+    -  
+
+      .. _enumitem_Application_Vietnamese:
+  * - ``Application.Vietnamese``
+    - ``132``
+    -  
+
+
+.. _example_Application:
+
+
+Example
+*******
+
+.. code-block:: qml
+
+    import InCore.Foundation 2.0
+    
+    Application {
+        id: app
+    
+        // populate metadata
+        name: "example"
+        version: "1.2.3"
+        description: "Simple application example"
+        url: "https://incore.readthedocs.io"
+        vendor: "in.hub GmbH"
+    
+        // global settings
+        country: Application.Germany
+        language: Application.German
+        timeZone: "Europe/Berlin"
+    
+        // print message when finished loading
+        onCompleted: console.log("Example app ready")
+    }
+    
