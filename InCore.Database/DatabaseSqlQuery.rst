@@ -19,11 +19,12 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`error <property_DatabaseSqlQuery_error>`
   * :ref:`errorString <property_DatabaseSqlQuery_errorString>`
   * :ref:`forwardOnly <property_DatabaseSqlQuery_forwardOnly>`
+  * :ref:`lastInsertedId <property_DatabaseSqlQuery_lastInsertedId>`
   * :ref:`query <property_DatabaseSqlQuery_query>`
   * :ref:`results <property_DatabaseSqlQuery_results>`
   * :ref:`Object.objectId <property_Object_objectId>`
@@ -113,6 +114,25 @@ This property holds whether the query is forward only. For some queries :ref:`fo
 :**› Default**: ``false``
 :**› Signal**: forwardOnlyChanged()
 :**› Attributes**: Writable
+
+
+.. _property_DatabaseSqlQuery_lastInsertedId:
+
+.. _signal_DatabaseSqlQuery_lastInsertedIdChanged:
+
+.. index::
+   single: lastInsertedId
+
+lastInsertedId
+++++++++++++++
+
+This property holds the object ID of the most recent inserted row if the database supports it. ``undefined`` will be returned if the query did not insert any value or if the database does not report the id back. If more than one row was touched by the insert, the behavior is undefined. For MySQL databases the row's auto-increment field will be returned.
+
+This property was introduced in InCore 2.3.
+
+:**› Type**: Variant
+:**› Signal**: lastInsertedIdChanged()
+:**› Attributes**: Readonly
 
 
 .. _property_DatabaseSqlQuery_query:

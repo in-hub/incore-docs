@@ -17,6 +17,7 @@ Objects
 .. toctree::
 	:maxdepth: 1
 
+	ModbusBackplaneMaster
 	ModbusClient
 	ModbusDevice
 	ModbusRegister

@@ -35,6 +35,7 @@ Properties
   * :ref:`port <property_MqttClient_port>`
   * :ref:`protocolVersion <property_MqttClient_protocolVersion>`
   * :ref:`state <property_MqttClient_state>`
+  * :ref:`useWebSockets <property_MqttClient_useWebSockets>`
   * :ref:`username <property_MqttClient_username>`
   * :ref:`willMessage <property_MqttClient_willMessage>`
   * :ref:`willQoS <property_MqttClient_willQoS>`
@@ -297,6 +298,26 @@ This property holds the current state of the MQTT client connection. See the :re
 :**› Default**: :ref:`MqttClient.Disconnected <enumitem_MqttClient_Disconnected>`
 :**› Signal**: stateChanged()
 :**› Attributes**: Readonly
+
+
+.. _property_MqttClient_useWebSockets:
+
+.. _signal_MqttClient_useWebSocketsChanged:
+
+.. index::
+   single: useWebSockets
+
+useWebSockets
++++++++++++++
+
+This property holds whether to use WebSockets for connecting to an MQTT broker supporting WebSockets connections.
+
+This property was introduced in InCore 2.3.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: useWebSocketsChanged()
+:**› Attributes**: Writable
 
 
 .. _property_MqttClient_username:
@@ -682,13 +703,10 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.Mqtt 2.0
+    import InCore.Foundation 2.3
+    import InCore.Mqtt 2.3
     
     Application {
-    
-        name: "MqttClientExample"
-    
         // create an MQTT client which subscribes a topic
         MqttClient {
             clientId: "MqttClientExample"
