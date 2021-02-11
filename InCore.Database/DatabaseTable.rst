@@ -64,6 +64,8 @@ Signals
   * :ref:`queriesDataChanged() <signal_DatabaseTable_queriesDataChanged>`
   * :ref:`structureDataChanged() <signal_DatabaseTable_structureDataChanged>`
   * :ref:`DataObjectWriter.objectsDataChanged() <signal_DataObjectWriter_objectsDataChanged>`
+  * :ref:`DataObjectWriter.submitted() <signal_DataObjectWriter_submitted>`
+  * :ref:`DataObjectWriter.truncated() <signal_DataObjectWriter_truncated>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 Enumerations

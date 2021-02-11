@@ -437,8 +437,8 @@ Example
             id: digitalInput
             index: DigitalIO.IO1
             direction: DigitalIO.Input
-            Polling on value { interval: 100 }
-            onValueChanged: console.log("IO1 changed to", value)
+            Polling on inputValue { interval: 100 }
+            onInputValueChanged: console.log("IO1 changed to", inputValue)
             EdgeDetector on inputValue {
                 onRisingEdge: console.log("Rising edge detected")
             }

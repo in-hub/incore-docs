@@ -11,6 +11,7 @@ Description
 The ModbusRtuMaster object implements a Modbus RTU master which communicates with Modbus slaves via a serial port.
 
 :**› Inherits**: :ref:`ModbusClient <object_ModbusClient>`
+:**› Inherited by**: :ref:`ModbusBackplaneMaster <object_ModbusBackplaneMaster>`
 
 Overview
 ********

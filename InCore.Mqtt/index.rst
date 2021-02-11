@@ -24,3 +24,4 @@ Objects
 	MqttPublication
 	MqttSubscription
 	MqttTopic
+	MqttWildcardSubscription

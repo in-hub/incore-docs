@@ -314,7 +314,7 @@ This enumeration describes all errors which can occur in Mail objects. The most 
       .. _enumitem_Mail_SendError:
   * - ``Mail.SendError``
     - ``6``
-    - The email could not be send, likely due to a wrong configuration.
+    - The email could not be sent, likely due to a wrong configuration.
 
 
 .. _example_Mail:

@@ -276,15 +276,12 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.Mqtt 2.0
+    import InCore.Foundation 2.3
+    import InCore.Mqtt 2.3
     
     Application {
-    
-        name: "MqttSubscriptionExample"
-    
         MqttClient {
-            clientId: "MqttPublicationTest"
+            clientId: "MqttSubscriptionExample"
             hostname: "mqtt.inhub.de"
     
             MqttSubscription {

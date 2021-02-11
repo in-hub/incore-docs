@@ -13,7 +13,7 @@ The IoDevice object is the base interface class of all I/O devices. It provides 
 Before accessing data the device must be configured through the corresponding properties such as :ref:`readOnly <property_IoDevice_readOnly>`, :ref:`append <property_IoDevice_append>` and :ref:`truncate <property_IoDevice_truncate>`. It can then be opened via :ref:`open() <method_IoDevice_open>`. Objects interacting with I/O devices (e.g. :ref:`CsvWriter <object_CsvWriter>` or :ref:`EventLogFile <object_EventLogFile>`) usually open them automatically.
 
 :**› Inherits**: :ref:`Object <object_Object>`
-:**› Inherited by**: :ref:`File <object_File>`
+:**› Inherited by**: :ref:`File <object_File>`, :ref:`IpSocket <object_IpSocket>`, :ref:`WebSocket <object_WebSocket>`
 
 Overview
 ********
@@ -28,6 +28,7 @@ Properties
   * :ref:`atEnd <property_IoDevice_atEnd>`
   * :ref:`autoOpen <property_IoDevice_autoOpen>`
   * :ref:`bytesAvailable <property_IoDevice_bytesAvailable>`
+  * :ref:`canReadLine <property_IoDevice_canReadLine>`
   * :ref:`deviceErrorString <property_IoDevice_deviceErrorString>`
   * :ref:`isOpen <property_IoDevice_isOpen>`
   * :ref:`isWritable <property_IoDevice_isWritable>`
@@ -47,10 +48,12 @@ Methods
   :columns: 2
 
   * :ref:`close() <method_IoDevice_close>`
+  * :ref:`flush() <method_IoDevice_flush>`
   * :ref:`open() <method_IoDevice_open>`
   * :ref:`peekAll() <method_IoDevice_peekAll>`
   * :ref:`read() <method_IoDevice_read>`
   * :ref:`readAll() <method_IoDevice_readAll>`
+  * :ref:`readLine() <method_IoDevice_readLine>`
   * :ref:`sync() <method_IoDevice_sync>`
   * :ref:`write() <method_IoDevice_write>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
@@ -62,6 +65,7 @@ Signals
 .. hlist::
   :columns: 1
 
+  * :ref:`lineAvailableForRead() <signal_IoDevice_lineAvailableForRead>`
   * :ref:`readyRead() <signal_IoDevice_readyRead>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
@@ -142,6 +146,25 @@ This property was introduced in InCore 2.0.
 
 :**› Type**: SignedBigInteger
 :**› Signal**: bytesAvailableChanged()
+:**› Attributes**: Readonly
+
+
+.. _property_IoDevice_canReadLine:
+
+.. _signal_IoDevice_canReadLineChanged:
+
+.. index::
+   single: canReadLine
+
+canReadLine
++++++++++++
+
+This property holds whether a complete line of data can be read from the device.
+
+This property was introduced in InCore 2.3.
+
+:**› Type**: Boolean
+:**› Signal**: canReadLineChanged()
 :**› Attributes**: Readonly
 
 
@@ -316,6 +339,20 @@ This method flushes any buffered data and closes the I/O device.
 
 
 
+.. _method_IoDevice_flush:
+
+.. index::
+   single: flush
+
+flush()
++++++++
+
+This method flushes all write buffers and possibly buffered data of the I/O device to the operating system.
+
+This method was introduced in InCore 2.3.
+
+
+
 .. _method_IoDevice_open:
 
 .. index::
@@ -376,6 +413,22 @@ This method was introduced in InCore 2.0.
 
 
 
+.. _method_IoDevice_readLine:
+
+.. index::
+   single: readLine
+
+readLine()
+++++++++++
+
+This method reads a line from the device (maximum 65535 characters) and returns the result as a UTF-8 encoded string. This function has no way of reporting errors, i.e. an empty string can mean either that no data was currently available for reading, or that an error occurred.
+
+This method was introduced in InCore 2.3.
+
+:**› Returns**: String
+
+
+
 .. _method_IoDevice_sync:
 
 .. index::
@@ -384,7 +437,7 @@ This method was introduced in InCore 2.0.
 sync()
 ++++++
 
-This method flushes any buffered data to the I/O device and tells the operating system to write all pending data to its storages.
+This method calls :ref:`IoDevice.flush() <method_IoDevice_flush>` and tells the operating system to write all pending data to its storages. Calling this method might block the program execution for a while depending on the amount of data to be written.
 
 
 
@@ -403,6 +456,20 @@ This method writes the given data to the I/O device. If :ref:`unbuffered <proper
 
 Signals
 *******
+
+
+.. _signal_IoDevice_lineAvailableForRead:
+
+.. index::
+   single: lineAvailableForRead
+
+lineAvailableForRead()
+++++++++++++++++++++++
+
+This signal is emitted once everytime a a complete line of data can be read from the device. It will only be emitted again once new data is available, such as when a new payload of network data has arrived on a network socket, or when a new block of data has been appended to the device.
+
+This signal was introduced in InCore 2.3.
+
 
 
 .. _signal_IoDevice_readyRead:

@@ -16,6 +16,7 @@ The InCore Framework offers ready-to-use high-level software blocks ("objects") 
 	InCore.Http/index
 	InCore.Modbus/index
 	InCore.Mqtt/index
+	InCore.OpcUa/index
 
 .. toctree::
 	:maxdepth: 1

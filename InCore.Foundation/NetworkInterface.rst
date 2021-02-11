@@ -371,7 +371,19 @@ This enumeration describes all errors which can occur in NetworkInterface object
 .. index::
    single: NetworkInterface.InvalidCountryCode
 .. index::
-   single: NetworkInterface.OperationNotSupported
+   single: NetworkInterface.OperationNotSupportedError
+.. index::
+   single: NetworkInterface.DeviceNotReadyError
+.. index::
+   single: NetworkInterface.InvalidAddressError
+.. index::
+   single: NetworkInterface.EmptyMessageError
+.. index::
+   single: NetworkInterface.MessageCreateError
+.. index::
+   single: NetworkInterface.MessageSendError
+.. index::
+   single: NetworkInterface.MessageDeleteError
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -420,10 +432,40 @@ This enumeration describes all errors which can occur in NetworkInterface object
     - ``7``
     - Specified country code is invalid or could not be set.
 
-      .. _enumitem_NetworkInterface_OperationNotSupported:
-  * - ``NetworkInterface.OperationNotSupported``
+      .. _enumitem_NetworkInterface_OperationNotSupportedError:
+  * - ``NetworkInterface.OperationNotSupportedError``
     - ``8``
     - The requested operation is not supported by the the interface.
+
+      .. _enumitem_NetworkInterface_DeviceNotReadyError:
+  * - ``NetworkInterface.DeviceNotReadyError``
+    - ``9``
+    - The device for the network interface is not available or not ready yet.
+
+      .. _enumitem_NetworkInterface_InvalidAddressError:
+  * - ``NetworkInterface.InvalidAddressError``
+    - ``10``
+    - The address (e.g. SMS recipient number) is empty.
+
+      .. _enumitem_NetworkInterface_EmptyMessageError:
+  * - ``NetworkInterface.EmptyMessageError``
+    - ``11``
+    - The message (e.g. SMS text) is empty.
+
+      .. _enumitem_NetworkInterface_MessageCreateError:
+  * - ``NetworkInterface.MessageCreateError``
+    - ``12``
+    - The message could not be created for sending.
+
+      .. _enumitem_NetworkInterface_MessageSendError:
+  * - ``NetworkInterface.MessageSendError``
+    - ``13``
+    - The message could not be sent, likely due to a network error or an invalid address.
+
+      .. _enumitem_NetworkInterface_MessageDeleteError:
+  * - ``NetworkInterface.MessageDeleteError``
+    - ``14``
+    - The message could not be deleted.
 
 
 .. _enum_NetworkInterface_OperationalState:

@@ -13,6 +13,7 @@ The ByteArray object is used to store and transport binary data and convert it t
 This object was introduced in InCore 2.0.
 
 :**› Inherits**: :ref:`Object <object_Object>`
+:**› Inherited by**: :ref:`UdpDatagram <object_UdpDatagram>`
 
 Overview
 ********

@@ -59,6 +59,8 @@ Signals
 
   * :ref:`errorOccurred() <signal_CsvWriter_errorOccurred>`
   * :ref:`DataObjectWriter.objectsDataChanged() <signal_DataObjectWriter_objectsDataChanged>`
+  * :ref:`DataObjectWriter.submitted() <signal_DataObjectWriter_submitted>`
+  * :ref:`DataObjectWriter.truncated() <signal_DataObjectWriter_truncated>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 Enumerations

@@ -66,6 +66,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`sendMessage() <method_MobileNetworkInterface_sendMessage>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -77,6 +78,8 @@ Signals
 
   * :ref:`connected() <signal_MobileNetworkInterface_connected>`
   * :ref:`disconnected() <signal_MobileNetworkInterface_disconnected>`
+  * :ref:`messageReceived() <signal_MobileNetworkInterface_messageReceived>`
+  * :ref:`messageSent() <signal_MobileNetworkInterface_messageSent>`
   * :ref:`NetworkInterface.errorOccurred() <signal_NetworkInterface_errorOccurred>`
   * :ref:`ConfigurationObject.itemsDataChanged() <signal_ConfigurationObject_itemsDataChanged>`
   * :ref:`Object.completed() <signal_Object_completed>`
@@ -388,6 +391,27 @@ This property holds an internal :ref:`ConfigurationItem <object_ConfigurationIte
 :**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
 :**› Attributes**: Readonly
 
+Methods
+*******
+
+
+.. _method_MobileNetworkInterface_sendMessage:
+
+.. index::
+   single: sendMessage
+
+sendMessage(String recipientNumber, String text)
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+This method sends a text message (SMS) using the modem. The phone number of the SMS recipient has to be supplied in the ``recipientNumber`` argument. If the message text in the ``text`` parameter contains non-ASCII characters the Unicode (UCS-2) encoding is used which requires 2 bytes per character. This may be relevant if the number of SMS that can be sent in a time period is limited. 
+
+It returns ``true`` if the send operation has been initiated successfully. Errors occurring while sending the SMS are signaled through the :ref:`NetworkInterface.error <property_NetworkInterface_error>` property.
+
+This method was introduced in InCore 2.3.
+
+:**› Returns**: Boolean
+
+
 Signals
 *******
 
@@ -413,6 +437,34 @@ disconnected()
 ++++++++++++++
 
 This signal is emitted when the connection to the mobile network has been closed, i.e. :ref:`state <property_MobileNetworkInterface_state>` is not :ref:`MobileNetworkInterface.StateConnected <enumitem_MobileNetworkInterface_StateConnected>` yet/any longer.
+
+
+
+.. _signal_MobileNetworkInterface_messageReceived:
+
+.. index::
+   single: messageReceived
+
+messageReceived(String messageText, String messageId)
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This signal is emitted when a text message (SMS) has been received. The message text is available trough the `m̀essageText`` argument. The internal ID of the received message is supplied in the ``messageId`` argument.
+
+This signal was introduced in InCore 2.3.
+
+
+
+.. _signal_MobileNetworkInterface_messageSent:
+
+.. index::
+   single: messageSent
+
+messageSent(String messageId)
++++++++++++++++++++++++++++++
+
+This signal is emitted when a text message (SMS) has been sent successfully. It's not emitted if an error occurred while sending. The internal ID of the sent message is supplied in the ``messageId`` argument
+
+This signal was introduced in InCore 2.3.
 
 
 Enumerations
@@ -549,6 +601,8 @@ Example
     Application {
         NetworkConfiguration {
             MobileNetworkInterface {
+                id: wwan0
+    
                 // configure connection parameters
                 apn: "internet.myprovider.de"
                 username: "inhub"
@@ -567,7 +621,15 @@ Example
                 onConnected: console.log("I'm online :-)")
                 onDisconnected: console.log("I'm offline :-(")
                 onStateChanged: console.log("Modem state", state)
+    
+                onMessageReceived: console.log(("SMS received: \"%1\"").arg(messageText))
             }
+        }
+    
+        Counter {
+            id: smsCounter
+            interval: 30000
+            onValueChanged: wwan0.sendMessage("+49123456789", ("Hello world! This is SMS number %1.").arg(value))
         }
     }
     

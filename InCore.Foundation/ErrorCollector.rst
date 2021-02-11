@@ -91,7 +91,7 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
+    import InCore.Foundation 2.3
     
     Application {
     
@@ -99,11 +99,6 @@ Example
             // file without storage will raise an error when opened
             id: file
             fileName: "test.txt"
-        }
-    
-        Sms {
-            // SMS without transport will raise an error when sent
-            id: sms
         }
     
         // polling on property which does not support polling will an raise error
@@ -146,7 +141,6 @@ Example
         onCompleted: {
             // trigger errors
             file.open();
-            sms.send();
             customObject.doSomething()
             customObjectWithSignal.doSomething()
         }

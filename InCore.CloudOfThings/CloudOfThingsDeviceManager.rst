@@ -231,9 +231,10 @@ Example
     
                 updateManager: UpdateManager {
     
-                    //all default due to Cloud of Things command
-                    autoInstall: true
-                    autoDownload: true
+                    // use this configuration to update incremental via Cloud of Things
+                    // else set all to true
+                    autoInstall: false
+                    autoDownload: false
                     autoReboot: true
     
                     repositories: [
