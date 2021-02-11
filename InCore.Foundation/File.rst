@@ -29,6 +29,7 @@ Properties
   * :ref:`IoDevice.atEnd <property_IoDevice_atEnd>`
   * :ref:`IoDevice.autoOpen <property_IoDevice_autoOpen>`
   * :ref:`IoDevice.bytesAvailable <property_IoDevice_bytesAvailable>`
+  * :ref:`IoDevice.canReadLine <property_IoDevice_canReadLine>`
   * :ref:`IoDevice.deviceErrorString <property_IoDevice_deviceErrorString>`
   * :ref:`IoDevice.isOpen <property_IoDevice_isOpen>`
   * :ref:`IoDevice.isWritable <property_IoDevice_isWritable>`
@@ -48,11 +49,14 @@ Methods
   :columns: 2
 
   * :ref:`remove() <method_File_remove>`
+  * :ref:`sync() <method_File_sync>`
   * :ref:`IoDevice.close() <method_IoDevice_close>`
+  * :ref:`IoDevice.flush() <method_IoDevice_flush>`
   * :ref:`IoDevice.open() <method_IoDevice_open>`
   * :ref:`IoDevice.peekAll() <method_IoDevice_peekAll>`
   * :ref:`IoDevice.read() <method_IoDevice_read>`
   * :ref:`IoDevice.readAll() <method_IoDevice_readAll>`
+  * :ref:`IoDevice.readLine() <method_IoDevice_readLine>`
   * :ref:`IoDevice.sync() <method_IoDevice_sync>`
   * :ref:`IoDevice.write() <method_IoDevice_write>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
@@ -65,6 +69,7 @@ Signals
   :columns: 1
 
   * :ref:`errorOccurred() <signal_File_errorOccurred>`
+  * :ref:`IoDevice.lineAvailableForRead() <signal_IoDevice_lineAvailableForRead>`
   * :ref:`IoDevice.readyRead() <signal_IoDevice_readyRead>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
@@ -164,6 +169,18 @@ remove()
 This method removes the file specified by :ref:`fileName <property_File_fileName>` and stored on :ref:`storage <property_File_storage>`.
 
 :**› Returns**: Boolean
+
+
+
+.. _method_File_sync:
+
+.. index::
+   single: sync
+
+sync()
+++++++
+
+This method calls :ref:`IoDevice.flush() <method_IoDevice_flush>` and tells the operating system to write all pending data to its storages. Calling this method might block the program execution for a while depending on the amount of data to be written.
 
 
 Signals

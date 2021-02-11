@@ -61,6 +61,8 @@ Signals
 
   * :ref:`errorOccurred() <signal_MqttPublication_errorOccurred>`
   * :ref:`DataObjectWriter.objectsDataChanged() <signal_DataObjectWriter_objectsDataChanged>`
+  * :ref:`DataObjectWriter.submitted() <signal_DataObjectWriter_submitted>`
+  * :ref:`DataObjectWriter.truncated() <signal_DataObjectWriter_truncated>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 Enumerations
@@ -244,13 +246,10 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.Mqtt 2.0
+    import InCore.Foundation 2.3
+    import InCore.Mqtt 2.3
     
     Application {
-    
-        name: "MqttPublicationExample"
-    
         System {
             id: system
             Polling on deviceTemperature { interval: 5000 }
@@ -266,7 +265,7 @@ Example
         }
     
         MqttClient {
-            clientId: "MqttPublicationTest"
+            clientId: "MqttPublicationExample"
             hostname: "localhost"
     
             MqttPublication {
@@ -280,13 +279,13 @@ Example
                 }
     
                 MqttTopic {
-                    name: "incore/counter"
+                    name: "incore/foo/counter"
                     data: counter.value
                 }
     
                 // publish current date string on every change (i.e. every second)
                 MqttTopic {
-                    name: "incore/date"
+                    name: "incore/bar/date"
                     data: dateTime.string
                 }
             }

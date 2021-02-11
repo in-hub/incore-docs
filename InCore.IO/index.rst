@@ -33,6 +33,8 @@ Objects
 	I2cBus
 	I2cDevice
 	I2cEeprom
+	Keyboard
+	KeyboardManager
 	LED
 	Ltc2483Adc
 	Relay

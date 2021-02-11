@@ -53,6 +53,8 @@ Signals
   :columns: 1
 
   * :ref:`objectsDataChanged() <signal_DataObjectWriter_objectsDataChanged>`
+  * :ref:`submitted() <signal_DataObjectWriter_submitted>`
+  * :ref:`truncated() <signal_DataObjectWriter_truncated>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 Enumerations
@@ -231,6 +233,34 @@ objectsDataChanged(SignedInteger index)
 +++++++++++++++++++++++++++++++++++++++
 
 This signal is emitted whenever the :ref:`List.dataChanged() <signal_List_dataChanged>` signal is emitted, i.e. the item at ``index`` in the :ref:`objects <property_DataObjectWriter_objects>` list itself emitted the dataChanged() signal.
+
+
+
+.. _signal_DataObjectWriter_submitted:
+
+.. index::
+   single: submitted
+
+submitted()
++++++++++++
+
+This signal is emitted when :ref:`objects <property_DataObjectWriter_objects>` have been successfully submitted.
+
+This signal was introduced in InCore 2.3.
+
+
+
+.. _signal_DataObjectWriter_truncated:
+
+.. index::
+   single: truncated
+
+truncated()
++++++++++++
+
+This signal is emitted when :ref:`objects <property_DataObjectWriter_objects>` have been truncated.
+
+This signal was introduced in InCore 2.3.
 
 
 Enumerations
