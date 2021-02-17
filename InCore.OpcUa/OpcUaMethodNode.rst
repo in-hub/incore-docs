@@ -106,3 +106,45 @@ callMethod()
 Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodnode.html#callMethod-method>`_ documentation.
 
 
+
+.. _example_OpcUaMethodNode:
+
+
+Example
+*******
+
+.. code-block:: qml
+
+    import InCore.Foundation 2.3
+    import InCore.OpcUa 2.3
+    
+    Application {
+        OpcUaClient {
+            OpcUaConnection {
+                // ...
+            }
+    
+            OpcUaMethodNode {
+                id: pingMethod
+                nodeId: OpcUaNodeId { identifier: "s=Machine.Ping"; ns: "Example Namespace" }
+                objectNodeId: OpcUaNodeId { identifier: "s=Machine"; ns: "Example Namespace" }
+    
+                inputArguments: [
+                    OpcUaMethodArgument {
+                        value: 123.456
+                        type: OpcUaConstants.Double
+                    },
+                    OpcUaMethodArgument {
+                        value: "Hello world"
+                        type: OpcUaConstants.String
+                    }
+                ]
+                onOutputArgumentsChanged: console.log("Method returned", JSON.stringify(outputArguments))
+            }
+        }
+    
+        Timer {
+            onTriggered: pingMethod.callMethod()
+        }
+    }
+    

@@ -45,3 +45,4 @@ Objects
 	SerialPortBusNode
 	SerialPortManager
 	Sht3x
+	UsbPrinter

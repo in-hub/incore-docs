@@ -32,6 +32,7 @@ Properties
   * :ref:`hardwareName <property_NetworkInterface_hardwareName>`
   * :ref:`networkAddresses <property_NetworkInterface_networkAddresses>`
   * :ref:`operationalState <property_NetworkInterface_operationalState>`
+  * :ref:`routes <property_NetworkInterface_routes>`
   * :ref:`setupState <property_NetworkInterface_setupState>`
   * :ref:`useRoutes <property_NetworkInterface_useRoutes>`
   * :ref:`useRoutesItem <property_NetworkInterface_useRoutesItem>`
@@ -57,6 +58,7 @@ Signals
   :columns: 1
 
   * :ref:`errorOccurred() <signal_NetworkInterface_errorOccurred>`
+  * :ref:`routesDataChanged() <signal_NetworkInterface_routesDataChanged>`
   * :ref:`ConfigurationObject.itemsDataChanged() <signal_ConfigurationObject_itemsDataChanged>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
@@ -243,6 +245,25 @@ This property holds the operational state of the network interface. The most com
 :**› Attributes**: Readonly
 
 
+.. _property_NetworkInterface_routes:
+
+.. _signal_NetworkInterface_routesChanged:
+
+.. index::
+   single: routes
+
+routes
+++++++
+
+This property holds a list of :ref:`NetworkRoute <object_NetworkRoute>` objects which hold additional network routes to configure.
+
+This property was introduced in InCore 2.3.
+
+:**› Type**: :ref:`List <object_List>`\<:ref:`NetworkRoute <object_NetworkRoute>`>
+:**› Signal**: routesChanged()
+:**› Attributes**: Readonly
+
+
 .. _property_NetworkInterface_setupState:
 
 .. _signal_NetworkInterface_setupStateChanged:
@@ -305,6 +326,18 @@ errorOccurred()
 +++++++++++++++
 
 This signal is emitted whenever an error has occurred, regardless of whether the :ref:`error <property_NetworkInterface_error>` property has changed or not. In contrast to the change notification signal of the :ref:`error <property_NetworkInterface_error>` property this signal is also emitted several times if a certain error occurs several times in succession.
+
+
+
+.. _signal_NetworkInterface_routesDataChanged:
+
+.. index::
+   single: routesDataChanged
+
+routesDataChanged(SignedInteger index)
+++++++++++++++++++++++++++++++++++++++
+
+This signal is emitted whenever the :ref:`List.dataChanged() <signal_List_dataChanged>` signal is emitted, i.e. the item at ``index`` in the :ref:`routes <property_NetworkInterface_routes>` list itself emitted the dataChanged() signal.
 
 
 Enumerations

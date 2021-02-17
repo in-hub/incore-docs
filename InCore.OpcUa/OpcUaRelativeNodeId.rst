@@ -62,3 +62,6 @@ Please refer to the `Qt OPC UA RelativeNodeId QML type <https://doc.qt.io/QtOPCU
 
 :**› Attributes**: Writable
 
+Example
+*******
+See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaRelativeNodeId.

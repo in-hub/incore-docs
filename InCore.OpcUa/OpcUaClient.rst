@@ -94,25 +94,22 @@ Example
     
     Application {
         OpcUaClient {
-            OpcUaEndpointDiscovery { }
-    
-            OpcUaConnection { }
+            OpcUaConnection {
+                // ...
+            }
     
             OpcUaNodeId {
                 identifier: "s=Machine"
-                ns: "Demo Namespace"
+                ns: "Example Namespace"
                 id: machineNodeId
             }
     
-    
-            OpcUaMethodNode {
-                nodeId: OpcUaNodeId {
-                    identifier: "s=Machine.Stop"
-                    ns: "Demo Namespace"
+            OpcUaValueNode {
+                nodeId: OpcUaRelativeNodeId {
+                    startNode: machineNodeId
+                    path: [ OpcUaRelativeNodePath { ns: "Example Namespace"; browseName: "Example Value" } ]
                 }
-    
-                objectNodeId: machineNodeId
-                id: stopMethod
+                onValueChanged: console.log("Example value", value)
             }
         }
     }

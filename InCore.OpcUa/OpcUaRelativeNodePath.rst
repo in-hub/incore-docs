@@ -108,3 +108,6 @@ Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOP
 
 :**› Attributes**: Writable
 
+Example
+*******
+See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaRelativeNodePath.
