@@ -289,13 +289,20 @@ Example
                 onSubscribedChanged: console.log("Subscribed to topics")
     
                 MqttTopic {
+                    name: "inhub/address"
+                    onDataChanged: console.log("Address changed to", data)
+                }
+    
+                MqttTopic {
                     name: "inhub/customerCount"
+                    dataType: MqttTopic.UnsignedInteger
                     onDataChanged: console.log("Number of customers changed to", data)
                 }
     
                 MqttTopic {
-                    name: "inhub/employeeCount"
-                    onDataChanged: console.log("Number of employees changed to", data)
+                    name: "inhub/isGreat"
+                    dataType: MqttTopic.Boolean
+                    onDataChanged: console.log("isGreat changed to", data)
                 }
             }
         }

@@ -54,3 +54,6 @@ Please refer to the `Qt OPC UA NodeId QML type <https://doc.qt.io/QtOPCUA/qml-qt
 
 :**› Attributes**: Writable
 
+Example
+*******
+See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaNodeId.

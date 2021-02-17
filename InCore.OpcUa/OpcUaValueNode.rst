@@ -158,3 +158,6 @@ dataChangeOccurred(Variant value)
 Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#dataChangeOccurred-signal>`_ documentation.
 
 
+Example
+*******
+See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaValueNode.

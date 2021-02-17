@@ -27,6 +27,9 @@ Properties
   * :ref:`allowRoamingItem <property_MobileNetworkInterface_allowRoamingItem>`
   * :ref:`apn <property_MobileNetworkInterface_apn>`
   * :ref:`apnItem <property_MobileNetworkInterface_apnItem>`
+  * :ref:`authenticationType <property_MobileNetworkInterface_authenticationType>`
+  * :ref:`authenticationTypeItem <property_MobileNetworkInterface_authenticationTypeItem>`
+  * :ref:`deviceManufacturer <property_MobileNetworkInterface_deviceManufacturer>`
   * :ref:`deviceModel <property_MobileNetworkInterface_deviceModel>`
   * :ref:`iccid <property_MobileNetworkInterface_iccid>`
   * :ref:`imei <property_MobileNetworkInterface_imei>`
@@ -51,6 +54,7 @@ Properties
   * :ref:`NetworkInterface.hardwareName <property_NetworkInterface_hardwareName>`
   * :ref:`NetworkInterface.networkAddresses <property_NetworkInterface_networkAddresses>`
   * :ref:`NetworkInterface.operationalState <property_NetworkInterface_operationalState>`
+  * :ref:`NetworkInterface.routes <property_NetworkInterface_routes>`
   * :ref:`NetworkInterface.setupState <property_NetworkInterface_setupState>`
   * :ref:`NetworkInterface.useRoutes <property_NetworkInterface_useRoutes>`
   * :ref:`NetworkInterface.useRoutesItem <property_NetworkInterface_useRoutesItem>`
@@ -74,13 +78,14 @@ Signals
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`connected() <signal_MobileNetworkInterface_connected>`
   * :ref:`disconnected() <signal_MobileNetworkInterface_disconnected>`
   * :ref:`messageReceived() <signal_MobileNetworkInterface_messageReceived>`
   * :ref:`messageSent() <signal_MobileNetworkInterface_messageSent>`
   * :ref:`NetworkInterface.errorOccurred() <signal_NetworkInterface_errorOccurred>`
+  * :ref:`NetworkInterface.routesDataChanged() <signal_NetworkInterface_routesDataChanged>`
   * :ref:`ConfigurationObject.itemsDataChanged() <signal_ConfigurationObject_itemsDataChanged>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
@@ -90,6 +95,7 @@ Enumerations
 .. hlist::
   :columns: 1
 
+  * :ref:`AuthenticationType <enum_MobileNetworkInterface_AuthenticationType>`
   * :ref:`State <enum_MobileNetworkInterface_State>`
   * :ref:`NetworkInterface.DhcpClientIdentifier <enum_NetworkInterface_DhcpClientIdentifier>`
   * :ref:`NetworkInterface.Error <enum_NetworkInterface_Error>`
@@ -162,6 +168,59 @@ apnItem
 This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`apn <property_MobileNetworkInterface_apn>` property.
 
 :**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_authenticationType:
+
+.. _signal_MobileNetworkInterface_authenticationTypeChanged:
+
+.. index::
+   single: authenticationType
+
+authenticationType
+++++++++++++++++++
+
+
+
+This property was introduced in InCore 2.3.
+
+:**› Type**: :ref:`AuthenticationType <enum_MobileNetworkInterface_AuthenticationType>`
+:**› Default**: :ref:`MobileNetworkInterface.UnknownAuthentication <enumitem_MobileNetworkInterface_UnknownAuthentication>`
+:**› Signal**: authenticationTypeChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MobileNetworkInterface_authenticationTypeItem:
+
+.. index::
+   single: authenticationTypeItem
+
+authenticationTypeItem
+++++++++++++++++++++++
+
+This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`authenticationType <property_MobileNetworkInterface_authenticationType>` property.
+
+:**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_deviceManufacturer:
+
+.. _signal_MobileNetworkInterface_deviceManufacturerChanged:
+
+.. index::
+   single: deviceManufacturer
+
+deviceManufacturer
+++++++++++++++++++
+
+This property holds the manufacturer name of the modem device.
+
+This property was introduced in InCore 2.3.
+
+:**› Type**: String
+:**› Signal**: deviceManufacturerChanged()
 :**› Attributes**: Readonly
 
 
@@ -469,6 +528,74 @@ This signal was introduced in InCore 2.3.
 
 Enumerations
 ************
+
+
+.. _enum_MobileNetworkInterface_AuthenticationType:
+
+.. index::
+   single: AuthenticationType
+
+AuthenticationType
+++++++++++++++++++
+
+
+
+.. index::
+   single: MobileNetworkInterface.UnknownAuthentication
+.. index::
+   single: MobileNetworkInterface.NoAuthentication
+.. index::
+   single: MobileNetworkInterface.PAP
+.. index::
+   single: MobileNetworkInterface.CHAP
+.. index::
+   single: MobileNetworkInterface.MSCHAP
+.. index::
+   single: MobileNetworkInterface.MSCHAPv2
+.. index::
+   single: MobileNetworkInterface.EAP
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+
+      .. _enumitem_MobileNetworkInterface_UnknownAuthentication:
+  * - ``MobileNetworkInterface.UnknownAuthentication``
+    - ``0``
+    - 
+
+      .. _enumitem_MobileNetworkInterface_NoAuthentication:
+  * - ``MobileNetworkInterface.NoAuthentication``
+    - ``1``
+    - 
+
+      .. _enumitem_MobileNetworkInterface_PAP:
+  * - ``MobileNetworkInterface.PAP``
+    - ``2``
+    - 
+
+      .. _enumitem_MobileNetworkInterface_CHAP:
+  * - ``MobileNetworkInterface.CHAP``
+    - ``3``
+    - 
+
+      .. _enumitem_MobileNetworkInterface_MSCHAP:
+  * - ``MobileNetworkInterface.MSCHAP``
+    - ``4``
+    - 
+
+      .. _enumitem_MobileNetworkInterface_MSCHAPv2:
+  * - ``MobileNetworkInterface.MSCHAPv2``
+    - ``5``
+    - 
+
+      .. _enumitem_MobileNetworkInterface_EAP:
+  * - ``MobileNetworkInterface.EAP``
+    - ``6``
+    - 
 
 
 .. _enum_MobileNetworkInterface_State:

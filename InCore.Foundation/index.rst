@@ -19,7 +19,7 @@ The Foundation module is the heart of the InCore framework and provides basic ob
 * **Input/output**: :ref:`File <object_File>`, :ref:`CsvWriter <object_CsvWriter>`
 * **JSON RPC**: :ref:`JsonRpcClient <object_JsonRpcClient>`, :ref:`JsonRpcServer <object_JsonRpcServer>`, :ref:`JsonRpcService <object_JsonRpcService>`
 * **Measuring**: :ref:`Measurement <object_Measurement>`, :ref:`MeasurementGroup <object_MeasurementGroup>`, :ref:`MeasurementView <object_MeasurementView>`
-* **Networking**: :ref:`TcpSocket <object_TcpSocket>`, :ref:`UdpSocket <object_UdpSocket>`, :ref:`WebSocket <object_WebSocket>`, :ref:`NetworkConfiguration <object_NetworkConfiguration>`, :ref:`NetworkInterface <object_NetworkInterface>`, :ref:`WiredNetworkInterface <object_WiredNetworkInterface>`, :ref:`WirelessNetworkInterface <object_WirelessNetworkInterface>`, :ref:`MobileNetworkInterface <object_MobileNetworkInterface>`, :ref:`Mail <object_Mail>`, :ref:`DhcpServer <object_DhcpServer>`
+* **Networking**: :ref:`TcpSocket <object_TcpSocket>`, :ref:`UdpSocket <object_UdpSocket>`, :ref:`WebSocket <object_WebSocket>`, :ref:`TcpServer <object_TcpServer>`, :ref:`NetworkConfiguration <object_NetworkConfiguration>`, :ref:`NetworkInterface <object_NetworkInterface>`, :ref:`WiredNetworkInterface <object_WiredNetworkInterface>`, :ref:`WirelessNetworkInterface <object_WirelessNetworkInterface>`, :ref:`MobileNetworkInterface <object_MobileNetworkInterface>`, :ref:`Mail <object_Mail>`, :ref:`DhcpServer <object_DhcpServer>`
 * **Services**: :ref:`SystemService <object_SystemService>`, :ref:`OpenVpnClientService <object_OpenVpnClientService>`, :ref:`SshService <object_SshService>`, :ref:`WebServerService <object_WebServerService>`, :ref:`DockerService <object_DockerService>`
 * **Storage**: :ref:`LocalStorage <object_LocalStorage>`, :ref:`UsbStorage <object_UsbStorage>`, :ref:`InMemoryStorage <object_InMemoryStorage>`
 * **System**: :ref:`System <object_System>`, :ref:`Process <object_Process>`, :ref:`UpdateManager <object_UpdateManager>`
@@ -44,7 +44,6 @@ Objects
 	ConfigurationObject
 	Counter
 	CsvWriter
-	Current
 	DataObject
 	DataObjectGroup
 	DataObjectView
@@ -88,6 +87,7 @@ Objects
 	MobileNetworkInterface
 	NetworkConfiguration
 	NetworkInterface
+	NetworkRoute
 	NftAddressTranslation
 	NftChain
 	NftFirewall
@@ -114,8 +114,8 @@ Objects
 	System
 	SystemConfiguration
 	SystemService
+	TcpServer
 	TcpSocket
-	Temperature
 	Timer
 	TransformList
 	Translator

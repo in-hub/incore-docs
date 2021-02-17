@@ -54,6 +54,7 @@ Properties
   * :ref:`NetworkInterface.hardwareName <property_NetworkInterface_hardwareName>`
   * :ref:`NetworkInterface.networkAddresses <property_NetworkInterface_networkAddresses>`
   * :ref:`NetworkInterface.operationalState <property_NetworkInterface_operationalState>`
+  * :ref:`NetworkInterface.routes <property_NetworkInterface_routes>`
   * :ref:`NetworkInterface.setupState <property_NetworkInterface_setupState>`
   * :ref:`NetworkInterface.useRoutes <property_NetworkInterface_useRoutes>`
   * :ref:`NetworkInterface.useRoutesItem <property_NetworkInterface_useRoutesItem>`
@@ -79,6 +80,7 @@ Signals
   :columns: 1
 
   * :ref:`NetworkInterface.errorOccurred() <signal_NetworkInterface_errorOccurred>`
+  * :ref:`NetworkInterface.routesDataChanged() <signal_NetworkInterface_routesDataChanged>`
   * :ref:`ConfigurationObject.itemsDataChanged() <signal_ConfigurationObject_itemsDataChanged>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
@@ -555,7 +557,7 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
+    import InCore.Foundation 2.3
     
     Application {
         NetworkConfiguration {
@@ -575,6 +577,12 @@ Example
                 domains: "example.org"
                 ntp: "ntp1.example.org ntp2.example.org"
                 multicastDNS: true
+                routes: [
+                    NetworkRoute {
+                        destination: "192.168.3.0/24"
+                        gateway: "192.168.2.253"
+                    }
+                ]
             }
         }
     }

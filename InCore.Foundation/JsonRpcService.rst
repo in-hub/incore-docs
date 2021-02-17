@@ -74,15 +74,13 @@ Example
     
         JsonRpcClient {
             id: rpcClient
-            onPropertyReceived: console.log("Received property", name, "with value", value)
-            onCallFinished: console.log("Function", name, "returned", returnValue)
             onErrorCodeReceived: console.log("Call to", name, "returned with error code", errorCode)
             onErrorMessageReceived: console.log("Call to", name, "returned with error message", errorMessage)
         }
     
         onCompleted:  {
-            rpcClient.getProperty("systemClock")
-            rpcClient.call("callMe", ["My message"])
+            rpcClient.getProperty("systemClock", (value) => { console.log("System clock:", value) })
+            rpcClient.call("callMe", ["My message"], (retval) => { console.log("callMe() returned:", retval)})
             rpcClient.call("nonExistingFunction", [])
         }
     

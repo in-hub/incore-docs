@@ -148,9 +148,10 @@ This property holds the network interface to transmit traffic to for this flow.
 protocol
 ++++++++
 
-
+This property holds the protocol which to match. It has to be set to a protocol such as TCP or UDP in order to use source or destination port matching (:ref:`sourcePorts <property_NftFlow_sourcePorts>`/:ref:`destinationPorts <property_NftFlow_destinationPorts>`).
 
 :**› Type**: :ref:`NftRule.Protocol <enum_NftRule_Protocol>`
+:**› Default**: :ref:`NftRule.AllProtocols <enumitem_NftRule_AllProtocols>`
 :**› Signal**: protocolChanged()
 :**› Attributes**: Writable
 

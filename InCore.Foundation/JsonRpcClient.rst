@@ -48,11 +48,9 @@ Signals
 .. hlist::
   :columns: 1
 
-  * :ref:`callFinished() <signal_JsonRpcClient_callFinished>`
   * :ref:`errorCodeReceived() <signal_JsonRpcClient_errorCodeReceived>`
   * :ref:`errorDataReceived() <signal_JsonRpcClient_errorDataReceived>`
   * :ref:`errorMessageReceived() <signal_JsonRpcClient_errorMessageReceived>`
-  * :ref:`propertyReceived() <signal_JsonRpcClient_propertyReceived>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 
@@ -141,10 +139,10 @@ Methods
 .. index::
    single: call
 
-call(String name, List arguments)
-+++++++++++++++++++++++++++++++++
+call(String name, List arguments, JSValue callback)
++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-This method calls the method specified by parameter `name` with the arguments specified in parameter ``arguments``. It returns ``true`` if the call request could be initiated succesfully. This does not neccessarily mean that the call itself was successful. Use the :ref:`errorCodeReceived() <signal_JsonRpcClient_errorCodeReceived>`, :ref:`errorDataReceived() <signal_JsonRpcClient_errorDataReceived>` or :ref:`errorMessageReceived() <signal_JsonRpcClient_errorMessageReceived>` signals to detect and handle actual RPC errors.
+This method calls the method specified by parameter `name` with the arguments specified in parameter ``arguments``. It returns ``true`` if the call request could be initiated succesfully. This does not neccessarily mean that the call itself was successful. Use the :ref:`errorCodeReceived() <signal_JsonRpcClient_errorCodeReceived>`, :ref:`errorDataReceived() <signal_JsonRpcClient_errorDataReceived>` or :ref:`errorMessageReceived() <signal_JsonRpcClient_errorMessageReceived>` signals to detect and handle actual RPC errors. When the call succeeded, the return value will be passed to the given callback as the first argument.
 
 :**› Returns**: Boolean
 
@@ -155,10 +153,10 @@ This method calls the method specified by parameter `name` with the arguments sp
 .. index::
    single: getProperty
 
-getProperty(String name)
-++++++++++++++++++++++++
+getProperty(String name, JSValue callback)
+++++++++++++++++++++++++++++++++++++++++++
 
-This method wraps a call to the :ref:`getProperty() <method_JsonRpcClient_getProperty>` method implemented by :ref:`JsonRpcService <object_JsonRpcService>`. Whenever a property is received, the :ref:`propertyReceived() <signal_JsonRpcClient_propertyReceived>` signal (instead of the :ref:`callFinished() <signal_JsonRpcClient_callFinished>` signal) is emitted.
+This method wraps a call to the :ref:`getProperty() <method_JsonRpcClient_getProperty>` method implemented by :ref:`JsonRpcService <object_JsonRpcService>`. Whenever a property is received, the given callback is called with the result as the first argument.
 
 :**› Returns**: Boolean
 
@@ -179,18 +177,6 @@ This method wraps a call to the :ref:`setProperty() <method_JsonRpcClient_setPro
 
 Signals
 *******
-
-
-.. _signal_JsonRpcClient_callFinished:
-
-.. index::
-   single: callFinished
-
-callFinished(String name, Variant returnValue)
-++++++++++++++++++++++++++++++++++++++++++++++
-
-This signal is emitted whenever an RPC call has been finished successfully. The method name and return value are passed through the signal parameters.
-
 
 
 .. _signal_JsonRpcClient_errorCodeReceived:
@@ -226,18 +212,6 @@ errorMessageReceived(String name, String errorMessage)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 This signal is emitted whenever an RPC error response with a valid error message is received.
-
-
-
-.. _signal_JsonRpcClient_propertyReceived:
-
-.. index::
-   single: propertyReceived
-
-propertyReceived(String name, Variant value)
-++++++++++++++++++++++++++++++++++++++++++++
-
-This signal is emitted whenever a property requested via the :ref:`getProperty() <method_JsonRpcClient_getProperty>` has been received. The property's name and value are passed through the signal parameters.
 
 
 Example

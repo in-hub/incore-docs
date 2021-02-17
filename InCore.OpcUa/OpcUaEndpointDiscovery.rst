@@ -107,3 +107,43 @@ Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/QtO
 :**› Returns**: :ref:`QOpcUaEndpointDescription <enum_OpcUaEndpointDiscovery_QOpcUaEndpointDescription>`
 
 
+
+.. _example_OpcUaEndpointDiscovery:
+
+
+Example
+*******
+
+.. code-block:: qml
+
+    import InCore.Foundation 2.3
+    import InCore.OpcUa 2.3
+    
+    Application {
+        OpcUaClient {
+            OpcUaEndpointDiscovery {
+                serverUrl: "opc.tcp://192.168.1.2:4840"
+                onEndpointsChanged: {
+                    if (status.isGood) {
+                        if (status.status === OpcUaStatus.GoodCompletesAsynchronusly)
+                            return; // wait until finished
+                        if (count > 0) {
+                            console.log("Using endpoint", at(0).endpointUrl, at(0).securityPolicy);
+                            connection.connectToEndpoint(at(0));
+                        } else {
+                            console.log("No endpoints retrieved")
+                        }
+                    } else {
+                        console.log("Error fetching endpoints:", status.status);
+                    }
+                }
+            }
+    
+            OpcUaConnection {
+                id: connection
+                backend: availableBackends[0]
+                defaultConnection: true
+            }
+        }
+    }
+    
