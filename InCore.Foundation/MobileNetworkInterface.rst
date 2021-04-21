@@ -459,10 +459,10 @@ Methods
 .. index::
    single: sendMessage
 
-sendMessage(String recipientNumber, String text)
-++++++++++++++++++++++++++++++++++++++++++++++++
+sendMessage(String recipientNumbers, String text)
++++++++++++++++++++++++++++++++++++++++++++++++++
 
-This method sends a text message (SMS) using the modem. The phone number of the SMS recipient has to be supplied in the ``recipientNumber`` argument. If the message text in the ``text`` parameter contains non-ASCII characters the Unicode (UCS-2) encoding is used which requires 2 bytes per character. This may be relevant if the number of SMS that can be sent in a time period is limited. 
+This method sends a text message (SMS) using the modem. The phone number(s) of the SMS recipient(s) have to be supplied in the ``recipientNumbers`` argument. To send more than one SMS separate the phone numbers with comma. Included spaces will be removed. If the message text in the ``text`` parameter contains non-ASCII characters the Unicode (UCS-2) encoding is used which requires 2 bytes per character. This may be relevant if the number of SMS that can be sent in a time period is limited. 
 
 It returns ``true`` if the send operation has been initiated successfully. Errors occurring while sending the SMS are signaled through the :ref:`NetworkInterface.error <property_NetworkInterface_error>` property.
 
@@ -756,7 +756,7 @@ Example
         Counter {
             id: smsCounter
             interval: 30000
-            onValueChanged: wwan0.sendMessage("+49123456789", ("Hello world! This is SMS number %1.").arg(value))
+            onValueChanged: wwan0.sendMessage("+49123456789, +49135798642", ("Hello world! This is SMS number %1.").arg(value))
         }
     }
     

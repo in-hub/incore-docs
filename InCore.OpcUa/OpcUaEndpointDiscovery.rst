@@ -139,7 +139,7 @@ Example
                 }
             }
     
-            OpcUaConnection {
+            OpcUaClientConnection {
                 id: connection
                 backend: availableBackends[0]
                 defaultConnection: true

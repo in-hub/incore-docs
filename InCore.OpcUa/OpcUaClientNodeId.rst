@@ -1,9 +1,9 @@
 
-.. _object_OpcUaNodeId:
+.. _object_OpcUaClientNodeId:
 
 
-:index:`OpcUaNodeId`
---------------------
+:index:`OpcUaClientNodeId`
+--------------------------
 
 Description
 ***********
@@ -29,7 +29,7 @@ Properties
 **********
 
 
-.. _property_OpcUaNodeId_identifier:
+.. _property_OpcUaClientNodeId_identifier:
 
 .. index::
    single: identifier
@@ -42,7 +42,7 @@ Please refer to the `Qt OPC UA NodeId QML type <https://doc.qt.io/QtOPCUA/qml-qt
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaNodeId_ns:
+.. _property_OpcUaClientNodeId_ns:
 
 .. index::
    single: ns
@@ -56,4 +56,4 @@ Please refer to the `Qt OPC UA NodeId QML type <https://doc.qt.io/QtOPCUA/qml-qt
 
 Example
 *******
-See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaNodeId.
+See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaClientNodeId.

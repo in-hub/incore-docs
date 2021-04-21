@@ -1,9 +1,9 @@
 
-.. _object_OpcUaConnection:
+.. _object_OpcUaClientConnection:
 
 
-:index:`OpcUaConnection`
-------------------------
+:index:`OpcUaClientConnection`
+------------------------------
 
 Description
 ***********
@@ -60,7 +60,7 @@ Properties
 **********
 
 
-.. _property_OpcUaConnection_authenticationInformation:
+.. _property_OpcUaClientConnection_authenticationInformation:
 
 .. index::
    single: authenticationInformation
@@ -73,7 +73,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaConnection_availableBackends:
+.. _property_OpcUaClientConnection_availableBackends:
 
 .. index::
    single: availableBackends
@@ -86,7 +86,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 :**› Attributes**: Readonly
 
 
-.. _property_OpcUaConnection_backend:
+.. _property_OpcUaClientConnection_backend:
 
 .. index::
    single: backend
@@ -99,7 +99,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaConnection_connected:
+.. _property_OpcUaClientConnection_connected:
 
 .. index::
    single: connected
@@ -112,7 +112,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 :**› Attributes**: Readonly
 
 
-.. _property_OpcUaConnection_connection:
+.. _property_OpcUaClientConnection_connection:
 
 .. index::
    single: connection
@@ -125,7 +125,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaConnection_currentEndpoint:
+.. _property_OpcUaClientConnection_currentEndpoint:
 
 .. index::
    single: currentEndpoint
@@ -138,7 +138,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 :**› Attributes**: Readonly
 
 
-.. _property_OpcUaConnection_defaultConnection:
+.. _property_OpcUaClientConnection_defaultConnection:
 
 .. index::
    single: defaultConnection
@@ -151,7 +151,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaConnection_namespaces:
+.. _property_OpcUaClientConnection_namespaces:
 
 .. index::
    single: namespaces
@@ -164,7 +164,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 :**› Attributes**: Readonly
 
 
-.. _property_OpcUaConnection_supportedSecurityPolicies:
+.. _property_OpcUaClientConnection_supportedSecurityPolicies:
 
 .. index::
    single: supportedSecurityPolicies
@@ -177,7 +177,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 :**› Attributes**: Readonly
 
 
-.. _property_OpcUaConnection_supportedUserTokenTypes:
+.. _property_OpcUaClientConnection_supportedUserTokenTypes:
 
 .. index::
    single: supportedUserTokenTypes
@@ -193,19 +193,19 @@ Methods
 *******
 
 
-.. _method_OpcUaConnection_connectToEndpoint:
+.. _method_OpcUaClientConnection_connectToEndpoint:
 
 .. index::
    single: connectToEndpoint
 
-connectToEndpoint(:ref:`QOpcUaEndpointDescription <enum_OpcUaConnection_QOpcUaEndpointDescription>` endpointDescription)
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+connectToEndpoint(:ref:`QOpcUaEndpointDescription <enum_OpcUaClientConnection_QOpcUaEndpointDescription>` endpointDescription)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connectToEndpoint-method>`_ documentation.
 
 
 
-.. _method_OpcUaConnection_disconnectFromEndpoint:
+.. _method_OpcUaClientConnection_disconnectFromEndpoint:
 
 .. index::
    single: disconnectFromEndpoint
@@ -217,7 +217,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 
 
 
-.. _method_OpcUaConnection_readNodeAttributes:
+.. _method_OpcUaClientConnection_readNodeAttributes:
 
 .. index::
    single: readNodeAttributes
@@ -231,7 +231,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 
 
 
-.. _method_OpcUaConnection_writeNodeAttributes:
+.. _method_OpcUaClientConnection_writeNodeAttributes:
 
 .. index::
    single: writeNodeAttributes
@@ -248,7 +248,7 @@ Signals
 *******
 
 
-.. _signal_OpcUaConnection_readNodeAttributesFinished:
+.. _signal_OpcUaClientConnection_readNodeAttributesFinished:
 
 .. index::
    single: readNodeAttributesFinished
@@ -260,7 +260,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 
 
 
-.. _signal_OpcUaConnection_writeNodeAttributesFinished:
+.. _signal_OpcUaClientConnection_writeNodeAttributesFinished:
 
 .. index::
    single: writeNodeAttributesFinished
@@ -273,4 +273,4 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 
 Example
 *******
-See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaConnection.
+See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaClientConnection.

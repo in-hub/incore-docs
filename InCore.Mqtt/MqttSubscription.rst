@@ -8,11 +8,11 @@
 Description
 ***********
 
-The MqttSubscription object manages subscriptions of one or multiple MQTT topics published by another instance on the MQTT broker. Unless disabled explicitely via the :ref:`autoSubscribe <property_MqttSubscription_autoSubscribe>` property all topics are subscribed automatically.
+The MqttSubscription object manages subscriptions of one or multiple MQTT :ref:`topics <property_MqttSubscription_topics>` published by another instance on the MQTT broker. Unless disabled explicitely via the :ref:`autoSubscribe <property_MqttSubscription_autoSubscribe>` property all topics are subscribed automatically.
 
 The parent object must be of type :ref:`MqttClient <object_MqttClient>`.
 
-:**› Inherits**: :ref:`Object <object_Object>`
+:**› Inherits**: :ref:`MqttAbstractSubscription <object_MqttAbstractSubscription>`
 
 Overview
 ********
@@ -23,12 +23,12 @@ Properties
 .. hlist::
   :columns: 2
 
-  * :ref:`autoSubscribe <property_MqttSubscription_autoSubscribe>`
-  * :ref:`error <property_MqttSubscription_error>`
-  * :ref:`errorString <property_MqttSubscription_errorString>`
-  * :ref:`qos <property_MqttSubscription_qos>`
-  * :ref:`subscribed <property_MqttSubscription_subscribed>`
   * :ref:`topics <property_MqttSubscription_topics>`
+  * :ref:`MqttAbstractSubscription.autoSubscribe <property_MqttAbstractSubscription_autoSubscribe>`
+  * :ref:`MqttAbstractSubscription.error <property_MqttAbstractSubscription_error>`
+  * :ref:`MqttAbstractSubscription.errorString <property_MqttAbstractSubscription_errorString>`
+  * :ref:`MqttAbstractSubscription.qos <property_MqttAbstractSubscription_qos>`
+  * :ref:`MqttAbstractSubscription.subscribed <property_MqttAbstractSubscription_subscribed>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
 
@@ -38,8 +38,8 @@ Methods
 .. hlist::
   :columns: 1
 
-  * :ref:`subscribe() <method_MqttSubscription_subscribe>`
-  * :ref:`unsubscribe() <method_MqttSubscription_unsubscribe>`
+  * :ref:`MqttAbstractSubscription.subscribe() <method_MqttAbstractSubscription_subscribe>`
+  * :ref:`MqttAbstractSubscription.unsubscribe() <method_MqttAbstractSubscription_unsubscribe>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -49,8 +49,8 @@ Signals
 .. hlist::
   :columns: 1
 
-  * :ref:`errorOccurred() <signal_MqttSubscription_errorOccurred>`
   * :ref:`topicsDataChanged() <signal_MqttSubscription_topicsDataChanged>`
+  * :ref:`MqttAbstractSubscription.errorOccurred() <signal_MqttAbstractSubscription_errorOccurred>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 Enumerations
@@ -60,103 +60,12 @@ Enumerations
   :columns: 1
 
   * :ref:`Error <enum_MqttSubscription_Error>`
+  * :ref:`MqttAbstractSubscription.Error <enum_MqttAbstractSubscription_Error>`
 
 
 
 Properties
 **********
-
-
-.. _property_MqttSubscription_autoSubscribe:
-
-.. _signal_MqttSubscription_autoSubscribeChanged:
-
-.. index::
-   single: autoSubscribe
-
-autoSubscribe
-+++++++++++++
-
-This property holds whether to subscribe the :ref:`topics <property_MqttSubscription_topics>` automatically once the :ref:`MqttClient <object_MqttClient>` is connected to the MQTT broker.
-
-:**› Type**: Boolean
-:**› Default**: ``true``
-:**› Signal**: autoSubscribeChanged()
-:**› Attributes**: Writable
-
-
-.. _property_MqttSubscription_error:
-
-.. _signal_MqttSubscription_errorChanged:
-
-.. index::
-   single: error
-
-error
-+++++
-
-This property holds the most recently occurred error or :ref:`MqttSubscription.NoError <enumitem_MqttSubscription_NoError>` if no error occurred. If the same error occurs multiple times this property does not change. Use the :ref:`errorOccurred() <signal_MqttSubscription_errorOccurred>` signal to detect multiple occurrences of the same error.
-
-:**› Type**: :ref:`Error <enum_MqttSubscription_Error>`
-:**› Signal**: errorChanged()
-:**› Attributes**: Readonly
-
-
-.. _property_MqttSubscription_errorString:
-
-.. _signal_MqttSubscription_errorStringChanged:
-
-.. index::
-   single: errorString
-
-errorString
-+++++++++++
-
-This property holds the current human readable error string corresponding to the current value in the :ref:`error <property_MqttSubscription_error>` property. It may include additional information such as failure reasons or locations.
-
-:**› Type**: String
-:**› Signal**: errorStringChanged()
-:**› Attributes**: Readonly
-
-
-.. _property_MqttSubscription_qos:
-
-.. _signal_MqttSubscription_qosChanged:
-
-.. index::
-   single: qos
-
-qos
-+++
-
-This property holds the Quality of Service to set for the subscribed topics. The QoS level defines how hard the broker will try to ensure that a message is received. MQTT defines three QoS levels:
-
-* ``0``: The broker will deliver the message once, with no confirmation. This level could be used, for example, with ambient sensor data where it does not matter if an individual reading is lost as the next one will be published soon after.
-* ``1``: The broker will deliver the message at least once, with confirmation required.
-* ``2``: The broker will deliver the message exactly once by using a four step handshake. This level could be used, for example, with billing systems where duplicate or lost messages could lead to incorrect charges being applied.
-
-:**› Type**: SignedInteger
-:**› Default**: ``0``
-:**› Signal**: qosChanged()
-:**› Attributes**: Writable
-
-
-.. _property_MqttSubscription_subscribed:
-
-.. _signal_MqttSubscription_subscribedChanged:
-
-.. index::
-   single: subscribed
-
-subscribed
-++++++++++
-
-This property holds whether the :ref:`topics <property_MqttSubscription_topics>` have been subscribed to successfully.
-
-:**› Type**: Boolean
-:**› Default**: ``false``
-:**› Signal**: subscribedChanged()
-:**› Attributes**: Readonly
 
 
 .. _property_MqttSubscription_topics:
@@ -175,49 +84,8 @@ This property holds a list of MQTT topics to subscribe.
 :**› Signal**: topicsChanged()
 :**› Attributes**: Readonly
 
-Methods
-*******
-
-
-.. _method_MqttSubscription_subscribe:
-
-.. index::
-   single: subscribe
-
-subscribe()
-+++++++++++
-
-This method subscribes the configured :ref:`topics <property_MqttSubscription_topics>` using the parent :ref:`MqttClient <object_MqttClient>` object. Once subscribed the :ref:`MqttTopic::data <property_DataObject_data>` properties are updated whenever the MQTT broker receives updates from the topic publisher.
-
-This method usually never has to be called manually. Instead the :ref:`autoSubscribe <property_MqttSubscription_autoSubscribe>` property should be left at its default value or set to ``true``.
-
-
-
-.. _method_MqttSubscription_unsubscribe:
-
-.. index::
-   single: unsubscribe
-
-unsubscribe()
-+++++++++++++
-
-This method unsubscribes the configured :ref:`topics <property_MqttSubscription_topics>` using the parent :ref:`MqttClient <object_MqttClient>` object. The :ref:`MqttTopic::data <property_DataObject_data>` properties will not be updated any longer if the MQTT broker receives updates from the topic publisher.
-
-
 Signals
 *******
-
-
-.. _signal_MqttSubscription_errorOccurred:
-
-.. index::
-   single: errorOccurred
-
-errorOccurred()
-+++++++++++++++
-
-This signal is emitted whenever an error has occurred, regardless of whether the :ref:`error <property_MqttSubscription_error>` property has changed or not. In contrast to the change notification signal of the :ref:`error <property_MqttSubscription_error>` property this signal is also emitted several times if a certain error occurs several times in succession.
-
 
 
 .. _signal_MqttSubscription_topicsDataChanged:
@@ -243,7 +111,7 @@ Enumerations
 Error
 +++++
 
-This enumeration describes all errors which can occur in MqttSubscription objects. The most recently occurred error is stored in the :ref:`error <property_MqttSubscription_error>` property.
+This enumeration describes all errors which can occur in MqttAbstractSubscription objects. The most recently occurred error is stored in the :ref:`error <property_MqttSubscription_error>` property.
 
 .. index::
    single: MqttSubscription.NoError

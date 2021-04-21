@@ -19,8 +19,10 @@ Objects
 .. toctree::
 	:maxdepth: 1
 
+	MqttAbstractSubscription
 	MqttBroker
 	MqttClient
+	MqttObjectPublication
 	MqttPublication
 	MqttSubscription
 	MqttTopic

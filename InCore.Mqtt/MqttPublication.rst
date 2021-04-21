@@ -15,6 +15,7 @@ The parent object must be of type :ref:`MqttClient <object_MqttClient>`.
 The inherited :ref:`DataObjectWriter.submitMode <property_DataObjectWriter_submitMode>` property is initialized to :ref:`DataObjectWriter.SubmitOnAnyChange <enumitem_DataObjectWriter_SubmitOnAnyChange>` which will automatically publish any topic whenever it changes. The submit mode can be changed to e.g. only publish all topics when all of them have been updated (:ref:`DataObjectWriter.SubmitOnCompleteDataset <enumitem_DataObjectWriter_SubmitOnCompleteDataset>`) or periodically every :ref:`DataObjectWriter.submitInterval <property_DataObjectWriter_submitInterval>` milliseconds (:ref:`DataObjectWriter.SubmitPeriodically <enumitem_DataObjectWriter_SubmitPeriodically>`). Manual submission can be implemented through the :ref:`DataObjectWriter.SubmitManually <enumitem_DataObjectWriter_SubmitManually>` submit mode and calling :ref:`publish() <method_MqttPublication_publish>`.
 
 :**› Inherits**: :ref:`DataObjectWriter <object_DataObjectWriter>`
+:**› Inherited by**: :ref:`MqttObjectPublication <object_MqttObjectPublication>`
 
 Overview
 ********
@@ -219,6 +220,8 @@ This enumeration describes all errors which can occur in MqttPublication objects
    single: MqttPublication.NoError
 .. index::
    single: MqttPublication.InvalidClient
+.. index::
+   single: MqttPublication.EmptyTopicBasename
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -236,6 +239,11 @@ This enumeration describes all errors which can occur in MqttPublication objects
   * - ``MqttPublication.InvalidClient``
     - ``1``
     - Parent object is not an MqttClient.
+
+      .. _enumitem_MqttPublication_EmptyTopicBasename:
+  * - ``MqttPublication.EmptyTopicBasename``
+    - ``2``
+    - Topic base name not set.
 
 
 .. _example_MqttPublication:

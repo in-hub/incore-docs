@@ -1,9 +1,9 @@
 
-.. _object_OpcUaMethodNode:
+.. _object_OpcUaClientMethodNode:
 
 
-:index:`OpcUaMethodNode`
-------------------------
+:index:`OpcUaClientMethodNode`
+------------------------------
 
 Description
 ***********
@@ -40,7 +40,7 @@ Properties
 **********
 
 
-.. _property_OpcUaMethodNode_inputArguments:
+.. _property_OpcUaClientMethodNode_inputArguments:
 
 .. index::
    single: inputArguments
@@ -53,7 +53,7 @@ Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qm
 :**› Attributes**: Readonly
 
 
-.. _property_OpcUaMethodNode_objectNodeId:
+.. _property_OpcUaClientMethodNode_objectNodeId:
 
 .. index::
    single: objectNodeId
@@ -66,7 +66,7 @@ Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qm
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaMethodNode_outputArguments:
+.. _property_OpcUaClientMethodNode_outputArguments:
 
 .. index::
    single: outputArguments
@@ -79,7 +79,7 @@ Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qm
 :**› Attributes**: Readonly
 
 
-.. _property_OpcUaMethodNode_resultStatus:
+.. _property_OpcUaClientMethodNode_resultStatus:
 
 .. index::
    single: resultStatus
@@ -95,7 +95,7 @@ Methods
 *******
 
 
-.. _method_OpcUaMethodNode_callMethod:
+.. _method_OpcUaClientMethodNode_callMethod:
 
 .. index::
    single: callMethod
@@ -107,7 +107,7 @@ Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qm
 
 
 
-.. _example_OpcUaMethodNode:
+.. _example_OpcUaClientMethodNode:
 
 
 Example
@@ -120,21 +120,21 @@ Example
     
     Application {
         OpcUaClient {
-            OpcUaConnection {
+            OpcUaClientConnection {
                 // ...
             }
     
-            OpcUaMethodNode {
+            OpcUaClientMethodNode {
                 id: pingMethod
-                nodeId: OpcUaNodeId { identifier: "s=Machine.Ping"; ns: "Example Namespace" }
-                objectNodeId: OpcUaNodeId { identifier: "s=Machine"; ns: "Example Namespace" }
+                nodeId: OpcUaClientNodeId { identifier: "s=Machine.Ping"; ns: "Example Namespace" }
+                objectNodeId: OpcUaClientNodeId { identifier: "s=Machine"; ns: "Example Namespace" }
     
                 inputArguments: [
-                    OpcUaMethodArgument {
+                    OpcUaClientMethodArgument {
                         value: 123.456
                         type: OpcUaConstants.Double
                     },
-                    OpcUaMethodArgument {
+                    OpcUaClientMethodArgument {
                         value: "Hello world"
                         type: OpcUaConstants.String
                     }
