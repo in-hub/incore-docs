@@ -1,16 +1,16 @@
 
-.. _object_OpcUaNode:
+.. _object_OpcUaClientNode:
 
 
-:index:`OpcUaNode`
-------------------
+:index:`OpcUaClientNode`
+------------------------
 
 Description
 ***********
 
 Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#->`_ documentation.
 
-:**› Inherited by**: :ref:`OpcUaMethodNode <object_OpcUaMethodNode>`, :ref:`OpcUaValueNode <object_OpcUaValueNode>`
+:**› Inherited by**: :ref:`OpcUaClientMethodNode <object_OpcUaClientMethodNode>`, :ref:`OpcUaClientValueNode <object_OpcUaClientValueNode>`
 
 Overview
 ********
@@ -65,7 +65,7 @@ Properties
 **********
 
 
-.. _property_OpcUaNode_browseName:
+.. _property_OpcUaClientNode_browseName:
 
 .. index::
    single: browseName
@@ -78,7 +78,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaNode_connection:
+.. _property_OpcUaClientNode_connection:
 
 .. index::
    single: connection
@@ -91,7 +91,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaNode_description:
+.. _property_OpcUaClientNode_description:
 
 .. index::
    single: description
@@ -104,7 +104,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaNode_displayName:
+.. _property_OpcUaClientNode_displayName:
 
 .. index::
    single: displayName
@@ -117,7 +117,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaNode_errorMessage:
+.. _property_OpcUaClientNode_errorMessage:
 
 .. index::
    single: errorMessage
@@ -130,7 +130,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 :**› Attributes**: Readonly
 
 
-.. _property_OpcUaNode_eventFilter:
+.. _property_OpcUaClientNode_eventFilter:
 
 .. index::
    single: eventFilter
@@ -143,7 +143,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaNode_nodeClass:
+.. _property_OpcUaClientNode_nodeClass:
 
 .. index::
    single: nodeClass
@@ -156,7 +156,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 :**› Attributes**: Readonly
 
 
-.. _property_OpcUaNode_nodeId:
+.. _property_OpcUaClientNode_nodeId:
 
 .. index::
    single: nodeId
@@ -169,7 +169,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaNode_readyToUse:
+.. _property_OpcUaClientNode_readyToUse:
 
 .. index::
    single: readyToUse
@@ -182,7 +182,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 :**› Attributes**: Readonly
 
 
-.. _property_OpcUaNode_status:
+.. _property_OpcUaClientNode_status:
 
 .. index::
    single: status
@@ -198,7 +198,7 @@ Methods
 *******
 
 
-.. _method_OpcUaNode_getServerTimestamp:
+.. _method_OpcUaClientNode_getServerTimestamp:
 
 .. index::
    single: getServerTimestamp
@@ -208,11 +208,11 @@ getServerTimestamp(:ref:`QOpcUa.NodeAttribute <enum_QOpcUa_NodeAttribute>`)
 
 Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#getServerTimestamp-method>`_ documentation.
 
-:**› Returns**: :ref:`QDateTime <enum_OpcUaNode_QDateTime>`
+:**› Returns**: :ref:`QDateTime <enum_OpcUaClientNode_QDateTime>`
 
 
 
-.. _method_OpcUaNode_getSourceTimestamp:
+.. _method_OpcUaClientNode_getSourceTimestamp:
 
 .. index::
    single: getSourceTimestamp
@@ -222,14 +222,14 @@ getSourceTimestamp(:ref:`QOpcUa.NodeAttribute <enum_QOpcUa_NodeAttribute>`)
 
 Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#getSourceTimestamp-method>`_ documentation.
 
-:**› Returns**: :ref:`QDateTime <enum_OpcUaNode_QDateTime>`
+:**› Returns**: :ref:`QDateTime <enum_OpcUaClientNode_QDateTime>`
 
 
 Signals
 *******
 
 
-.. _signal_OpcUaNode_eventOccurred:
+.. _signal_OpcUaClientNode_eventOccurred:
 
 .. index::
    single: eventOccurred
@@ -244,7 +244,7 @@ Enumerations
 ************
 
 
-.. _enum_OpcUaNode_Status:
+.. _enum_OpcUaClientNode_Status:
 
 .. index::
    single: Status
@@ -257,4 +257,4 @@ Status
 Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#Status-prop>`_ documentation.
 Example
 *******
-See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaNode.
+See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaClientNode.

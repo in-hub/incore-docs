@@ -94,20 +94,20 @@ Example
     
     Application {
         OpcUaClient {
-            OpcUaConnection {
+            OpcUaClientConnection {
                 // ...
             }
     
-            OpcUaNodeId {
+            OpcUaClientNodeId {
                 identifier: "s=Machine"
                 ns: "Example Namespace"
                 id: machineNodeId
             }
     
-            OpcUaValueNode {
-                nodeId: OpcUaRelativeNodeId {
+            OpcUaClientValueNode {
+                nodeId: OpcUaClientRelativeNodeId {
                     startNode: machineNodeId
-                    path: [ OpcUaRelativeNodePath { ns: "Example Namespace"; browseName: "Example Value" } ]
+                    path: [ OpcUaClientRelativeNodePath { ns: "Example Namespace"; browseName: "Example Value" } ]
                 }
                 onValueChanged: console.log("Example value", value)
             }

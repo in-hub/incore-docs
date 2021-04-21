@@ -1,9 +1,9 @@
 
-.. _object_OpcUaValueNode:
+.. _object_OpcUaClientValueNode:
 
 
-:index:`OpcUaValueNode`
------------------------
+:index:`OpcUaClientValueNode`
+-----------------------------
 
 Description
 ***********
@@ -53,7 +53,7 @@ Properties
 **********
 
 
-.. _property_OpcUaValueNode_filter:
+.. _property_OpcUaClientValueNode_filter:
 
 .. index::
    single: filter
@@ -66,7 +66,7 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaValueNode_monitored:
+.. _property_OpcUaClientValueNode_monitored:
 
 .. index::
    single: monitored
@@ -79,7 +79,7 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaValueNode_publishingInterval:
+.. _property_OpcUaClientValueNode_publishingInterval:
 
 .. index::
    single: publishingInterval
@@ -92,7 +92,7 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaValueNode_serverTimestamp:
+.. _property_OpcUaClientValueNode_serverTimestamp:
 
 .. index::
    single: serverTimestamp
@@ -105,7 +105,7 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 :**› Attributes**: Readonly
 
 
-.. _property_OpcUaValueNode_sourceTimestamp:
+.. _property_OpcUaClientValueNode_sourceTimestamp:
 
 .. index::
    single: sourceTimestamp
@@ -118,7 +118,7 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 :**› Attributes**: Readonly
 
 
-.. _property_OpcUaValueNode_value:
+.. _property_OpcUaClientValueNode_value:
 
 .. index::
    single: value
@@ -131,7 +131,7 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaValueNode_valueType:
+.. _property_OpcUaClientValueNode_valueType:
 
 .. index::
    single: valueType
@@ -147,7 +147,7 @@ Signals
 *******
 
 
-.. _signal_OpcUaValueNode_dataChangeOccurred:
+.. _signal_OpcUaClientValueNode_dataChangeOccurred:
 
 .. index::
    single: dataChangeOccurred
@@ -160,4 +160,4 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 
 Example
 *******
-See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaValueNode.
+See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaClientValueNode.

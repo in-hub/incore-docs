@@ -14,7 +14,7 @@ The parent object must be of type :ref:`MqttClient <object_MqttClient>`.
 
 This object was introduced in InCore 2.3.
 
-:**› Inherits**: :ref:`Object <object_Object>`
+:**› Inherits**: :ref:`MqttAbstractSubscription <object_MqttAbstractSubscription>`
 
 Overview
 ********
@@ -26,11 +26,13 @@ Properties
   :columns: 2
 
   * :ref:`data <property_MqttWildcardSubscription_data>`
-  * :ref:`enabled <property_MqttWildcardSubscription_enabled>`
   * :ref:`name <property_MqttWildcardSubscription_name>`
-  * :ref:`qos <property_MqttWildcardSubscription_qos>`
-  * :ref:`subscribed <property_MqttWildcardSubscription_subscribed>`
   * :ref:`topics <property_MqttWildcardSubscription_topics>`
+  * :ref:`MqttAbstractSubscription.autoSubscribe <property_MqttAbstractSubscription_autoSubscribe>`
+  * :ref:`MqttAbstractSubscription.error <property_MqttAbstractSubscription_error>`
+  * :ref:`MqttAbstractSubscription.errorString <property_MqttAbstractSubscription_errorString>`
+  * :ref:`MqttAbstractSubscription.qos <property_MqttAbstractSubscription_qos>`
+  * :ref:`MqttAbstractSubscription.subscribed <property_MqttAbstractSubscription_subscribed>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
 
@@ -40,6 +42,8 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`MqttAbstractSubscription.subscribe() <method_MqttAbstractSubscription_subscribe>`
+  * :ref:`MqttAbstractSubscription.unsubscribe() <method_MqttAbstractSubscription_unsubscribe>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -49,7 +53,17 @@ Signals
 .. hlist::
   :columns: 1
 
+  * :ref:`MqttAbstractSubscription.errorOccurred() <signal_MqttAbstractSubscription_errorOccurred>`
   * :ref:`Object.completed() <signal_Object_completed>`
+
+Enumerations
+++++++++++++
+
+.. hlist::
+  :columns: 1
+
+  * :ref:`Error <enum_MqttWildcardSubscription_Error>`
+  * :ref:`MqttAbstractSubscription.Error <enum_MqttAbstractSubscription_Error>`
 
 
 
@@ -74,24 +88,6 @@ This property holds a map with the data of all topics matching the wildcard topi
 :**› Attributes**: Readonly
 
 
-.. _property_MqttWildcardSubscription_enabled:
-
-.. _signal_MqttWildcardSubscription_enabledChanged:
-
-.. index::
-   single: enabled
-
-enabled
-+++++++
-
-This property holds whether to subscribe the specified wildcard topic.
-
-:**› Type**: Boolean
-:**› Default**: ``true``
-:**› Signal**: enabledChanged()
-:**› Attributes**: Writable
-
-
 .. _property_MqttWildcardSubscription_name:
 
 .. _signal_MqttWildcardSubscription_nameChanged:
@@ -109,42 +105,6 @@ This property holds the name of the wildcard topic to subscribe.
 :**› Attributes**: Writable
 
 
-.. _property_MqttWildcardSubscription_qos:
-
-.. _signal_MqttWildcardSubscription_qosChanged:
-
-.. index::
-   single: qos
-
-qos
-+++
-
-This property holds the Quality of Service to set for the subscribed wildcard topic. See the :ref:`MqttSubscription.qos <property_MqttSubscription_qos>` property for further information.
-
-:**› Type**: SignedInteger
-:**› Default**: ``0``
-:**› Signal**: qosChanged()
-:**› Attributes**: Writable
-
-
-.. _property_MqttWildcardSubscription_subscribed:
-
-.. _signal_MqttWildcardSubscription_subscribedChanged:
-
-.. index::
-   single: subscribed
-
-subscribed
-++++++++++
-
-This property holds whether the wildcard topic is actually subscribed.
-
-:**› Type**: Boolean
-:**› Default**: ``false``
-:**› Signal**: subscribedChanged()
-:**› Attributes**: Readonly
-
-
 .. _property_MqttWildcardSubscription_topics:
 
 .. _signal_MqttWildcardSubscription_topicsChanged:
@@ -160,6 +120,42 @@ This property holds a list of names with all received topics matching the wildca
 :**› Type**: StringList
 :**› Signal**: topicsChanged()
 :**› Attributes**: Readonly
+
+Enumerations
+************
+
+
+.. _enum_MqttWildcardSubscription_Error:
+
+.. index::
+   single: Error
+
+Error
++++++
+
+This enumeration describes all errors which can occur in MqttAbstractSubscription objects. The most recently occurred error is stored in the :ref:`error <property_MqttWildcardSubscription_error>` property.
+
+.. index::
+   single: MqttWildcardSubscription.NoError
+.. index::
+   single: MqttWildcardSubscription.InvalidClient
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+
+      .. _enumitem_MqttWildcardSubscription_NoError:
+  * - ``MqttWildcardSubscription.NoError``
+    - ``0``
+    - No error occurred or was detected.
+
+      .. _enumitem_MqttWildcardSubscription_InvalidClient:
+  * - ``MqttWildcardSubscription.InvalidClient``
+    - ``1``
+    - Parent object is not an MqttClient.
 
 
 .. _example_MqttWildcardSubscription:

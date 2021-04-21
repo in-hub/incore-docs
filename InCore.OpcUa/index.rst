@@ -19,20 +19,31 @@ Objects
 
 	OpcUaAttributeOperand
 	OpcUaClient
-	OpcUaConnection
+	OpcUaClientConnection
+	OpcUaClientMethodArgument
+	OpcUaClientMethodNode
+	OpcUaClientNode
+	OpcUaClientNodeId
+	OpcUaClientNodeIdType
+	OpcUaClientRelativeNodeId
+	OpcUaClientRelativeNodePath
+	OpcUaClientValueNode
 	OpcUaDataChangeFilter
 	OpcUaElementOperand
 	OpcUaEndpointDiscovery
 	OpcUaEventFilter
 	OpcUaFilterElement
 	OpcUaLiteralOperand
-	OpcUaMethodArgument
-	OpcUaMethodNode
-	OpcUaNode
-	OpcUaNodeId
-	OpcUaNodeIdType
-	OpcUaRelativeNodeId
-	OpcUaRelativeNodePath
+	OpcUaLocalizedText
+	OpcUaServer
 	OpcUaServerDiscovery
+	OpcUaServerMethodArgument
+	OpcUaServerMethodNode
+	OpcUaServerNamespace
+	OpcUaServerNode
+	OpcUaServerObjectNode
+	OpcUaServerSecurity
+	OpcUaServerUser
+	OpcUaServerValueNode
 	OpcUaSimpleAttributeOperand
-	OpcUaValueNode
+	OpcUaType

@@ -1,9 +1,9 @@
 
-.. _object_OpcUaRelativeNodeId:
+.. _object_OpcUaClientRelativeNodeId:
 
 
-:index:`OpcUaRelativeNodeId`
-----------------------------
+:index:`OpcUaClientRelativeNodeId`
+----------------------------------
 
 Description
 ***********
@@ -37,7 +37,7 @@ Properties
 **********
 
 
-.. _property_OpcUaRelativeNodeId_path:
+.. _property_OpcUaClientRelativeNodeId_path:
 
 .. index::
    single: path
@@ -50,7 +50,7 @@ Please refer to the `Qt OPC UA RelativeNodeId QML type <https://doc.qt.io/QtOPCU
 :**› Attributes**: Readonly
 
 
-.. _property_OpcUaRelativeNodeId_startNode:
+.. _property_OpcUaClientRelativeNodeId_startNode:
 
 .. index::
    single: startNode
@@ -64,4 +64,4 @@ Please refer to the `Qt OPC UA RelativeNodeId QML type <https://doc.qt.io/QtOPCU
 
 Example
 *******
-See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaRelativeNodeId.
+See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaClientRelativeNodeId.

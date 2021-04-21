@@ -1,9 +1,9 @@
 
-.. _object_OpcUaMethodArgument:
+.. _object_OpcUaClientMethodArgument:
 
 
-:index:`OpcUaMethodArgument`
-----------------------------
+:index:`OpcUaClientMethodArgument`
+----------------------------------
 
 Description
 ***********
@@ -38,7 +38,7 @@ Properties
 **********
 
 
-.. _property_OpcUaMethodArgument_type:
+.. _property_OpcUaClientMethodArgument_type:
 
 .. index::
    single: type
@@ -51,7 +51,7 @@ Please refer to the `Qt OPC UA MethodArgument QML type <https://doc.qt.io/QtOPCU
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaMethodArgument_value:
+.. _property_OpcUaClientMethodArgument_value:
 
 .. index::
    single: value
@@ -63,3 +63,6 @@ Please refer to the `Qt OPC UA MethodArgument QML type <https://doc.qt.io/QtOPCU
 
 :**› Attributes**: Writable
 
+Example
+*******
+See :ref:`OpcUaClientMethodNode example <example_OpcUaClientMethodNode>` on how to use OpcUaClientMethodArgument.

@@ -1,9 +1,9 @@
 
-.. _object_OpcUaRelativeNodePath:
+.. _object_OpcUaClientRelativeNodePath:
 
 
-:index:`OpcUaRelativeNodePath`
-------------------------------
+:index:`OpcUaClientRelativeNodePath`
+------------------------------------
 
 Description
 ***********
@@ -44,7 +44,7 @@ Properties
 **********
 
 
-.. _property_OpcUaRelativeNodePath_browseName:
+.. _property_OpcUaClientRelativeNodePath_browseName:
 
 .. index::
    single: browseName
@@ -57,7 +57,7 @@ Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOP
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaRelativeNodePath_includeSubtypes:
+.. _property_OpcUaClientRelativeNodePath_includeSubtypes:
 
 .. index::
    single: includeSubtypes
@@ -70,7 +70,7 @@ Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOP
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaRelativeNodePath_isInverse:
+.. _property_OpcUaClientRelativeNodePath_isInverse:
 
 .. index::
    single: isInverse
@@ -83,7 +83,7 @@ Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOP
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaRelativeNodePath_ns:
+.. _property_OpcUaClientRelativeNodePath_ns:
 
 .. index::
    single: ns
@@ -96,7 +96,7 @@ Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOP
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaRelativeNodePath_referenceType:
+.. _property_OpcUaClientRelativeNodePath_referenceType:
 
 .. index::
    single: referenceType
@@ -110,4 +110,4 @@ Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOP
 
 Example
 *******
-See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaRelativeNodePath.
+See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaClientRelativeNodePath.
