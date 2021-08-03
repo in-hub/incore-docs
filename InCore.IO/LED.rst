@@ -35,6 +35,7 @@ Methods
   :columns: 1
 
   * :ref:`toggle() <method_LED_toggle>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

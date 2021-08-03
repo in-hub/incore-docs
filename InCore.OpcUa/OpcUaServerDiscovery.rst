@@ -104,6 +104,6 @@ at(SignedInteger row)
 
 Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-serverdiscovery.html#at-method>`_ documentation.
 
-:**› Returns**: :ref:`QOpcUaApplicationDescription <enum_OpcUaServerDiscovery_QOpcUaApplicationDescription>`
+:**› Returns**: `OpcUaClientApplicationDescription <https://doc.qt.io/QtOPCUA/qml-qtopcua-applicationdescription.html>`_
 
 

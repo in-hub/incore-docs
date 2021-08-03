@@ -41,6 +41,7 @@ Methods
   * :ref:`pollGpioPinStates() <method_FtdiI2cBus_pollGpioPinStates>`
   * :ref:`readGpioPin() <method_FtdiI2cBus_readGpioPin>`
   * :ref:`writeGpioPin() <method_FtdiI2cBus_writeGpioPin>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -308,12 +309,13 @@ Example
     
     Application {
         FtdiI2cBus {
-            onCompleted: {
-                // switch on LED attached to GPIO 13
-                writeGpios(8192, 1)
-                // read lower 8 GPIO channels
-                console.log(readGpios() & 0xff)
-            }
+            Polling on gpioPinStates { }
+    
+            // read lower 8 GPIO channels
+            onGpioPinStatesChanged: console.log("GPIO 1-8:", gpioPinStates & 0xff)
+    
+            // switch on LED attached to GPIO 13
+            onCompleted:  writeGpioPin(13, 1)
         }
     }
     

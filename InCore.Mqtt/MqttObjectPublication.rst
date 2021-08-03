@@ -48,6 +48,7 @@ Methods
   * :ref:`DataObjectWriter.submit() <method_DataObjectWriter_submit>`
   * :ref:`DataObjectWriter.sync() <method_DataObjectWriter_sync>`
   * :ref:`DataObjectWriter.truncate() <method_DataObjectWriter_truncate>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

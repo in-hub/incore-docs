@@ -39,6 +39,7 @@ Methods
 
   * :ref:`connectDevice() <method_ModbusDevice_connectDevice>`
   * :ref:`disconnectDevice() <method_ModbusDevice_disconnectDevice>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

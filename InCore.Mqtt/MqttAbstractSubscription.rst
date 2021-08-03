@@ -38,6 +38,7 @@ Methods
 
   * :ref:`subscribe() <method_MqttAbstractSubscription_subscribe>`
   * :ref:`unsubscribe() <method_MqttAbstractSubscription_unsubscribe>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -167,7 +168,7 @@ Methods
 subscribe()
 +++++++++++
 
-This method subscribes the configured :ref:`topics <property_MqttAbstractSubscription_topics>` using the parent :ref:`MqttClient <object_MqttClient>` object. Once subscribed the :ref:`MqttTopic::data <property_DataObject_data>` properties are updated whenever the MQTT broker receives updates from the topic publisher.
+This method subscribes the configured topics using the parent :ref:`MqttClient <object_MqttClient>` object. Once subscribed the :ref:`MqttTopic::data <property_DataObject_data>` properties are updated whenever the MQTT broker receives updates from the topic publisher.
 
 This method usually never has to be called manually. Instead the :ref:`autoSubscribe <property_MqttAbstractSubscription_autoSubscribe>` property should be left at its default value or set to ``true``.
 
@@ -181,7 +182,7 @@ This method usually never has to be called manually. Instead the :ref:`autoSubsc
 unsubscribe()
 +++++++++++++
 
-This method unsubscribes the configured :ref:`topics <property_MqttAbstractSubscription_topics>` using the parent :ref:`MqttClient <object_MqttClient>` object. The :ref:`MqttTopic::data <property_DataObject_data>` properties will not be updated any longer if the MQTT broker receives updates from the topic publisher.
+This method unsubscribes the configured topics using the parent :ref:`MqttClient <object_MqttClient>` object. The :ref:`MqttTopic::data <property_DataObject_data>` properties will not be updated any longer if the MQTT broker receives updates from the topic publisher.
 
 
 Signals

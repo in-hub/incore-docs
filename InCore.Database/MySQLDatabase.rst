@@ -8,7 +8,7 @@
 Description
 ***********
 
-The MySQLDatabase object is used to connect to MySQL Server.
+The MySQLDatabase object can be used to connect to a MySQL database server.
 
 :**› Inherits**: :ref:`NetworkDatabase <object_NetworkDatabase>`
 
@@ -21,7 +21,6 @@ Properties
 .. hlist::
   :columns: 3
 
-  * :ref:`databaseName <property_MySQLDatabase_databaseName>`
   * :ref:`NetworkDatabase.password <property_NetworkDatabase_password>`
   * :ref:`NetworkDatabase.port <property_NetworkDatabase_port>`
   * :ref:`NetworkDatabase.server <property_NetworkDatabase_server>`
@@ -48,6 +47,7 @@ Methods
   * :ref:`Database.close() <method_Database_close>`
   * :ref:`Database.dropAllTables() <method_Database_dropAllTables>`
   * :ref:`Database.open() <method_Database_open>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -76,23 +76,6 @@ Properties
 **********
 
 
-.. _property_MySQLDatabase_databaseName:
-
-.. _signal_MySQLDatabase_databaseNameChanged:
-
-.. index::
-   single: databaseName
-
-databaseName
-++++++++++++
-
-This property holds the name of the connection's database.
-
-:**› Type**: String
-:**› Signal**: databaseNameChanged()
-:**› Attributes**: Writable
-
-
 .. _example_MySQLDatabase:
 
 
@@ -101,33 +84,26 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 1.0
-    import InCore.Database 1.0
+    import InCore.Foundation 2.4
+    import InCore.Database 2.4
     
     Application {
-        version: "0.8.15"
-    
         MySQLDatabase {
-            id: mysqlDB
+            server: "127.0.0.1"
             user: "root"
             password: "mysql"
-            databaseName: "test"
-            server: "10.1.2.6"
-            port: 3306
+            name: "mysql"
     
             sqlQueries: [
                 DatabaseSqlQuery {
-                    id: updateVersionQuery
-                    forwardOnly: true
-                    query: ("EXEC [updateVersion]
-                        @Version = %1")
-                    .arg( version )
-    
-                    onErrorChanged: console.log( errorString )
+                    id: checkVersionQuery
+                    query: ("SELECT VERSION();" )
+                    onErrorOccurred: console.log(errorString)
+                    onResultsChanged: console.log(JSON.stringify(results))
                 }
             ]
-    
-            onCompleted: updateVersionQuery.execute()
         }
+    
+        onCompleted: checkVersionQuery.execute()
     }
     

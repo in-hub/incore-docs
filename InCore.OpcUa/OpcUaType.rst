@@ -8,7 +8,9 @@
 Description
 ***********
 
+The OpcUaType object provides constants for specifying the data type of attributes modeled via :ref:`OpcUaServerValueNode <object_OpcUaServerValueNode>` objects or server arguments specified via :ref:`OpcUaServerMethodArgument <object_OpcUaServerMethodArgument>` objects.
 
+This object was introduced in InCore 2.3.
 
 :**› Inherits**: :ref:`Object <object_Object>`
 
@@ -30,6 +32,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

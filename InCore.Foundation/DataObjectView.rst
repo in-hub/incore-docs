@@ -20,13 +20,17 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 2
+  :columns: 3
 
+  * :ref:`color <property_DataObjectView_color>`
+  * :ref:`decimals <property_DataObjectView_decimals>`
   * :ref:`disabled <property_DataObjectView_disabled>`
   * :ref:`hidden <property_DataObjectView_hidden>`
   * :ref:`orderIndex <property_DataObjectView_orderIndex>`
   * :ref:`placeholder <property_DataObjectView_placeholder>`
+  * :ref:`range <property_DataObjectView_range>`
   * :ref:`readOnly <property_DataObjectView_readOnly>`
+  * :ref:`stepSize <property_DataObjectView_stepSize>`
   * :ref:`toolTip <property_DataObjectView_toolTip>`
   * :ref:`widget <property_DataObjectView_widget>`
   * :ref:`widgetData <property_DataObjectView_widgetData>`
@@ -41,6 +45,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -64,6 +69,45 @@ Enumerations
 
 Properties
 **********
+
+
+.. _property_DataObjectView_color:
+
+.. _signal_DataObjectView_colorChanged:
+
+.. index::
+   single: color
+
+color
++++++
+
+This property holds the color to use for visualizing the data, e.g. the measurement curve in a plot.
+
+This property was introduced in InCore 2.4.
+
+:**› Type**: String
+:**› Signal**: colorChanged()
+:**› Attributes**: Writable
+
+
+.. _property_DataObjectView_decimals:
+
+.. _signal_DataObjectView_decimalsChanged:
+
+.. index::
+   single: decimals
+
+decimals
+++++++++
+
+This property holds the number of digits after the decimal point to show for :ref:`DataObject.Float <enumitem_DataObject_Float>` or :ref:`DataObject.Double <enumitem_DataObject_Double>` data in widgets such as spinboxes.
+
+This property was introduced in InCore 2.4.
+
+:**› Type**: SignedInteger
+:**› Default**: ``0``
+:**› Signal**: decimalsChanged()
+:**› Attributes**: Writable
 
 
 .. _property_DataObjectView_disabled:
@@ -137,6 +181,25 @@ This property holds the placeholder for the input widget which usually is shown 
 :**› Attributes**: Writable
 
 
+.. _property_DataObjectView_range:
+
+.. _signal_DataObjectView_rangeChanged:
+
+.. index::
+   single: range
+
+range
++++++
+
+This property holds the range which to display or allow for input, usually a minimum and a maximum value.
+
+This property was introduced in InCore 2.4.
+
+:**› Type**: List
+:**› Signal**: rangeChanged()
+:**› Attributes**: Writable
+
+
 .. _property_DataObjectView_readOnly:
 
 .. _signal_DataObjectView_readOnlyChanged:
@@ -152,6 +215,26 @@ This property holds whether the view/widget should be read-only. If set to ``tru
 :**› Type**: Boolean
 :**› Default**: ``false``
 :**› Signal**: readOnlyChanged()
+:**› Attributes**: Writable
+
+
+.. _property_DataObjectView_stepSize:
+
+.. _signal_DataObjectView_stepSizeChanged:
+
+.. index::
+   single: stepSize
+
+stepSize
+++++++++
+
+This property holds the step size for widgets such as spinboxes or sliders.
+
+This property was introduced in InCore 2.4.
+
+:**› Type**: Double
+:**› Default**: ``1``
+:**› Signal**: stepSizeChanged()
 :**› Attributes**: Writable
 
 
@@ -184,7 +267,7 @@ widget
 
 This property holds an enumeration value for the frontend indicating which kind of widget to use for the related :ref:`DataObject <object_DataObject>`. See the :ref:`Widget <enum_DataObjectView_Widget>` enumeration for details.
 
-:**› Type**: :ref:`Widget <enum_DataObjectView_Widget>`
+:**› Type**: :ref:`DataObjectView.Widget <enum_DataObjectView_Widget>`
 :**› Default**: :ref:`DataObjectView.NoWidget <enumitem_DataObjectView_NoWidget>`
 :**› Signal**: widgetChanged()
 :**› Attributes**: Writable
@@ -268,6 +351,8 @@ This enumeration describes predefined values for the :ref:`widget <property_Data
    single: DataObjectView.Gauge
 .. index::
    single: DataObjectView.Chart
+.. index::
+   single: DataObjectView.SpinBox
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -315,6 +400,11 @@ This enumeration describes predefined values for the :ref:`widget <property_Data
   * - ``DataObjectView.Chart``
     - ``7``
     - Display the data value in a chart.
+
+      .. _enumitem_DataObjectView_SpinBox:
+  * - ``DataObjectView.SpinBox``
+    - ``8``
+    - Use a spinbox widget for number input.
 
 Example
 *******

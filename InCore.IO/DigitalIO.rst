@@ -41,6 +41,7 @@ Methods
   * :ref:`pollInputValue() <method_DigitalIO_pollInputValue>`
   * :ref:`pollOpenDrainFault() <method_DigitalIO_pollOpenDrainFault>`
   * :ref:`pollValue() <method_DigitalIO_pollValue>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

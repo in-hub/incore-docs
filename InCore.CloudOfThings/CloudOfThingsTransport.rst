@@ -46,6 +46,7 @@ Methods
   * :ref:`connectToHost() <method_CloudOfThingsTransport_connectToHost>`
   * :ref:`disconnectFromHost() <method_CloudOfThingsTransport_disconnectFromHost>`
   * :ref:`requestPing() <method_CloudOfThingsTransport_requestPing>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -59,6 +60,7 @@ Signals
   * :ref:`disconnected() <signal_CloudOfThingsTransport_disconnected>`
   * :ref:`errorOccurred() <signal_CloudOfThingsTransport_errorOccurred>`
   * :ref:`pingResponseReceived() <signal_CloudOfThingsTransport_pingResponseReceived>`
+  * :ref:`sslErrorOccurred() <signal_CloudOfThingsTransport_sslErrorOccurred>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 Enumerations
@@ -379,6 +381,20 @@ This signal is emitted after :ref:`requestPing() <method_CloudOfThingsTransport_
 This signal was introduced in InCore 2.0.
 
 
+
+.. _signal_CloudOfThingsTransport_sslErrorOccurred:
+
+.. index::
+   single: sslErrorOccurred
+
+sslErrorOccurred(String errorString)
+++++++++++++++++++++++++++++++++++++
+
+This signal is emitted when an TLS/SSL-related error has occurred.
+
+This signal was introduced in InCore 2.4.
+
+
 Enumerations
 ************
 
@@ -399,6 +415,8 @@ This enumeration describes all errors which can occur in CloudOfThingsTransport 
    single: CloudOfThingsTransport.MissingTenant
 .. index::
    single: CloudOfThingsTransport.TransportError
+.. index::
+   single: CloudOfThingsTransport.SslError
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -421,6 +439,11 @@ This enumeration describes all errors which can occur in CloudOfThingsTransport 
   * - ``CloudOfThingsTransport.TransportError``
     - ``2``
     - The underlaying transport had an error: .
+
+      .. _enumitem_CloudOfThingsTransport_SslError:
+  * - ``CloudOfThingsTransport.SslError``
+    - ``3``
+    - Error while establishing TLS/SSL connection.
 
 
 .. _enum_CloudOfThingsTransport_Protocol:

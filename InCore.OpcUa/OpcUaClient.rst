@@ -31,6 +31,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -59,9 +60,9 @@ Properties
 objects
 +++++++
 
-This property holds a list of OPC UA related objects, such as :ref:`OpcUaConnection <object_OpcUaConnection>`.
+This property holds a list of OPC UA related objects, such as :ref:`OpcUaClientConnection <object_OpcUaClientConnection>`.
 
-:**› Type**: :ref:`List <object_List>`\<:ref:`QObject <enum_OpcUaClient_QObject>`>
+:**› Type**: :ref:`List <object_List>`\<Object>
 :**› Signal**: objectsChanged()
 :**› Attributes**: Readonly
 

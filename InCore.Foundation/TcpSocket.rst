@@ -59,7 +59,7 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 2
+  :columns: 3
 
   * :ref:`IpSocket.abort() <method_IpSocket_abort>`
   * :ref:`IpSocket.connectToHost() <method_IpSocket_connectToHost>`
@@ -73,6 +73,7 @@ Methods
   * :ref:`IoDevice.readLine() <method_IoDevice_readLine>`
   * :ref:`IoDevice.sync() <method_IoDevice_sync>`
   * :ref:`IoDevice.write() <method_IoDevice_write>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

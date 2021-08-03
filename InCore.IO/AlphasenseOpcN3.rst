@@ -55,6 +55,7 @@ Methods
   * :ref:`pollSerialNumber() <method_AlphasenseOpcN3_pollSerialNumber>`
   * :ref:`pollValues() <method_AlphasenseOpcN3_pollValues>`
   * :ref:`reset() <method_AlphasenseOpcN3_reset>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

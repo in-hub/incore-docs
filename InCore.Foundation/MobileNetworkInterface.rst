@@ -31,6 +31,8 @@ Properties
   * :ref:`authenticationTypeItem <property_MobileNetworkInterface_authenticationTypeItem>`
   * :ref:`deviceManufacturer <property_MobileNetworkInterface_deviceManufacturer>`
   * :ref:`deviceModel <property_MobileNetworkInterface_deviceModel>`
+  * :ref:`establishIpConnection <property_MobileNetworkInterface_establishIpConnection>`
+  * :ref:`establishIpConnectionItem <property_MobileNetworkInterface_establishIpConnectionItem>`
   * :ref:`iccid <property_MobileNetworkInterface_iccid>`
   * :ref:`imei <property_MobileNetworkInterface_imei>`
   * :ref:`imsi <property_MobileNetworkInterface_imsi>`
@@ -71,6 +73,7 @@ Methods
   :columns: 1
 
   * :ref:`sendMessage() <method_MobileNetworkInterface_sendMessage>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -86,7 +89,9 @@ Signals
   * :ref:`messageSent() <signal_MobileNetworkInterface_messageSent>`
   * :ref:`NetworkInterface.errorOccurred() <signal_NetworkInterface_errorOccurred>`
   * :ref:`NetworkInterface.routesDataChanged() <signal_NetworkInterface_routesDataChanged>`
+  * :ref:`ConfigurationObject.aboutToBeUpdated() <signal_ConfigurationObject_aboutToBeUpdated>`
   * :ref:`ConfigurationObject.itemsDataChanged() <signal_ConfigurationObject_itemsDataChanged>`
+  * :ref:`ConfigurationObject.updated() <signal_ConfigurationObject_updated>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 Enumerations
@@ -238,6 +243,40 @@ This property holds the model name of the modem device.
 
 :**› Type**: String
 :**› Signal**: deviceModelChanged()
+:**› Attributes**: Readonly
+
+
+.. _property_MobileNetworkInterface_establishIpConnection:
+
+.. _signal_MobileNetworkInterface_establishIpConnectionChanged:
+
+.. index::
+   single: establishIpConnection
+
+establishIpConnection
++++++++++++++++++++++
+
+This property holds whether to establish an IP-based data connection. When set to ``false``, the modem will only register on the cellular network and remain in the :ref:`MobileNetworkInterface.StateRegistered <enumitem_MobileNetworkInterface_StateRegistered>` state. In this state it's possible to send and receive text messages (SMS).
+
+This property was introduced in InCore 2.4.
+
+:**› Type**: Boolean
+:**› Default**: ``true``
+:**› Signal**: establishIpConnectionChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MobileNetworkInterface_establishIpConnectionItem:
+
+.. index::
+   single: establishIpConnectionItem
+
+establishIpConnectionItem
++++++++++++++++++++++++++
+
+This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`establishIpConnection <property_MobileNetworkInterface_establishIpConnection>` property.
+
+:**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
 :**› Attributes**: Readonly
 
 

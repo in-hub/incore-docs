@@ -39,6 +39,7 @@ Methods
 
   * :ref:`DockerObject.create() <method_DockerObject_create>`
   * :ref:`DockerObject.remove() <method_DockerObject_remove>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

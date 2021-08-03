@@ -11,7 +11,7 @@ Description
 The NetworkDatabase object holds common properties for all kinds of databases reachable through network connections.
 
 :**› Inherits**: :ref:`Database <object_Database>`
-:**› Inherited by**: :ref:`MSSQLDatabase <object_MSSQLDatabase>`, :ref:`MySQLDatabase <object_MySQLDatabase>`
+:**› Inherited by**: :ref:`MSSQLDatabase <object_MSSQLDatabase>`, :ref:`MySQLDatabase <object_MySQLDatabase>`, :ref:`PostgreSQLDatabase <object_PostgreSQLDatabase>`
 
 Overview
 ********
@@ -48,6 +48,7 @@ Methods
   * :ref:`Database.close() <method_Database_close>`
   * :ref:`Database.dropAllTables() <method_Database_dropAllTables>`
   * :ref:`Database.open() <method_Database_open>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

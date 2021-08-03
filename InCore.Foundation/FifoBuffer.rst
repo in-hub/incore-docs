@@ -40,6 +40,7 @@ Methods
   * :ref:`read() <method_FifoBuffer_read>`
   * :ref:`write() <method_FifoBuffer_write>`
   * :ref:`List.setItem() <method_List_setItem>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

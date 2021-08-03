@@ -132,11 +132,11 @@ Example
                 inputArguments: [
                     OpcUaClientMethodArgument {
                         value: 123.456
-                        type: OpcUaConstants.Double
+                        type: OpcUaType.Double
                     },
                     OpcUaClientMethodArgument {
                         value: "Hello world"
-                        type: OpcUaConstants.String
+                        type: OpcUaType.String
                     }
                 ]
                 onOutputArgumentsChanged: console.log("Method returned", JSON.stringify(outputArguments))

@@ -36,13 +36,14 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`pollChannels() <method_EnergyAddonEN100_pollChannels>`
   * :ref:`pollEnabledChannels() <method_EnergyAddonEN100_pollEnabledChannels>`
   * :ref:`pollOperatingHours() <method_EnergyAddonEN100_pollOperatingHours>`
   * :ref:`pollSupplyVoltage() <method_EnergyAddonEN100_pollSupplyVoltage>`
   * :ref:`pollTemperature() <method_EnergyAddonEN100_pollTemperature>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

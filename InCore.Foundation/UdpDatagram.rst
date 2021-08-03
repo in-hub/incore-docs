@@ -8,7 +8,7 @@
 Description
 ***********
 
-
+The UdpDatagram object contains data and meta data of a UDP datagram received through a :ref:`UdpSocket <object_UdpSocket>` object.
 
 This object was introduced in InCore 2.3.
 
@@ -43,6 +43,7 @@ Methods
   :columns: 1
 
   * :ref:`ByteArray.remove() <method_ByteArray_remove>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

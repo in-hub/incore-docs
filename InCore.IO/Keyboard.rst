@@ -39,6 +39,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -237,7 +238,7 @@ Enumerations
 Modifiers
 +++++++++
 
-
+This enumeration describes the modifier keys which can be pressed while other keys are pressed.
 
 .. index::
    single: Keyboard.NoModifier

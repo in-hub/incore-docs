@@ -33,6 +33,7 @@ Properties
   * :ref:`system <property_Application_system>`
   * :ref:`timeZone <property_Application_timeZone>`
   * :ref:`trace <property_Application_trace>`
+  * :ref:`translate <property_Application_translate>`
   * :ref:`url <property_Application_url>`
   * :ref:`vendor <property_Application_vendor>`
   * :ref:`version <property_Application_version>`
@@ -47,6 +48,7 @@ Methods
   :columns: 1
 
   * :ref:`dumpBacktrace() <method_Application_dumpBacktrace>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -159,7 +161,7 @@ language
 This property holds the language the application is configured for. Changing this property from :ref:`Application.English <enumitem_Application_English>` to a different language may - depending on the current translation and language support state - make the individual InCore objects return translated messages and error strings.
 
 :**› Type**: :ref:`Language <enum_Application_Language>`
-:**› Default**: :ref:`Application.English <enumitem_Application_English>`
+:**› Default**: :ref:`Application.German <enumitem_Application_German>`
 :**› Signal**: languageChanged()
 :**› Attributes**: Writable
 
@@ -174,7 +176,7 @@ This property holds the language the application is configured for. Changing thi
 measurementSystem
 +++++++++++++++++
 
-This property holds the measurement system the application is configured for. Various objects derived from the :ref:`Measurement <object_Measurement>` object depend on this setting and return values converted for the appropriate measurement system. For example the :ref:`Temperature <object_Temperature>` object provides the formatted temperature in the :ref:`Measurement.displayString <property_Measurement_displayString>` property. It is converted to °F if :ref:`measurementSystem <property_Application_measurementSystem>` is set to :ref:`Measurement.ImperialUSSystem <enumitem_Measurement_ImperialUSSystem>`.
+This property holds the measurement system the application is configured for. Objects derived from the :ref:`Measurement <object_Measurement>` object may depend on this setting and return values converted for the appropriate measurement system. For example a temperature object could provide the formatted temperature in the :ref:`Measurement.displayString <property_Measurement_displayString>` property. It is converted to °F if :ref:`measurementSystem <property_Application_measurementSystem>` is set to :ref:`Measurement.ImperialUSSystem <enumitem_Measurement_ImperialUSSystem>`.
 
 :**› Type**: :ref:`Measurement.System <enum_Measurement_System>`
 :**› Default**: :ref:`Measurement.MetricSystem <enumitem_Measurement_MetricSystem>`
@@ -295,6 +297,26 @@ This property holds whether to log internal trace messages to the console. This 
 :**› Attributes**: Writable, Optional
 
 
+.. _property_Application_translate:
+
+.. _signal_Application_translateChanged:
+
+.. index::
+   single: translate
+
+translate
++++++++++
+
+This property holds whether to load a translation file based on the :ref:`language <property_Application_language>` setting. When enabled, the file ``<TWO-LETTER-ISO-639-LANGUAGE-CODE>.qm`` is loaded from the application directory.
+
+This property was introduced in InCore 2.4.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: translateChanged()
+:**› Attributes**: Writable
+
+
 .. _property_Application_url:
 
 .. _signal_Application_urlChanged:
@@ -377,6 +399,8 @@ Country
 This enumeration is used to specify a country.
 
 .. index::
+   single: Application.AnyCountry
+.. index::
    single: Application.Argentina
 .. index::
    single: Application.Australia
@@ -455,6 +479,11 @@ This enumeration is used to specify a country.
   * - Name
     - Value
     - Description
+
+      .. _enumitem_Application_AnyCountry:
+  * - ``Application.AnyCountry``
+    - ``0``
+    -  
 
       .. _enumitem_Application_Argentina:
   * - ``Application.Argentina``
@@ -648,6 +677,8 @@ Language
 This enumeration is used to specify a language.
 
 .. index::
+   single: Application.AnyLanguage
+.. index::
    single: Application.Arabic
 .. index::
    single: Application.Chinese
@@ -706,6 +737,11 @@ This enumeration is used to specify a language.
   * - Name
     - Value
     - Description
+
+      .. _enumitem_Application_AnyLanguage:
+  * - ``Application.AnyLanguage``
+    - ``0``
+    -  
 
       .. _enumitem_Application_Arabic:
   * - ``Application.Arabic``

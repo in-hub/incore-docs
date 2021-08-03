@@ -8,7 +8,7 @@
 Description
 ***********
 
-The MSSQLDatabase object is used to connect to a Microsoft SQL Server using ODBC.
+The MSSQLDatabase object can be used to connect to a Microsoft SQL Server using ODBC.
 
 :**› Inherits**: :ref:`NetworkDatabase <object_NetworkDatabase>`
 
@@ -49,6 +49,7 @@ Methods
   * :ref:`Database.close() <method_Database_close>`
   * :ref:`Database.dropAllTables() <method_Database_dropAllTables>`
   * :ref:`Database.open() <method_Database_open>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

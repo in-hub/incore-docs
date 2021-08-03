@@ -36,6 +36,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -138,7 +139,7 @@ Signals
 acceptError(:ref:`IpSocket.Error <enum_IpSocket_Error>` error)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
+This signal is emitted whenever an error occurs while accepting a new incoming connection. The error code is provided in the first argument.
 
 
 
@@ -150,7 +151,7 @@ acceptError(:ref:`IpSocket.Error <enum_IpSocket_Error>` error)
 connectionAccepted(:ref:`TcpSocket <object_TcpSocket>` connection)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
+This signal is emitted whenever a connection has been accepted successfully. The connection is provided in the first argument and is ready to be read from or written to.
 
 
 

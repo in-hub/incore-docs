@@ -44,6 +44,7 @@ Methods
   * :ref:`close() <method_Database_close>`
   * :ref:`dropAllTables() <method_Database_dropAllTables>`
   * :ref:`open() <method_Database_open>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -345,8 +346,6 @@ This enumeration describes all errors which can occur in Database objects. The m
 .. index::
    single: Database.NoError
 .. index::
-   single: Database.InvalidIdError
-.. index::
    single: Database.InvalidStorageError
 .. index::
    single: Database.StoragePathError
@@ -359,7 +358,7 @@ This enumeration describes all errors which can occur in Database objects. The m
 .. index::
    single: Database.InvalidCredentials
 .. index::
-   single: Database.InvalidDatabase
+   single: Database.InvalidNameError
 .. index::
    single: Database.ConnectionError
 .. list-table::
@@ -375,47 +374,42 @@ This enumeration describes all errors which can occur in Database objects. The m
     - ``0``
     - No error occurred or was detected.
 
-      .. _enumitem_Database_InvalidIdError:
-  * - ``Database.InvalidIdError``
-    - ``1``
-    - Empty or invalid database id (only ASCII letters and numbers allowed).
-
       .. _enumitem_Database_InvalidStorageError:
   * - ``Database.InvalidStorageError``
-    - ``2``
+    - ``1``
     - None or invalid storage set.
 
       .. _enumitem_Database_StoragePathError:
   * - ``Database.StoragePathError``
-    - ``3``
+    - ``2``
     - Error while creating directories on storage.
 
       .. _enumitem_Database_OpenError:
   * - ``Database.OpenError``
-    - ``4``
+    - ``3``
     - Can't open database.
 
       .. _enumitem_Database_InitializationError:
   * - ``Database.InitializationError``
-    - ``5``
+    - ``4``
     - Error while performing database initialization tasks.
 
       .. _enumitem_Database_CreateTablesError:
   * - ``Database.CreateTablesError``
-    - ``6``
+    - ``5``
     - Failed to create tables in database.
 
       .. _enumitem_Database_InvalidCredentials:
   * - ``Database.InvalidCredentials``
-    - ``7``
+    - ``6``
     - Some credentials are missing or invalid, e.g. no password set.
 
-      .. _enumitem_Database_InvalidDatabase:
-  * - ``Database.InvalidDatabase``
-    - ``8``
-    - None or invalid database specified.
+      .. _enumitem_Database_InvalidNameError:
+  * - ``Database.InvalidNameError``
+    - ``7``
+    - None or invalid database name specified.
 
       .. _enumitem_Database_ConnectionError:
   * - ``Database.ConnectionError``
-    - ``9``
+    - ``8``
     - Connection lost.

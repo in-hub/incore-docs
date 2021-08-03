@@ -38,6 +38,7 @@ Methods
   * :ref:`restart() <method_Timer_restart>`
   * :ref:`start() <method_Timer_start>`
   * :ref:`stop() <method_Timer_stop>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

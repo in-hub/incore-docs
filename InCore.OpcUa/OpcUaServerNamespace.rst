@@ -10,6 +10,8 @@ Description
 
 
 
+This object was introduced in InCore 2.3.
+
 :**› Inherits**: :ref:`Object <object_Object>`
 
 Overview
@@ -33,6 +35,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

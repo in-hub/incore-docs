@@ -42,13 +42,14 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`pollCpuLoad() <method_System_pollCpuLoad>`
   * :ref:`pollDeviceHumidity() <method_System_pollDeviceHumidity>`
   * :ref:`pollDeviceTemperature() <method_System_pollDeviceTemperature>`
   * :ref:`pollUptime() <method_System_pollUptime>`
   * :ref:`reboot() <method_System_reboot>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

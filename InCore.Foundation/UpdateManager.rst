@@ -47,6 +47,7 @@ Methods
   * :ref:`check() <method_UpdateManager_check>`
   * :ref:`download() <method_UpdateManager_download>`
   * :ref:`install() <method_UpdateManager_install>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

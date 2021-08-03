@@ -37,6 +37,7 @@ Methods
 
   * :ref:`pollCurrent() <method_EnergyAddonChannel_pollCurrent>`
   * :ref:`pollFrequency() <method_EnergyAddonChannel_pollFrequency>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
