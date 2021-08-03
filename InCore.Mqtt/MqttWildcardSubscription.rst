@@ -26,6 +26,8 @@ Properties
   :columns: 2
 
   * :ref:`data <property_MqttWildcardSubscription_data>`
+  * :ref:`dataType <property_MqttWildcardSubscription_dataType>`
+  * :ref:`mode <property_MqttWildcardSubscription_mode>`
   * :ref:`name <property_MqttWildcardSubscription_name>`
   * :ref:`topics <property_MqttWildcardSubscription_topics>`
   * :ref:`MqttAbstractSubscription.autoSubscribe <property_MqttAbstractSubscription_autoSubscribe>`
@@ -44,6 +46,7 @@ Methods
 
   * :ref:`MqttAbstractSubscription.subscribe() <method_MqttAbstractSubscription_subscribe>`
   * :ref:`MqttAbstractSubscription.unsubscribe() <method_MqttAbstractSubscription_unsubscribe>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -53,6 +56,7 @@ Signals
 .. hlist::
   :columns: 1
 
+  * :ref:`valueReceived() <signal_MqttWildcardSubscription_valueReceived>`
   * :ref:`MqttAbstractSubscription.errorOccurred() <signal_MqttAbstractSubscription_errorOccurred>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
@@ -62,7 +66,7 @@ Enumerations
 .. hlist::
   :columns: 1
 
-  * :ref:`Error <enum_MqttWildcardSubscription_Error>`
+  * :ref:`Mode <enum_MqttWildcardSubscription_Mode>`
   * :ref:`MqttAbstractSubscription.Error <enum_MqttAbstractSubscription_Error>`
 
 
@@ -86,6 +90,44 @@ This property holds a map with the data of all topics matching the wildcard topi
 :**› Type**: Map
 :**› Signal**: dataChanged()
 :**› Attributes**: Readonly
+
+
+.. _property_MqttWildcardSubscription_dataType:
+
+.. _signal_MqttWildcardSubscription_dataTypeChanged:
+
+.. index::
+   single: dataType
+
+dataType
+++++++++
+
+This property holds the data type which to convert the payload of incoming messages automatically. If not specified, the payload will not be converted and inserted as raw data in the :ref:`data <property_MqttWildcardSubscription_data>` map or passed as raw data to the :ref:`valueReceived() <signal_MqttWildcardSubscription_valueReceived>` signal.
+
+This property was introduced in InCore 2.4.
+
+:**› Type**: :ref:`DataObject.DataType <enum_DataObject_DataType>`
+:**› Default**: :ref:`DataObject.Invalid <enumitem_DataObject_Invalid>`
+:**› Signal**: dataTypeChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MqttWildcardSubscription_mode:
+
+.. _signal_MqttWildcardSubscription_modeChanged:
+
+.. index::
+   single: mode
+
+mode
+++++
+
+This property holds the mode which specifies how to process incoming messages. See the :ref:`MqttWildcardSubscription.Mode <enum_MqttWildcardSubscription_Mode>` enumeration for details.
+
+:**› Type**: :ref:`Mode <enum_MqttWildcardSubscription_Mode>`
+:**› Default**: :ref:`MqttWildcardSubscription.UpdateDataMap <enumitem_MqttWildcardSubscription_UpdateDataMap>`
+:**› Signal**: modeChanged()
+:**› Attributes**: Writable
 
 
 .. _property_MqttWildcardSubscription_name:
@@ -121,24 +163,43 @@ This property holds a list of names with all received topics matching the wildca
 :**› Signal**: topicsChanged()
 :**› Attributes**: Readonly
 
+Signals
+*******
+
+
+.. _signal_MqttWildcardSubscription_valueReceived:
+
+.. index::
+   single: valueReceived
+
+valueReceived(String topicName, Variant value)
+++++++++++++++++++++++++++++++++++++++++++++++
+
+This signal is emitted whenever a new value has been received and :ref:`mode <property_MqttWildcardSubscription_mode>` is set to :ref:`MqttWildcardSubscription.ReceiveValues <enumitem_MqttWildcardSubscription_ReceiveValues>`. The name of the topic and the actual value are passed.
+
+This signal was introduced in InCore 2.4.
+
+
 Enumerations
 ************
 
 
-.. _enum_MqttWildcardSubscription_Error:
+.. _enum_MqttWildcardSubscription_Mode:
 
 .. index::
-   single: Error
+   single: Mode
 
-Error
-+++++
+Mode
+++++
 
-This enumeration describes all errors which can occur in MqttAbstractSubscription objects. The most recently occurred error is stored in the :ref:`error <property_MqttWildcardSubscription_error>` property.
+This enumeration describes all supported modes for processing incoming messages
+
+This enumeration was introduced in InCore 2.4.
 
 .. index::
-   single: MqttWildcardSubscription.NoError
+   single: MqttWildcardSubscription.UpdateDataMap
 .. index::
-   single: MqttWildcardSubscription.InvalidClient
+   single: MqttWildcardSubscription.ReceiveValues
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -147,15 +208,15 @@ This enumeration describes all errors which can occur in MqttAbstractSubscriptio
     - Value
     - Description
 
-      .. _enumitem_MqttWildcardSubscription_NoError:
-  * - ``MqttWildcardSubscription.NoError``
+      .. _enumitem_MqttWildcardSubscription_UpdateDataMap:
+  * - ``MqttWildcardSubscription.UpdateDataMap``
     - ``0``
-    - No error occurred or was detected.
+    - Update the :ref:`data <property_MqttWildcardSubscription_data>` map property. Use bindings to individual subproperties of the :ref:`data <property_MqttWildcardSubscription_data>` property to use the actual data or react to ``xxxChanged()`` signals (see example).
 
-      .. _enumitem_MqttWildcardSubscription_InvalidClient:
-  * - ``MqttWildcardSubscription.InvalidClient``
+      .. _enumitem_MqttWildcardSubscription_ReceiveValues:
+  * - ``MqttWildcardSubscription.ReceiveValues``
     - ``1``
-    - Parent object is not an MqttClient.
+    - Emits the :ref:`valueReceived() <signal_MqttWildcardSubscription_valueReceived>` signal on every incoming message. In this mode, the :ref:`data <property_MqttWildcardSubscription_data>` map is not updated which can improve performance if you only need to process incoming (possibly converted) data value directly anyway.
 
 
 .. _example_MqttWildcardSubscription:
@@ -168,7 +229,6 @@ Example
 
     import InCore.Foundation 2.3
     import InCore.Mqtt 2.3
-    import InCore.IO 2.3
     
     Application {
         MqttClient {
@@ -179,20 +239,32 @@ Example
                 id: allTopics
                 name: "#"
                 onTopicsChanged: console.log("Names of all published topics:", topics)
-                property var counter: topics.includes("incore/foo/counter") ? data.incore.foo.counter : 0
+                property var counter: topics.includes("incore/foo/counter") ? parseInt(data.incore.foo.counter) : 0
                 onCounterChanged: console.log("Counter:", counter)
             }
             MqttWildcardSubscription {
                 name: "incore/+/date"
-                property var date: topics.includes("bar/date") ? data.bar.date : 0
-                onDateChanged: console.log(date)
+                dataType: MqttTopic.DateTime
+                mode: MqttWildcardSubscription.ReceiveValues
+                onValueReceived: console.log("Date:", value)
+            }
+    
+            MqttWildcardSubscription {
+                id: measurements
+                dataType: MqttTopic.Float
+                name: "measurements/#"
             }
         }
     
-        DigitalIO {
-            index: DigitalIO.IO1
-            direction: DigitalIO.Output
-            outputValue: allTopics.topics.includes("incore/foo/counter") ? allTopics.data.incore.foo.counter % 2 : 0
+        ObjectArray {
+            Repeater on objects {
+                model: measurements.topics
+                Measurement {
+                    objectId: modelData
+                    data: measurements.data[modelData]
+                    onDataChanged: console.log("Measurement value:", objectId, data)
+                }
+            }
         }
     }
     

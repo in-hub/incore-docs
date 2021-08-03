@@ -40,6 +40,7 @@ Methods
 
   * :ref:`start() <method_HttpDownload_start>`
   * :ref:`stop() <method_HttpDownload_stop>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -182,7 +183,7 @@ running
 This property holds whether the download is currently running. Changing this property is equivalent to calling :ref:`start() <method_HttpDownload_start>` and :ref:`stop() <method_HttpDownload_stop>`. After a download has been finished this property changes to ``false`` automatically.
 
 :**› Type**: Boolean
-:**› Default**: ``true``
+:**› Default**: ``false``
 :**› Signal**: runningChanged()
 :**› Attributes**: Writable
 

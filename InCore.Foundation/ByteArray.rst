@@ -13,7 +13,7 @@ The ByteArray object is used to store and transport binary data and convert it t
 This object was introduced in InCore 2.0.
 
 :**› Inherits**: :ref:`Object <object_Object>`
-:**› Inherited by**: :ref:`UdpDatagram <object_UdpDatagram>`
+:**› Inherited by**: :ref:`Resource <object_Resource>`, :ref:`UdpDatagram <object_UdpDatagram>`
 
 Overview
 ********
@@ -39,6 +39,7 @@ Methods
   :columns: 1
 
   * :ref:`remove() <method_ByteArray_remove>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

@@ -48,6 +48,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -59,7 +60,9 @@ Signals
 
   * :ref:`errorOccurred() <signal_NetworkInterface_errorOccurred>`
   * :ref:`routesDataChanged() <signal_NetworkInterface_routesDataChanged>`
+  * :ref:`ConfigurationObject.aboutToBeUpdated() <signal_ConfigurationObject_aboutToBeUpdated>`
   * :ref:`ConfigurationObject.itemsDataChanged() <signal_ConfigurationObject_itemsDataChanged>`
+  * :ref:`ConfigurationObject.updated() <signal_ConfigurationObject_updated>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 Enumerations

@@ -38,6 +38,7 @@ Methods
 
   * :ref:`execute() <method_DatabaseSqlQuery_execute>`
   * :ref:`pollResults() <method_DatabaseSqlQuery_pollResults>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

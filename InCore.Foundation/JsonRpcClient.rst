@@ -39,6 +39,7 @@ Methods
   * :ref:`call() <method_JsonRpcClient_call>`
   * :ref:`getProperty() <method_JsonRpcClient_getProperty>`
   * :ref:`setProperty() <method_JsonRpcClient_setProperty>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

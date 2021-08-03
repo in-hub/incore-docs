@@ -21,14 +21,17 @@ Properties
 .. hlist::
   :columns: 3
 
-  * :ref:`color <property_MeasurementView_color>`
   * :ref:`maximumValue <property_MeasurementView_maximumValue>`
   * :ref:`minimumValue <property_MeasurementView_minimumValue>`
+  * :ref:`DataObjectView.color <property_DataObjectView_color>`
+  * :ref:`DataObjectView.decimals <property_DataObjectView_decimals>`
   * :ref:`DataObjectView.disabled <property_DataObjectView_disabled>`
   * :ref:`DataObjectView.hidden <property_DataObjectView_hidden>`
   * :ref:`DataObjectView.orderIndex <property_DataObjectView_orderIndex>`
   * :ref:`DataObjectView.placeholder <property_DataObjectView_placeholder>`
+  * :ref:`DataObjectView.range <property_DataObjectView_range>`
   * :ref:`DataObjectView.readOnly <property_DataObjectView_readOnly>`
+  * :ref:`DataObjectView.stepSize <property_DataObjectView_stepSize>`
   * :ref:`DataObjectView.toolTip <property_DataObjectView_toolTip>`
   * :ref:`DataObjectView.widget <property_DataObjectView_widget>`
   * :ref:`DataObjectView.widgetData <property_DataObjectView_widgetData>`
@@ -43,6 +46,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -66,23 +70,6 @@ Enumerations
 
 Properties
 **********
-
-
-.. _property_MeasurementView_color:
-
-.. _signal_MeasurementView_colorChanged:
-
-.. index::
-   single: color
-
-color
-+++++
-
-This property holds the color to use for parametrizing the widget displaying a measurement, e.g. a gauge or plot.
-
-:**› Type**: String
-:**› Signal**: colorChanged()
-:**› Attributes**: Writable
 
 
 .. _property_MeasurementView_maximumValue:

@@ -8,7 +8,7 @@
 Description
 ***********
 
-The MqttSubscription object manages subscriptions of one or multiple MQTT :ref:`topics <property_MqttSubscription_topics>` published by another instance on the MQTT broker. Unless disabled explicitely via the :ref:`autoSubscribe <property_MqttSubscription_autoSubscribe>` property all topics are subscribed automatically.
+The MqttSubscription object manages subscriptions of one or multiple MQTT :ref:`topics <property_MqttSubscription_topics>` published by another instance on the MQTT broker. Unless disabled explicitely via the :ref:`MqttAbstractSubscription.autoSubscribe <property_MqttAbstractSubscription_autoSubscribe>` property all topics are subscribed automatically.
 
 The parent object must be of type :ref:`MqttClient <object_MqttClient>`.
 
@@ -40,6 +40,7 @@ Methods
 
   * :ref:`MqttAbstractSubscription.subscribe() <method_MqttAbstractSubscription_subscribe>`
   * :ref:`MqttAbstractSubscription.unsubscribe() <method_MqttAbstractSubscription_unsubscribe>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -59,7 +60,6 @@ Enumerations
 .. hlist::
   :columns: 1
 
-  * :ref:`Error <enum_MqttSubscription_Error>`
   * :ref:`MqttAbstractSubscription.Error <enum_MqttAbstractSubscription_Error>`
 
 
@@ -99,42 +99,6 @@ topicsDataChanged(SignedInteger index)
 This signal is emitted whenever the :ref:`List.dataChanged() <signal_List_dataChanged>` signal is emitted, i.e. the item at ``index`` in the :ref:`topics <property_MqttSubscription_topics>` list itself emitted the dataChanged() signal.
 
 
-Enumerations
-************
-
-
-.. _enum_MqttSubscription_Error:
-
-.. index::
-   single: Error
-
-Error
-+++++
-
-This enumeration describes all errors which can occur in MqttAbstractSubscription objects. The most recently occurred error is stored in the :ref:`error <property_MqttSubscription_error>` property.
-
-.. index::
-   single: MqttSubscription.NoError
-.. index::
-   single: MqttSubscription.InvalidClient
-.. list-table::
-  :widths: auto
-  :header-rows: 1
-
-  * - Name
-    - Value
-    - Description
-
-      .. _enumitem_MqttSubscription_NoError:
-  * - ``MqttSubscription.NoError``
-    - ``0``
-    - No error occurred or was detected.
-
-      .. _enumitem_MqttSubscription_InvalidClient:
-  * - ``MqttSubscription.InvalidClient``
-    - ``1``
-    - Parent object is not an MqttClient.
-
 
 .. _example_MqttSubscription:
 
@@ -150,28 +114,35 @@ Example
     Application {
         MqttClient {
             clientId: "MqttSubscriptionExample"
-            hostname: "mqtt.inhub.de"
+            hostname: "localhost"
     
             MqttSubscription {
                 qos: 1
                 onSubscribedChanged: console.log("Subscribed to topics")
     
                 MqttTopic {
-                    name: "inhub/address"
-                    onDataChanged: console.log("Address changed to", data)
+                    name: "incore/temperature"
+                    dataType: MqttTopic.Float
+                    onDataChanged: console.log("Device temperature changed to", data)
                 }
     
                 MqttTopic {
-                    name: "inhub/customerCount"
-                    dataType: MqttTopic.UnsignedInteger
-                    onDataChanged: console.log("Number of customers changed to", data)
+                    name: "incore/foo/counter"
+                    onDataChanged: console.log("Counter changed to", data)
                 }
     
                 MqttTopic {
-                    name: "inhub/isGreat"
-                    dataType: MqttTopic.Boolean
-                    onDataChanged: console.log("isGreat changed to", data)
+                    name: "incore/bar/date"
+                    dataType: DataObject.DateTime
+                    onDataChanged: console.log("Date changed to", data)
                 }
+    
+                MqttTopic {
+                    name: "incore/array"
+                    dataType: DataObject.StringList
+                    onDataChanged: console.log("Array data:", data)
+                }
+    
             }
         }
     }

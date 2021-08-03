@@ -51,6 +51,7 @@ Methods
   * :ref:`DataObjectWriter.submit() <method_DataObjectWriter_submit>`
   * :ref:`DataObjectWriter.sync() <method_DataObjectWriter_sync>`
   * :ref:`DataObjectWriter.truncate() <method_DataObjectWriter_truncate>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -265,6 +266,7 @@ Example
     
         DateTime {
             id: dateTime
+            dateFormat: DateTime.FormatISO
         }
     
         Counter {
@@ -294,7 +296,15 @@ Example
                 // publish current date string on every change (i.e. every second)
                 MqttTopic {
                     name: "incore/bar/date"
+                    dataType: MqttTopic.DateTime
                     data: dateTime.string
+                }
+    
+                // publish array as comma separated string list
+                MqttTopic {
+                    name: "incore/array"
+                    dataType: MqttTopic.StringList
+                    data: [ 1, 2, 3 ]
                 }
             }
         }

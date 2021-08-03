@@ -198,8 +198,8 @@ Methods
 .. index::
    single: connectToEndpoint
 
-connectToEndpoint(:ref:`QOpcUaEndpointDescription <enum_OpcUaClientConnection_QOpcUaEndpointDescription>` endpointDescription)
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+connectToEndpoint(`OpcUaClientEndpointDescription <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdescription.html>`_ endpointDescription)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connectToEndpoint-method>`_ documentation.
 

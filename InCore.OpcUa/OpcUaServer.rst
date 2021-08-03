@@ -10,6 +10,8 @@ Description
 
 The OpcUaServer object provides an OPC UA server to which :ref:`OpcUaServerNamespace <object_OpcUaServerNamespace>` objects with corresponding child nodes can be added.
 
+This object was introduced in InCore 2.3.
+
 :**› Inherits**: :ref:`Object <object_Object>`
 
 Overview
@@ -19,10 +21,11 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`enabled <property_OpcUaServer_enabled>`
   * :ref:`namespaces <property_OpcUaServer_namespaces>`
+  * :ref:`nodeSets <property_OpcUaServer_nodeSets>`
   * :ref:`port <property_OpcUaServer_port>`
   * :ref:`security <property_OpcUaServer_security>`
   * :ref:`users <property_OpcUaServer_users>`
@@ -35,6 +38,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -87,6 +91,25 @@ namespaces
 :**› Type**: :ref:`List <object_List>`\<:ref:`OpcUaServerNamespace <object_OpcUaServerNamespace>`>
 :**› Signal**: namespacesChanged()
 :**› Attributes**: Readonly
+
+
+.. _property_OpcUaServer_nodeSets:
+
+.. _signal_OpcUaServer_nodeSetsChanged:
+
+.. index::
+   single: nodeSets
+
+nodeSets
+++++++++
+
+This property holds a list of OPC UA NodeSet files which to load at start.
+
+This property was introduced in InCore 2.4.
+
+:**› Type**: StringList
+:**› Signal**: nodeSetsChanged()
+:**› Attributes**: Writable
 
 
 .. _property_OpcUaServer_port:

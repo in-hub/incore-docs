@@ -37,6 +37,7 @@ Methods
 
   * :ref:`clear() <method_CloudOfThingsMeasurementDatabase_clear>`
   * :ref:`datasetCount() <method_CloudOfThingsMeasurementDatabase_datasetCount>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

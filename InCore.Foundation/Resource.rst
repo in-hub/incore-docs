@@ -8,9 +8,9 @@
 Description
 ***********
 
-The Resource object provides the content of a file as a string. This can be used to easily process the content of text files or provide base64-encoded image data.
+The Resource object provides the content of a local or remote file as a string. This can be used to easily process the content of text files or provide base64-encoded image data.
 
-:**› Inherits**: :ref:`Object <object_Object>`
+:**› Inherits**: :ref:`ByteArray <object_ByteArray>`
 
 Overview
 ********
@@ -21,12 +21,15 @@ Properties
 .. hlist::
   :columns: 2
 
-  * :ref:`data <property_Resource_data>`
-  * :ref:`encoding <property_Resource_encoding>`
   * :ref:`error <property_Resource_error>`
   * :ref:`errorString <property_Resource_errorString>`
   * :ref:`fileName <property_Resource_fileName>`
   * :ref:`storage <property_Resource_storage>`
+  * :ref:`ByteArray.arrayBuffer <property_ByteArray_arrayBuffer>`
+  * :ref:`ByteArray.base64 <property_ByteArray_base64>`
+  * :ref:`ByteArray.data <property_ByteArray_data>`
+  * :ref:`ByteArray.hex <property_ByteArray_hex>`
+  * :ref:`ByteArray.string <property_ByteArray_string>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
 
@@ -36,6 +39,8 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`ByteArray.remove() <method_ByteArray_remove>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -54,48 +59,12 @@ Enumerations
 .. hlist::
   :columns: 1
 
-  * :ref:`Encoding <enum_Resource_Encoding>`
   * :ref:`Error <enum_Resource_Error>`
 
 
 
 Properties
 **********
-
-
-.. _property_Resource_data:
-
-.. _signal_Resource_dataChanged:
-
-.. index::
-   single: data
-
-data
-++++
-
-This property holds the contents of the file resource. Its encoding is based on the :ref:`encoding <property_Resource_encoding>` property.
-
-:**› Type**: String
-:**› Signal**: dataChanged()
-:**› Attributes**: Readonly
-
-
-.. _property_Resource_encoding:
-
-.. _signal_Resource_encodingChanged:
-
-.. index::
-   single: encoding
-
-encoding
-++++++++
-
-This property holds the encoding type specifying how to encode the data read from the file before updating the :ref:`data <property_Resource_data>` property.
-
-:**› Type**: :ref:`Encoding <enum_Resource_Encoding>`
-:**› Default**: :ref:`Resource.Raw <enumitem_Resource_Raw>`
-:**› Signal**: encodingChanged()
-:**› Attributes**: Writable
 
 
 .. _property_Resource_error:
@@ -142,7 +111,7 @@ This property holds the current human readable error string corresponding to the
 fileName
 ++++++++
 
-This property holds the name of the resource file to read. It is relative to :ref:`storage <property_Resource_storage>` and its :ref:`path <property_Storage_path>` on the storage.
+This property holds the name of the resource file to read. It can be a full URL (including remote URLs with the http scheme) or a path relative to :ref:`storage <property_Resource_storage>` and its :ref:`path <property_Storage_path>` on the storage.
 
 :**› Type**: String
 :**› Signal**: fileNameChanged()
@@ -182,39 +151,6 @@ This signal is emitted whenever an error has occurred, regardless of whether the
 
 Enumerations
 ************
-
-
-.. _enum_Resource_Encoding:
-
-.. index::
-   single: Encoding
-
-Encoding
-++++++++
-
-This enumeration describes the supported encoding types for the :ref:`data <property_Resource_data>` property.
-
-.. index::
-   single: Resource.Raw
-.. index::
-   single: Resource.Base64
-.. list-table::
-  :widths: auto
-  :header-rows: 1
-
-  * - Name
-    - Value
-    - Description
-
-      .. _enumitem_Resource_Raw:
-  * - ``Resource.Raw``
-    - ``0``
-    - Provide the file contents as a UTF-8 encoded string.
-
-      .. _enumitem_Resource_Base64:
-  * - ``Resource.Base64``
-    - ``1``
-    - Provide the file contents as a base64 encoded string.
 
 
 .. _enum_Resource_Error:

@@ -36,13 +36,14 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`close() <method_DataObjectWriter_close>`
   * :ref:`open() <method_DataObjectWriter_open>`
   * :ref:`submit() <method_DataObjectWriter_submit>`
   * :ref:`sync() <method_DataObjectWriter_sync>`
   * :ref:`truncate() <method_DataObjectWriter_truncate>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

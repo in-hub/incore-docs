@@ -34,6 +34,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -43,7 +44,9 @@ Signals
 .. hlist::
   :columns: 1
 
+  * :ref:`aboutToBeUpdated() <signal_ConfigurationObject_aboutToBeUpdated>`
   * :ref:`itemsDataChanged() <signal_ConfigurationObject_itemsDataChanged>`
+  * :ref:`updated() <signal_ConfigurationObject_updated>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 
@@ -103,6 +106,20 @@ Signals
 *******
 
 
+.. _signal_ConfigurationObject_aboutToBeUpdated:
+
+.. index::
+   single: aboutToBeUpdated
+
+aboutToBeUpdated()
+++++++++++++++++++
+
+This signal is emitted before the configuration object is being updated through object deserialization, e.g. when using in conjunction with an :ref:`JsonRpcService <object_JsonRpcService>` and loading settings through RPC calls.
+
+This signal was introduced in InCore 2.4.
+
+
+
 .. _signal_ConfigurationObject_itemsDataChanged:
 
 .. index::
@@ -112,5 +129,19 @@ itemsDataChanged(SignedInteger index)
 +++++++++++++++++++++++++++++++++++++
 
 This signal is emitted whenever the :ref:`List.dataChanged() <signal_List_dataChanged>` signal is emitted, i.e. the item at ``index`` in the :ref:`items <property_ConfigurationObject_items>` list itself emitted the dataChanged() signal.
+
+
+
+.. _signal_ConfigurationObject_updated:
+
+.. index::
+   single: updated
+
+updated()
++++++++++
+
+This signal is emitted after the configuration object has been updated through object deserialization, e.g. when using in conjunction with an :ref:`JsonRpcService <object_JsonRpcService>` and loading settings through RPC calls.
+
+This signal was introduced in InCore 2.4.
 
 

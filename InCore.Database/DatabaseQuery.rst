@@ -30,6 +30,7 @@ Properties
   * :ref:`limitPos <property_DatabaseQuery_limitPos>`
   * :ref:`objects <property_DatabaseQuery_objects>`
   * :ref:`orderBy <property_DatabaseQuery_orderBy>`
+  * :ref:`orderByNames <property_DatabaseQuery_orderByNames>`
   * :ref:`results <property_DatabaseQuery_results>`
   * :ref:`table <property_DatabaseQuery_table>`
   * :ref:`Object.objectId <property_Object_objectId>`
@@ -43,6 +44,7 @@ Methods
 
   * :ref:`execute() <method_DatabaseQuery_execute>`
   * :ref:`pollResults() <method_DatabaseQuery_pollResults>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -186,11 +188,30 @@ This property holds the list of objects which column should be queried. The orde
 orderBy
 +++++++
 
-This property holds a list of columns to use for ordering (sorting) the rows. Currently only ``ascending`` ordering is done.
+This property holds a list of columns to use for ordering (sorting) the rows. Only ``ascending`` ordering is done. See also :ref:`orderByNames <property_DatabaseQuery_orderByNames>`.
 
 :**› Type**: :ref:`List <object_List>`\<:ref:`DataObject <object_DataObject>`>
 :**› Signal**: orderByChanged()
 :**› Attributes**: Readonly
+
+
+.. _property_DatabaseQuery_orderByNames:
+
+.. _signal_DatabaseQuery_orderByNamesChanged:
+
+.. index::
+   single: orderByNames
+
+orderByNames
+++++++++++++
+
+This property holds a string list of column ids to use for ordering (sorting) the rows. This will have no effect if :ref:`orderBy <property_DatabaseQuery_orderBy>` is set. The negative sign in front of an id indicates ``descending`` order. See also the example at the bottom.
+
+This property was introduced in InCore 2.4.
+
+:**› Type**: StringList
+:**› Signal**: orderByNamesChanged()
+:**› Attributes**: Writable
 
 
 .. _property_DatabaseQuery_results:

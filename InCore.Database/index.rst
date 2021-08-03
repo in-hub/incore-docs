@@ -31,3 +31,4 @@ Objects
 	MSSQLDatabase
 	MySQLDatabase
 	NetworkDatabase
+	PostgreSQLDatabase

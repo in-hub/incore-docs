@@ -104,7 +104,7 @@ at(SignedInteger row)
 
 Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdiscovery.html#at-method>`_ documentation.
 
-:**› Returns**: :ref:`QOpcUaEndpointDescription <enum_OpcUaEndpointDiscovery_QOpcUaEndpointDescription>`
+:**› Returns**: `OpcUaClientEndpointDescription <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdescription.html>`_
 
 
 

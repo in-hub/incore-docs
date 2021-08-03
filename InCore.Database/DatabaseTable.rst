@@ -51,6 +51,7 @@ Methods
   * :ref:`DataObjectWriter.submit() <method_DataObjectWriter_submit>`
   * :ref:`DataObjectWriter.sync() <method_DataObjectWriter_sync>`
   * :ref:`DataObjectWriter.truncate() <method_DataObjectWriter_truncate>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -402,7 +403,7 @@ Example
 .. code-block:: qml
 
     import InCore.Foundation 2.0
-    import InCore.Database 2.0
+    import InCore.Database 2.4
     
     Application {
     
@@ -444,6 +445,17 @@ Example
                         }
     
                         Polling on results { interval: 10000 }
+                    },
+    
+                    DatabaseQuery {
+                        // query only sensor3 data
+                        objects: [sensor3]
+                        // sort by sensor3 descending, then sensor2 ascending
+                        orderByNames: ["-sensor3", "sensor2"]
+    
+                        // only get 10 values descending
+                        limitPos: 0
+                        limitLength: 10
                     }
                 ]
             }

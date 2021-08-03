@@ -38,6 +38,7 @@ Methods
   :columns: 1
 
   * :ref:`reset() <method_BackplaneBus_reset>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

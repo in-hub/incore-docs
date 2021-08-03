@@ -10,6 +10,8 @@ Description
 
 
 
+This object was introduced in InCore 2.3.
+
 :**› Inherits**: :ref:`OpcUaServerNode <object_OpcUaServerNode>`
 
 Overview
@@ -22,6 +24,7 @@ Properties
   :columns: 2
 
   * :ref:`readOnly <property_OpcUaServerValueNode_readOnly>`
+  * :ref:`unit <property_OpcUaServerValueNode_unit>`
   * :ref:`value <property_OpcUaServerValueNode_value>`
   * :ref:`valueType <property_OpcUaServerValueNode_valueType>`
   * :ref:`OpcUaServerNode.browseName <property_OpcUaServerNode_browseName>`
@@ -29,6 +32,7 @@ Properties
   * :ref:`OpcUaServerNode.displayName <property_OpcUaServerNode_displayName>`
   * :ref:`OpcUaServerNode.fullNodePath <property_OpcUaServerNode_fullNodePath>`
   * :ref:`OpcUaServerNode.identifier <property_OpcUaServerNode_identifier>`
+  * :ref:`OpcUaServerNode.typeDefinition <property_OpcUaServerNode_typeDefinition>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
 
@@ -38,6 +42,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -70,6 +75,26 @@ This property holds whether the :ref:`value <property_OpcUaServerValueNode_value
 :**› Type**: Boolean
 :**› Default**: ``false``
 :**› Signal**: readOnlyChanged()
+:**› Attributes**: Writable
+
+
+.. _property_OpcUaServerValueNode_unit:
+
+.. _signal_OpcUaServerValueNode_unitChanged:
+
+.. index::
+   single: unit
+
+unit
+++++
+
+This property holds one of the units as defined per http://www.opcfoundation.org/UA/units/un/cefact
+
+This property was introduced in InCore 2.4.
+
+:**› Type**: :ref:`Measurement.Unit <enum_Measurement_Unit>`
+:**› Default**: :ref:`Measurement.NoUnit <enumitem_Measurement_NoUnit>`
+:**› Signal**: unitChanged()
 :**› Attributes**: Writable
 
 

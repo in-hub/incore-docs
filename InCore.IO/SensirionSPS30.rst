@@ -51,6 +51,7 @@ Methods
   * :ref:`pollValues() <method_SensirionSPS30_pollValues>`
   * :ref:`reset() <method_SensirionSPS30_reset>`
   * :ref:`startFanCleaning() <method_SensirionSPS30_startFanCleaning>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 

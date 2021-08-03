@@ -48,6 +48,7 @@ Methods
   * :ref:`pollBusStatus() <method_CanBus_pollBusStatus>`
   * :ref:`reset() <method_CanBus_reset>`
   * :ref:`writeFrame() <method_CanBus_writeFrame>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
@@ -105,6 +106,8 @@ busStatus
 +++++++++
 
 This property holds the current CAN bus status.
+
+This property was introduced in InCore 2.2.
 
 :**› Type**: :ref:`BusStatus <enum_CanBus_BusStatus>`
 :**› Signal**: busStatusChanged()
@@ -314,7 +317,11 @@ This method polls the :ref:`busStatus <property_CanBus_busStatus>` property. It 
 reset()
 +++++++
 
+This method performs a CAN controller reset to release the CAN controller from bus off state, if possible.
 
+Note: CAN controller resets disturb the running communication and may take up to one second to complete. Only call this function to recover from bus errors.
+
+This method was introduced in InCore 2.2.
 
 
 
@@ -398,6 +405,8 @@ BusStatus
 
 This enumeration describes all possible states of the CAN bus.
 
+This enumeration was introduced in InCore 2.2.
+
 .. index::
    single: CanBus.Unknown
 .. index::
@@ -419,27 +428,27 @@ This enumeration describes all possible states of the CAN bus.
       .. _enumitem_CanBus_Unknown:
   * - ``CanBus.Unknown``
     - ``0``
-    - .
+    - The CAN bus status is unknown.
 
       .. _enumitem_CanBus_Good:
   * - ``CanBus.Good``
     - ``1``
-    - 
+    - The CAN controller is fully operational.
 
       .. _enumitem_CanBus_Warning:
   * - ``CanBus.Warning``
     - ``2``
-    - 
+    - The CAN controller is in warning status.
 
       .. _enumitem_CanBus_Error:
   * - ``CanBus.Error``
     - ``3``
-    - 
+    - The CAN controller is in error status (no longer sending CAN frames).
 
       .. _enumitem_CanBus_BusOff:
   * - ``CanBus.BusOff``
     - ``4``
-    - 
+    - The CAN controller is in bus off status (disconnected from the CAN bus).
 
 
 .. _enum_CanBus_Error:

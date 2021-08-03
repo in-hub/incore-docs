@@ -203,12 +203,12 @@ Methods
 .. index::
    single: getServerTimestamp
 
-getServerTimestamp(:ref:`QOpcUa.NodeAttribute <enum_QOpcUa_NodeAttribute>`)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+getServerTimestamp(:ref:`OpcUaNodeAttribute.NodeAttribute <enum_OpcUaNodeAttribute_NodeAttribute>`)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#getServerTimestamp-method>`_ documentation.
 
-:**› Returns**: :ref:`QDateTime <enum_OpcUaClientNode_QDateTime>`
+:**› Returns**: DateTime
 
 
 
@@ -217,12 +217,12 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 .. index::
    single: getSourceTimestamp
 
-getSourceTimestamp(:ref:`QOpcUa.NodeAttribute <enum_QOpcUa_NodeAttribute>`)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+getSourceTimestamp(:ref:`OpcUaNodeAttribute.NodeAttribute <enum_OpcUaNodeAttribute_NodeAttribute>`)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#getSourceTimestamp-method>`_ documentation.
 
-:**› Returns**: :ref:`QDateTime <enum_OpcUaClientNode_QDateTime>`
+:**› Returns**: DateTime
 
 
 Signals
