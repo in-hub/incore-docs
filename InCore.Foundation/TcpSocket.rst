@@ -114,7 +114,7 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.3
+    import InCore.Foundation 2.5
     
     TcpSocket {
         hostname: "10.1.2.3"

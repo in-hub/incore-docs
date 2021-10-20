@@ -27,8 +27,11 @@ Objects
 	DatabaseQueryWhere
 	DatabaseSqlQuery
 	DatabaseTable
+	DatabaseUpdate
 	LocalDatabase
 	MSSQLDatabase
+	MeasurementBufferDatabase
+	MeasurementDatabase
 	MySQLDatabase
 	NetworkDatabase
 	PostgreSQLDatabase

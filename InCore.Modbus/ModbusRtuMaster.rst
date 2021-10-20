@@ -28,6 +28,7 @@ Properties
   * :ref:`parity <property_ModbusRtuMaster_parity>`
   * :ref:`portName <property_ModbusRtuMaster_portName>`
   * :ref:`stopBits <property_ModbusRtuMaster_stopBits>`
+  * :ref:`turnaroundDelay <property_ModbusRtuMaster_turnaroundDelay>`
   * :ref:`ModbusClient.numberOfRetries <property_ModbusClient_numberOfRetries>`
   * :ref:`ModbusClient.slaves <property_ModbusClient_slaves>`
   * :ref:`ModbusClient.timeout <property_ModbusClient_timeout>`
@@ -184,6 +185,25 @@ This property holds the number of stop bits of the serial port used for communic
 :**› Attributes**: Writable
 
 
+.. _property_ModbusRtuMaster_turnaroundDelay:
+
+.. _signal_ModbusRtuMaster_turnaroundDelayChanged:
+
+.. index::
+   single: turnaroundDelay
+
+turnaroundDelay
++++++++++++++++
+
+This property holds the amount of milliseconds for the silent interval between a Modbus broadcast and a consecutive Modbus messages. Typically the turnaround delay is in the range of ``100`` to ``200`` milliseconds.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: SignedInteger
+:**› Signal**: turnaroundDelayChanged()
+:**› Attributes**: Writable
+
+
 .. _example_ModbusRtuMaster:
 
 
@@ -192,8 +212,8 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.Modbus 2.0
+    import InCore.Foundation 2.5
+    import InCore.Modbus 2.5
     
     Application {
     

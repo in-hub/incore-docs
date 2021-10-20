@@ -560,7 +560,7 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.3
+    import InCore.Foundation 2.5
     
     Application {
         NetworkConfiguration {

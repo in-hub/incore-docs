@@ -21,6 +21,7 @@ Properties
 .. hlist::
   :columns: 2
 
+  * :ref:`lowDelay <property_ModbusTcpClient_lowDelay>`
   * :ref:`networkAddress <property_ModbusTcpClient_networkAddress>`
   * :ref:`networkPort <property_ModbusTcpClient_networkPort>`
   * :ref:`ModbusClient.numberOfRetries <property_ModbusClient_numberOfRetries>`
@@ -73,6 +74,26 @@ Properties
 **********
 
 
+.. _property_ModbusTcpClient_lowDelay:
+
+.. _signal_ModbusTcpClient_lowDelayChanged:
+
+.. index::
+   single: lowDelay
+
+lowDelay
+++++++++
+
+This property holds whether to optimize the underlying TCP/IP socket for low latency by setting the ``TCP_NODELAY`` option and disabling Nagle's algorithm.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: lowDelayChanged()
+:**› Attributes**: Writable
+
+
 .. _property_ModbusTcpClient_networkAddress:
 
 .. _signal_ModbusTcpClient_networkAddressChanged:
@@ -117,8 +138,8 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.Modbus 2.0
+    import InCore.Foundation 2.5
+    import InCore.Modbus 2.5
     
     Application {
     

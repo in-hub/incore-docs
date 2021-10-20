@@ -181,7 +181,9 @@ Methods
 execute()
 +++++++++
 
-This method executes the query and updates :ref:`results <property_DatabaseSqlQuery_results>`
+This method executes the query and updates :ref:`results <property_DatabaseSqlQuery_results>`. On success, ``true`` is returned, otherwise ``false``.
+
+:**› Returns**: Boolean
 
 
 

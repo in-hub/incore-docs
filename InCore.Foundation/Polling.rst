@@ -21,12 +21,13 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`error <property_Polling_error>`
   * :ref:`errorString <property_Polling_errorString>`
   * :ref:`interval <property_Polling_interval>`
   * :ref:`running <property_Polling_running>`
+  * :ref:`timestamp <property_Polling_timestamp>`
   * :ref:`PropertyModifier.targetValue <property_PropertyModifier_targetValue>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
@@ -133,6 +134,25 @@ This property holds whether the specified property is polled. This can be used t
 :**› Signal**: runningChanged()
 :**› Attributes**: Writable
 
+
+.. _property_Polling_timestamp:
+
+.. _signal_Polling_timestampChanged:
+
+.. index::
+   single: timestamp
+
+timestamp
++++++++++
+
+This property holds a timestamp in milliseconds of the last successful property polling.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: SignedBigInteger
+:**› Signal**: timestampChanged()
+:**› Attributes**: Writable
+
 Signals
 *******
 
@@ -193,8 +213,8 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.IO 2.0
+    import InCore.Foundation 2.5
+    import InCore.IO 2.5
     
     Application {
     

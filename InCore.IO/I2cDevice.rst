@@ -109,8 +109,8 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.IO 2.0
+    import InCore.Foundation 2.5
+    import InCore.IO 2.5
     
     Application {
         FtdiI2cBus {

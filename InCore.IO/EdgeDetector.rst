@@ -21,10 +21,13 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
+  * :ref:`detectFallingEdges <property_EdgeDetector_detectFallingEdges>`
+  * :ref:`detectRisingEdges <property_EdgeDetector_detectRisingEdges>`
   * :ref:`error <property_EdgeDetector_error>`
   * :ref:`errorString <property_EdgeDetector_errorString>`
+  * :ref:`running <property_EdgeDetector_running>`
   * :ref:`PropertyModifier.targetValue <property_PropertyModifier_targetValue>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
@@ -64,6 +67,46 @@ Properties
 **********
 
 
+.. _property_EdgeDetector_detectFallingEdges:
+
+.. _signal_EdgeDetector_detectFallingEdgesChanged:
+
+.. index::
+   single: detectFallingEdges
+
+detectFallingEdges
+++++++++++++++++++
+
+This property holds whether to react to falling edges and emit the :ref:`fallingEdge() <signal_EdgeDetector_fallingEdge>` signal. Set it to ``false`` to save CPU cycles if only rising edges are of interest.
+
+This property was introduced in InCore 2.4.
+
+:**› Type**: Boolean
+:**› Default**: ``true``
+:**› Signal**: detectFallingEdgesChanged()
+:**› Attributes**: Writable
+
+
+.. _property_EdgeDetector_detectRisingEdges:
+
+.. _signal_EdgeDetector_detectRisingEdgesChanged:
+
+.. index::
+   single: detectRisingEdges
+
+detectRisingEdges
++++++++++++++++++
+
+This property holds whether to react to rising edges and emit the :ref:`risingEdge() <signal_EdgeDetector_risingEdge>` signal. Set it to ``false`` to save CPU cycles if only falling edges are of interest.
+
+This property was introduced in InCore 2.4.
+
+:**› Type**: Boolean
+:**› Default**: ``true``
+:**› Signal**: detectRisingEdgesChanged()
+:**› Attributes**: Writable
+
+
 .. _property_EdgeDetector_error:
 
 .. _signal_EdgeDetector_errorChanged:
@@ -96,6 +139,26 @@ This property holds the current human readable error string corresponding to the
 :**› Type**: String
 :**› Signal**: errorStringChanged()
 :**› Attributes**: Readonly
+
+
+.. _property_EdgeDetector_running:
+
+.. _signal_EdgeDetector_runningChanged:
+
+.. index::
+   single: running
+
+running
++++++++
+
+This property holds whether the edge detector is active. This can be used to switch the detector on or off corresponding to constraints.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: Boolean
+:**› Default**: ``true``
+:**› Signal**: runningChanged()
+:**› Attributes**: Writable
 
 Signals
 *******

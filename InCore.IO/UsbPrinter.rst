@@ -117,7 +117,7 @@ Example
 
 .. code-block:: qml
 
-    import InCore.IO 2.3
+    import InCore.IO 2.5
     
     UsbPrinter {
         index: 0

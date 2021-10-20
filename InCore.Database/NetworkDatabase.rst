@@ -33,6 +33,7 @@ Properties
   * :ref:`Database.errorDetails <property_Database_errorDetails>`
   * :ref:`Database.errorString <property_Database_errorString>`
   * :ref:`Database.name <property_Database_name>`
+  * :ref:`Database.ready <property_Database_ready>`
   * :ref:`Database.reopenInterval <property_Database_reopenInterval>`
   * :ref:`Database.sqlQueries <property_Database_sqlQueries>`
   * :ref:`Database.tables <property_Database_tables>`

@@ -30,6 +30,7 @@ Properties
   * :ref:`pseudoRingBufferOrderBy <property_DatabaseTable_pseudoRingBufferOrderBy>`
   * :ref:`pseudoRingBufferSize <property_DatabaseTable_pseudoRingBufferSize>`
   * :ref:`queries <property_DatabaseTable_queries>`
+  * :ref:`ready <property_DatabaseTable_ready>`
   * :ref:`structure <property_DatabaseTable_structure>`
   * :ref:`DataObjectWriter.datasetCount <property_DataObjectWriter_datasetCount>`
   * :ref:`DataObjectWriter.objects <property_DataObjectWriter_objects>`
@@ -227,6 +228,26 @@ This property holds a list of :ref:`DatabaseQuery <object_DatabaseQuery>` object
 :**› Attributes**: Readonly
 
 
+.. _property_DatabaseTable_ready:
+
+.. _signal_DatabaseTable_readyChanged:
+
+.. index::
+   single: ready
+
+ready
++++++
+
+This property holds whether the database table has been opened and initialized successfully and is ready to execute queries.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: readyChanged()
+:**› Attributes**: Readonly
+
+
 .. _property_DatabaseTable_structure:
 
 .. _signal_DatabaseTable_structureChanged:
@@ -402,8 +423,8 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.Database 2.4
+    import InCore.Foundation 2.5
+    import InCore.Database 2.5
     
     Application {
     

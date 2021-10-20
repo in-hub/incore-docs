@@ -113,7 +113,7 @@ This property holds whether to allow this field to be empty when inserting a new
 dbColumn
 ++++++++
 
-This property holds the name of the database column for the field, otherwise per default the object ID is be used
+This property holds the name of the database column for the field, otherwise per default the object ID is be used.
 
 :**› Type**: String
 :**› Signal**: dbColumnChanged()
@@ -286,8 +286,8 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.Database 2.0
+    import InCore.Foundation 2.5
+    import InCore.Database 2.5
     
     Application {
     

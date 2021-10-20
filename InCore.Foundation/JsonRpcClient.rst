@@ -27,6 +27,7 @@ Properties
   * :ref:`hostname <property_JsonRpcClient_hostname>`
   * :ref:`path <property_JsonRpcClient_path>`
   * :ref:`protocol <property_JsonRpcClient_protocol>`
+  * :ref:`serviceName <property_JsonRpcClient_serviceName>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
 
@@ -124,11 +125,31 @@ This property holds the URL path of the RPC endpoint.
 protocol
 ++++++++
 
-This property holds the protocol to use for sending the JSON-RPC requests. Valid values are ``http`` and ``https``
+This property holds the protocol to use for sending the JSON-RPC requests. Valid values are ``http`` and ``https``.
 
 :**› Type**: String
 :**› Default**: ``http``
 :**› Signal**: protocolChanged()
+:**› Attributes**: Writable
+
+
+.. _property_JsonRpcClient_serviceName:
+
+.. _signal_JsonRpcClient_serviceNameChanged:
+
+.. index::
+   single: serviceName
+
+serviceName
++++++++++++
+
+This property holds the server-side name of the service corresponding to \property{JsonRpcService.serviceName}.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: String
+:**› Default**: ``incore``
+:**› Signal**: serviceNameChanged()
 :**› Attributes**: Writable
 
 Methods
