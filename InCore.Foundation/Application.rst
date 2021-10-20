@@ -34,6 +34,7 @@ Properties
   * :ref:`timeZone <property_Application_timeZone>`
   * :ref:`trace <property_Application_trace>`
   * :ref:`translate <property_Application_translate>`
+  * :ref:`trapErrors <property_Application_trapErrors>`
   * :ref:`url <property_Application_url>`
   * :ref:`vendor <property_Application_vendor>`
   * :ref:`version <property_Application_version>`
@@ -314,6 +315,26 @@ This property was introduced in InCore 2.4.
 :**› Type**: Boolean
 :**› Default**: ``false``
 :**› Signal**: translateChanged()
+:**› Attributes**: Writable
+
+
+.. _property_Application_trapErrors:
+
+.. _signal_Application_trapErrorsChanged:
+
+.. index::
+   single: trapErrors
+
+trapErrors
+++++++++++
+
+This property holds whether to immediately exit the application on any occurring error. This can ease debugging in case a huge number of messages are printed to the console during runtime.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: trapErrorsChanged()
 :**› Attributes**: Writable
 
 
@@ -882,7 +903,7 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
+    import InCore.Foundation 2.5
     
     Application {
         id: app

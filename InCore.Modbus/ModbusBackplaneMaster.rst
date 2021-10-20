@@ -27,6 +27,7 @@ Properties
   * :ref:`ModbusRtuMaster.parity <property_ModbusRtuMaster_parity>`
   * :ref:`ModbusRtuMaster.portName <property_ModbusRtuMaster_portName>`
   * :ref:`ModbusRtuMaster.stopBits <property_ModbusRtuMaster_stopBits>`
+  * :ref:`ModbusRtuMaster.turnaroundDelay <property_ModbusRtuMaster_turnaroundDelay>`
   * :ref:`ModbusClient.numberOfRetries <property_ModbusClient_numberOfRetries>`
   * :ref:`ModbusClient.slaves <property_ModbusClient_slaves>`
   * :ref:`ModbusClient.timeout <property_ModbusClient_timeout>`

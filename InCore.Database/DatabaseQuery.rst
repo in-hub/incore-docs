@@ -13,6 +13,7 @@ The DatabaseQuery object is used to query objects from a database. It can be use
 .. note:: Pay attention to the usage of :ref:`results <property_DatabaseQuery_results>` each call will execute the query. See the example at bottom.
 
 :**› Inherits**: :ref:`Object <object_Object>`
+:**› Inherited by**: :ref:`DatabaseUpdate <object_DatabaseUpdate>`
 
 Overview
 ********
@@ -259,7 +260,9 @@ Methods
 execute()
 +++++++++
 
-This method executes the query and updates :ref:`results <property_DatabaseQuery_results>`
+This method executes the query and updates :ref:`results <property_DatabaseQuery_results>`. On success, ``true`` is returned, otherwise ``false``.
+
+:**› Returns**: Boolean
 
 
 

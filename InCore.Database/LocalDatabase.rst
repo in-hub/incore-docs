@@ -29,6 +29,7 @@ Properties
   * :ref:`Database.errorDetails <property_Database_errorDetails>`
   * :ref:`Database.errorString <property_Database_errorString>`
   * :ref:`Database.name <property_Database_name>`
+  * :ref:`Database.ready <property_Database_ready>`
   * :ref:`Database.reopenInterval <property_Database_reopenInterval>`
   * :ref:`Database.sqlQueries <property_Database_sqlQueries>`
   * :ref:`Database.tables <property_Database_tables>`
@@ -98,8 +99,8 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.Database 2.0
+    import InCore.Foundation 2.5
+    import InCore.Database 2.5
     
     Application {
     

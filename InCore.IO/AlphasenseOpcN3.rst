@@ -40,6 +40,7 @@ Properties
   * :ref:`temperature <property_AlphasenseOpcN3_temperature>`
   * :ref:`values <property_AlphasenseOpcN3_values>`
   * :ref:`SerialPortBusNode.bus <property_SerialPortBusNode_bus>`
+  * :ref:`SerialPortBusNode.portName <property_SerialPortBusNode_portName>`
   * :ref:`SerialPortBusNode.responseTimeout <property_SerialPortBusNode_responseTimeout>`
   * :ref:`SerialPortBusNode.serialPort <property_SerialPortBusNode_serialPort>`
   * :ref:`Object.objectId <property_Object_objectId>`
@@ -535,8 +536,8 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.IO 2.0
+    import InCore.Foundation 2.5
+    import InCore.IO 2.5
     
     Application {
     

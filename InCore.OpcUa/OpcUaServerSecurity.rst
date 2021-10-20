@@ -216,7 +216,7 @@ This property holds paths to one or multiple trust list file used for security p
 userLoginRequiresEncryption
 +++++++++++++++++++++++++++
 
-This property holds whether to allow user logins for unencrypted connections, i.e. clients connecting with :ref:`OpcUaServerSecurity.PolicyNone <enumitem_OpcUaServerSecurity_PolicyNone>`
+This property holds whether to allow user logins for unencrypted connections, i.e. clients connecting with :ref:`OpcUaServerSecurity.PolicyNone <enumitem_OpcUaServerSecurity_PolicyNone>`.
 
 :**› Type**: Boolean
 :**› Default**: ``true``

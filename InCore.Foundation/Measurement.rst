@@ -9508,7 +9508,7 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.4
+    import InCore.Foundation 2.5
     
     Application {
         Measurement {

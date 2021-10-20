@@ -222,7 +222,7 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.1
+    import InCore.Foundation 2.5
     
     NftFirewall {
         NftAddressTranslation {

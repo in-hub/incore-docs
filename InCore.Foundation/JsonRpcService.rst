@@ -14,6 +14,14 @@ The JsonRpcService object provides mechanisms for exposing user-defined function
 Overview
 ********
 
+Properties
+++++++++++
+
+.. hlist::
+  :columns: 1
+
+  * :ref:`serviceName <property_JsonRpcService_serviceName>`
+
 Methods
 +++++++
 
@@ -27,6 +35,26 @@ Methods
 
 Properties
 **********
+
+
+.. _property_JsonRpcService_serviceName:
+
+.. _signal_JsonRpcService_serviceNameChanged:
+
+.. index::
+   single: serviceName
+
+serviceName
++++++++++++
+
+This property holds the name of the JSON-RPC service user for registering to the JSON-RPC server. It is prepended to all method names, i.e. ``foo()`` can be called through the JSON-RPC method ``<serviceName>.foo``.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: String
+:**› Default**: ``incore``
+:**› Signal**: serviceNameChanged()
+:**› Attributes**: Writable
 
 Methods
 *******
@@ -68,7 +96,7 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.2
+    import InCore.Foundation 2.5
     
     Application {
     

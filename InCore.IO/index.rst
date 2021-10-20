@@ -39,10 +39,12 @@ Objects
 	Ltc2483Adc
 	Relay
 	SensirionHDLC
+	SensirionSFM3300
 	SensirionSPS30
 	SerialPort
 	SerialPortBus
 	SerialPortBusNode
 	SerialPortManager
 	Sht3x
+	SystemI2cBus
 	UsbPrinter

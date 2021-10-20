@@ -21,13 +21,10 @@ Properties
 .. hlist::
   :columns: 2
 
-  * :ref:`buffering <property_CloudOfThingsMeasurementWriter_buffering>`
+  * :ref:`bufferDatabase <property_CloudOfThingsMeasurementWriter_bufferDatabase>`
   * :ref:`client <property_CloudOfThingsMeasurementWriter_client>`
   * :ref:`error <property_CloudOfThingsMeasurementWriter_error>`
   * :ref:`errorString <property_CloudOfThingsMeasurementWriter_errorString>`
-  * :ref:`measurementDatabase <property_CloudOfThingsMeasurementWriter_measurementDatabase>`
-  * :ref:`sendStoredDataCount <property_CloudOfThingsMeasurementWriter_sendStoredDataCount>`
-  * :ref:`sendStoredDataInterval <property_CloudOfThingsMeasurementWriter_sendStoredDataInterval>`
   * :ref:`DataObjectWriter.datasetCount <property_DataObjectWriter_datasetCount>`
   * :ref:`DataObjectWriter.objects <property_DataObjectWriter_objects>`
   * :ref:`DataObjectWriter.running <property_DataObjectWriter_running>`
@@ -78,22 +75,23 @@ Properties
 **********
 
 
-.. _property_CloudOfThingsMeasurementWriter_buffering:
+.. _property_CloudOfThingsMeasurementWriter_bufferDatabase:
 
-.. _signal_CloudOfThingsMeasurementWriter_bufferingChanged:
+.. _signal_CloudOfThingsMeasurementWriter_bufferDatabaseChanged:
 
 .. index::
-   single: buffering
+   single: bufferDatabase
 
-buffering
-+++++++++
+bufferDatabase
+++++++++++++++
 
-This property holds whether :ref:`Measurement <object_Measurement>` objects should be stored when :ref:`CloudOfThingsClient <object_CloudOfThingsClient>` is not connected. If the connection is restored buffered measurements will be sent with an interval of :ref:`sendStoredDataInterval <property_CloudOfThingsMeasurementWriter_sendStoredDataInterval>` ms.
+This property holds the database to which the measurements are written temporarily when :ref:`MeasurementBufferDatabase.buffering <property_MeasurementBufferDatabase_buffering>` is set to ``true`` and the Cloud of Things client is offline or not connected.
 
-:**› Type**: Boolean
-:**› Default**: ``true``
-:**› Signal**: bufferingChanged()
-:**› Attributes**: Writable
+This property was introduced in InCore 2.5.
+
+:**› Type**: :ref:`MeasurementBufferDatabase <object_MeasurementBufferDatabase>`
+:**› Signal**: bufferDatabaseChanged()
+:**› Attributes**: Readonly
 
 
 .. _property_CloudOfThingsMeasurementWriter_client:
@@ -106,7 +104,7 @@ This property holds whether :ref:`Measurement <object_Measurement>` objects shou
 client
 ++++++
 
-This property holds the Cloud of Things client. This property can be left blank if :ref:`CloudOfThingsClient <object_CloudOfThingsClient>` is a parent.
+This property holds the Cloud of Things client. This property can be left blank if the parent object is a :ref:`CloudOfThingsClient <object_CloudOfThingsClient>`.
 
 :**› Type**: :ref:`CloudOfThingsClient <object_CloudOfThingsClient>`
 :**› Signal**: clientChanged()
@@ -145,59 +143,6 @@ This property holds the current human readable error string corresponding to the
 :**› Type**: String
 :**› Signal**: errorStringChanged()
 :**› Attributes**: Readonly
-
-
-.. _property_CloudOfThingsMeasurementWriter_measurementDatabase:
-
-.. _signal_CloudOfThingsMeasurementWriter_measurementDatabaseChanged:
-
-.. index::
-   single: measurementDatabase
-
-measurementDatabase
-+++++++++++++++++++
-
-This property holds the database where the measurements are buffered when :ref:`buffering <property_CloudOfThingsMeasurementWriter_buffering>` is ``true`` and no connection to Cloud of Things is available.
-
-:**› Type**: :ref:`CloudOfThingsMeasurementDatabase <object_CloudOfThingsMeasurementDatabase>`
-:**› Signal**: measurementDatabaseChanged()
-:**› Attributes**: Readonly
-
-
-.. _property_CloudOfThingsMeasurementWriter_sendStoredDataCount:
-
-.. _signal_CloudOfThingsMeasurementWriter_sendStoredDataCountChanged:
-
-.. index::
-   single: sendStoredDataCount
-
-sendStoredDataCount
-+++++++++++++++++++
-
-This property holds how many stored measurements from :ref:`measurementDatabase <property_CloudOfThingsMeasurementWriter_measurementDatabase>` are sent at once after the connection is restored. The lowest possible value is 1.
-
-:**› Type**: SignedInteger
-:**› Default**: ``1``
-:**› Signal**: sendStoredDataCountChanged()
-:**› Attributes**: Writable
-
-
-.. _property_CloudOfThingsMeasurementWriter_sendStoredDataInterval:
-
-.. _signal_CloudOfThingsMeasurementWriter_sendStoredDataIntervalChanged:
-
-.. index::
-   single: sendStoredDataInterval
-
-sendStoredDataInterval
-++++++++++++++++++++++
-
-This property holds holds the send interval in which stored elements from :ref:`measurementDatabase <property_CloudOfThingsMeasurementWriter_measurementDatabase>` are sent after the connection is restored. The lowest possible value is 100.
-
-:**› Type**: SignedInteger
-:**› Default**: ``2000``
-:**› Signal**: sendStoredDataIntervalChanged()
-:**› Attributes**: Writable
 
 Signals
 *******
@@ -287,8 +232,9 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.CloudOfThings 2.0
+    import InCore.Foundation 2.5
+    import InCore.CloudOfThings 2.5
+    import InCore.Database 2.5
     
     Application {
     
@@ -313,14 +259,13 @@ Example
                 password: "y0urAwes@meP4ssword"
             }
     
-            CloudOfThingsMeasurementWriter
-            {
+            CloudOfThingsMeasurementWriter {
                 id: measurementWriter
     
                 //buffer data if connection is lost
-                measurementDatabase    {
+                bufferDatabase    {
                     bufferSize: 5000
-                    transmitOrder: CloudOfThingsMeasurementDatabase.Descending
+                    transmitOrder: MeasurementBufferDatabase.Descending
                 }
     
                 submitMode: CloudOfThingsMeasurementWriter.SubmitPeriodically

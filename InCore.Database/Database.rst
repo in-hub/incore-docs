@@ -29,6 +29,7 @@ Properties
   * :ref:`errorDetails <property_Database_errorDetails>`
   * :ref:`errorString <property_Database_errorString>`
   * :ref:`name <property_Database_name>`
+  * :ref:`ready <property_Database_ready>`
   * :ref:`reopenInterval <property_Database_reopenInterval>`
   * :ref:`sqlQueries <property_Database_sqlQueries>`
   * :ref:`tables <property_Database_tables>`
@@ -194,6 +195,26 @@ This property holds the name of the database to access. It depends on the actual
 :**› Type**: String
 :**› Signal**: nameChanged()
 :**› Attributes**: Writable
+
+
+.. _property_Database_ready:
+
+.. _signal_Database_readyChanged:
+
+.. index::
+   single: ready
+
+ready
++++++
+
+This property holds whether the database has been opened successfully and is ready to execute queries.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: readyChanged()
+:**› Attributes**: Readonly
 
 
 .. _property_Database_reopenInterval:

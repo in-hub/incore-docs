@@ -19,9 +19,10 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`interval <property_Timer_interval>`
+  * :ref:`msecsElapsed <property_Timer_msecsElapsed>`
   * :ref:`repeat <property_Timer_repeat>`
   * :ref:`running <property_Timer_running>`
   * :ref:`triggeredOnStart <property_Timer_triggeredOnStart>`
@@ -73,6 +74,20 @@ This property holds the interval which elapses before :ref:`triggered() <signal_
 :**› Default**: ``1000``
 :**› Signal**: intervalChanged()
 :**› Attributes**: Writable
+
+
+.. _property_Timer_msecsElapsed:
+
+.. index::
+   single: msecsElapsed
+
+msecsElapsed
+++++++++++++
+
+This property holds returns the number of milliseconds since this timer was last started.
+
+:**› Type**: SignedBigInteger
+:**› Attributes**: Readonly
 
 
 .. _property_Timer_repeat:
@@ -209,7 +224,7 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
+    import InCore.Foundation 2.5
     
     Application {
     

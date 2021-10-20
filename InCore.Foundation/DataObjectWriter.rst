@@ -194,7 +194,9 @@ This method opens the destination resource for writing. It returns ``true`` on s
 submit()
 ++++++++
 
-This method submits a new dataset to the destination resource, i.e. a new row in the output file or a database table. A dataset consists of all configured :ref:`objects <property_DataObjectWriter_objects>` and usually is represented as a row in the destination resource. Instead of calling this method manually one of the submit modes should be configured through the :ref:`submitMode <property_DataObjectWriter_submitMode>` property.
+This method submits a new dataset to the destination resource, i.e. a new row in the output file or a database table. A dataset consists of all configured :ref:`objects <property_DataObjectWriter_objects>` and usually is represented as a row in the destination resource. Instead of calling this method manually one of the submit modes should be configured through the :ref:`submitMode <property_DataObjectWriter_submitMode>` property. On success, ``true`` is returned, otherwise ``false``.
+
+:**› Returns**: Boolean
 
 
 

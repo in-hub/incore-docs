@@ -25,6 +25,7 @@ Properties
   :columns: 1
 
   * :ref:`bus <property_SerialPortBusNode_bus>`
+  * :ref:`portName <property_SerialPortBusNode_portName>`
   * :ref:`responseTimeout <property_SerialPortBusNode_responseTimeout>`
   * :ref:`serialPort <property_SerialPortBusNode_serialPort>`
   * :ref:`Object.objectId <property_Object_objectId>`
@@ -69,6 +70,25 @@ This property holds the bus which to use for reading and writing data from a ser
 :**› Type**: :ref:`SerialPortBus <object_SerialPortBus>`
 :**› Signal**: busChanged()
 :**› Attributes**: Writable, Optional
+
+
+.. _property_SerialPortBusNode_portName:
+
+.. _signal_SerialPortBusNode_portNameChanged:
+
+.. index::
+   single: portName
+
+portName
+++++++++
+
+This property holds an alias for the :ref:`SerialPort.portName <property_SerialPort_portName>` property of :ref:`serialPort <property_SerialPortBusNode_serialPort>`. It allows using modifiers such as :ref:`Select <object_Select>` on the port name.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: String
+:**› Signal**: portNameChanged()
+:**› Attributes**: Writable
 
 
 .. _property_SerialPortBusNode_responseTimeout:

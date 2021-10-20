@@ -23,8 +23,6 @@ Properties
 
   * :ref:`autoCleaningInterval <property_SensirionSPS30_autoCleaningInterval>`
   * :ref:`enabled <property_SensirionSPS30_enabled>`
-  * :ref:`error <property_SensirionSPS30_error>`
-  * :ref:`errorString <property_SensirionSPS30_errorString>`
   * :ref:`massPM10 <property_SensirionSPS30_massPM10>`
   * :ref:`massPM1_0 <property_SensirionSPS30_massPM1_0>`
   * :ref:`massPM2_5 <property_SensirionSPS30_massPM2_5>`
@@ -36,7 +34,15 @@ Properties
   * :ref:`numberPM4_0 <property_SensirionSPS30_numberPM4_0>`
   * :ref:`typicalSize <property_SensirionSPS30_typicalSize>`
   * :ref:`values <property_SensirionSPS30_values>`
+  * :ref:`SensirionHDLC.articleCode <property_SensirionHDLC_articleCode>`
+  * :ref:`SensirionHDLC.error <property_SensirionHDLC_error>`
+  * :ref:`SensirionHDLC.errorString <property_SensirionHDLC_errorString>`
+  * :ref:`SensirionHDLC.firmwareVersion <property_SensirionHDLC_firmwareVersion>`
+  * :ref:`SensirionHDLC.hardwareVersion <property_SensirionHDLC_hardwareVersion>`
+  * :ref:`SensirionHDLC.productName <property_SensirionHDLC_productName>`
+  * :ref:`SensirionHDLC.serialNumber <property_SensirionHDLC_serialNumber>`
   * :ref:`SerialPortBusNode.bus <property_SerialPortBusNode_bus>`
+  * :ref:`SerialPortBusNode.portName <property_SerialPortBusNode_portName>`
   * :ref:`SerialPortBusNode.responseTimeout <property_SerialPortBusNode_responseTimeout>`
   * :ref:`SerialPortBusNode.serialPort <property_SerialPortBusNode_serialPort>`
   * :ref:`Object.objectId <property_Object_objectId>`
@@ -49,8 +55,9 @@ Methods
   :columns: 1
 
   * :ref:`pollValues() <method_SensirionSPS30_pollValues>`
-  * :ref:`reset() <method_SensirionSPS30_reset>`
   * :ref:`startFanCleaning() <method_SensirionSPS30_startFanCleaning>`
+  * :ref:`SensirionHDLC.reset() <method_SensirionHDLC_reset>`
+  * :ref:`SensirionHDLC.sendCommand() <method_SensirionHDLC_sendCommand>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.toJson() <method_Object_toJson>`
@@ -61,7 +68,8 @@ Signals
 .. hlist::
   :columns: 1
 
-  * :ref:`errorOccurred() <signal_SensirionSPS30_errorOccurred>`
+  * :ref:`SensirionHDLC.errorOccurred() <signal_SensirionHDLC_errorOccurred>`
+  * :ref:`SensirionHDLC.responseReceived() <signal_SensirionHDLC_responseReceived>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 Enumerations
@@ -70,7 +78,7 @@ Enumerations
 .. hlist::
   :columns: 1
 
-  * :ref:`Error <enum_SensirionSPS30_Error>`
+  * :ref:`SensirionHDLC.Error <enum_SensirionHDLC_Error>`
 
 
 
@@ -112,40 +120,6 @@ This property holds whether the sensor is enabled. After power up, the module is
 :**› Default**: ``true``
 :**› Signal**: enabledChanged()
 :**› Attributes**: Writable
-
-
-.. _property_SensirionSPS30_error:
-
-.. _signal_SensirionSPS30_errorChanged:
-
-.. index::
-   single: error
-
-error
-+++++
-
-This property holds the most recently occurred error or :ref:`SensirionSPS30.NoError <enumitem_SensirionSPS30_NoError>` if no error occurred. If the same error occurs multiple times this property does not change. Use the :ref:`errorOccurred() <signal_SensirionSPS30_errorOccurred>` signal to detect multiple occurrences of the same error.
-
-:**› Type**: :ref:`Error <enum_SensirionSPS30_Error>`
-:**› Signal**: errorChanged()
-:**› Attributes**: Readonly
-
-
-.. _property_SensirionSPS30_errorString:
-
-.. _signal_SensirionSPS30_errorStringChanged:
-
-.. index::
-   single: errorString
-
-errorString
-+++++++++++
-
-This property holds the current human readable error string corresponding to the current value in the :ref:`error <property_SensirionSPS30_error>` property. It may include additional information such as failure reasons or locations.
-
-:**› Type**: String
-:**› Signal**: errorStringChanged()
-:**› Attributes**: Readonly
 
 
 .. _property_SensirionSPS30_massPM10:
@@ -372,18 +346,6 @@ This method polls the :ref:`values <property_SensirionSPS30_values>` property. I
 
 
 
-.. _method_SensirionSPS30_reset:
-
-.. index::
-   single: reset
-
-reset()
-+++++++
-
-This method soft resets the sensor. After calling this command, the module is in the same state as after a Power-Reset. This method sets :ref:`enabled <property_SensirionSPS30_enabled>` = ``false``.
-
-
-
 .. _method_SensirionSPS30_startFanCleaning:
 
 .. index::
@@ -395,120 +357,6 @@ startFanCleaning()
 This method starts the fan-cleaning manually. For more details, see :ref:`autoCleaningInterval <property_SensirionSPS30_autoCleaningInterval>`
 
 
-Signals
-*******
-
-
-.. _signal_SensirionSPS30_errorOccurred:
-
-.. index::
-   single: errorOccurred
-
-errorOccurred()
-+++++++++++++++
-
-This signal is emitted whenever an error has occurred, regardless of whether the :ref:`error <property_SensirionSPS30_error>` property has changed or not. In contrast to the change notification signal of the :ref:`error <property_SensirionSPS30_error>` property this signal is also emitted several times if a certain error occurs several times in succession.
-
-
-Enumerations
-************
-
-
-.. _enum_SensirionSPS30_Error:
-
-.. index::
-   single: Error
-
-Error
-+++++
-
-This enumeration describes all errors which can occur in SensirionSPS30 objects. The most recently occurred error is stored in the :ref:`error <property_SensirionSPS30_error>` property.
-
-.. index::
-   single: SensirionSPS30.NoError
-.. index::
-   single: SensirionSPS30.WrongDataLength
-.. index::
-   single: SensirionSPS30.UnknownCommand
-.. index::
-   single: SensirionSPS30.NoAccessRight
-.. index::
-   single: SensirionSPS30.IllegalCommand
-.. index::
-   single: SensirionSPS30.InternalFunctionArgumentOutOfRange
-.. index::
-   single: SensirionSPS30.CommandNotAllowedCurrentState
-.. index::
-   single: SensirionSPS30.UnknownError
-.. index::
-   single: SensirionSPS30.InvalidResponse
-.. index::
-   single: SensirionSPS30.ResponseTimeoutError
-.. index::
-   single: SensirionSPS30.InvalidPort
-.. list-table::
-  :widths: auto
-  :header-rows: 1
-
-  * - Name
-    - Value
-    - Description
-
-      .. _enumitem_SensirionSPS30_NoError:
-  * - ``SensirionSPS30.NoError``
-    - ``0``
-    - No error occurred or was detected.
-
-      .. _enumitem_SensirionSPS30_WrongDataLength:
-  * - ``SensirionSPS30.WrongDataLength``
-    - ``1``
-    - Wrong data length for this command.
-
-      .. _enumitem_SensirionSPS30_UnknownCommand:
-  * - ``SensirionSPS30.UnknownCommand``
-    - ``2``
-    - Unknown command.
-
-      .. _enumitem_SensirionSPS30_NoAccessRight:
-  * - ``SensirionSPS30.NoAccessRight``
-    - ``3``
-    - No access right for command.
-
-      .. _enumitem_SensirionSPS30_IllegalCommand:
-  * - ``SensirionSPS30.IllegalCommand``
-    - ``4``
-    - Illegal command parameter or parameter out of allowed range.
-
-      .. _enumitem_SensirionSPS30_InternalFunctionArgumentOutOfRange:
-  * - ``SensirionSPS30.InternalFunctionArgumentOutOfRange``
-    - ``40``
-    - Internal function argument out of range.
-
-      .. _enumitem_SensirionSPS30_CommandNotAllowedCurrentState:
-  * - ``SensirionSPS30.CommandNotAllowedCurrentState``
-    - ``67``
-    - Command not allowed in current state.
-
-      .. _enumitem_SensirionSPS30_UnknownError:
-  * - ``SensirionSPS30.UnknownError``
-    - ``127``
-    - Unspecified device error.
-
-      .. _enumitem_SensirionSPS30_InvalidResponse:
-  * - ``SensirionSPS30.InvalidResponse``
-    - ``128``
-    - Received an invalid response, e.g. invalid CRC or invalid data.
-
-      .. _enumitem_SensirionSPS30_ResponseTimeoutError:
-  * - ``SensirionSPS30.ResponseTimeoutError``
-    - ``129``
-    - Did not receive response to request within 5000 ms.
-
-      .. _enumitem_SensirionSPS30_InvalidPort:
-  * - ``SensirionSPS30.InvalidPort``
-    - ``130``
-    - Specified serial port does not exist or can't be opened.
-
 
 .. _example_SensirionSPS30:
 
@@ -518,8 +366,8 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.IO 2.0
+    import InCore.Foundation 2.5
+    import InCore.IO 2.5
     
     Application {
     

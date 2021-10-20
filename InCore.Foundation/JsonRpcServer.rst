@@ -8,7 +8,7 @@
 Description
 ***********
 
-The JsonRpcServer object provides a `JSON-RPC 2.0 compliant <https://www.jsonrpc.org/specification>`_ server. Basic network parameters can be customized through the :ref:`port <property_JsonRpcServer_port>` and :ref:`localHost <property_JsonRpcServer_localHost>` properties. In order to expose functions and properties via JSON-RPC a :ref:`JsonRpcService <object_JsonRpcService>` has to be defined and assigned to the :ref:`service <property_JsonRpcServer_service>` property.
+The JsonRpcServer object provides a `JSON-RPC 2.0 compliant <https://www.jsonrpc.org/specification>`_ server. Basic network parameters can be customized through the :ref:`port <property_JsonRpcServer_port>` and :ref:`localHost <property_JsonRpcServer_localHost>` properties. In order to expose functions and properties via JSON-RPC at least one :ref:`JsonRpcService <object_JsonRpcService>` has to be defined and assigned to the :ref:`services <property_JsonRpcServer_services>` property.
 
 :**› Inherits**: :ref:`Object <object_Object>`
 
@@ -24,7 +24,7 @@ Properties
   * :ref:`debugRpcMessages <property_JsonRpcServer_debugRpcMessages>`
   * :ref:`localHost <property_JsonRpcServer_localHost>`
   * :ref:`port <property_JsonRpcServer_port>`
-  * :ref:`service <property_JsonRpcServer_service>`
+  * :ref:`services <property_JsonRpcServer_services>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
 
@@ -44,6 +44,7 @@ Signals
 .. hlist::
   :columns: 1
 
+  * :ref:`servicesDataChanged() <signal_JsonRpcServer_servicesDataChanged>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 
@@ -108,21 +109,38 @@ This property holds the TCP port of the JSON-RPC server.
 :**› Attributes**: Writable
 
 
-.. _property_JsonRpcServer_service:
+.. _property_JsonRpcServer_services:
 
-.. _signal_JsonRpcServer_serviceChanged:
+.. _signal_JsonRpcServer_servicesChanged:
 
 .. index::
-   single: service
+   single: services
 
-service
-+++++++
+services
+++++++++
 
-This property holds a reference to a :ref:`JsonRpcService <object_JsonRpcService>` object which exposes the desired functions and properties.
+This property holds a list of :ref:`JsonRpcService <object_JsonRpcService>` objects which exposes the desired functions and properties.
 
-:**› Type**: :ref:`JsonRpcService <object_JsonRpcService>`
-:**› Signal**: serviceChanged()
-:**› Attributes**: Writable
+This property was introduced in InCore 2.5.
+
+:**› Type**: :ref:`List <object_List>`\<:ref:`JsonRpcService <object_JsonRpcService>`>
+:**› Signal**: servicesChanged()
+:**› Attributes**: Readonly
+
+Signals
+*******
+
+
+.. _signal_JsonRpcServer_servicesDataChanged:
+
+.. index::
+   single: servicesDataChanged
+
+servicesDataChanged(SignedInteger index)
+++++++++++++++++++++++++++++++++++++++++
+
+This signal is emitted whenever the :ref:`List.dataChanged() <signal_List_dataChanged>` signal is emitted, i.e. the item at ``index`` in the :ref:`services <property_JsonRpcServer_services>` list itself emitted the dataChanged() signal.
+
 
 Example
 *******

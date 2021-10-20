@@ -414,6 +414,8 @@ This enumeration describes the type of the device which the application can be r
 .. index::
    single: System.GM200
 .. index::
+   single: System.IM6
+.. index::
    single: System.Other
 .. list-table::
   :widths: auto
@@ -433,9 +435,14 @@ This enumeration describes the type of the device which the application can be r
     - ``1``
     - A HUB-GM200 (dual-core) device.
 
+      .. _enumitem_System_IM6:
+  * - ``System.IM6``
+    - ``2``
+    - An IM6-XXNNN device.
+
       .. _enumitem_System_Other:
   * - ``System.Other``
-    - ``2``
+    - ``3``
     - Other/unknown device.
 
 

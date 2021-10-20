@@ -359,10 +359,10 @@ Example
             // group with dynamically populated objects
             MeasurementGroup {
                 onCompleted: {
-                    Qt.createQmlObject('import InCore.Foundation 1.0; DataObject { id: dynDO1; data: 10 }', this);
-                    Qt.createQmlObject('import InCore.Foundation 1.0; DataObject { id: dynDO2; data: 5.2 }', this);
-                    dynMeas1 = Qt.createQmlObject('import InCore.Foundation 1.0; Measurement { id: dynMeas1; data: 10 }', this);
-                    dynMeas2 = Qt.createQmlObject('import InCore.Foundation 1.0; Measurement { id: dynMeas2; data: 20 }', dynMeas1);
+                    Qt.createQmlObject('import InCore.Foundation 2.5; DataObject { id: dynDO1; data: 10 }', this);
+                    Qt.createQmlObject('import InCore.Foundation 2.5; DataObject { id: dynDO2; data: 5.2 }', this);
+                    dynMeas1 = Qt.createQmlObject('import InCore.Foundation 2.5; Measurement { id: dynMeas1; data: 10 }', this);
+                    dynMeas2 = Qt.createQmlObject('import InCore.Foundation 2.5; Measurement { id: dynMeas2; data: 20 }', dynMeas1);
                     // destroy object again so we should observe a decrease in number of gathered objects
                     dynMeas2.destroy();
                 }

@@ -8,10 +8,10 @@
 Description
 ***********
 
-The I2cBus object represents an I2C bus with attached :ref:`I2cDevice <object_I2cDevice>` objects. This abstract base object provides common properties and methods only. Use a dedicated I2C bus implementation such as :ref:`FtdiI2CBus <object_FtdiI2CBus>`.
+The I2cBus object represents an I2C bus with attached :ref:`I2cDevice <object_I2cDevice>` objects. This abstract base object provides common properties and methods only. Use a dedicated I2C bus implementation such as :ref:`SystemI2cBus <object_SystemI2cBus>` and :ref:`FtdiI2cBus <object_FtdiI2cBus>`.
 
 :**› Inherits**: :ref:`Object <object_Object>`
-:**› Inherited by**: :ref:`FtdiI2cBus <object_FtdiI2cBus>`
+:**› Inherited by**: :ref:`FtdiI2cBus <object_FtdiI2cBus>`, :ref:`SystemI2cBus <object_SystemI2cBus>`
 
 Overview
 ********

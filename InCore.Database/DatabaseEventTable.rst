@@ -37,6 +37,7 @@ Properties
   * :ref:`DatabaseTable.pseudoRingBufferOrderBy <property_DatabaseTable_pseudoRingBufferOrderBy>`
   * :ref:`DatabaseTable.pseudoRingBufferSize <property_DatabaseTable_pseudoRingBufferSize>`
   * :ref:`DatabaseTable.queries <property_DatabaseTable_queries>`
+  * :ref:`DatabaseTable.ready <property_DatabaseTable_ready>`
   * :ref:`DatabaseTable.structure <property_DatabaseTable_structure>`
   * :ref:`DataObjectWriter.datasetCount <property_DataObjectWriter_datasetCount>`
   * :ref:`DataObjectWriter.objects <property_DataObjectWriter_objects>`
@@ -235,8 +236,8 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.0
-    import InCore.Database 2.0
+    import InCore.Foundation 2.5
+    import InCore.Database 2.5
     
     Application {
         name: "EventDemo"

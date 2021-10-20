@@ -704,8 +704,8 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.3
-    import InCore.Mqtt 2.3
+    import InCore.Foundation 2.5
+    import InCore.Mqtt 2.5
     
     Application {
         // create an MQTT client which subscribes a topic

@@ -175,12 +175,12 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.3
+    import InCore.Foundation 2.5
     
     TcpServer {
         port: 1234
     
-        onConnectionAccepted: {
+        onConnectionAccepted: (connection) => {
             connection.write("Hello world\n")
             connection.readyRead.connect( () => {
                 console.log("Client sent:", connection.readAll())
