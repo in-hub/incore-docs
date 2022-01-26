@@ -49,7 +49,7 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`connectToHost() <method_MqttClient_connectToHost>`
   * :ref:`connectToHostEncrypted() <method_MqttClient_connectToHostEncrypted>`
@@ -57,6 +57,7 @@ Methods
   * :ref:`requestPing() <method_MqttClient_requestPing>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
 Signals

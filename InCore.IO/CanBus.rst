@@ -42,7 +42,7 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`clear() <method_CanBus_clear>`
   * :ref:`pollBusStatus() <method_CanBus_pollBusStatus>`
@@ -50,6 +50,7 @@ Methods
   * :ref:`writeFrame() <method_CanBus_writeFrame>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
 Signals

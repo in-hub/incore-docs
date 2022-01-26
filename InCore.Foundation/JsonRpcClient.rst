@@ -21,11 +21,12 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`debugRpcMessages <property_JsonRpcClient_debugRpcMessages>`
   * :ref:`hostname <property_JsonRpcClient_hostname>`
   * :ref:`path <property_JsonRpcClient_path>`
+  * :ref:`port <property_JsonRpcClient_port>`
   * :ref:`protocol <property_JsonRpcClient_protocol>`
   * :ref:`serviceName <property_JsonRpcClient_serviceName>`
   * :ref:`Object.objectId <property_Object_objectId>`
@@ -42,6 +43,7 @@ Methods
   * :ref:`setProperty() <method_JsonRpcClient_setProperty>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
 Signals
@@ -112,6 +114,25 @@ This property holds the URL path of the RPC endpoint.
 :**› Type**: String
 :**› Default**: ``/rpc``
 :**› Signal**: pathChanged()
+:**› Attributes**: Writable
+
+
+.. _property_JsonRpcClient_port:
+
+.. _signal_JsonRpcClient_portChanged:
+
+.. index::
+   single: port
+
+port
+++++
+
+This property holds the port at which the JSON-RPC server is listening.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: SignedInteger
+:**› Signal**: portChanged()
 :**› Attributes**: Writable
 
 

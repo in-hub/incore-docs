@@ -47,6 +47,7 @@ Methods
 
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
 Signals
@@ -353,6 +354,10 @@ This enumeration describes predefined values for the :ref:`widget <property_Data
    single: DataObjectView.Chart
 .. index::
    single: DataObjectView.SpinBox
+.. index::
+   single: DataObjectView.EditableCombobox
+.. index::
+   single: DataObjectView.PasswordField
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -405,6 +410,16 @@ This enumeration describes predefined values for the :ref:`widget <property_Data
   * - ``DataObjectView.SpinBox``
     - ``8``
     - Use a spinbox widget for number input.
+
+      .. _enumitem_DataObjectView_EditableCombobox:
+  * - ``DataObjectView.EditableCombobox``
+    - ``9``
+    - Use a combobox which allows editing the text.
+
+      .. _enumitem_DataObjectView_PasswordField:
+  * - ``DataObjectView.PasswordField``
+    - ``10``
+    - Use text field widget which shows asterisks instead of the actual input.
 
 Example
 *******

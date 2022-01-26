@@ -51,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'InCore'
-copyright = '2021, in.hub GmbH'
+copyright = '2022, in.hub GmbH'
 author = 'in.hub GmbH'
 
 title = os.getenv('TITLE', 'InCore Documentation')
@@ -60,7 +60,7 @@ title = os.getenv('TITLE', 'InCore Documentation')
 # built documents.
 #
 # The short X.Y version.
-version = '2.5.0'
+version = '2.5.2'
 # The full version, including alpha/beta/rc tags.
 release = version
 

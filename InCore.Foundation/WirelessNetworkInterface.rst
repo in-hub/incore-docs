@@ -21,6 +21,7 @@ Properties
 .. hlist::
   :columns: 3
 
+  * :ref:`availableNetworks <property_WirelessNetworkInterface_availableNetworks>`
   * :ref:`countryCode <property_WirelessNetworkInterface_countryCode>`
   * :ref:`countryCodeItem <property_WirelessNetworkInterface_countryCodeItem>`
   * :ref:`index <property_WirelessNetworkInterface_index>`
@@ -55,8 +56,10 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`scanAvailableNetworks() <method_WirelessNetworkInterface_scanAvailableNetworks>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
 Signals
@@ -88,6 +91,25 @@ Enumerations
 
 Properties
 **********
+
+
+.. _property_WirelessNetworkInterface_availableNetworks:
+
+.. _signal_WirelessNetworkInterface_availableNetworksChanged:
+
+.. index::
+   single: availableNetworks
+
+availableNetworks
++++++++++++++++++
+
+This property holds a list with information about all available wireless networks found during the last scan. Every list entry contains several properties including ``ssid``, ``signal``, ``mode``, ``wpa`, ``frequency`` and ``privacy``. Per default this list is updated every 30 s. It's also possible to manually trigger a network scan by calling :ref:`scanAvailableNetworks() <method_WirelessNetworkInterface_scanAvailableNetworks>`.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: List
+:**› Signal**: availableNetworksChanged()
+:**› Attributes**: Writable
 
 
 .. _property_WirelessNetworkInterface_countryCode:
@@ -216,6 +238,23 @@ This property holds an internal :ref:`ConfigurationItem <object_ConfigurationIte
 :**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
 :**› Attributes**: Readonly
 
+Methods
+*******
+
+
+.. _method_WirelessNetworkInterface_scanAvailableNetworks:
+
+.. index::
+   single: scanAvailableNetworks
+
+scanAvailableNetworks()
++++++++++++++++++++++++
+
+This method tells the wireless network interface to scan all available networks. When finished, the :ref:`availableNetworks <property_WirelessNetworkInterface_availableNetworks>` property is updated.
+
+This method was introduced in InCore 2.5.
+
+
 Enumerations
 ************
 
@@ -277,6 +316,7 @@ Example
                 ssid: "inhub"
                 passphrase: "MyS3cr3tP4ssw0rd"
                 countryCode: "DE"
+                onAvailableNetworksChanged: console.log(JSON.stringify(availableNetworks))
             }
         }
     }

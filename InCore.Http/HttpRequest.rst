@@ -36,7 +36,7 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`del() <method_HttpRequest_del>`
   * :ref:`get() <method_HttpRequest_get>`
@@ -44,6 +44,7 @@ Methods
   * :ref:`put() <method_HttpRequest_put>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
 Signals

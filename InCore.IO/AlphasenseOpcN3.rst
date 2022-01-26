@@ -50,7 +50,7 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`pollDeviceInformation() <method_AlphasenseOpcN3_pollDeviceInformation>`
   * :ref:`pollSerialNumber() <method_AlphasenseOpcN3_pollSerialNumber>`
@@ -58,6 +58,7 @@ Methods
   * :ref:`reset() <method_AlphasenseOpcN3_reset>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
 Signals
