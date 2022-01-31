@@ -22,6 +22,7 @@ Objects
 	MqttAbstractSubscription
 	MqttBroker
 	MqttClient
+	MqttMeasurementWriter
 	MqttObjectPublication
 	MqttPublication
 	MqttSubscription

@@ -15,7 +15,7 @@ The parent object must be of type :ref:`MqttClient <object_MqttClient>`.
 The inherited :ref:`DataObjectWriter.submitMode <property_DataObjectWriter_submitMode>` property is initialized to :ref:`DataObjectWriter.SubmitOnAnyChange <enumitem_DataObjectWriter_SubmitOnAnyChange>` which will automatically publish any topic whenever it changes. The submit mode can be changed to e.g. only publish all topics when all of them have been updated (:ref:`DataObjectWriter.SubmitOnCompleteDataset <enumitem_DataObjectWriter_SubmitOnCompleteDataset>`) or periodically every :ref:`DataObjectWriter.submitInterval <property_DataObjectWriter_submitInterval>` milliseconds (:ref:`DataObjectWriter.SubmitPeriodically <enumitem_DataObjectWriter_SubmitPeriodically>`). Manual submission can be implemented through the :ref:`DataObjectWriter.SubmitManually <enumitem_DataObjectWriter_SubmitManually>` submit mode and calling :ref:`publish() <method_MqttPublication_publish>`.
 
 :**› Inherits**: :ref:`DataObjectWriter <object_DataObjectWriter>`
-:**› Inherited by**: :ref:`MqttObjectPublication <object_MqttObjectPublication>`
+:**› Inherited by**: :ref:`MqttMeasurementWriter <object_MqttMeasurementWriter>`, :ref:`MqttObjectPublication <object_MqttObjectPublication>`
 
 Overview
 ********
@@ -53,6 +53,7 @@ Methods
   * :ref:`DataObjectWriter.truncate() <method_DataObjectWriter_truncate>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
 Signals
@@ -223,6 +224,8 @@ This enumeration describes all errors which can occur in MqttPublication objects
    single: MqttPublication.InvalidClient
 .. index::
    single: MqttPublication.EmptyTopicBasename
+.. index::
+   single: MqttPublication.MissingObjectsIds
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -245,6 +248,11 @@ This enumeration describes all errors which can occur in MqttPublication objects
   * - ``MqttPublication.EmptyTopicBasename``
     - ``2``
     - Topic base name not set.
+
+      .. _enumitem_MqttPublication_MissingObjectsIds:
+  * - ``MqttPublication.MissingObjectsIds``
+    - ``3``
+    - Some data objects do not have an object ID.
 
 
 .. _example_MqttPublication:

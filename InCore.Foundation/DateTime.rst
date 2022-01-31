@@ -26,6 +26,7 @@ Properties
   * :ref:`dateFormat <property_DateTime_dateFormat>`
   * :ref:`formatString <property_DateTime_formatString>`
   * :ref:`highPrecisionString <property_DateTime_highPrecisionString>`
+  * :ref:`running <property_DateTime_running>`
   * :ref:`string <property_DateTime_string>`
   * :ref:`timeZone <property_DateTime_timeZone>`
   * :ref:`DataObject.data <property_DataObject_data>`
@@ -45,9 +46,11 @@ Methods
   :columns: 1
 
   * :ref:`availableTimeZones() <method_DateTime_availableTimeZones>`
+  * :ref:`parseToString() <method_DateTime_parseToString>`
   * :ref:`DataObject.touch() <method_DataObject_touch>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
 Signals
@@ -207,6 +210,26 @@ This property holds a formatted string including milliseconds. If a custom :ref:
 :**› Attributes**: Readonly
 
 
+.. _property_DateTime_running:
+
+.. _signal_DateTime_runningChanged:
+
+.. index::
+   single: running
+
+running
++++++++
+
+This property holds whether the :ref:`currentSecsSinceEpoch <property_DateTime_currentSecsSinceEpoch>` property and corresponding properties such as :ref:`string <property_DateTime_string>` are updated automatically every second.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: Boolean
+:**› Default**: ``true``
+:**› Signal**: runningChanged()
+:**› Attributes**: Writable
+
+
 .. _property_DateTime_string:
 
 .. _signal_DateTime_stringChanged:
@@ -255,6 +278,20 @@ availableTimeZones()
 This method returns a list of all available time zones.
 
 :**› Returns**: StringList
+
+
+
+.. _method_DateTime_parseToString:
+
+.. index::
+   single: parseToString
+
+parseToString(Variant data, :ref:`DateTime.DateFormat <enum_DateTime_DateFormat>` dateFormat, String timeZone)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+:**› Returns**: String
 
 
 Enumerations

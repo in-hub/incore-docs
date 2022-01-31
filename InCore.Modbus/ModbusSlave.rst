@@ -42,6 +42,7 @@ Methods
   * :ref:`pollRegisters() <method_ModbusSlave_pollRegisters>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
 Signals
@@ -297,6 +298,8 @@ This enumeration describes all errors which can occur in ModbusSlave objects. Th
    single: ModbusSlave.WriteError
 .. index::
    single: ModbusSlave.RequestError
+.. index::
+   single: ModbusSlave.RegisterTypeError
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -334,6 +337,11 @@ This enumeration describes all errors which can occur in ModbusSlave objects. Th
   * - ``ModbusSlave.RequestError``
     - ``5``
     - A general error occurred while sending a request to the Modbus slave.
+
+      .. _enumitem_ModbusSlave_RegisterTypeError:
+  * - ``ModbusSlave.RegisterTypeError``
+    - ``6``
+    - Can't send requests; ModbusRegister type is InvalidType.
 
 
 .. _enum_ModbusSlave_PollMode:

@@ -32,6 +32,7 @@ Methods
 
   * :ref:`deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`fromJson() <method_Object_fromJson>`
+  * :ref:`serializeProperties() <method_Object_serializeProperties>`
   * :ref:`toJson() <method_Object_toJson>`
 
 Signals
@@ -108,6 +109,22 @@ fromJson(String data)
 +++++++++++++++++++++
 
 This method parses the specified JSON string and deserializes (loads) the corresponding properties of this object instance and children objects.
+
+
+
+.. _method_Object_serializeProperties:
+
+.. index::
+   single: serializeProperties
+
+serializeProperties(:ref:`Object.SerializeFilter <enum_Object_SerializeFilter>` filter)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This method serializes (saves) the corresponding properties of this object instance and children objects. It works similarly to :ref:`toJson() <method_Object_toJson>` but returns a map/dictionary instead of a JSON string.
+
+This method was introduced in InCore 2.5.
+
+:**› Returns**: Map
 
 
 

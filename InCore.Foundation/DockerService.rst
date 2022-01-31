@@ -39,7 +39,7 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`login() <method_DockerService_login>`
   * :ref:`logout() <method_DockerService_logout>`
@@ -47,6 +47,7 @@ Methods
   * :ref:`SystemService.stop() <method_SystemService_stop>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
   * :ref:`Object.toJson() <method_Object_toJson>`
 
 Signals
