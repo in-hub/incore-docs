@@ -51,7 +51,8 @@ Methods
 .. hlist::
   :columns: 1
 
-  * :ref:`dumpBacktrace() <method_Application_dumpBacktrace>`
+  * :ref:`dumpInternalBacktrace() <method_Application_dumpInternalBacktrace>`
+  * :ref:`dumpStackTrace() <method_Application_dumpStackTrace>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
@@ -455,15 +456,29 @@ Methods
 *******
 
 
-.. _method_Application_dumpBacktrace:
+.. _method_Application_dumpInternalBacktrace:
 
 .. index::
-   single: dumpBacktrace
+   single: dumpInternalBacktrace
 
-dumpBacktrace()
-+++++++++++++++
+dumpInternalBacktrace()
++++++++++++++++++++++++
 
 This method dumps an internal function call backtrace to the console. Except for troubleshooting in contact with the InCore developers you'll never need to call this function.
+
+
+
+.. _method_Application_dumpStackTrace:
+
+.. index::
+   single: dumpStackTrace
+
+dumpStackTrace()
+++++++++++++++++
+
+This method dumps a QML function call stack trace to the console which can be used for debugging purposes.
+
+This method was introduced in InCore 2.5.
 
 
 Enumerations

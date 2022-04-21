@@ -40,8 +40,6 @@ Properties
   * :ref:`modeItem <property_WiredNetworkInterface_modeItem>`
   * :ref:`multicastDNS <property_WiredNetworkInterface_multicastDNS>`
   * :ref:`multicastDNSItem <property_WiredNetworkInterface_multicastDNSItem>`
-  * :ref:`ntp <property_WiredNetworkInterface_ntp>`
-  * :ref:`ntpItem <property_WiredNetworkInterface_ntpItem>`
   * :ref:`vlan <property_WiredNetworkInterface_vlan>`
   * :ref:`vlanItem <property_WiredNetworkInterface_vlanItem>`
   * :ref:`NetworkInterface.dhcpClientIdentifier <property_NetworkInterface_dhcpClientIdentifier>`
@@ -53,9 +51,13 @@ Properties
   * :ref:`NetworkInterface.hardwareAddressItem <property_NetworkInterface_hardwareAddressItem>`
   * :ref:`NetworkInterface.hardwareName <property_NetworkInterface_hardwareName>`
   * :ref:`NetworkInterface.networkAddresses <property_NetworkInterface_networkAddresses>`
+  * :ref:`NetworkInterface.ntp <property_NetworkInterface_ntp>`
+  * :ref:`NetworkInterface.ntpItem <property_NetworkInterface_ntpItem>`
   * :ref:`NetworkInterface.operationalState <property_NetworkInterface_operationalState>`
   * :ref:`NetworkInterface.routes <property_NetworkInterface_routes>`
   * :ref:`NetworkInterface.setupState <property_NetworkInterface_setupState>`
+  * :ref:`NetworkInterface.trafficRx <property_NetworkInterface_trafficRx>`
+  * :ref:`NetworkInterface.trafficTx <property_NetworkInterface_trafficTx>`
   * :ref:`NetworkInterface.useRoutes <property_NetworkInterface_useRoutes>`
   * :ref:`NetworkInterface.useRoutesItem <property_NetworkInterface_useRoutesItem>`
   * :ref:`ConfigurationObject.items <property_ConfigurationObject_items>`
@@ -70,6 +72,8 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`NetworkInterface.pollTrafficRx() <method_NetworkInterface_pollTrafficRx>`
+  * :ref:`NetworkInterface.pollTrafficTx() <method_NetworkInterface_pollTrafficTx>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
@@ -403,37 +407,6 @@ multicastDNSItem
 ++++++++++++++++
 
 This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`multicastDNS <property_WiredNetworkInterface_multicastDNS>` property.
-
-:**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
-:**› Attributes**: Readonly
-
-
-.. _property_WiredNetworkInterface_ntp:
-
-.. _signal_WiredNetworkInterface_ntpChanged:
-
-.. index::
-   single: ntp
-
-ntp
-+++
-
-This property holds a list of NTP servers which should be used for synchronizing the system clock of the device. Multiple server addresses can be specified (IPv4/IPv6 addresses and resolvable hostnames allowed) and separated by space.
-
-:**› Type**: String
-:**› Signal**: ntpChanged()
-:**› Attributes**: Writable
-
-
-.. _property_WiredNetworkInterface_ntpItem:
-
-.. index::
-   single: ntpItem
-
-ntpItem
-+++++++
-
-This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`ntp <property_WiredNetworkInterface_ntp>` property.
 
 :**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
 :**› Attributes**: Readonly

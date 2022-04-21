@@ -24,8 +24,10 @@ Properties
   :columns: 3
 
   * :ref:`bufferDatabase <property_MqttMeasurementWriter_bufferDatabase>`
+  * :ref:`container <property_MqttMeasurementWriter_container>`
   * :ref:`fields <property_MqttMeasurementWriter_fields>`
   * :ref:`grouping <property_MqttMeasurementWriter_grouping>`
+  * :ref:`measurementsFieldName <property_MqttMeasurementWriter_measurementsFieldName>`
   * :ref:`mode <property_MqttMeasurementWriter_mode>`
   * :ref:`topicBaseName <property_MqttMeasurementWriter_topicBaseName>`
   * :ref:`MqttPublication.autoPublish <property_MqttPublication_autoPublish>`
@@ -36,6 +38,7 @@ Properties
   * :ref:`DataObjectWriter.datasetCount <property_DataObjectWriter_datasetCount>`
   * :ref:`DataObjectWriter.objects <property_DataObjectWriter_objects>`
   * :ref:`DataObjectWriter.running <property_DataObjectWriter_running>`
+  * :ref:`DataObjectWriter.submitChangedObjectsOnly <property_DataObjectWriter_submitChangedObjectsOnly>`
   * :ref:`DataObjectWriter.submitInterval <property_DataObjectWriter_submitInterval>`
   * :ref:`DataObjectWriter.submitMode <property_DataObjectWriter_submitMode>`
   * :ref:`Object.objectId <property_Object_objectId>`
@@ -104,6 +107,23 @@ This property holds the database to which the measurements are written temporari
 :**› Attributes**: Readonly
 
 
+.. _property_MqttMeasurementWriter_container:
+
+.. _signal_MqttMeasurementWriter_containerChanged:
+
+.. index::
+   single: container
+
+container
++++++++++
+
+This property holds a map with keys/values in which to embed the JSON/CBOR data in the :ref:`measurementsFieldName <property_MqttMeasurementWriter_measurementsFieldName>` field. This allows publish additional metadata such as the device name or location. If empty, the string representation of the JSON/CBOR data is published directly.
+
+:**› Type**: Map
+:**› Signal**: containerChanged()
+:**› Attributes**: Writable
+
+
 .. _property_MqttMeasurementWriter_fields:
 
 .. _signal_MqttMeasurementWriter_fieldsChanged:
@@ -137,6 +157,24 @@ This property holds whether an additional hierarchy level for measurement groups
 :**› Type**: Boolean
 :**› Default**: ``false``
 :**› Signal**: groupingChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MqttMeasurementWriter_measurementsFieldName:
+
+.. _signal_MqttMeasurementWriter_measurementsFieldNameChanged:
+
+.. index::
+   single: measurementsFieldName
+
+measurementsFieldName
++++++++++++++++++++++
+
+This property holds the name of the field in the :ref:`container <property_MqttMeasurementWriter_container>` map in which to embed the JSON/CBOR-encoded measurements.
+
+:**› Type**: String
+:**› Default**: ``measurements``
+:**› Signal**: measurementsFieldNameChanged()
 :**› Attributes**: Writable
 
 
@@ -269,6 +307,10 @@ This enumeration describes all supported modes in which the writer can operate.
    single: MqttMeasurementWriter.JsonMap
 .. index::
    single: MqttMeasurementWriter.CborMap
+.. index::
+   single: MqttMeasurementWriter.JsonArray
+.. index::
+   single: MqttMeasurementWriter.CborArray
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -291,6 +333,16 @@ This enumeration describes all supported modes in which the writer can operate.
   * - ``MqttMeasurementWriter.CborMap``
     - ``2``
     - publish measurements and their properties as a CBOR map.
+
+      .. _enumitem_MqttMeasurementWriter_JsonArray:
+  * - ``MqttMeasurementWriter.JsonArray``
+    - ``3``
+    - publish measurements and their properties as a JSON array.
+
+      .. _enumitem_MqttMeasurementWriter_CborArray:
+  * - ``MqttMeasurementWriter.CborArray``
+    - ``4``
+    - publish measurements and their properties as a CBOR array.
 
 
 .. _example_MqttMeasurementWriter:

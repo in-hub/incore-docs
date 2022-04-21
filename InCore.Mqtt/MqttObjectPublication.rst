@@ -19,7 +19,7 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 2
+  :columns: 3
 
   * :ref:`source <property_MqttObjectPublication_source>`
   * :ref:`topicBaseName <property_MqttObjectPublication_topicBaseName>`
@@ -31,6 +31,7 @@ Properties
   * :ref:`DataObjectWriter.datasetCount <property_DataObjectWriter_datasetCount>`
   * :ref:`DataObjectWriter.objects <property_DataObjectWriter_objects>`
   * :ref:`DataObjectWriter.running <property_DataObjectWriter_running>`
+  * :ref:`DataObjectWriter.submitChangedObjectsOnly <property_DataObjectWriter_submitChangedObjectsOnly>`
   * :ref:`DataObjectWriter.submitInterval <property_DataObjectWriter_submitInterval>`
   * :ref:`DataObjectWriter.submitMode <property_DataObjectWriter_submitMode>`
   * :ref:`Object.objectId <property_Object_objectId>`

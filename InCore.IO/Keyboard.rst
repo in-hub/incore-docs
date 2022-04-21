@@ -28,7 +28,6 @@ Properties
   * :ref:`name <property_Keyboard_name>`
   * :ref:`physicalLocation <property_Keyboard_physicalLocation>`
   * :ref:`productIdentifier <property_Keyboard_productIdentifier>`
-  * :ref:`usbLocation <property_Keyboard_usbLocation>`
   * :ref:`vendorIdentifier <property_Keyboard_vendorIdentifier>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
@@ -131,7 +130,7 @@ This property holds the name of the keyboard device, if available.
 physicalLocation
 ++++++++++++++++
 
-This property holds the physical location of the keyboard device, if available.
+This property holds the physical location of the keyboard device (e.g. ``usb-musb-hdrc.1-1.1.2``), if available.
 
 :**› Type**: String
 :**› Signal**: physicalLocationChanged()
@@ -152,23 +151,6 @@ This property holds the product identifier of the keyboard device, if available.
 
 :**› Type**: SignedInteger
 :**› Signal**: productIdentifierChanged()
-:**› Attributes**: Readonly
-
-
-.. _property_Keyboard_usbLocation:
-
-.. _signal_Keyboard_usbLocationChanged:
-
-.. index::
-   single: usbLocation
-
-usbLocation
-+++++++++++
-
-This property holds the location of the keyboard device on the USB bus, if available.
-
-:**› Type**: String
-:**› Signal**: usbLocationChanged()
 :**› Attributes**: Readonly
 
 

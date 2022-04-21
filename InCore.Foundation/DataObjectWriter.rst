@@ -22,11 +22,12 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`datasetCount <property_DataObjectWriter_datasetCount>`
   * :ref:`objects <property_DataObjectWriter_objects>`
   * :ref:`running <property_DataObjectWriter_running>`
+  * :ref:`submitChangedObjectsOnly <property_DataObjectWriter_submitChangedObjectsOnly>`
   * :ref:`submitInterval <property_DataObjectWriter_submitInterval>`
   * :ref:`submitMode <property_DataObjectWriter_submitMode>`
   * :ref:`Object.objectId <property_Object_objectId>`
@@ -119,6 +120,26 @@ This property holds whether the periodical data submission via :ref:`submitMode 
 :**› Type**: Boolean
 :**› Default**: ``true``
 :**› Signal**: runningChanged()
+:**› Attributes**: Writable
+
+
+.. _property_DataObjectWriter_submitChangedObjectsOnly:
+
+.. _signal_DataObjectWriter_submitChangedObjectsOnlyChanged:
+
+.. index::
+   single: submitChangedObjectsOnly
+
+submitChangedObjectsOnly
+++++++++++++++++++++++++
+
+This property holds whether to submit only objects whose values have changed since the last submission. This flag is not supported by all :ref:`DataObjectWriter <object_DataObjectWriter>` implementations, e.g. :ref:`CsvWriter <object_CsvWriter>` always has to write all fields to keep the file structure consistent.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: submitChangedObjectsOnlyChanged()
 :**› Attributes**: Writable
 
 

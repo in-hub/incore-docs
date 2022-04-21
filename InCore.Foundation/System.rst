@@ -24,6 +24,7 @@ Properties
   * :ref:`bootloaderVersion <property_System_bootloaderVersion>`
   * :ref:`clock <property_System_clock>`
   * :ref:`cpuLoad <property_System_cpuLoad>`
+  * :ref:`cpuUsage <property_System_cpuUsage>`
   * :ref:`deviceHumidity <property_System_deviceHumidity>`
   * :ref:`deviceId <property_System_deviceId>`
   * :ref:`deviceName <property_System_deviceName>`
@@ -32,6 +33,8 @@ Properties
   * :ref:`error <property_System_error>`
   * :ref:`errorString <property_System_errorString>`
   * :ref:`hostname <property_System_hostname>`
+  * :ref:`memoryAvailable <property_System_memoryAvailable>`
+  * :ref:`memoryTotal <property_System_memoryTotal>`
   * :ref:`osVersion <property_System_osVersion>`
   * :ref:`services <property_System_services>`
   * :ref:`uptime <property_System_uptime>`
@@ -45,8 +48,10 @@ Methods
   :columns: 2
 
   * :ref:`pollCpuLoad() <method_System_pollCpuLoad>`
+  * :ref:`pollCpuUsage() <method_System_pollCpuUsage>`
   * :ref:`pollDeviceHumidity() <method_System_pollDeviceHumidity>`
   * :ref:`pollDeviceTemperature() <method_System_pollDeviceTemperature>`
+  * :ref:`pollMemoryAvailable() <method_System_pollMemoryAvailable>`
   * :ref:`pollUptime() <method_System_pollUptime>`
   * :ref:`reboot() <method_System_reboot>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
@@ -121,6 +126,25 @@ This property holds the system load average for the last minute. The value is eq
 
 :**› Type**: Double
 :**› Signal**: cpuLoadChanged()
+:**› Attributes**: Readonly, Requires :ref:`Polling <object_Polling>`
+
+
+.. _property_System_cpuUsage:
+
+.. _signal_System_cpuUsageChanged:
+
+.. index::
+   single: cpuUsage
+
+cpuUsage
+++++++++
+
+This property holds the average CPU usage in percent. When polled for the first time, it will return the total CPU usage since system start while subsequent polls return the CPU usage since the previous poll.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: SignedInteger
+:**› Signal**: cpuUsageChanged()
 :**› Attributes**: Readonly, Requires :ref:`Polling <object_Polling>`
 
 
@@ -257,6 +281,44 @@ This property holds the hostname of the system.  The hostname must follow the us
 :**› Attributes**: Writable
 
 
+.. _property_System_memoryAvailable:
+
+.. _signal_System_memoryAvailableChanged:
+
+.. index::
+   single: memoryAvailable
+
+memoryAvailable
++++++++++++++++
+
+This property holds the available (unused) memory of the system in MiB.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: SignedInteger
+:**› Signal**: memoryAvailableChanged()
+:**› Attributes**: Readonly, Requires :ref:`Polling <object_Polling>`
+
+
+.. _property_System_memoryTotal:
+
+.. _signal_System_memoryTotalChanged:
+
+.. index::
+   single: memoryTotal
+
+memoryTotal
++++++++++++
+
+This property holds the total memory of the system in MiB.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: SignedInteger
+:**› Signal**: memoryTotalChanged()
+:**› Attributes**: Readonly
+
+
 .. _property_System_osVersion:
 
 .. index::
@@ -320,6 +382,18 @@ This method polls the :ref:`cpuLoad <property_System_cpuLoad>` property. It is c
 
 
 
+.. _method_System_pollCpuUsage:
+
+.. index::
+   single: pollCpuUsage
+
+pollCpuUsage()
+++++++++++++++
+
+This method polls the :ref:`cpuUsage <property_System_cpuUsage>` property. It is called automatically when using a :ref:`Polling <object_Polling>` property modifier on this property and usually does not have to be called manually.
+
+
+
 .. _method_System_pollDeviceHumidity:
 
 .. index::
@@ -341,6 +415,18 @@ pollDeviceTemperature()
 +++++++++++++++++++++++
 
 This method polls the :ref:`deviceTemperature <property_System_deviceTemperature>` property. It is called automatically when using a :ref:`Polling <object_Polling>` property modifier on this property and usually does not have to be called manually.
+
+
+
+.. _method_System_pollMemoryAvailable:
+
+.. index::
+   single: pollMemoryAvailable
+
+pollMemoryAvailable()
++++++++++++++++++++++
+
+This method polls the :ref:`memoryAvailable <property_System_memoryAvailable>` property. It is called automatically when using a :ref:`Polling <object_Polling>` property modifier on this property and usually does not have to be called manually.
 
 
 
@@ -486,3 +572,23 @@ This enumeration describes all errors which can occur in System objects. The mos
     - ``2``
     - Hostname is invalid, likely due to invalid characters.
 
+
+.. _example_System:
+
+
+Example
+*******
+
+.. code-block:: qml
+
+    import InCore.Foundation 2.5
+    
+    Application {
+        System {
+            Polling on cpuUsage { }
+            Polling on memoryAvailable { }
+            onCpuUsageChanged: console.log("CPU usage:", cpuUsage, "%")
+            onMemoryAvailableChanged: console.log(("%1 of %2 MiB used").arg(memoryTotal-memoryAvailable).arg(memoryTotal))
+        }
+    }
+    

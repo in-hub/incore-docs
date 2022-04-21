@@ -31,9 +31,13 @@ Properties
   * :ref:`hardwareAddressItem <property_NetworkInterface_hardwareAddressItem>`
   * :ref:`hardwareName <property_NetworkInterface_hardwareName>`
   * :ref:`networkAddresses <property_NetworkInterface_networkAddresses>`
+  * :ref:`ntp <property_NetworkInterface_ntp>`
+  * :ref:`ntpItem <property_NetworkInterface_ntpItem>`
   * :ref:`operationalState <property_NetworkInterface_operationalState>`
   * :ref:`routes <property_NetworkInterface_routes>`
   * :ref:`setupState <property_NetworkInterface_setupState>`
+  * :ref:`trafficRx <property_NetworkInterface_trafficRx>`
+  * :ref:`trafficTx <property_NetworkInterface_trafficTx>`
   * :ref:`useRoutes <property_NetworkInterface_useRoutes>`
   * :ref:`useRoutesItem <property_NetworkInterface_useRoutesItem>`
   * :ref:`ConfigurationObject.items <property_ConfigurationObject_items>`
@@ -48,6 +52,8 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`pollTrafficRx() <method_NetworkInterface_pollTrafficRx>`
+  * :ref:`pollTrafficTx() <method_NetworkInterface_pollTrafficTx>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
@@ -231,6 +237,37 @@ This property was introduced in InCore 1.1.
 :**› Attributes**: Readonly
 
 
+.. _property_NetworkInterface_ntp:
+
+.. _signal_NetworkInterface_ntpChanged:
+
+.. index::
+   single: ntp
+
+ntp
++++
+
+This property holds a list of NTP servers which should be used for synchronizing the system clock of the device. Multiple server addresses can be specified (IPv4/IPv6 addresses and resolvable hostnames allowed) and separated by space.
+
+:**› Type**: String
+:**› Signal**: ntpChanged()
+:**› Attributes**: Writable
+
+
+.. _property_NetworkInterface_ntpItem:
+
+.. index::
+   single: ntpItem
+
+ntpItem
++++++++
+
+This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`ntp <property_NetworkInterface_ntp>` property.
+
+:**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
+:**› Attributes**: Readonly
+
+
 .. _property_NetworkInterface_operationalState:
 
 .. _signal_NetworkInterface_operationalStateChanged:
@@ -286,6 +323,44 @@ This property holds the setup state of the network interface which specifies the
 :**› Attributes**: Readonly
 
 
+.. _property_NetworkInterface_trafficRx:
+
+.. _signal_NetworkInterface_trafficRxChanged:
+
+.. index::
+   single: trafficRx
+
+trafficRx
++++++++++
+
+This property holds the number of bytes received per second through this interface during the last polling interval.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: SignedInteger
+:**› Signal**: trafficRxChanged()
+:**› Attributes**: Readonly, Requires :ref:`Polling <object_Polling>`
+
+
+.. _property_NetworkInterface_trafficTx:
+
+.. _signal_NetworkInterface_trafficTxChanged:
+
+.. index::
+   single: trafficTx
+
+trafficTx
++++++++++
+
+This property holds the number of bytes transmitted per second through this interface during the last polling interval.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: SignedInteger
+:**› Signal**: trafficTxChanged()
+:**› Attributes**: Readonly, Requires :ref:`Polling <object_Polling>`
+
+
 .. _property_NetworkInterface_useRoutes:
 
 .. _signal_NetworkInterface_useRoutesChanged:
@@ -316,6 +391,33 @@ This property holds an internal :ref:`ConfigurationItem <object_ConfigurationIte
 
 :**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
 :**› Attributes**: Readonly
+
+Methods
+*******
+
+
+.. _method_NetworkInterface_pollTrafficRx:
+
+.. index::
+   single: pollTrafficRx
+
+pollTrafficRx()
++++++++++++++++
+
+This method polls the :ref:`trafficRx <property_NetworkInterface_trafficRx>` property. It is called automatically when using a :ref:`Polling <object_Polling>` property modifier on this property and usually does not have to be called manually.
+
+
+
+.. _method_NetworkInterface_pollTrafficTx:
+
+.. index::
+   single: pollTrafficTx
+
+pollTrafficTx()
++++++++++++++++
+
+This method polls the :ref:`trafficTx <property_NetworkInterface_trafficTx>` property. It is called automatically when using a :ref:`Polling <object_Polling>` property modifier on this property and usually does not have to be called manually.
+
 
 Signals
 *******

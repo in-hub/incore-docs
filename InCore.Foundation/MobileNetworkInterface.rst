@@ -55,9 +55,13 @@ Properties
   * :ref:`NetworkInterface.hardwareAddressItem <property_NetworkInterface_hardwareAddressItem>`
   * :ref:`NetworkInterface.hardwareName <property_NetworkInterface_hardwareName>`
   * :ref:`NetworkInterface.networkAddresses <property_NetworkInterface_networkAddresses>`
+  * :ref:`NetworkInterface.ntp <property_NetworkInterface_ntp>`
+  * :ref:`NetworkInterface.ntpItem <property_NetworkInterface_ntpItem>`
   * :ref:`NetworkInterface.operationalState <property_NetworkInterface_operationalState>`
   * :ref:`NetworkInterface.routes <property_NetworkInterface_routes>`
   * :ref:`NetworkInterface.setupState <property_NetworkInterface_setupState>`
+  * :ref:`NetworkInterface.trafficRx <property_NetworkInterface_trafficRx>`
+  * :ref:`NetworkInterface.trafficTx <property_NetworkInterface_trafficTx>`
   * :ref:`NetworkInterface.useRoutes <property_NetworkInterface_useRoutes>`
   * :ref:`NetworkInterface.useRoutesItem <property_NetworkInterface_useRoutesItem>`
   * :ref:`ConfigurationObject.items <property_ConfigurationObject_items>`
@@ -73,6 +77,8 @@ Methods
   :columns: 1
 
   * :ref:`sendMessage() <method_MobileNetworkInterface_sendMessage>`
+  * :ref:`NetworkInterface.pollTrafficRx() <method_NetworkInterface_pollTrafficRx>`
+  * :ref:`NetworkInterface.pollTrafficTx() <method_NetworkInterface_pollTrafficTx>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`

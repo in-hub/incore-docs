@@ -29,6 +29,7 @@ Properties
   * :ref:`error <property_UpdateManager_error>`
   * :ref:`errorData <property_UpdateManager_errorData>`
   * :ref:`errorString <property_UpdateManager_errorString>`
+  * :ref:`installStepMessage <property_UpdateManager_installStepMessage>`
   * :ref:`pendingUpdates <property_UpdateManager_pendingUpdates>`
   * :ref:`progress <property_UpdateManager_progress>`
   * :ref:`repositories <property_UpdateManager_repositories>`
@@ -91,7 +92,7 @@ autoDownload
 This property holds whether to automatically download available updates.
 
 :**› Type**: Boolean
-:**› Default**: ``true``
+:**› Default**: ``false``
 :**› Signal**: autoDownloadChanged()
 :**› Attributes**: Writable
 
@@ -127,7 +128,7 @@ autoReboot
 This property holds whether to automatically reboot the system after installing updates.
 
 :**› Type**: Boolean
-:**› Default**: ``true``
+:**› Default**: ``false``
 :**› Signal**: autoRebootChanged()
 :**› Attributes**: Writable
 
@@ -218,6 +219,25 @@ This property holds the current human readable error string corresponding to the
 :**› Attributes**: Readonly
 
 
+.. _property_UpdateManager_installStepMessage:
+
+.. _signal_UpdateManager_installStepMessageChanged:
+
+.. index::
+   single: installStepMessage
+
+installStepMessage
+++++++++++++++++++
+
+This property holds a message providing information about the current step of an update installation.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: String
+:**› Signal**: installStepMessageChanged()
+:**› Attributes**: Readonly
+
+
 .. _property_UpdateManager_pendingUpdates:
 
 .. _signal_UpdateManager_pendingUpdatesChanged:
@@ -228,11 +248,11 @@ This property holds the current human readable error string corresponding to the
 pendingUpdates
 ++++++++++++++
 
-This property holds the list of available updates pending for installation.
+This property holds the list of available updates pending for installation. This list usually is populated by the :ref:`download() <method_UpdateManager_download>` method but also can be written manually for installing a custom update bundle via the :ref:`install() <method_UpdateManager_install>` method.
 
 :**› Type**: StringList
 :**› Signal**: pendingUpdatesChanged()
-:**› Attributes**: Readonly
+:**› Attributes**: Writable
 
 
 .. _property_UpdateManager_progress:
@@ -245,7 +265,7 @@ This property holds the list of available updates pending for installation.
 progress
 ++++++++
 
-This property holds the progress of the current operation.
+This property holds the percentage progress of the update installation operation.
 
 :**› Type**: SignedInteger
 :**› Signal**: progressChanged()

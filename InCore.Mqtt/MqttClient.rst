@@ -171,7 +171,7 @@ This property holds whether to open SSL/TLS connections only. If disabled all tr
 error
 +++++
 
-This property holds the most recent error occured while connecting to an MQTT broker.
+This property holds the most recent error occurred while connecting to an MQTT broker.
 
 :**› Type**: :ref:`Error <enum_MqttClient_Error>`
 :**› Default**: :ref:`MqttClient.NoError <enumitem_MqttClient_NoError>`

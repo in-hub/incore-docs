@@ -50,6 +50,8 @@ Signals
   :columns: 1
 
   * :ref:`errorOccurred() <signal_Repeater_errorOccurred>`
+  * :ref:`objectAdded() <signal_Repeater_objectAdded>`
+  * :ref:`objectRemoved() <signal_Repeater_objectRemoved>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 Enumerations
@@ -207,6 +209,34 @@ errorOccurred()
 +++++++++++++++
 
 This signal is emitted whenever an error has occurred, regardless of whether the :ref:`error <property_Repeater_error>` property has changed or not. In contrast to the change notification signal of the :ref:`error <property_Repeater_error>` property this signal is also emitted several times if a certain error occurs several times in succession.
+
+
+
+.. _signal_Repeater_objectAdded:
+
+.. index::
+   single: objectAdded
+
+objectAdded(Object item)
+++++++++++++++++++++++++
+
+This signal is emitted when an object has been instantiated and added to the target list.
+
+This signal was introduced in InCore 2.5.
+
+
+
+.. _signal_Repeater_objectRemoved:
+
+.. index::
+   single: objectRemoved
+
+objectRemoved(Object item)
+++++++++++++++++++++++++++
+
+This signal is emitted when an object has been removed from the target list and is going to be destroyed.
+
+This signal was introduced in InCore 2.5.
 
 
 Enumerations
