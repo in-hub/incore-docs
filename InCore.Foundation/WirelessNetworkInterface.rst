@@ -30,6 +30,8 @@ Properties
   * :ref:`passphraseItem <property_WirelessNetworkInterface_passphraseItem>`
   * :ref:`ssid <property_WirelessNetworkInterface_ssid>`
   * :ref:`ssidItem <property_WirelessNetworkInterface_ssidItem>`
+  * :ref:`NetworkInterface.bytesRx <property_NetworkInterface_bytesRx>`
+  * :ref:`NetworkInterface.bytesTx <property_NetworkInterface_bytesTx>`
   * :ref:`NetworkInterface.dhcpClientIdentifier <property_NetworkInterface_dhcpClientIdentifier>`
   * :ref:`NetworkInterface.enabled <property_NetworkInterface_enabled>`
   * :ref:`NetworkInterface.enabledItem <property_NetworkInterface_enabledItem>`
@@ -58,11 +60,14 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`scanAvailableNetworks() <method_WirelessNetworkInterface_scanAvailableNetworks>`
+  * :ref:`NetworkInterface.pollBytesRx() <method_NetworkInterface_pollBytesRx>`
+  * :ref:`NetworkInterface.pollBytesTx() <method_NetworkInterface_pollBytesTx>`
   * :ref:`NetworkInterface.pollTrafficRx() <method_NetworkInterface_pollTrafficRx>`
   * :ref:`NetworkInterface.pollTrafficTx() <method_NetworkInterface_pollTrafficTx>`
+  * :ref:`ConfigurationObject.toDataMap() <method_ConfigurationObject_toDataMap>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`

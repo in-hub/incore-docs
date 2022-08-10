@@ -170,19 +170,17 @@ Example
     import InCore.Foundation 2.5
     
     Application {
-        System {
-            DockerService {
-                DockerContainer {
-                    name: "docker-mount-example"
-                    image: "arm32v7/nginx:latest"
-                    mounts: [
-                        DockerMount {
-                            source: "/storage/nginx/conf.d"
-                            destination: "/etc/nginx/conf.d"
-                            readOnly: true
-                        }
-                    ]
-                }
+        DockerService {
+            DockerContainer {
+                name: "docker-mount-example"
+                image: "arm32v7/nginx:latest"
+                mounts: [
+                    DockerMount {
+                        source: "/storage/nginx/conf.d"
+                        destination: "/etc/nginx/conf.d"
+                        readOnly: true
+                    }
+                ]
             }
         }
     }

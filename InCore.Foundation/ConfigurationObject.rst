@@ -34,6 +34,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`toDataMap() <method_ConfigurationObject_toDataMap>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
@@ -102,6 +103,25 @@ This property holds an internal :ref:`ConfigurationItem <object_ConfigurationIte
 
 :**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
 :**› Attributes**: Readonly
+
+Methods
+*******
+
+
+.. _method_ConfigurationObject_toDataMap:
+
+.. index::
+   single: toDataMap
+
+toDataMap()
++++++++++++
+
+This method is similar to :ref:`Object.serializeProperties() <method_Object_serializeProperties>` but only returns the serialized :ref:`DataObject.data <property_DataObject_data>` properties of each :ref:`ConfigurationItem <object_ConfigurationItem>`.
+
+This method was introduced in InCore 2.6.
+
+:**› Returns**: Map
+
 
 Signals
 *******

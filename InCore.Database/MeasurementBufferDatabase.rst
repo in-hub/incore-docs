@@ -12,7 +12,7 @@ The MeasurementBufferDatabase object is a helper class to buffer :ref:`Measureme
 
 This object was introduced in InCore 2.5.
 
-:**› Inherits**: :ref:`MeasurementDatabase <object_MeasurementDatabase>`
+:**› Inherits**: :ref:`DatabaseMeasurementWriter <object_DatabaseMeasurementWriter>`
 
 Overview
 ********
@@ -28,7 +28,9 @@ Properties
   * :ref:`bufferSize <property_MeasurementBufferDatabase_bufferSize>`
   * :ref:`buffering <property_MeasurementBufferDatabase_buffering>`
   * :ref:`transmitOrder <property_MeasurementBufferDatabase_transmitOrder>`
-  * :ref:`MeasurementDatabase.storage <property_MeasurementDatabase_storage>`
+  * :ref:`DatabaseMeasurementWriter.database <property_DatabaseMeasurementWriter_database>`
+  * :ref:`DatabaseMeasurementWriter.databaseTable <property_DatabaseMeasurementWriter_databaseTable>`
+  * :ref:`DatabaseMeasurementWriter.measurements <property_DatabaseMeasurementWriter_measurements>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
 
@@ -38,8 +40,9 @@ Methods
 .. hlist::
   :columns: 1
 
-  * :ref:`MeasurementDatabase.clear() <method_MeasurementDatabase_clear>`
-  * :ref:`MeasurementDatabase.datasetCount() <method_MeasurementDatabase_datasetCount>`
+  * :ref:`DatabaseMeasurementWriter.clear() <method_DatabaseMeasurementWriter_clear>`
+  * :ref:`DatabaseMeasurementWriter.datasetCount() <method_DatabaseMeasurementWriter_datasetCount>`
+  * :ref:`DatabaseMeasurementWriter.store() <method_DatabaseMeasurementWriter_store>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
@@ -51,6 +54,7 @@ Signals
 .. hlist::
   :columns: 1
 
+  * :ref:`DatabaseMeasurementWriter.measurementsDataChanged() <signal_DatabaseMeasurementWriter_measurementsDataChanged>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 Enumerations

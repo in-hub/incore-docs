@@ -113,19 +113,17 @@ Example
     import InCore.Foundation 2.5
     
     Application {
-        System {
-            DockerService {
-                DockerContainer {
-                    name: "docker-postgresql-example"
-                    image: "arm32v7/postgres:alpine"
-                    volumes: [ DockerVolume { name: "postgresdata"; destination: "/var/lib/postgresql/data" } ]
-                }
-                DockerContainer {
-                    name: "docker-nodered-example"
-                    image: "nodered/node-red:latest-minimal"
-                    ports: [ "1880:1880" ]
-                    volumes: [ DockerVolume { name: "nodereddata"; destination: "/data" } ]
-                }
+        DockerService {
+            DockerContainer {
+                name: "docker-postgresql-example"
+                image: "arm32v7/postgres:alpine"
+                volumes: [ DockerVolume { name: "postgresdata"; destination: "/var/lib/postgresql/data" } ]
+            }
+            DockerContainer {
+                name: "docker-nodered-example"
+                image: "nodered/node-red:latest-minimal"
+                ports: [ "1880:1880" ]
+                volumes: [ DockerVolume { name: "nodereddata"; destination: "/data" } ]
             }
         }
     }

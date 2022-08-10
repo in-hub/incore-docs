@@ -23,11 +23,13 @@ Objects
 	OpcUaClientMethodArgument
 	OpcUaClientMethodNode
 	OpcUaClientNode
+	OpcUaClientNodeDiscovery
 	OpcUaClientNodeId
 	OpcUaClientNodeIdType
 	OpcUaClientRelativeNodeId
 	OpcUaClientRelativeNodePath
 	OpcUaClientValueNode
+	OpcUaConnection
 	OpcUaDataChangeFilter
 	OpcUaElementOperand
 	OpcUaEndpointDiscovery

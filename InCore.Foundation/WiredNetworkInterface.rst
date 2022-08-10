@@ -40,8 +40,12 @@ Properties
   * :ref:`modeItem <property_WiredNetworkInterface_modeItem>`
   * :ref:`multicastDNS <property_WiredNetworkInterface_multicastDNS>`
   * :ref:`multicastDNSItem <property_WiredNetworkInterface_multicastDNSItem>`
+  * :ref:`subnetPrefixLength <property_WiredNetworkInterface_subnetPrefixLength>`
+  * :ref:`subnetPrefixLengthItem <property_WiredNetworkInterface_subnetPrefixLengthItem>`
   * :ref:`vlan <property_WiredNetworkInterface_vlan>`
   * :ref:`vlanItem <property_WiredNetworkInterface_vlanItem>`
+  * :ref:`NetworkInterface.bytesRx <property_NetworkInterface_bytesRx>`
+  * :ref:`NetworkInterface.bytesTx <property_NetworkInterface_bytesTx>`
   * :ref:`NetworkInterface.dhcpClientIdentifier <property_NetworkInterface_dhcpClientIdentifier>`
   * :ref:`NetworkInterface.enabled <property_NetworkInterface_enabled>`
   * :ref:`NetworkInterface.enabledItem <property_NetworkInterface_enabledItem>`
@@ -70,10 +74,13 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
+  * :ref:`NetworkInterface.pollBytesRx() <method_NetworkInterface_pollBytesRx>`
+  * :ref:`NetworkInterface.pollBytesTx() <method_NetworkInterface_pollBytesTx>`
   * :ref:`NetworkInterface.pollTrafficRx() <method_NetworkInterface_pollTrafficRx>`
   * :ref:`NetworkInterface.pollTrafficTx() <method_NetworkInterface_pollTrafficTx>`
+  * :ref:`ConfigurationObject.toDataMap() <method_ConfigurationObject_toDataMap>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
@@ -121,7 +128,7 @@ Properties
 address
 +++++++
 
-This property holds a static IPv4 or IPv6 address for this interface and its prefix length, separated by a ``/`` character, e.g. ``192.168.2.19/24``. Multiple addresses (including prefix) can be specified and separated by space.
+This property holds a static IPv4 or IPv6 address for this interface and optionally its subnet prefix length, separated by a ``/`` character, e.g. ``192.168.2.19/24``. Multiple addresses (including prefix) can be specified and separated by space.
 
 :**› Type**: String
 :**› Signal**: addressChanged()
@@ -407,6 +414,40 @@ multicastDNSItem
 ++++++++++++++++
 
 This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`multicastDNS <property_WiredNetworkInterface_multicastDNS>` property.
+
+:**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
+:**› Attributes**: Readonly
+
+
+.. _property_WiredNetworkInterface_subnetPrefixLength:
+
+.. _signal_WiredNetworkInterface_subnetPrefixLengthChanged:
+
+.. index::
+   single: subnetPrefixLength
+
+subnetPrefixLength
+++++++++++++++++++
+
+This property holds the subnet prefix length for the static IPv4 or IPv6 :ref:`address <property_WiredNetworkInterface_address>`. It is ignored if specified as part of the IP address already. Otherwise it has to be set to a value greater than ``0``, e.g. ``24`` for the IPv4 subnet mask ``255.255.255.0``.
+
+This property was introduced in InCore 2.6.
+
+:**› Type**: SignedInteger
+:**› Default**: ``0``
+:**› Signal**: subnetPrefixLengthChanged()
+:**› Attributes**: Writable
+
+
+.. _property_WiredNetworkInterface_subnetPrefixLengthItem:
+
+.. index::
+   single: subnetPrefixLengthItem
+
+subnetPrefixLengthItem
+++++++++++++++++++++++
+
+This property holds an internal :ref:`ConfigurationItem <object_ConfigurationItem>` instance for the :ref:`subnetPrefixLength <property_WiredNetworkInterface_subnetPrefixLength>` property.
 
 :**› Type**: :ref:`ConfigurationItem <object_ConfigurationItem>`
 :**› Attributes**: Readonly

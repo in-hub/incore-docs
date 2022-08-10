@@ -451,7 +451,7 @@ This method calls :ref:`IoDevice.flush() <method_IoDevice_flush>` and tells the 
 write(ArrayBuffer data)
 +++++++++++++++++++++++
 
-This method writes the given data to the I/O device. If :ref:`unbuffered <property_IoDevice_unbuffered>` is ``false`` the data may not actually be written until the file is closed or :ref:`sync() <method_IoDevice_sync>` is called.
+This method writes the given data to the I/O device. If :ref:`unbuffered <property_IoDevice_unbuffered>` is ``false`` the data may not actually be written until the device is closed or :ref:`flush() <method_IoDevice_flush>` is called.
 
 :**› Returns**: SignedBigInteger
 

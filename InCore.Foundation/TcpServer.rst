@@ -50,6 +50,7 @@ Signals
   * :ref:`acceptError() <signal_TcpServer_acceptError>`
   * :ref:`connectionAccepted() <signal_TcpServer_connectionAccepted>`
   * :ref:`connectionsDataChanged() <signal_TcpServer_connectionsDataChanged>`
+  * :ref:`listenError() <signal_TcpServer_listenError>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 
@@ -137,10 +138,10 @@ Signals
 .. index::
    single: acceptError
 
-acceptError(:ref:`IpSocket.Error <enum_IpSocket_Error>` error)
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+acceptError(SignedInteger error)
+++++++++++++++++++++++++++++++++
 
-This signal is emitted whenever an error occurs while accepting a new incoming connection. The error code is provided in the first argument.
+This signal is emitted whenever an error occurs while accepting a new incoming connection. The error code is provided in the first argument and corresponds to :ref:`IpSocket.Error <enum_IpSocket_Error>`.
 
 
 
@@ -168,6 +169,20 @@ This signal is emitted whenever the :ref:`List.dataChanged() <signal_List_dataCh
 
 
 
+.. _signal_TcpServer_listenError:
+
+.. index::
+   single: listenError
+
+listenError(SignedInteger error)
+++++++++++++++++++++++++++++++++
+
+This signal is emitted whenever an error occurs while trying to listen at the specified :ref:`port <property_TcpServer_port>`. The error code is provided in the first argument and corresponds to :ref:`IpSocket.Error <enum_IpSocket_Error>`.
+
+This signal was introduced in InCore 2.6.
+
+
+
 .. _example_TcpServer:
 
 
@@ -178,14 +193,23 @@ Example
 
     import InCore.Foundation 2.5
     
-    TcpServer {
-        port: 1234
+    Application {
+        TcpServer {
+            port: 1234
     
-        onConnectionAccepted: (connection) => {
-            connection.write("Hello world\n")
-            connection.readyRead.connect( () => {
-                console.log("Client sent:", connection.readAll())
-            } );
+            onListenError: (error) => {
+                               if (error === IpSocket.AddressInUseError)
+                               {
+                                   console.log("ERROR: port is already in use")
+                               }
+                           }
+    
+            onConnectionAccepted: (connection) => {
+                                      connection.write("Hello world\n")
+                                      connection.readyRead.connect( () => {
+                                                                       console.log("Client sent:", connection.readAll())
+                                                                   } );
+                                  }
         }
     }
     

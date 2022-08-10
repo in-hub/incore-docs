@@ -22,6 +22,7 @@ Properties
   :columns: 2
 
   * :ref:`address <property_ModbusSlave_address>`
+  * :ref:`client <property_ModbusSlave_client>`
   * :ref:`enabled <property_ModbusSlave_enabled>`
   * :ref:`error <property_ModbusSlave_error>`
   * :ref:`errorString <property_ModbusSlave_errorString>`
@@ -85,6 +86,25 @@ This property holds the address of the Modbus slave. It is also known as slave I
 :**› Type**: SignedInteger
 :**› Default**: ``0``
 :**› Signal**: addressChanged()
+:**› Attributes**: Writable
+
+
+.. _property_ModbusSlave_client:
+
+.. _signal_ModbusSlave_clientChanged:
+
+.. index::
+   single: client
+
+client
+++++++
+
+This property holds the Modbus client which to use for reading/writing Modbus requests. If unset, the parent object will be used.
+
+This property was introduced in InCore 2.6.
+
+:**› Type**: :ref:`ModbusClient <object_ModbusClient>`
+:**› Signal**: clientChanged()
 :**› Attributes**: Writable
 
 

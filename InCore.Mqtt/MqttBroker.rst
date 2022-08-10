@@ -21,18 +21,14 @@ Properties
 .. hlist::
   :columns: 2
 
-  * :ref:`aclFile <property_MqttBroker_aclFile>`
-  * :ref:`allowAnonymous <property_MqttBroker_allowAnonymous>`
   * :ref:`enabled <property_MqttBroker_enabled>`
   * :ref:`internal <property_MqttBroker_internal>`
+  * :ref:`listeners <property_MqttBroker_listeners>`
   * :ref:`maxConnections <property_MqttBroker_maxConnections>`
-  * :ref:`passwordFile <property_MqttBroker_passwordFile>`
-  * :ref:`port <property_MqttBroker_port>`
   * :ref:`tlsCaFile <property_MqttBroker_tlsCaFile>`
   * :ref:`tlsCertificateFile <property_MqttBroker_tlsCertificateFile>`
   * :ref:`tlsCiphers <property_MqttBroker_tlsCiphers>`
   * :ref:`tlsKeyFile <property_MqttBroker_tlsKeyFile>`
-  * :ref:`websocketsPort <property_MqttBroker_websocketsPort>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
 
@@ -53,51 +49,13 @@ Signals
 .. hlist::
   :columns: 1
 
+  * :ref:`listenersDataChanged() <signal_MqttBroker_listenersDataChanged>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
 
 
 Properties
 **********
-
-
-.. _property_MqttBroker_aclFile:
-
-.. _signal_MqttBroker_aclFileChanged:
-
-.. index::
-   single: aclFile
-
-aclFile
-+++++++
-
-This property holds the path to Mosquitto ACL file managed externally via ``mosquitto_passwd``. See the `mosquitto.conf man page <https://mosquitto.org/man/mosquitto-conf-5.html#idm35>`_ for details.
-
-This property was introduced in InCore 2.3.
-
-:**› Type**: String
-:**› Signal**: aclFileChanged()
-:**› Attributes**: Writable
-
-
-.. _property_MqttBroker_allowAnonymous:
-
-.. _signal_MqttBroker_allowAnonymousChanged:
-
-.. index::
-   single: allowAnonymous
-
-allowAnonymous
-++++++++++++++
-
-This property holds whether clients that connect without providing a username are allowed to connect.
-
-This property was introduced in InCore 2.3.
-
-:**› Type**: Boolean
-:**› Default**: ``true``
-:**› Signal**: allowAnonymousChanged()
-:**› Attributes**: Writable
 
 
 .. _property_MqttBroker_enabled:
@@ -136,6 +94,25 @@ This property holds whether the broker should listen for incoming connections on
 :**› Attributes**: Writable
 
 
+.. _property_MqttBroker_listeners:
+
+.. _signal_MqttBroker_listenersChanged:
+
+.. index::
+   single: listeners
+
+listeners
++++++++++
+
+This property holds a list of objects. This can be used for objects that require a CloudOfThingsClient as parent.
+
+This property was introduced in InCore 2.6.
+
+:**› Type**: :ref:`List <object_List>`\<:ref:`MqttListener <object_MqttListener>`>
+:**› Signal**: listenersChanged()
+:**› Attributes**: Readonly
+
+
 .. _property_MqttBroker_maxConnections:
 
 .. _signal_MqttBroker_maxConnectionsChanged:
@@ -152,43 +129,6 @@ This property holds the maximum number of connections which the broker is allowe
 :**› Default**: ``-1``
 :**› Signal**: maxConnectionsChanged()
 :**› Attributes**: Writable, Optional
-
-
-.. _property_MqttBroker_passwordFile:
-
-.. _signal_MqttBroker_passwordFileChanged:
-
-.. index::
-   single: passwordFile
-
-passwordFile
-++++++++++++
-
-This property holds the path to Mosquitto password file managed externally via ``mosquitto_passwd``. See the `mosquitto_passwd man page <https://mosquitto.org/man/mosquitto_passwd-1.html>`_ for details.
-
-This property was introduced in InCore 2.3.
-
-:**› Type**: String
-:**› Signal**: passwordFileChanged()
-:**› Attributes**: Writable
-
-
-.. _property_MqttBroker_port:
-
-.. _signal_MqttBroker_portChanged:
-
-.. index::
-   single: port
-
-port
-++++
-
-This property holds the TCP port number which the broker is listening at for incoming connections.
-
-:**› Type**: SignedInteger
-:**› Default**: ``1883``
-:**› Signal**: portChanged()
-:**› Attributes**: Writable
 
 
 .. _property_MqttBroker_tlsCaFile:
@@ -266,25 +206,20 @@ This property was introduced in InCore 2.3.
 :**› Signal**: tlsKeyFileChanged()
 :**› Attributes**: Writable
 
+Signals
+*******
 
-.. _property_MqttBroker_websocketsPort:
 
-.. _signal_MqttBroker_websocketsPortChanged:
+.. _signal_MqttBroker_listenersDataChanged:
 
 .. index::
-   single: websocketsPort
+   single: listenersDataChanged
 
-websocketsPort
-++++++++++++++
+listenersDataChanged(SignedInteger index)
++++++++++++++++++++++++++++++++++++++++++
 
-This property holds the network port number at which to listen for Websockets connections.
+This signal is emitted whenever the :ref:`List.dataChanged() <signal_List_dataChanged>` signal is emitted, i.e. the item at ``index`` in the :ref:`listeners <property_MqttBroker_listeners>` list itself emitted the dataChanged() signal.
 
-This property was introduced in InCore 2.3.
-
-:**› Type**: SignedInteger
-:**› Default**: ``-1``
-:**› Signal**: websocketsPortChanged()
-:**› Attributes**: Writable
 
 
 .. _example_MqttBroker:
@@ -295,8 +230,8 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.5
-    import InCore.Mqtt 2.5
+    import InCore.Foundation 2.6
+    import InCore.Mqtt 2.6
     
     Application {
     
@@ -310,7 +245,17 @@ Example
         // start an MQTT broker if enabled via settings
         MqttBroker {
             enabled: settings.brokerEnabled
-            internal: false
+            listeners: [
+                MqttListener {
+                    internal: false
+                    port: 1883
+                },
+                MqttListener {
+                    internal: false
+                    port: 1884
+                    protocol: MqttListener.Websockets
+                }
+            ]
         }
     }
     

@@ -28,6 +28,7 @@ Properties
   * :ref:`OpcUaServerNode.browseName <property_OpcUaServerNode_browseName>`
   * :ref:`OpcUaServerNode.description <property_OpcUaServerNode_description>`
   * :ref:`OpcUaServerNode.displayName <property_OpcUaServerNode_displayName>`
+  * :ref:`OpcUaServerNode.enabled <property_OpcUaServerNode_enabled>`
   * :ref:`OpcUaServerNode.fullNodePath <property_OpcUaServerNode_fullNodePath>`
   * :ref:`OpcUaServerNode.identifier <property_OpcUaServerNode_identifier>`
   * :ref:`OpcUaServerNode.typeDefinition <property_OpcUaServerNode_typeDefinition>`
@@ -40,6 +41,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`OpcUaServerNode.removeFromServer() <method_OpcUaServerNode_removeFromServer>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`

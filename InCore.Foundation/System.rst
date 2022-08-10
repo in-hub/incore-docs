@@ -28,6 +28,7 @@ Properties
   * :ref:`deviceHumidity <property_System_deviceHumidity>`
   * :ref:`deviceId <property_System_deviceId>`
   * :ref:`deviceName <property_System_deviceName>`
+  * :ref:`deviceSubtype <property_System_deviceSubtype>`
   * :ref:`deviceTemperature <property_System_deviceTemperature>`
   * :ref:`deviceType <property_System_deviceType>`
   * :ref:`error <property_System_error>`
@@ -193,6 +194,25 @@ This property holds the name of the device. This can be a description with arbit
 
 :**› Type**: String
 :**› Signal**: deviceNameChanged()
+:**› Attributes**: Writable
+
+
+.. _property_System_deviceSubtype:
+
+.. _signal_System_deviceSubtypeChanged:
+
+.. index::
+   single: deviceSubtype
+
+deviceSubtype
++++++++++++++
+
+This property holds the subtype of the device which the application currently is running on. The proper values are :ref:`deviceType <property_System_deviceType>`-specific and only should be set by the vendor.
+
+This property was introduced in InCore 2.6.
+
+:**› Type**: String
+:**› Signal**: deviceSubtypeChanged()
 :**› Attributes**: Writable
 
 

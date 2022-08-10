@@ -21,8 +21,9 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
+  * :ref:`brightness <property_LED_brightness>`
   * :ref:`index <property_LED_index>`
   * :ref:`networkInterfaceName <property_LED_networkInterfaceName>`
   * :ref:`systemName <property_LED_systemName>`
@@ -64,6 +65,26 @@ Enumerations
 
 Properties
 **********
+
+
+.. _property_LED_brightness:
+
+.. _signal_LED_brightnessChanged:
+
+.. index::
+   single: brightness
+
+brightness
+++++++++++
+
+This property holds the brightness between 0 and 100% which to use when :ref:`value <property_LED_value>` is ``true`` and the corresponding LED is controlled through a PWM.
+
+This property was introduced in InCore 2.6.
+
+:**› Type**: SignedInteger
+:**› Default**: ``100``
+:**› Signal**: brightnessChanged()
+:**› Attributes**: Writable
 
 
 .. _property_LED_index:

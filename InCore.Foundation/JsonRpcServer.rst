@@ -23,6 +23,7 @@ Properties
 
   * :ref:`debugRpcMessages <property_JsonRpcServer_debugRpcMessages>`
   * :ref:`localHost <property_JsonRpcServer_localHost>`
+  * :ref:`name <property_JsonRpcServer_name>`
   * :ref:`port <property_JsonRpcServer_port>`
   * :ref:`services <property_JsonRpcServer_services>`
   * :ref:`Object.objectId <property_Object_objectId>`
@@ -89,6 +90,25 @@ This property holds whether the server should listen for incoming connections on
 :**› Type**: Boolean
 :**› Default**: ``true``
 :**› Signal**: localHostChanged()
+:**› Attributes**: Writable
+
+
+.. _property_JsonRpcServer_name:
+
+.. _signal_JsonRpcServer_nameChanged:
+
+.. index::
+   single: name
+
+name
+++++
+
+This property holds the local socket name which the JSON-RPC server should listen at. If set, :ref:`port <property_JsonRpcServer_port>` is ignored and the server is listening on an UNIX domain socket instead of a TCP port.
+
+This property was introduced in InCore 2.6.
+
+:**› Type**: String
+:**› Signal**: nameChanged()
 :**› Attributes**: Writable
 
 

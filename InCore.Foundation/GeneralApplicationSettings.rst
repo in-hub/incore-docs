@@ -41,6 +41,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`ConfigurationObject.toDataMap() <method_ConfigurationObject_toDataMap>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`

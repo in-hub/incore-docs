@@ -38,6 +38,8 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`syncAllNodes() <method_OpcUaServer_syncAllNodes>`
+  * :ref:`syncNode() <method_OpcUaServer_syncNode>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
@@ -160,6 +162,37 @@ users
 :**› Type**: :ref:`List <object_List>`\<:ref:`OpcUaServerUser <object_OpcUaServerUser>`>
 :**› Signal**: usersChanged()
 :**› Attributes**: Readonly
+
+Methods
+*******
+
+
+.. _method_OpcUaServer_syncAllNodes:
+
+.. index::
+   single: syncAllNodes
+
+syncAllNodes()
+++++++++++++++
+
+This method synchronizes all nodes (which may have changed dynamically) with the underlying OPC UA server instance.
+
+This method was introduced in InCore 2.6.
+
+
+
+.. _method_OpcUaServer_syncNode:
+
+.. index::
+   single: syncNode
+
+syncNode(:ref:`OpcUaServerNode <object_OpcUaServerNode>` startNode)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This method recursively synchronizes the given nodes with the underlying OPC UA server instance.
+
+This method was introduced in InCore 2.6.
+
 
 Signals
 *******

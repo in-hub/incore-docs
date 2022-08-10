@@ -22,6 +22,8 @@ Properties
 .. hlist::
   :columns: 3
 
+  * :ref:`bytesRx <property_NetworkInterface_bytesRx>`
+  * :ref:`bytesTx <property_NetworkInterface_bytesTx>`
   * :ref:`dhcpClientIdentifier <property_NetworkInterface_dhcpClientIdentifier>`
   * :ref:`enabled <property_NetworkInterface_enabled>`
   * :ref:`enabledItem <property_NetworkInterface_enabledItem>`
@@ -50,10 +52,13 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
+  * :ref:`pollBytesRx() <method_NetworkInterface_pollBytesRx>`
+  * :ref:`pollBytesTx() <method_NetworkInterface_pollBytesTx>`
   * :ref:`pollTrafficRx() <method_NetworkInterface_pollTrafficRx>`
   * :ref:`pollTrafficTx() <method_NetworkInterface_pollTrafficTx>`
+  * :ref:`ConfigurationObject.toDataMap() <method_ConfigurationObject_toDataMap>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
@@ -87,6 +92,44 @@ Enumerations
 
 Properties
 **********
+
+
+.. _property_NetworkInterface_bytesRx:
+
+.. _signal_NetworkInterface_bytesRxChanged:
+
+.. index::
+   single: bytesRx
+
+bytesRx
++++++++
+
+This property holds the number of bytes received through this interface since the device has been started.
+
+This property was introduced in InCore 2.6.
+
+:**› Type**: UnsignedBigInteger
+:**› Signal**: bytesRxChanged()
+:**› Attributes**: Readonly, Requires :ref:`Polling <object_Polling>`
+
+
+.. _property_NetworkInterface_bytesTx:
+
+.. _signal_NetworkInterface_bytesTxChanged:
+
+.. index::
+   single: bytesTx
+
+bytesTx
++++++++
+
+This property holds the number of bytes transmitted through this interface since the device has been started.
+
+This property was introduced in InCore 2.6.
+
+:**› Type**: UnsignedBigInteger
+:**› Signal**: bytesTxChanged()
+:**› Attributes**: Readonly, Requires :ref:`Polling <object_Polling>`
 
 
 .. _property_NetworkInterface_dhcpClientIdentifier:
@@ -394,6 +437,30 @@ This property holds an internal :ref:`ConfigurationItem <object_ConfigurationIte
 
 Methods
 *******
+
+
+.. _method_NetworkInterface_pollBytesRx:
+
+.. index::
+   single: pollBytesRx
+
+pollBytesRx()
++++++++++++++
+
+This method polls the :ref:`bytesRx <property_NetworkInterface_bytesRx>` property. It is called automatically when using a :ref:`Polling <object_Polling>` property modifier on this property and usually does not have to be called manually.
+
+
+
+.. _method_NetworkInterface_pollBytesTx:
+
+.. index::
+   single: pollBytesTx
+
+pollBytesTx()
++++++++++++++
+
+This method polls the :ref:`bytesTx <property_NetworkInterface_bytesTx>` property. It is called automatically when using a :ref:`Polling <object_Polling>` property modifier on this property and usually does not have to be called manually.
+
 
 
 .. _method_NetworkInterface_pollTrafficRx:

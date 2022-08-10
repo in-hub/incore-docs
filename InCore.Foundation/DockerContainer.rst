@@ -21,6 +21,7 @@ Properties
 .. hlist::
   :columns: 3
 
+  * :ref:`arguments <property_DockerContainer_arguments>`
   * :ref:`cleanUpAtExit <property_DockerContainer_cleanUpAtExit>`
   * :ref:`cleanUpAtStart <property_DockerContainer_cleanUpAtStart>`
   * :ref:`enabled <property_DockerContainer_enabled>`
@@ -50,6 +51,7 @@ Methods
   :columns: 2
 
   * :ref:`execute() <method_DockerContainer_execute>`
+  * :ref:`pull() <method_DockerContainer_pull>`
   * :ref:`run() <method_DockerContainer_run>`
   * :ref:`start() <method_DockerContainer_start>`
   * :ref:`stop() <method_DockerContainer_stop>`
@@ -84,6 +86,25 @@ Enumerations
 
 Properties
 **********
+
+
+.. _property_DockerContainer_arguments:
+
+.. _signal_DockerContainer_argumentsChanged:
+
+.. index::
+   single: arguments
+
+arguments
++++++++++
+
+This property holds a list of arguments which to pass to the executable specified by :ref:`entryPoint <property_DockerContainer_entryPoint>`.
+
+This property was introduced in InCore 2.6.
+
+:**› Type**: StringList
+:**› Signal**: argumentsChanged()
+:**› Attributes**: Writable
 
 
 .. _property_DockerContainer_cleanUpAtExit:
@@ -429,10 +450,26 @@ Methods
 .. index::
    single: execute
 
-execute(String command)
-+++++++++++++++++++++++
+execute(String command, StringList arguments)
++++++++++++++++++++++++++++++++++++++++++++++
 
 This method executes the given command in the container. The container has to be started before.
+
+:**› Returns**: Boolean
+
+
+
+.. _method_DockerContainer_pull:
+
+.. index::
+   single: pull
+
+pull()
+++++++
+
+This method pulls the specified :ref:`image <property_DockerContainer_image>` from the corresponding Docker registry. This can be used for updating existing images.
+
+This method was introduced in InCore 2.6.
 
 :**› Returns**: Boolean
 
@@ -443,8 +480,8 @@ This method executes the given command in the container. The container has to be
 .. index::
    single: run
 
-run(String command)
-+++++++++++++++++++
+run(String command, StringList arguments)
++++++++++++++++++++++++++++++++++++++++++
 
 This method starts the container and runs the given command.
 
@@ -572,6 +609,8 @@ This enumeration describes all errors which can occur in DockerContainer objects
    single: DockerContainer.InvalidImage
 .. index::
    single: DockerContainer.NetworkConnectionError
+.. index::
+   single: DockerContainer.PullFailed
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -649,6 +688,11 @@ This enumeration describes all errors which can occur in DockerContainer objects
   * - ``DockerContainer.NetworkConnectionError``
     - ``13``
     - Failed to connect container to specified network(s).
+
+      .. _enumitem_DockerContainer_PullFailed:
+  * - ``DockerContainer.PullFailed``
+    - ``14``
+    - Failed to pull the specified image. Either the Docker registry is not reachable or the image does not exist.
 
 
 .. _enum_DockerContainer_NetworkMode:
@@ -765,15 +809,13 @@ Example
     import InCore.Foundation 2.5
     
     Application {
-        System {
-            DockerService {
-                DockerContainer {
-                    name: "nodered-example"
-                    image: "nodered/node-red:latest-minimal"
-                    ports: [ "1880:1880" ]
-                    environment: [ "FLOWS=myflows.json", "NODE_OPTIONS=--max_old_space_size=128" ]
-                    restartPolicy: DockerContainer.RestartAlways
-                }
+        DockerService {
+            DockerContainer {
+                name: "nodered-example"
+                image: "nodered/node-red:latest-minimal"
+                ports: [ "1880:1880" ]
+                environment: [ "FLOWS=myflows.json", "NODE_OPTIONS=--max_old_space_size=128" ]
+                restartPolicy: DockerContainer.RestartAlways
             }
         }
     }

@@ -21,9 +21,11 @@ Properties
 .. hlist::
   :columns: 3
 
+  * :ref:`actualSiPrefixFactor <property_Measurement_actualSiPrefixFactor>`
   * :ref:`decimals <property_Measurement_decimals>`
   * :ref:`displayString <property_Measurement_displayString>`
   * :ref:`displayValue <property_Measurement_displayValue>`
+  * :ref:`fullUnitString <property_Measurement_fullUnitString>`
   * :ref:`siPrefix <property_Measurement_siPrefix>`
   * :ref:`siPrefixFactor <property_Measurement_siPrefixFactor>`
   * :ref:`siPrefixName <property_Measurement_siPrefixName>`
@@ -75,6 +77,25 @@ Enumerations
 
 Properties
 **********
+
+
+.. _property_Measurement_actualSiPrefixFactor:
+
+.. _signal_Measurement_actualSiPrefixFactorChanged:
+
+.. index::
+   single: actualSiPrefixFactor
+
+actualSiPrefixFactor
+++++++++++++++++++++
+
+This property holds the effective factor for the measurement value based on :ref:`siPrefix <property_Measurement_siPrefix>` and :ref:`siPrefixFactor <property_Measurement_siPrefixFactor>`.
+
+This property was introduced in InCore 2.6.
+
+:**› Type**: Double
+:**› Signal**: actualSiPrefixFactorChanged()
+:**› Attributes**: Readonly
 
 
 .. _property_Measurement_decimals:
@@ -129,6 +150,25 @@ This property was introduced in InCore 2.0.
 :**› Type**: <QML expression>
 :**› Signal**: displayValueChanged()
 :**› Attributes**: Writable
+
+
+.. _property_Measurement_fullUnitString:
+
+.. _signal_Measurement_fullUnitStringChanged:
+
+.. index::
+   single: fullUnitString
+
+fullUnitString
+++++++++++++++
+
+This property holds the complete unit string consisting of SI prefix and unit, e.g. ``µm``.
+
+This property was introduced in InCore 2.6.
+
+:**› Type**: String
+:**› Signal**: fullUnitStringChanged()
+:**› Attributes**: Readonly
 
 
 .. _property_Measurement_siPrefix:

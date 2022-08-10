@@ -39,6 +39,7 @@ Methods
 
   * :ref:`Configuration.load() <method_Configuration_load>`
   * :ref:`Configuration.save() <method_Configuration_save>`
+  * :ref:`Configuration.toDataMap() <method_Configuration_toDataMap>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`

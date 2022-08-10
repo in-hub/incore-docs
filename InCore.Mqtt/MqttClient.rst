@@ -54,6 +54,7 @@ Methods
   * :ref:`connectToHost() <method_MqttClient_connectToHost>`
   * :ref:`connectToHostEncrypted() <method_MqttClient_connectToHostEncrypted>`
   * :ref:`disconnectFromHost() <method_MqttClient_disconnectFromHost>`
+  * :ref:`publish() <method_MqttClient_publish>`
   * :ref:`requestPing() <method_MqttClient_requestPing>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
@@ -445,6 +446,20 @@ disconnectFromHost()
 ++++++++++++++++++++
 
 This method disconnects from the MQTT broker. This method usually should not be called manually in favor of setting the :ref:`autoConnect <property_MqttClient_autoConnect>` property.
+
+
+
+.. _method_MqttClient_publish:
+
+.. index::
+   single: publish
+
+publish(String topicName, ArrayBuffer data, UnsignedChar qos, Boolean retain)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This method manually publishes the given data for a given topic. This can be used e.g. to publish a series of topics in a loop. In most cases :ref:`MqttPublication <object_MqttPublication>` should be used instead.
+
+This method was introduced in InCore 2.6.
 
 
 

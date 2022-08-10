@@ -22,6 +22,7 @@ Objects
 	DatabaseEventWriter
 	DatabaseExporter
 	DatabaseFieldOptions
+	DatabaseMeasurementWriter
 	DatabaseQuery
 	DatabaseQueryFilter
 	DatabaseQueryWhere
@@ -31,7 +32,6 @@ Objects
 	LocalDatabase
 	MSSQLDatabase
 	MeasurementBufferDatabase
-	MeasurementDatabase
 	MySQLDatabase
 	NetworkDatabase
 	PostgreSQLDatabase

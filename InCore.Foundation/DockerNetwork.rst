@@ -95,27 +95,22 @@ Example
     import InCore.Foundation 2.5
     
     Application {
-        System {
     
-            property var internalNetwork : DockerNetwork { id: internalNetwork; name: "example_internal"; internal: true; }
+        property var internalNetwork : DockerNetwork { id: internalNetwork; name: "example_internal"; internal: true; }
     
-            DockerService {
-                DockerContainer {
-                    name: "example-frontend"
-                    image: "example/frontend:latest"
-                    hostname: "frontend"
-                    ports: [ "80:80" ]
-                    networks: [ internalNetwork ]
-                }
+        DockerService {
+            DockerContainer {
+                name: "example-frontend"
+                image: "example/frontend:latest"
+                hostname: "frontend"
+                ports: [ "80:80" ]
+                networks: [ internalNetwork ]
             }
-    
-            DockerService {
-                DockerContainer {
-                    name: "example-backend"
-                    image: "example/backend:latest"
-                    hostname: "backend"
-                    networks: [ internalNetwork ]
-                }
+            DockerContainer {
+                name: "example-backend"
+                image: "example/backend:latest"
+                hostname: "backend"
+                networks: [ internalNetwork ]
             }
         }
     }

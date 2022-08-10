@@ -31,6 +31,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`fullNodePath() <method_OpcUaClient_fullNodePath>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
@@ -66,6 +67,25 @@ This property holds a list of OPC UA related objects, such as :ref:`OpcUaClientC
 :**› Type**: :ref:`List <object_List>`\<Object>
 :**› Signal**: objectsChanged()
 :**› Attributes**: Readonly
+
+Methods
+*******
+
+
+.. _method_OpcUaClient_fullNodePath:
+
+.. index::
+   single: fullNodePath
+
+fullNodePath(:ref:`OpcUaNodeIdType <enum_OpcUaClient_OpcUaNodeIdType>` nodeId)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This method returns the full node path, i.e. namespace + identifier of the given node ID.
+
+This method was introduced in InCore 2.6.
+
+:**› Returns**: String
+
 
 Signals
 *******

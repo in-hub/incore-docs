@@ -32,6 +32,7 @@ Properties
   * :ref:`numberPM1_0 <property_SensirionSPS30_numberPM1_0>`
   * :ref:`numberPM2_5 <property_SensirionSPS30_numberPM2_5>`
   * :ref:`numberPM4_0 <property_SensirionSPS30_numberPM4_0>`
+  * :ref:`timestamp <property_SensirionSPS30_timestamp>`
   * :ref:`typicalSize <property_SensirionSPS30_typicalSize>`
   * :ref:`values <property_SensirionSPS30_values>`
   * :ref:`SensirionHDLC.articleCode <property_SensirionHDLC_articleCode>`
@@ -283,6 +284,25 @@ This property holds the number concentration *PM4.0* in *#/cm³*.
 :**› Default**: ``0``
 :**› Signal**: numberPM4_0Changed()
 :**› Attributes**: Readonly
+
+
+.. _property_SensirionSPS30_timestamp:
+
+.. _signal_SensirionSPS30_timestampChanged:
+
+.. index::
+   single: timestamp
+
+timestamp
++++++++++
+
+This property holds a timestamp in milliseconds corresponding to the time when the latest measurements have been received.
+
+This property was introduced in InCore 2.6.
+
+:**› Type**: SignedBigInteger
+:**› Signal**: timestampChanged()
+:**› Attributes**: Writable
 
 
 .. _property_SensirionSPS30_typicalSize:

@@ -39,6 +39,7 @@ Methods
 
   * :ref:`load() <method_Configuration_load>`
   * :ref:`save() <method_Configuration_save>`
+  * :ref:`toDataMap() <method_Configuration_toDataMap>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
@@ -198,6 +199,22 @@ save()
 ++++++
 
 This method saves the configuration to the configured :ref:`storage <property_Configuration_storage>`.
+
+
+
+.. _method_Configuration_toDataMap:
+
+.. index::
+   single: toDataMap
+
+toDataMap()
++++++++++++
+
+This method is similar to :ref:`Object.serializeProperties() <method_Object_serializeProperties>` but only returns the serialized :ref:`DataObject.data <property_DataObject_data>` properties of each :ref:`ConfigurationItem <object_ConfigurationItem>`.
+
+This method was introduced in InCore 2.6.
+
+:**› Returns**: Map
 
 
 Signals
