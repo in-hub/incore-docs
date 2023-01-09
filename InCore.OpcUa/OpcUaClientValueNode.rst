@@ -18,7 +18,7 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * `filter <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#filter-prop>`_
   * `monitored <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#monitored-prop>`_
@@ -27,6 +27,7 @@ Properties
   * `sourceTimestamp <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#sourceTimestamp-prop>`_
   * `value <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#value-prop>`_
   * `valueType <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#valueType-prop>`_
+  * `writable <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#writable-prop>`_
 
 Methods
 +++++++
@@ -142,6 +143,19 @@ valueType
 Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#valueType-prop>`_ documentation.
 
 :**› Attributes**: Writable
+
+
+.. _property_OpcUaClientValueNode_writable:
+
+.. index::
+   single: writable
+
+writable
+++++++++
+
+Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#writable-prop>`_ documentation.
+
+:**› Attributes**: Readonly
 
 Signals
 *******

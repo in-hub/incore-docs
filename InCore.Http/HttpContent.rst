@@ -108,6 +108,8 @@ Type
 This enumeration describes the type specifying in which format to send or receive data.
 
 .. index::
+   single: HttpContent.Unknown
+.. index::
    single: HttpContent.PlainText
 .. index::
    single: HttpContent.Binary
@@ -121,19 +123,24 @@ This enumeration describes the type specifying in which format to send or receiv
     - Value
     - Description
 
+      .. _enumitem_HttpContent_Unknown:
+  * - ``HttpContent.Unknown``
+    - ``0``
+    - 
+
       .. _enumitem_HttpContent_PlainText:
   * - ``HttpContent.PlainText``
-    - ``0``
+    - ``1``
     - Send and receive data as plaintext.
 
       .. _enumitem_HttpContent_Binary:
   * - ``HttpContent.Binary``
-    - ``1``
+    - ``2``
     - Send and receive data as raw bytes which can be accessed as an ``ArrayBuffer``.
 
       .. _enumitem_HttpContent_Json:
   * - ``HttpContent.Json``
-    - ``2``
+    - ``3``
     - Send and receive data as JSON objects.
 
 Example

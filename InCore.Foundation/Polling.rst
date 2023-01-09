@@ -27,6 +27,7 @@ Properties
   * :ref:`errorString <property_Polling_errorString>`
   * :ref:`interval <property_Polling_interval>`
   * :ref:`running <property_Polling_running>`
+  * :ref:`synchronize <property_Polling_synchronize>`
   * :ref:`timestamp <property_Polling_timestamp>`
   * :ref:`PropertyModifier.targetValue <property_PropertyModifier_targetValue>`
   * :ref:`Object.objectId <property_Object_objectId>`
@@ -133,6 +134,26 @@ This property holds whether the specified property is polled. This can be used t
 :**› Type**: Boolean
 :**› Default**: ``true``
 :**› Signal**: runningChanged()
+:**› Attributes**: Writable
+
+
+.. _property_Polling_synchronize:
+
+.. _signal_Polling_synchronizeChanged:
+
+.. index::
+   single: synchronize
+
+synchronize
++++++++++++
+
+This property holds whether the internal timer should be synchronized to the system clock. When synchronized the first polling will be delayed such that the polling time is a multiple of :ref:`interval <property_Polling_interval>` beginning at midnight UTC.
+
+This property was introduced in InCore 2.7.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: synchronizeChanged()
 :**› Attributes**: Writable
 
 

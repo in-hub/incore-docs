@@ -34,8 +34,10 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
+  * :ref:`writeConfigurationFile() <method_OpenVpnClientService_writeConfigurationFile>`
+  * :ref:`SystemService.restart() <method_SystemService_restart>`
   * :ref:`SystemService.start() <method_SystemService_start>`
   * :ref:`SystemService.stop() <method_SystemService_stop>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
@@ -72,6 +74,25 @@ This property holds the name of the configuration, i.e. the name of the OpenVPN 
 :**› Type**: String
 :**› Signal**: configurationNameChanged()
 :**› Attributes**: Writable
+
+Methods
+*******
+
+
+.. _method_OpenVpnClientService_writeConfigurationFile:
+
+.. index::
+   single: writeConfigurationFile
+
+writeConfigurationFile(String name, String content)
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This method writes an OpenVPN configuration file identified with the given name and content.
+
+This method was introduced in InCore 2.7.
+
+:**› Returns**: Boolean
+
 
 
 .. _example_OpenVpnClientService:

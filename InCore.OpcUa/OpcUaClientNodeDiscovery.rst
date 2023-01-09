@@ -24,6 +24,7 @@ Properties
   :columns: 1
 
   * :ref:`browseNodeId <property_OpcUaClientNodeDiscovery_browseNodeId>`
+  * :ref:`connection <property_OpcUaClientNodeDiscovery_connection>`
   * :ref:`nodes <property_OpcUaClientNodeDiscovery_nodes>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
@@ -69,6 +70,25 @@ This property holds the node ID of the OPC/UA node whose children to discover.
 
 :**› Type**: `OpcUaNodeId <https://doc.qt.io/QtOPCUA/qml-qtopcua-nodeid.html>`_
 :**› Signal**: browseNodeIdChanged()
+:**› Attributes**: Writable
+
+
+.. _property_OpcUaClientNodeDiscovery_connection:
+
+.. _signal_OpcUaClientNodeDiscovery_connectionChanged:
+
+.. index::
+   single: connection
+
+connection
+++++++++++
+
+This property holds the connection which to use for discovery. If not set, the global default connection will be used.
+
+This property was introduced in InCore 2.7.
+
+:**› Type**: \enum{OpcUaConnection*}
+:**› Signal**: connectionChanged()
 :**› Attributes**: Writable
 
 

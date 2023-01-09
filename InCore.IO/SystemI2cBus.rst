@@ -113,7 +113,7 @@ index
 This property holds the I2C bus number.
 
 :**› Type**: UnsignedInteger
-:**› Default**: ``0``
+:**› Default**: ``4294967295``
 :**› Signal**: indexChanged()
 :**› Attributes**: Writable
 

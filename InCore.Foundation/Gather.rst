@@ -30,6 +30,7 @@ Properties
   * :ref:`error <property_Gather_error>`
   * :ref:`errorString <property_Gather_errorString>`
   * :ref:`expressionFilter <property_Gather_expressionFilter>`
+  * :ref:`maximumRecursionDepth <property_Gather_maximumRecursionDepth>`
   * :ref:`nameFilter <property_Gather_nameFilter>`
   * :ref:`orderBy <property_Gather_orderBy>`
   * :ref:`recursive <property_Gather_recursive>`
@@ -161,6 +162,26 @@ This property holds an expression which is used to filter objects. The expressio
 
 :**› Type**: <QML expression>
 :**› Signal**: expressionFilterChanged()
+:**› Attributes**: Writable
+
+
+.. _property_Gather_maximumRecursionDepth:
+
+.. _signal_Gather_maximumRecursionDepthChanged:
+
+.. index::
+   single: maximumRecursionDepth
+
+maximumRecursionDepth
++++++++++++++++++++++
+
+This property holds the maximum recursion depth when gathering children objects of the :ref:`source <property_Gather_source>` and :ref:`recursive <property_Gather_recursive>` is set to ``true``. If set to ``-1``, the recursion is not limited.
+
+This property was introduced in InCore 2.7.
+
+:**› Type**: SignedInteger
+:**› Default**: ``-1``
+:**› Signal**: maximumRecursionDepthChanged()
 :**› Attributes**: Writable
 
 

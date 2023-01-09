@@ -34,9 +34,10 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`Configuration.load() <method_Configuration_load>`
+  * :ref:`Configuration.remove() <method_Configuration_remove>`
   * :ref:`Configuration.save() <method_Configuration_save>`
   * :ref:`Configuration.toDataMap() <method_Configuration_toDataMap>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`

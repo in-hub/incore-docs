@@ -41,6 +41,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`restart() <method_SystemService_restart>`
   * :ref:`start() <method_SystemService_start>`
   * :ref:`stop() <method_SystemService_stop>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
@@ -151,6 +152,20 @@ This property holds a timeout in milliseconds for service-related operations suc
 
 Methods
 *******
+
+
+.. _method_SystemService_restart:
+
+.. index::
+   single: restart
+
+restart()
++++++++++
+
+This method stops the service and starts it again after 5 seconds.
+
+This method was introduced in InCore 2.7.
+
 
 
 .. _method_SystemService_start:

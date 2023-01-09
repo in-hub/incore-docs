@@ -35,6 +35,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`SystemService.restart() <method_SystemService_restart>`
   * :ref:`SystemService.start() <method_SystemService_start>`
   * :ref:`SystemService.stop() <method_SystemService_stop>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`

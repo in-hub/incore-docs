@@ -25,6 +25,8 @@ Properties
   * :ref:`msecsElapsed <property_Timer_msecsElapsed>`
   * :ref:`repeat <property_Timer_repeat>`
   * :ref:`running <property_Timer_running>`
+  * :ref:`synchronize <property_Timer_synchronize>`
+  * :ref:`timestamp <property_Timer_timestamp>`
   * :ref:`triggeredOnStart <property_Timer_triggeredOnStart>`
   * :ref:`triggeredOnStop <property_Timer_triggeredOnStop>`
   * :ref:`Object.objectId <property_Object_objectId>`
@@ -34,9 +36,10 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`restart() <method_Timer_restart>`
+  * :ref:`singleShot() <method_Timer_singleShot>`
   * :ref:`start() <method_Timer_start>`
   * :ref:`stop() <method_Timer_stop>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
@@ -72,12 +75,14 @@ interval
 This property holds the interval which elapses before :ref:`triggered() <signal_Timer_triggered>` is emitted. The minimum value is ``1``.
 
 :**› Type**: SignedInteger
-:**› Default**: ``1000``
+:**› Default**: ``0``
 :**› Signal**: intervalChanged()
 :**› Attributes**: Writable
 
 
 .. _property_Timer_msecsElapsed:
+
+.. _signal_Timer_msecsElapsedChanged:
 
 .. index::
    single: msecsElapsed
@@ -88,6 +93,7 @@ msecsElapsed
 This property holds returns the number of milliseconds since this timer was last started.
 
 :**› Type**: SignedBigInteger
+:**› Signal**: msecsElapsedChanged()
 :**› Attributes**: Readonly
 
 
@@ -125,6 +131,45 @@ This property holds whether the timer is running. Setting this property equals t
 :**› Default**: ``true``
 :**› Signal**: runningChanged()
 :**› Attributes**: Writable
+
+
+.. _property_Timer_synchronize:
+
+.. _signal_Timer_synchronizeChanged:
+
+.. index::
+   single: synchronize
+
+synchronize
++++++++++++
+
+This property holds whether the timer should be synchronized to the system clock. When synchronized the actual timer start will be delayed such that the trigger time is a multiple of :ref:`interval <property_Timer_interval>` beginning at midnight UTC.
+
+This property was introduced in InCore 2.7.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: synchronizeChanged()
+:**› Attributes**: Writable
+
+
+.. _property_Timer_timestamp:
+
+.. _signal_Timer_timestampChanged:
+
+.. index::
+   single: timestamp
+
+timestamp
++++++++++
+
+This property holds a timestamp in milliseconds of the last :ref:`triggered() <signal_Timer_triggered>` signal emission.
+
+This property was introduced in InCore 2.7.
+
+:**› Type**: SignedBigInteger
+:**› Signal**: timestampChanged()
+:**› Attributes**: Readonly
 
 
 .. _property_Timer_triggeredOnStart:
@@ -178,6 +223,20 @@ This method restarts the timer. This is the same as calling :ref:`stop() <method
 
 
 
+.. _method_Timer_singleShot:
+
+.. index::
+   single: singleShot
+
+singleShot(SignedInteger msec, JSValue method)
+++++++++++++++++++++++++++++++++++++++++++++++
+
+This method calls the given method (e.g. lambda) after the specified number of milliseconds.
+
+This method was introduced in InCore 2.7.
+
+
+
 .. _method_Timer_start:
 
 .. index::
@@ -225,9 +284,13 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.5
+    import InCore.Foundation 2.7
     
     Application {
+    
+        onCompleted: {
+            testTimer.singleShot(5000, () => { console.log("I was called through Timer.singleShot()") })
+        }
     
         //minimal Timer with default values
         Timer {

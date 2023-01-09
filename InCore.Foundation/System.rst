@@ -36,6 +36,7 @@ Properties
   * :ref:`hostname <property_System_hostname>`
   * :ref:`memoryAvailable <property_System_memoryAvailable>`
   * :ref:`memoryTotal <property_System_memoryTotal>`
+  * :ref:`osEdition <property_System_osEdition>`
   * :ref:`osVersion <property_System_osVersion>`
   * :ref:`services <property_System_services>`
   * :ref:`uptime <property_System_uptime>`
@@ -55,6 +56,8 @@ Methods
   * :ref:`pollMemoryAvailable() <method_System_pollMemoryAvailable>`
   * :ref:`pollUptime() <method_System_pollUptime>`
   * :ref:`reboot() <method_System_reboot>`
+  * :ref:`setHardwareClocks() <method_System_setHardwareClocks>`
+  * :ref:`shutdown() <method_System_shutdown>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
   * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
@@ -339,6 +342,22 @@ This property was introduced in InCore 2.5.
 :**› Attributes**: Readonly
 
 
+.. _property_System_osEdition:
+
+.. index::
+   single: osEdition
+
+osEdition
++++++++++
+
+This property holds the edition of the operating system currently running on the device.
+
+This property was introduced in InCore 2.7.
+
+:**› Type**: String
+:**› Attributes**: Readonly
+
+
 .. _property_System_osVersion:
 
 .. index::
@@ -475,6 +494,34 @@ This method initiates a full system restart. Since the application will be stopp
 This method was introduced in InCore 2.0.
 
 
+
+.. _method_System_setHardwareClocks:
+
+.. index::
+   single: setHardwareClocks
+
+setHardwareClocks()
++++++++++++++++++++
+
+This method sets all available hardware clocks (RTCs) to the current system time.
+
+This method was introduced in InCore 2.7.
+
+
+
+.. _method_System_shutdown:
+
+.. index::
+   single: shutdown
+
+shutdown()
+++++++++++
+
+This method initiates a clean system shutdown. Since the application will be stopped almost immediately any actions such as logging or closing connections should be performed before calling this method.
+
+This method was introduced in InCore 2.7.
+
+
 Signals
 *******
 
@@ -517,13 +564,17 @@ DeviceType
 This enumeration describes the type of the device which the application can be run on.
 
 .. index::
+   single: System.Other
+.. index::
    single: System.GM100
 .. index::
    single: System.GM200
 .. index::
+   single: System.GM400
+.. index::
    single: System.IM6
 .. index::
-   single: System.Other
+   single: System.CCM60
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -531,6 +582,11 @@ This enumeration describes the type of the device which the application can be r
   * - Name
     - Value
     - Description
+
+      .. _enumitem_System_Other:
+  * - ``System.Other``
+    - ``-1``
+    - Other/unknown device.
 
       .. _enumitem_System_GM100:
   * - ``System.GM100``
@@ -542,15 +598,20 @@ This enumeration describes the type of the device which the application can be r
     - ``1``
     - A HUB-GM200 (dual-core) device.
 
+      .. _enumitem_System_GM400:
+  * - ``System.GM400``
+    - ``2``
+    - A HUB-GM400 (quad-core) device.
+
       .. _enumitem_System_IM6:
   * - ``System.IM6``
-    - ``2``
+    - ``3``
     - An IM6-XXNNN device.
 
-      .. _enumitem_System_Other:
-  * - ``System.Other``
-    - ``3``
-    - Other/unknown device.
+      .. _enumitem_System_CCM60:
+  * - ``System.CCM60``
+    - ``4``
+    - A TURCK IM18-CCM60 device.
 
 
 .. _enum_System_Error:

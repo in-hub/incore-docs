@@ -35,9 +35,10 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`Configuration.load() <method_Configuration_load>`
+  * :ref:`Configuration.remove() <method_Configuration_remove>`
   * :ref:`Configuration.save() <method_Configuration_save>`
   * :ref:`Configuration.toDataMap() <method_Configuration_toDataMap>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
@@ -52,7 +53,6 @@ Signals
   :columns: 1
 
   * :ref:`interfacesDataChanged() <signal_NetworkConfiguration_interfacesDataChanged>`
-  * :ref:`reconfigured() <signal_NetworkConfiguration_reconfigured>`
   * :ref:`Configuration.aboutToBeUpdated() <signal_Configuration_aboutToBeUpdated>`
   * :ref:`Configuration.errorOccurred() <signal_Configuration_errorOccurred>`
   * :ref:`Configuration.objectsDataChanged() <signal_Configuration_objectsDataChanged>`
@@ -103,17 +103,5 @@ interfacesDataChanged(SignedInteger index)
 ++++++++++++++++++++++++++++++++++++++++++
 
 This signal is emitted whenever the :ref:`List.dataChanged() <signal_List_dataChanged>` signal is emitted, i.e. the item at ``index`` in the :ref:`interfaces <property_NetworkConfiguration_interfaces>` list itself emitted the dataChanged() signal.
-
-
-
-.. _signal_NetworkConfiguration_reconfigured:
-
-.. index::
-   single: reconfigured
-
-reconfigured()
-++++++++++++++
-
-This signal is emitted whenever the configuration has been written to the system and the system's network management service has been instructed to apply it.
 
 

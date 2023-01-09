@@ -693,9 +693,13 @@ This enumeration describes all operational states a network interface can enter.
 .. index::
    single: NetworkInterface.Dormant
 .. index::
+   single: NetworkInterface.DegradedCarrier
+.. index::
    single: NetworkInterface.Carrier
 .. index::
    single: NetworkInterface.Degraded
+.. index::
+   single: NetworkInterface.Enslaved
 .. index::
    single: NetworkInterface.Routable
 .. list-table::
@@ -726,19 +730,29 @@ This enumeration describes all operational states a network interface can enter.
     - ``3``
     - The device has a carrier, but is not yet ready for normal traffic.
 
+      .. _enumitem_NetworkInterface_DegradedCarrier:
+  * - ``NetworkInterface.DegradedCarrier``
+    - ``4``
+    - The link has carrier and addresses valid on the local link configured.
+
       .. _enumitem_NetworkInterface_Carrier:
   * - ``NetworkInterface.Carrier``
-    - ``4``
+    - ``5``
     - The link has a carrier.
 
       .. _enumitem_NetworkInterface_Degraded:
   * - ``NetworkInterface.Degraded``
-    - ``5``
+    - ``6``
     - The link has carrier and addresses valid on the local link configured.
+
+      .. _enumitem_NetworkInterface_Enslaved:
+  * - ``NetworkInterface.Enslaved``
+    - ``7``
+    - The link has carrier and is enslaved to bond or bridge master network interface.
 
       .. _enumitem_NetworkInterface_Routable:
   * - ``NetworkInterface.Routable``
-    - ``6``
+    - ``8``
     - The link has carrier and routable address configured.
 
 
@@ -757,13 +771,15 @@ This enumeration describes all setup states a network interface can enter.
 .. index::
    single: NetworkInterface.Pending
 .. index::
-   single: NetworkInterface.Failed
+   single: NetworkInterface.Initialized
 .. index::
    single: NetworkInterface.Configuring
 .. index::
    single: NetworkInterface.Configured
 .. index::
    single: NetworkInterface.Unmanaged
+.. index::
+   single: NetworkInterface.Failed
 .. index::
    single: NetworkInterface.Linger
 .. list-table::
@@ -784,10 +800,10 @@ This enumeration describes all setup states a network interface can enter.
     - ``1``
     - udev is still processing the link, we don't yet know if we will manage it.
 
-      .. _enumitem_NetworkInterface_Failed:
-  * - ``NetworkInterface.Failed``
+      .. _enumitem_NetworkInterface_Initialized:
+  * - ``NetworkInterface.Initialized``
     - ``2``
-    - networkd failed to manage the link.
+    - udev has processed the link, but we don't yet know if we will manage it.
 
       .. _enumitem_NetworkInterface_Configuring:
   * - ``NetworkInterface.Configuring``
@@ -804,7 +820,12 @@ This enumeration describes all setup states a network interface can enter.
     - ``5``
     - The link is not managed by networkd.
 
+      .. _enumitem_NetworkInterface_Failed:
+  * - ``NetworkInterface.Failed``
+    - ``6``
+    - networkd failed to manage the link.
+
       .. _enumitem_NetworkInterface_Linger:
   * - ``NetworkInterface.Linger``
-    - ``6``
+    - ``7``
     - The link is gone, but has not yet been dropped by networkd.

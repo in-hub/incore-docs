@@ -65,7 +65,7 @@ maximumActiveEndpointCount
 This property holds the maximum number of active endpoints. This allows limiting the total number of simultaneously opened serial ports, e.g. to work around limitations of the USB host controller when working with many USB serial converter devices.
 
 :**› Type**: SignedInteger
-:**› Default**: ``4``
+:**› Default**: ``8``
 :**› Signal**: maximumActiveEndpointCountChanged()
 :**› Attributes**: Writable
 

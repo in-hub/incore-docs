@@ -35,9 +35,10 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`load() <method_Configuration_load>`
+  * :ref:`remove() <method_Configuration_remove>`
   * :ref:`save() <method_Configuration_save>`
   * :ref:`toDataMap() <method_Configuration_toDataMap>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
@@ -187,6 +188,20 @@ load()
 ++++++
 
 This method loads the configuration from configured :ref:`storage <property_Configuration_storage>`.
+
+
+
+.. _method_Configuration_remove:
+
+.. index::
+   single: remove
+
+remove()
+++++++++
+
+This method removes the configuration file from :ref:`storage <property_Configuration_storage>`.
+
+This method was introduced in InCore 2.7.
 
 
 

@@ -22,6 +22,7 @@ Properties
   :columns: 2
 
   * :ref:`allowPipelining <property_HttpRequest_allowPipelining>`
+  * :ref:`authentication <property_HttpRequest_authentication>`
   * :ref:`content <property_HttpRequest_content>`
   * :ref:`error <property_HttpRequest_error>`
   * :ref:`errorString <property_HttpRequest_errorString>`
@@ -88,6 +89,25 @@ This property holds whether the HTTP client is allowed to use HTTP pipelining wi
 :**› Default**: ``false``
 :**› Signal**: allowPipeliningChanged()
 :**› Attributes**: Writable
+
+
+.. _property_HttpRequest_authentication:
+
+.. _signal_HttpRequest_authenticationChanged:
+
+.. index::
+   single: authentication
+
+authentication
+++++++++++++++
+
+This property holds the :ref:`HttpAuthentication <object_HttpAuthentication>` object which provides user credentials.
+
+This property was introduced in InCore 2.7.
+
+:**› Type**: :ref:`HttpAuthentication <object_HttpAuthentication>`
+:**› Signal**: authenticationChanged()
+:**› Attributes**: Readonly
 
 
 .. _property_HttpRequest_content:
