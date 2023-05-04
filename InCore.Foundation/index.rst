@@ -76,6 +76,7 @@ Objects
 	JsonRpcClient
 	JsonRpcServer
 	JsonRpcService
+	LicensingCertificate
 	List
 	LocalRepository
 	LocalStorage

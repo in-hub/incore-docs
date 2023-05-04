@@ -39,6 +39,8 @@ Methods
   :columns: 2
 
   * :ref:`connectToEndpoint() <method_OpcUaClientConnection_connectToEndpoint>`
+  * :ref:`setAnonymousAuthentication() <method_OpcUaClientConnection_setAnonymousAuthentication>`
+  * :ref:`setUsernameAuthentication() <method_OpcUaClientConnection_setUsernameAuthentication>`
   * `connectToEndpoint <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connectToEndpoint-method>`_
   * `disconnectFromEndpoint <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#disconnectFromEndpoint-method>`_
   * `readNodeAttributes <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#readNodeAttributes-method>`_
@@ -82,6 +84,34 @@ connectToEndpoint(String endpointUrl, :ref:`MessageSecurityMode <enum_OpcUaClien
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+
+
+
+.. _method_OpcUaClientConnection_setAnonymousAuthentication:
+
+.. index::
+   single: setAnonymousAuthentication
+
+setAnonymousAuthentication()
+++++++++++++++++++++++++++++
+
+This method sets the authentication type to anonymous authentication. This is the default authentication type and usually does not have to be set explicitly.
+
+This method was introduced in InCore 2.7.
+
+
+
+.. _method_OpcUaClientConnection_setUsernameAuthentication:
+
+.. index::
+   single: setUsernameAuthentication
+
+setUsernameAuthentication(String username, String password)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This method sets the authentication type to user authentication and authenticates with given username and password.
+
+This method was introduced in InCore 2.7.
 
 
 Enumerations

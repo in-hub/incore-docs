@@ -48,3 +48,4 @@ Objects
 	Sht3x
 	SystemI2cBus
 	UsbPrinter
+	VL53L1X
