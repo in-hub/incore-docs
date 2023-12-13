@@ -110,7 +110,7 @@ byteOrder
 This property holds the byte order which is used to combine two bytes to one 16-bit register. Transmitted data ``0xDE 0xAD`` would be interpreted as unsigned integer as ``57005`` (`BigEndian`) or ``44510`` (`LittleEndian`).
 
 :**› Type**: :ref:`ByteOrder <enum_ModbusRegister_ByteOrder>`
-:**› Default**: :ref:`ModbusRegister.LittleEndian <enumitem_ModbusRegister_LittleEndian>`
+:**› Default**: :ref:`ModbusRegister.BigEndian <enumitem_ModbusRegister_BigEndian>`
 :**› Signal**: byteOrderChanged()
 :**› Attributes**: Writable
 

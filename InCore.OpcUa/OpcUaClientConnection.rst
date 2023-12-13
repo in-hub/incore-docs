@@ -41,6 +41,7 @@ Methods
   * :ref:`connectToEndpoint() <method_OpcUaClientConnection_connectToEndpoint>`
   * :ref:`setAnonymousAuthentication() <method_OpcUaClientConnection_setAnonymousAuthentication>`
   * :ref:`setUsernameAuthentication() <method_OpcUaClientConnection_setUsernameAuthentication>`
+  * :ref:`setupEncryption() <method_OpcUaClientConnection_setupEncryption>`
   * `connectToEndpoint <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connectToEndpoint-method>`_
   * `disconnectFromEndpoint <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#disconnectFromEndpoint-method>`_
   * `readNodeAttributes <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#readNodeAttributes-method>`_
@@ -112,6 +113,22 @@ setUsernameAuthentication(String username, String password)
 This method sets the authentication type to user authentication and authenticates with given username and password.
 
 This method was introduced in InCore 2.7.
+
+
+
+.. _method_OpcUaClientConnection_setupEncryption:
+
+.. index::
+   single: setupEncryption
+
+setupEncryption(ArrayBuffer clientCertificateData, ArrayBuffer trustedCertificateData, String privateKeyData)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This method sets up connection encryption using the supplied X509 client certificate as well as the private key (the latter one in PEM format). The CA or server certificate has to be passed as trusted certificate, otherwise the client will not accept any server certificate.
+
+This method was introduced in InCore 2.7.
+
+:**› Returns**: Boolean
 
 
 Enumerations

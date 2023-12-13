@@ -25,6 +25,7 @@ Properties
 
   * :ref:`topics <property_MqttSubscription_topics>`
   * :ref:`MqttAbstractSubscription.autoSubscribe <property_MqttAbstractSubscription_autoSubscribe>`
+  * :ref:`MqttAbstractSubscription.enabled <property_MqttAbstractSubscription_enabled>`
   * :ref:`MqttAbstractSubscription.error <property_MqttAbstractSubscription_error>`
   * :ref:`MqttAbstractSubscription.errorString <property_MqttAbstractSubscription_errorString>`
   * :ref:`MqttAbstractSubscription.qos <property_MqttAbstractSubscription_qos>`

@@ -30,7 +30,9 @@ Properties
   * :ref:`mode <property_MqttWildcardSubscription_mode>`
   * :ref:`name <property_MqttWildcardSubscription_name>`
   * :ref:`topics <property_MqttWildcardSubscription_topics>`
+  * :ref:`updateTopics <property_MqttWildcardSubscription_updateTopics>`
   * :ref:`MqttAbstractSubscription.autoSubscribe <property_MqttAbstractSubscription_autoSubscribe>`
+  * :ref:`MqttAbstractSubscription.enabled <property_MqttAbstractSubscription_enabled>`
   * :ref:`MqttAbstractSubscription.error <property_MqttAbstractSubscription_error>`
   * :ref:`MqttAbstractSubscription.errorString <property_MqttAbstractSubscription_errorString>`
   * :ref:`MqttAbstractSubscription.qos <property_MqttAbstractSubscription_qos>`
@@ -42,8 +44,10 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
+  * :ref:`mapDataObject() <method_MqttWildcardSubscription_mapDataObject>`
+  * :ref:`unmapDataObject() <method_MqttWildcardSubscription_unmapDataObject>`
   * :ref:`MqttAbstractSubscription.subscribe() <method_MqttAbstractSubscription_subscribe>`
   * :ref:`MqttAbstractSubscription.unsubscribe() <method_MqttAbstractSubscription_unsubscribe>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
@@ -164,6 +168,57 @@ This property holds a list of names with all received topics matching the wildca
 :**› Signal**: topicsChanged()
 :**› Attributes**: Readonly
 
+
+.. _property_MqttWildcardSubscription_updateTopics:
+
+.. _signal_MqttWildcardSubscription_updateTopicsChanged:
+
+.. index::
+   single: updateTopics
+
+updateTopics
+++++++++++++
+
+This property holds whether to update the :ref:`topics <property_MqttWildcardSubscription_topics>` property on every incoming message. If the topic list is not required, you can set this property to ``false`` to improve performance.
+
+This property was introduced in InCore 2.7.
+
+:**› Type**: Boolean
+:**› Default**: ``true``
+:**› Signal**: updateTopicsChanged()
+:**› Attributes**: Writable
+
+Methods
+*******
+
+
+.. _method_MqttWildcardSubscription_mapDataObject:
+
+.. index::
+   single: mapDataObject
+
+mapDataObject(String topicName, :ref:`DataObject <enum_MqttWildcardSubscription_DataObject>` dataObject)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This method registers the given :ref:`DataObject <object_DataObject>` instance to receive value for a certain topic name in the :ref:`DataObject.data <property_DataObject_data>` property directly.
+
+This method was introduced in InCore 2.7.
+
+
+
+.. _method_MqttWildcardSubscription_unmapDataObject:
+
+.. index::
+   single: unmapDataObject
+
+unmapDataObject(:ref:`DataObject <enum_MqttWildcardSubscription_DataObject>` dataObject)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This method removes the :ref:`DataObject <object_DataObject>` registration for a certain object.
+
+This method was introduced in InCore 2.7.
+
+
 Signals
 *******
 
@@ -201,6 +256,10 @@ This enumeration was introduced in InCore 2.4.
    single: MqttWildcardSubscription.UpdateDataMap
 .. index::
    single: MqttWildcardSubscription.ReceiveValues
+.. index::
+   single: MqttWildcardSubscription.WriteToDataOfMappedDataObjects
+.. index::
+   single: MqttWildcardSubscription.WriteToTimestampOfMappedDataObjects
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -218,6 +277,16 @@ This enumeration was introduced in InCore 2.4.
   * - ``MqttWildcardSubscription.ReceiveValues``
     - ``1``
     - Emits the :ref:`valueReceived() <signal_MqttWildcardSubscription_valueReceived>` signal on every incoming message. In this mode, the :ref:`data <property_MqttWildcardSubscription_data>` map is not updated which can improve performance if you only need to process incoming (possibly converted) data value directly anyway.
+
+      .. _enumitem_MqttWildcardSubscription_WriteToDataOfMappedDataObjects:
+  * - ``MqttWildcardSubscription.WriteToDataOfMappedDataObjects``
+    - ``2``
+    - writes the received value to the :ref:`DataObject.data <property_DataObject_data>` property of the :ref:`DataObject <object_DataObject>` which has been associated with the respective topic name using the :ref:`mapDataObject() <method_MqttWildcardSubscription_mapDataObject>` method.
+
+      .. _enumitem_MqttWildcardSubscription_WriteToTimestampOfMappedDataObjects:
+  * - ``MqttWildcardSubscription.WriteToTimestampOfMappedDataObjects``
+    - ``3``
+    - writes the received value to the :ref:`DataObject.timestamp <property_DataObject_timestamp>` property of the :ref:`DataObject <object_DataObject>` which has been associated with the respective topic name using the :ref:`mapDataObject() <method_MqttWildcardSubscription_mapDataObject>` method.
 
 
 .. _example_MqttWildcardSubscription:

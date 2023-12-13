@@ -21,6 +21,7 @@ Properties
 .. hlist::
   :columns: 2
 
+  * :ref:`authenticationMethod <property_SmtpConfiguration_authenticationMethod>`
   * :ref:`password <property_SmtpConfiguration_password>`
   * :ref:`port <property_SmtpConfiguration_port>`
   * :ref:`senderHostname <property_SmtpConfiguration_senderHostname>`
@@ -49,10 +50,38 @@ Signals
 
   * :ref:`Object.completed() <signal_Object_completed>`
 
+Enumerations
+++++++++++++
+
+.. hlist::
+  :columns: 1
+
+  * :ref:`AuthMethod <enum_SmtpConfiguration_AuthMethod>`
+
 
 
 Properties
 **********
+
+
+.. _property_SmtpConfiguration_authenticationMethod:
+
+.. _signal_SmtpConfiguration_authenticationMethodChanged:
+
+.. index::
+   single: authenticationMethod
+
+authenticationMethod
+++++++++++++++++++++
+
+This property holds the method to use when authenticating against the SMTP server.
+
+This property was introduced in InCore 2.7.
+
+:**› Type**: :ref:`AuthMethod <enum_SmtpConfiguration_AuthMethod>`
+:**› Default**: :ref:`SmtpConfiguration.AuthNone <enumitem_SmtpConfiguration_AuthNone>`
+:**› Signal**: authenticationMethodChanged()
+:**› Attributes**: Writable
 
 
 .. _property_SmtpConfiguration_password:
@@ -157,6 +186,58 @@ This property holds the username used for authenticating against the SMTP server
 :**› Type**: String
 :**› Signal**: usernameChanged()
 :**› Attributes**: Writable
+
+Enumerations
+************
+
+
+.. _enum_SmtpConfiguration_AuthMethod:
+
+.. index::
+   single: AuthMethod
+
+AuthMethod
+++++++++++
+
+This enumeration describes supported methods for authenticating against an SMTP server.
+
+This enumeration was introduced in InCore 2.7.
+
+.. index::
+   single: SmtpConfiguration.AuthNone
+.. index::
+   single: SmtpConfiguration.AuthPlain
+.. index::
+   single: SmtpConfiguration.AuthLogin
+.. index::
+   single: SmtpConfiguration.AuthCramMd5
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+
+      .. _enumitem_SmtpConfiguration_AuthNone:
+  * - ``SmtpConfiguration.AuthNone``
+    - ``0``
+    - 
+
+      .. _enumitem_SmtpConfiguration_AuthPlain:
+  * - ``SmtpConfiguration.AuthPlain``
+    - ``1``
+    - 
+
+      .. _enumitem_SmtpConfiguration_AuthLogin:
+  * - ``SmtpConfiguration.AuthLogin``
+    - ``2``
+    - 
+
+      .. _enumitem_SmtpConfiguration_AuthCramMd5:
+  * - ``SmtpConfiguration.AuthCramMd5``
+    - ``3``
+    - 
 
 Example
 *******
