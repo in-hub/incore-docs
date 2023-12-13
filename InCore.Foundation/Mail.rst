@@ -163,7 +163,7 @@ This property holds the current human readable error string corresponding to the
 from
 ++++
 
-This property holds the name of the sender.
+This property holds a :ref:`MailAddress <object_MailAddress>` object specifying details of the sender.
 
 :**› Type**: :ref:`MailAddress <object_MailAddress>`
 :**› Signal**: fromChanged()
@@ -197,7 +197,7 @@ This property holds the subject of the email
 to
 ++
 
-This property holds the name of the recipient.
+This property holds the :ref:`MailAddress <object_MailAddress>` object specifying details of the recipient.
 
 :**› Type**: :ref:`MailAddress <object_MailAddress>`
 :**› Signal**: toChanged()
@@ -212,10 +212,10 @@ Methods
 .. index::
    single: send
 
-send()
-++++++
+send(String subject, String text)
++++++++++++++++++++++++++++++++++
 
-This method sends the email with the configured data.
+This method sends the email with the configured data. If the ``subject`` and ``text`` parameters are empty, the contents of the :ref:`subject <property_Mail_subject>` and :ref:`body <property_Mail_body>` are used.
 
 :**› Returns**: Boolean
 
@@ -272,9 +272,11 @@ This enumeration describes all errors which can occur in Mail objects. The most 
 .. index::
    single: Mail.EmptySubjectError
 .. index::
-   single: Mail.SystemError
-.. index::
    single: Mail.SendError
+.. index::
+   single: Mail.EncryptionError
+.. index::
+   single: Mail.SmtpError
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -308,15 +310,20 @@ This enumeration describes all errors which can occur in Mail objects. The most 
     - ``4``
     - No subject specified.
 
-      .. _enumitem_Mail_SystemError:
-  * - ``Mail.SystemError``
-    - ``5``
-    - Error starting the SMTP system process.
-
       .. _enumitem_Mail_SendError:
   * - ``Mail.SendError``
-    - ``6``
+    - ``5``
     - The email could not be sent, likely due to a wrong configuration.
+
+      .. _enumitem_Mail_EncryptionError:
+  * - ``Mail.EncryptionError``
+    - ``6``
+    - Could not establish an encrypted connection.
+
+      .. _enumitem_Mail_SmtpError:
+  * - ``Mail.SmtpError``
+    - ``7``
+    - SMTP-specific protocol error occurred.
 
 
 .. _example_Mail:
@@ -348,9 +355,9 @@ Example
             configuration {
                 server: "mail.example.org"
                 port: 25
-                tls: true
                 username: "sender"
                 password: "c5ypt!cP4ssw0rd"
+                encryptionMode: SmtpConfiguration.EncryptTLS
             }
             //MailAddress
             from {

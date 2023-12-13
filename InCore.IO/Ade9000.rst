@@ -1,0 +1,258 @@
+
+.. _object_Ade9000:
+
+
+:index:`Ade9000`
+----------------
+
+Description
+***********
+
+The Ade9000 object implements a driver for the USB-ISS-based Alphasense OPC-N3 sensor.
+
+:**› Inherits**: :ref:`SpiDevice <object_SpiDevice>`
+
+Overview
+********
+
+Properties
+++++++++++
+
+.. hlist::
+  :columns: 1
+
+  * :ref:`connectVoltageChannels <property_Ade9000_connectVoltageChannels>`
+  * :ref:`loadResistance <property_Ade9000_loadResistance>`
+  * :ref:`transformationRatio <property_Ade9000_transformationRatio>`
+  * :ref:`SpiDevice.address <property_SpiDevice_address>`
+  * :ref:`Object.objectId <property_Object_objectId>`
+  * :ref:`Object.parent <property_Object_parent>`
+
+Methods
++++++++
+
+.. hlist::
+  :columns: 2
+
+  * :ref:`readActivePower() <method_Ade9000_readActivePower>`
+  * :ref:`readApparentPower() <method_Ade9000_readApparentPower>`
+  * :ref:`readCurrent() <method_Ade9000_readCurrent>`
+  * :ref:`readReactivePower() <method_Ade9000_readReactivePower>`
+  * :ref:`readVoltage() <method_Ade9000_readVoltage>`
+  * :ref:`SpiDevice.read() <method_SpiDevice_read>`
+  * :ref:`SpiDevice.transfer() <method_SpiDevice_transfer>`
+  * :ref:`SpiDevice.write() <method_SpiDevice_write>`
+  * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
+  * :ref:`Object.fromJson() <method_Object_fromJson>`
+  * :ref:`Object.serializeProperties() <method_Object_serializeProperties>`
+  * :ref:`Object.toJson() <method_Object_toJson>`
+
+Signals
++++++++
+
+.. hlist::
+  :columns: 1
+
+  * :ref:`Object.completed() <signal_Object_completed>`
+
+Enumerations
+++++++++++++
+
+.. hlist::
+  :columns: 1
+
+  * :ref:`Phase <enum_Ade9000_Phase>`
+
+
+
+Properties
+**********
+
+
+.. _property_Ade9000_connectVoltageChannels:
+
+.. _signal_Ade9000_connectVoltageChannelsChanged:
+
+.. index::
+   single: connectVoltageChannels
+
+connectVoltageChannels
+++++++++++++++++++++++
+
+This property holds connect voltage channels B & C to voltage input A.
+
+This property was introduced in InCore 2.9.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: connectVoltageChannelsChanged()
+:**› Attributes**: Writable
+
+
+.. _property_Ade9000_loadResistance:
+
+.. _signal_Ade9000_loadResistanceChanged:
+
+.. index::
+   single: loadResistance
+
+loadResistance
+++++++++++++++
+
+This property holds the load resistance for the AC current sensor.
+
+:**› Type**: SignedInteger
+:**› Default**: ``100``
+:**› Signal**: loadResistanceChanged()
+:**› Attributes**: Writable
+
+
+.. _property_Ade9000_transformationRatio:
+
+.. _signal_Ade9000_transformationRatioChanged:
+
+.. index::
+   single: transformationRatio
+
+transformationRatio
++++++++++++++++++++
+
+This property holds the transformation ratio of the attached AC current sensor.
+
+:**› Type**: SignedInteger
+:**› Default**: ``3000``
+:**› Signal**: transformationRatioChanged()
+:**› Attributes**: Writable
+
+Methods
+*******
+
+
+.. _method_Ade9000_readActivePower:
+
+.. index::
+   single: readActivePower
+
+readActivePower(:ref:`Phase <enum_Ade9000_Phase>` phase)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+:**› Returns**: Float
+
+
+
+.. _method_Ade9000_readApparentPower:
+
+.. index::
+   single: readApparentPower
+
+readApparentPower(:ref:`Phase <enum_Ade9000_Phase>` phase)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+:**› Returns**: Float
+
+
+
+.. _method_Ade9000_readCurrent:
+
+.. index::
+   single: readCurrent
+
+readCurrent(:ref:`Phase <enum_Ade9000_Phase>` phase)
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+:**› Returns**: Float
+
+
+
+.. _method_Ade9000_readReactivePower:
+
+.. index::
+   single: readReactivePower
+
+readReactivePower(:ref:`Phase <enum_Ade9000_Phase>` phase)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+:**› Returns**: Float
+
+
+
+.. _method_Ade9000_readVoltage:
+
+.. index::
+   single: readVoltage
+
+readVoltage(:ref:`Phase <enum_Ade9000_Phase>` phase)
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+:**› Returns**: Float
+
+
+Enumerations
+************
+
+
+.. _enum_Ade9000_Phase:
+
+.. index::
+   single: Phase
+
+Phase
++++++
+
+
+
+This enumeration was introduced in InCore 2.8.
+
+.. index::
+   single: Ade9000.InvalidPhase
+.. index::
+   single: Ade9000.PhaseL1
+.. index::
+   single: Ade9000.PhaseL2
+.. index::
+   single: Ade9000.PhaseL3
+.. index::
+   single: Ade9000.PhaseN
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+
+      .. _enumitem_Ade9000_InvalidPhase:
+  * - ``Ade9000.InvalidPhase``
+    - ``0``
+    - 
+
+      .. _enumitem_Ade9000_PhaseL1:
+  * - ``Ade9000.PhaseL1``
+    - ``1``
+    - 
+
+      .. _enumitem_Ade9000_PhaseL2:
+  * - ``Ade9000.PhaseL2``
+    - ``2``
+    - 
+
+      .. _enumitem_Ade9000_PhaseL3:
+  * - ``Ade9000.PhaseL3``
+    - ``3``
+    - 
+
+      .. _enumitem_Ade9000_PhaseN:
+  * - ``Ade9000.PhaseN``
+    - ``4``
+    - 
+

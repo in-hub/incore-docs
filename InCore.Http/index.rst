@@ -24,3 +24,6 @@ Objects
 	HttpRepository
 	HttpRequest
 	HttpResponse
+	HttpServer
+	HttpServerResponse
+	HttpServerRoute

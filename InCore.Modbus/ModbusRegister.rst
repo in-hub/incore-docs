@@ -46,6 +46,7 @@ Methods
   :columns: 1
 
   * :ref:`pollData() <method_ModbusRegister_pollData>`
+  * :ref:`write() <method_ModbusRegister_write>`
   * :ref:`DataObject.touch() <method_DataObject_touch>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
@@ -110,7 +111,7 @@ byteOrder
 This property holds the byte order which is used to combine two bytes to one 16-bit register. Transmitted data ``0xDE 0xAD`` would be interpreted as unsigned integer as ``57005`` (`BigEndian`) or ``44510`` (`LittleEndian`).
 
 :**› Type**: :ref:`ByteOrder <enum_ModbusRegister_ByteOrder>`
-:**› Default**: :ref:`ModbusRegister.LittleEndian <enumitem_ModbusRegister_LittleEndian>`
+:**› Default**: :ref:`ModbusRegister.BigEndian <enumitem_ModbusRegister_BigEndian>`
 :**› Signal**: byteOrderChanged()
 :**› Attributes**: Writable
 
@@ -233,6 +234,22 @@ pollData()
 ++++++++++
 
 This method polls the :ref:`DataObject.data <property_DataObject_data>` property. It is called automatically when using a :ref:`Polling <object_Polling>` property modifier on this property and usually does not have to be called manually.
+
+
+
+.. _method_ModbusRegister_write:
+
+.. index::
+   single: write
+
+write(Variant data)
++++++++++++++++++++
+
+This method explicitly writes the given data according to the register configuration. Use this method to always write specific values even if they have not changed (:ref:`data <property_ModbusRegister_data>` only is written on value changes).
+
+This method was introduced in InCore 2.8.
+
+:**› Returns**: Boolean
 
 
 Signals

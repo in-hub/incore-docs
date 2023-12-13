@@ -26,6 +26,7 @@ Properties
 
   * :ref:`address <property_ModbusServer_address>`
   * :ref:`registers <property_ModbusServer_registers>`
+  * :ref:`ModbusDevice.activityLed <property_ModbusDevice_activityLed>`
   * :ref:`ModbusDevice.autoConnect <property_ModbusDevice_autoConnect>`
   * :ref:`ModbusDevice.error <property_ModbusDevice_error>`
   * :ref:`ModbusDevice.errorString <property_ModbusDevice_errorString>`
@@ -66,6 +67,7 @@ Enumerations
 .. hlist::
   :columns: 1
 
+  * :ref:`ModbusDevice.BusInterface <enum_ModbusDevice_BusInterface>`
   * :ref:`ModbusDevice.Error <enum_ModbusDevice_Error>`
   * :ref:`ModbusDevice.State <enum_ModbusDevice_State>`
 

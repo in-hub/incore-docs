@@ -22,6 +22,8 @@ Properties
   :columns: 3
 
   * :ref:`arguments <property_DockerContainer_arguments>`
+  * :ref:`capAdd <property_DockerContainer_capAdd>`
+  * :ref:`capDrop <property_DockerContainer_capDrop>`
   * :ref:`cleanUpAtExit <property_DockerContainer_cleanUpAtExit>`
   * :ref:`cleanUpAtStart <property_DockerContainer_cleanUpAtStart>`
   * :ref:`enabled <property_DockerContainer_enabled>`
@@ -104,6 +106,44 @@ This property was introduced in InCore 2.6.
 
 :**› Type**: StringList
 :**› Signal**: argumentsChanged()
+:**› Attributes**: Writable
+
+
+.. _property_DockerContainer_capAdd:
+
+.. _signal_DockerContainer_capAddChanged:
+
+.. index::
+   single: capAdd
+
+capAdd
+++++++
+
+This property holds security-related capabilities which to add to the container, e.g. ``NET_ADMIN``.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: StringList
+:**› Signal**: capAddChanged()
+:**› Attributes**: Writable
+
+
+.. _property_DockerContainer_capDrop:
+
+.. _signal_DockerContainer_capDropChanged:
+
+.. index::
+   single: capDrop
+
+capDrop
++++++++
+
+This property holds security-related capabilities which to drop from the container, e.g. ``NET_ADMIN``.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: StringList
+:**› Signal**: capDropChanged()
 :**› Attributes**: Writable
 
 
@@ -717,6 +757,8 @@ This enumeration was introduced in InCore 2.0.
    single: DockerContainer.MacVLAN
 .. index::
    single: DockerContainer.NoNetworking
+.. index::
+   single: DockerContainer.CustomNetworksOnly
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -749,6 +791,11 @@ This enumeration was introduced in InCore 2.0.
   * - ``DockerContainer.NoNetworking``
     - ``4``
     - Use the `none network driver <https://docs.docker.com/network/none/>`_, i.e. disable networking for the container.
+
+      .. _enumitem_DockerContainer_CustomNetworksOnly:
+  * - ``DockerContainer.CustomNetworksOnly``
+    - ``5``
+    - 
 
 
 .. _enum_DockerContainer_RestartPolicy:

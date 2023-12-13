@@ -26,6 +26,7 @@ Properties
   * :ref:`brightness <property_LED_brightness>`
   * :ref:`index <property_LED_index>`
   * :ref:`networkInterfaceName <property_LED_networkInterfaceName>`
+  * :ref:`serialPortName <property_LED_serialPortName>`
   * :ref:`systemName <property_LED_systemName>`
   * :ref:`trigger <property_LED_trigger>`
   * :ref:`value <property_LED_value>`
@@ -38,6 +39,7 @@ Methods
 .. hlist::
   :columns: 1
 
+  * :ref:`shot() <method_LED_shot>`
   * :ref:`toggle() <method_LED_toggle>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
@@ -124,6 +126,25 @@ This property was introduced in InCore 2.5.
 :**› Attributes**: Writable
 
 
+.. _property_LED_serialPortName:
+
+.. _signal_LED_serialPortNameChanged:
+
+.. index::
+   single: serialPortName
+
+serialPortName
+++++++++++++++
+
+This property holds the name of the serial port (e.g. ``ttyUSB0``) which to indicate RX/TX activity for.
+
+This property was introduced in InCore 2.5.
+
+:**› Type**: String
+:**› Signal**: serialPortNameChanged()
+:**› Attributes**: Writable
+
+
 .. _property_LED_systemName:
 
 .. _signal_LED_systemNameChanged:
@@ -184,6 +205,18 @@ Methods
 *******
 
 
+.. _method_LED_shot:
+
+.. index::
+   single: shot
+
+shot()
+++++++
+
+This method triggers the oneshot trigger, i.e. initiates a blinking cycle.
+
+
+
 .. _method_LED_toggle:
 
 .. index::
@@ -212,6 +245,10 @@ This enumeration describes the supported LED indexes.
 .. index::
    single: LED.None
 .. index::
+   single: LED.ActivityRed
+.. index::
+   single: LED.ActivityGreen
+.. index::
    single: LED.StatusRed
 .. index::
    single: LED.StatusGreen
@@ -230,19 +267,29 @@ This enumeration describes the supported LED indexes.
     - ``0``
     - No valid LED configured.
 
+      .. _enumitem_LED_ActivityRed:
+  * - ``LED.ActivityRed``
+    - ``1``
+    - The red activity LED.
+
+      .. _enumitem_LED_ActivityGreen:
+  * - ``LED.ActivityGreen``
+    - ``2``
+    - The green activity LED.
+
       .. _enumitem_LED_StatusRed:
   * - ``LED.StatusRed``
-    - ``1``
+    - ``3``
     - The red status LED.
 
       .. _enumitem_LED_StatusGreen:
   * - ``LED.StatusGreen``
-    - ``2``
+    - ``4``
     - The green status LED.
 
       .. _enumitem_LED_StatusBlue:
   * - ``LED.StatusBlue``
-    - ``3``
+    - ``5``
     - The blue status LED.
 
 
@@ -267,7 +314,9 @@ This enumeration was introduced in InCore 2.5.
 .. index::
    single: LED.NetworkTraffic
 .. index::
-   single: LED.SystemActivity
+   single: LED.OneShot
+.. index::
+   single: LED.SerialPort
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -296,10 +345,15 @@ This enumeration was introduced in InCore 2.5.
     - ``3``
     - A trigger indicating traffic at a certain network interface (:ref:`networkInterfaceName <property_LED_networkInterfaceName>`).
 
-      .. _enumitem_LED_SystemActivity:
-  * - ``LED.SystemActivity``
+      .. _enumitem_LED_OneShot:
+  * - ``LED.OneShot``
     - ``4``
-    - A trigger indicating any kind of CPU usage.
+    - A trigger for blinking on single events.
+
+      .. _enumitem_LED_SerialPort:
+  * - ``LED.SerialPort``
+    - ``5``
+    - A trigger for blinking on on serial port activity.
 
 
 .. _example_LED:

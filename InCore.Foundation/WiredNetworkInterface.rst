@@ -336,7 +336,7 @@ linkLocalAddressing
 This property holds whether to enable link-local address autoconfiguration. See `Link-local address <https://en.wikipedia.org/wiki/Link-local_address>`_ for details.
 
 :**› Type**: Boolean
-:**› Default**: ``false``
+:**› Default**: ``true``
 :**› Signal**: linkLocalAddressingChanged()
 :**› Attributes**: Writable
 
@@ -400,7 +400,7 @@ multicastDNS
 This property holds whether to enable multicast DNS support on this interface. When enabled, the device can be accessed via :ref:`System.hostname <property_System_hostname>`.local in the network. See `Multicast DNS <https://en.wikipedia.org/wiki/Multicast_DNS>`_ and `RFC 6762 <https://tools.ietf.org/html/rfc6762>`_ for details.
 
 :**› Type**: Boolean
-:**› Default**: ``false``
+:**› Default**: ``true``
 :**› Signal**: multicastDNSChanged()
 :**› Attributes**: Writable
 

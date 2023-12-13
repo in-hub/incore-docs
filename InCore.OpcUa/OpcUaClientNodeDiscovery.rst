@@ -26,6 +26,7 @@ Properties
   * :ref:`browseNodeId <property_OpcUaClientNodeDiscovery_browseNodeId>`
   * :ref:`connection <property_OpcUaClientNodeDiscovery_connection>`
   * :ref:`nodes <property_OpcUaClientNodeDiscovery_nodes>`
+  * :ref:`updating <property_OpcUaClientNodeDiscovery_updating>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
 
@@ -106,6 +107,26 @@ This property holds the discovered OPC/UA nodes. Depending on the respective nod
 
 :**› Type**: :ref:`List <object_List>`\<:ref:`OpcUaNode <enum_OpcUaClientNodeDiscovery_OpcUaNode>`>
 :**› Signal**: nodesChanged()
+:**› Attributes**: Readonly
+
+
+.. _property_OpcUaClientNodeDiscovery_updating:
+
+.. _signal_OpcUaClientNodeDiscovery_updatingChanged:
+
+.. index::
+   single: updating
+
+updating
+++++++++
+
+This property holds whether a discovery process is currently running.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: updatingChanged()
 :**› Attributes**: Readonly
 
 Methods

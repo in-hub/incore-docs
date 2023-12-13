@@ -21,14 +21,11 @@ Properties
 .. hlist::
   :columns: 3
 
-  * :ref:`actualSiPrefixFactor <property_Measurement_actualSiPrefixFactor>`
   * :ref:`decimals <property_Measurement_decimals>`
   * :ref:`displayString <property_Measurement_displayString>`
-  * :ref:`displayValue <property_Measurement_displayValue>`
   * :ref:`fullUnitString <property_Measurement_fullUnitString>`
   * :ref:`siPrefix <property_Measurement_siPrefix>`
   * :ref:`siPrefixFactor <property_Measurement_siPrefixFactor>`
-  * :ref:`siPrefixName <property_Measurement_siPrefixName>`
   * :ref:`system <property_Measurement_system>`
   * :ref:`unit <property_Measurement_unit>`
   * :ref:`view <property_Measurement_view>`
@@ -79,25 +76,6 @@ Properties
 **********
 
 
-.. _property_Measurement_actualSiPrefixFactor:
-
-.. _signal_Measurement_actualSiPrefixFactorChanged:
-
-.. index::
-   single: actualSiPrefixFactor
-
-actualSiPrefixFactor
-++++++++++++++++++++
-
-This property holds the effective factor for the measurement value based on :ref:`siPrefix <property_Measurement_siPrefix>` and :ref:`siPrefixFactor <property_Measurement_siPrefixFactor>`.
-
-This property was introduced in InCore 2.6.
-
-:**› Type**: Double
-:**› Signal**: actualSiPrefixFactorChanged()
-:**› Attributes**: Readonly
-
-
 .. _property_Measurement_decimals:
 
 .. _signal_Measurement_decimalsChanged:
@@ -131,25 +109,6 @@ This property holds the converted, scaled and formatted measurement value includ
 :**› Type**: String
 :**› Signal**: displayStringChanged()
 :**› Attributes**: Readonly
-
-
-.. _property_Measurement_displayValue:
-
-.. _signal_Measurement_displayValueChanged:
-
-.. index::
-   single: displayValue
-
-displayValue
-++++++++++++
-
-This property holds an expression which is used to calculate the display value based on the current :ref:`value <property_DataObject_data>`, :ref:`SI prefix factor <property_Measurement_siPrefixFactor>` and :ref:`measurement system <property_Measurement_system>`.
-
-This property was introduced in InCore 2.0.
-
-:**› Type**: <QML expression>
-:**› Signal**: displayValueChanged()
-:**› Attributes**: Writable
 
 
 .. _property_Measurement_fullUnitString:
@@ -199,32 +158,13 @@ This property holds the SI prefix for the measurement. It is included in the for
 siPrefixFactor
 ++++++++++++++
 
-This property holds an expression which evaluates to the SI prefix factor based on the :ref:`siPrefix <property_Measurement_siPrefix>`. If unset or set to ``undefined`` sensible default values (e.g. ``1000`` for :ref:`Measurement.Kilo <enumitem_Measurement_Kilo>`) will be used.
+This property holds the effective factor for the measurement value based on :ref:`siPrefix <property_Measurement_siPrefix>`.
 
-This property was introduced in InCore 2.0.
+This property was introduced in InCore 2.6.
 
-:**› Type**: <QML expression>
+:**› Type**: Double
 :**› Signal**: siPrefixFactorChanged()
-:**› Attributes**: Writable
-
-
-.. _property_Measurement_siPrefixName:
-
-.. _signal_Measurement_siPrefixNameChanged:
-
-.. index::
-   single: siPrefixName
-
-siPrefixName
-++++++++++++
-
-This property holds an expression which evaluates to the SI prefix name based on the :ref:`siPrefix <property_Measurement_siPrefix>`. If unset or set to ``undefined`` sensible default values (e.g. ``µ`` for :ref:`Measurement.Micro <enumitem_Measurement_Micro>`) will be used.
-
-This property was introduced in InCore 2.0.
-
-:**› Type**: <QML expression>
-:**› Signal**: siPrefixNameChanged()
-:**› Attributes**: Writable
+:**› Attributes**: Readonly
 
 
 .. _property_Measurement_system:

@@ -23,10 +23,9 @@ Properties
 .. hlist::
   :columns: 3
 
-  * :ref:`error <property_NftAddressTranslation_error>`
-  * :ref:`errorString <property_NftAddressTranslation_errorString>`
   * :ref:`masquerade <property_NftAddressTranslation_masquerade>`
   * :ref:`natDestinationAddress <property_NftAddressTranslation_natDestinationAddress>`
+  * :ref:`natDestinationPort <property_NftAddressTranslation_natDestinationPort>`
   * :ref:`natSourceAddress <property_NftAddressTranslation_natSourceAddress>`
   * :ref:`NftFlow.destinationAddress <property_NftFlow_destinationAddress>`
   * :ref:`NftFlow.destinationPorts <property_NftFlow_destinationPorts>`
@@ -59,7 +58,6 @@ Signals
 .. hlist::
   :columns: 1
 
-  * :ref:`errorOccurred() <signal_NftAddressTranslation_errorOccurred>`
   * :ref:`NftTable.chainsDataChanged() <signal_NftTable_chainsDataChanged>`
   * :ref:`Object.completed() <signal_Object_completed>`
 
@@ -69,47 +67,12 @@ Enumerations
 .. hlist::
   :columns: 1
 
-  * :ref:`Error <enum_NftAddressTranslation_Error>`
   * :ref:`NftTable.Family <enum_NftTable_Family>`
 
 
 
 Properties
 **********
-
-
-.. _property_NftAddressTranslation_error:
-
-.. _signal_NftAddressTranslation_errorChanged:
-
-.. index::
-   single: error
-
-error
-+++++
-
-This property holds the most recently occurred error or :ref:`NftAddressTranslation.NoError <enumitem_NftAddressTranslation_NoError>` if no error occurred. If the same error occurs multiple times this property does not change. Use the :ref:`errorOccurred() <signal_NftAddressTranslation_errorOccurred>` signal to detect multiple occurrences of the same error.
-
-:**› Type**: :ref:`Error <enum_NftAddressTranslation_Error>`
-:**› Signal**: errorChanged()
-:**› Attributes**: Readonly
-
-
-.. _property_NftAddressTranslation_errorString:
-
-.. _signal_NftAddressTranslation_errorStringChanged:
-
-.. index::
-   single: errorString
-
-errorString
-+++++++++++
-
-This property holds the current human readable error string corresponding to the current value in the :ref:`error <property_NftAddressTranslation_error>` property. It may include additional information such as failure reasons or locations.
-
-:**› Type**: String
-:**› Signal**: errorStringChanged()
-:**› Attributes**: Readonly
 
 
 .. _property_NftAddressTranslation_masquerade:
@@ -122,7 +85,7 @@ This property holds the current human readable error string corresponding to the
 masquerade
 ++++++++++
 
-This property holds whether to masquerade connections. If enabled, the :ref:`NftFlow.outputInterface <property_NftFlow_outputInterface>` property has to be set.
+This property holds whether to masquerade connections, i.e. rewrite the source address of packets.
 
 :**› Type**: Boolean
 :**› Default**: ``false``
@@ -147,6 +110,26 @@ This property holds the address to use for rewriting the destination address of 
 :**› Attributes**: Writable
 
 
+.. _property_NftAddressTranslation_natDestinationPort:
+
+.. _signal_NftAddressTranslation_natDestinationPortChanged:
+
+.. index::
+   single: natDestinationPort
+
+natDestinationPort
+++++++++++++++++++
+
+This property holds the NAT destination port which to forward packets to if it differs from the original destination port.
+
+This property was introduced in InCore 2.7.
+
+:**› Type**: SignedInteger
+:**› Default**: ``0``
+:**› Signal**: natDestinationPortChanged()
+:**› Attributes**: Writable
+
+
 .. _property_NftAddressTranslation_natSourceAddress:
 
 .. _signal_NftAddressTranslation_natSourceAddressChanged:
@@ -162,57 +145,6 @@ This property holds the address to use for rewriting the source address of packe
 :**› Type**: String
 :**› Signal**: natSourceAddressChanged()
 :**› Attributes**: Writable
-
-Signals
-*******
-
-
-.. _signal_NftAddressTranslation_errorOccurred:
-
-.. index::
-   single: errorOccurred
-
-errorOccurred()
-+++++++++++++++
-
-This signal is emitted whenever an error has occurred, regardless of whether the :ref:`error <property_NftAddressTranslation_error>` property has changed or not. In contrast to the change notification signal of the :ref:`error <property_NftAddressTranslation_error>` property this signal is also emitted several times if a certain error occurs several times in succession.
-
-
-Enumerations
-************
-
-
-.. _enum_NftAddressTranslation_Error:
-
-.. index::
-   single: Error
-
-Error
-+++++
-
-This enumeration describes all errors which can occur in NftAddressTranslation objects. The most recently occurred error is stored in the :ref:`error <property_NftAddressTranslation_error>` property.
-
-.. index::
-   single: NftAddressTranslation.NoError
-.. index::
-   single: NftAddressTranslation.MasqueradingWithoutOutputInterface
-.. list-table::
-  :widths: auto
-  :header-rows: 1
-
-  * - Name
-    - Value
-    - Description
-
-      .. _enumitem_NftAddressTranslation_NoError:
-  * - ``NftAddressTranslation.NoError``
-    - ``0``
-    - No error occurred or was detected.
-
-      .. _enumitem_NftAddressTranslation_MasqueradingWithoutOutputInterface:
-  * - ``NftAddressTranslation.MasqueradingWithoutOutputInterface``
-    - ``1``
-    - Masquerading enabled but output interface not set.
 
 
 .. _example_NftAddressTranslation:

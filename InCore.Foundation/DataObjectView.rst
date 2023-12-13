@@ -358,6 +358,10 @@ This enumeration describes predefined values for the :ref:`widget <property_Data
    single: DataObjectView.EditableCombobox
 .. index::
    single: DataObjectView.PasswordField
+.. index::
+   single: DataObjectView.TextFileField
+.. index::
+   single: DataObjectView.BinaryFilePicker
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -420,6 +424,16 @@ This enumeration describes predefined values for the :ref:`widget <property_Data
   * - ``DataObjectView.PasswordField``
     - ``10``
     - Use text field widget which shows asterisks instead of the actual input.
+
+      .. _enumitem_DataObjectView_TextFileField:
+  * - ``DataObjectView.TextFileField``
+    - ``11``
+    - a text field which also can be filled from a local text file.
+
+      .. _enumitem_DataObjectView_BinaryFilePicker:
+  * - ``DataObjectView.BinaryFilePicker``
+    - ``12``
+    - a widget allowing to select a file and use its content for the :ref:`DataObject <object_DataObject>`'s data in base64 representation.
 
 Example
 *******

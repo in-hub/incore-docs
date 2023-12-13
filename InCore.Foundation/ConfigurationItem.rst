@@ -83,3 +83,40 @@ This property holds whether the item is excluded from data serialization and des
 :**› Signal**: serializationDisabledChanged()
 :**› Attributes**: Writable
 
+
+.. _example_ConfigurationItem:
+
+
+Example
+*******
+
+.. code-block:: qml
+
+    import InCore.Foundation 2.7
+    
+    Application {
+        Configuration {
+            id: config
+            name: "InGraf"
+            objectId: "ingraf"
+    
+            ConfigurationObject {
+                id: cfgSmtpSettings
+                objectId: "smtpSettings"
+                ConfigurationItem {
+                    id: cfgSmtpServer
+                    objectId: "smtpServer"
+                    name: "SMTP server"
+                    view {
+                        widget: DataObjectView.TextInput
+                        orderIndex: 11
+                        widgetWidth: 50
+                    }
+                }
+            }
+        }
+    
+        onCompleted: console.log("x" + cfgSmtpServer.data ?? "")
+    
+    }
+    

@@ -21,11 +21,12 @@ Properties
 .. hlist::
   :columns: 2
 
+  * :ref:`authenticationMethod <property_SmtpConfiguration_authenticationMethod>`
+  * :ref:`encryptionMode <property_SmtpConfiguration_encryptionMode>`
   * :ref:`password <property_SmtpConfiguration_password>`
   * :ref:`port <property_SmtpConfiguration_port>`
   * :ref:`senderHostname <property_SmtpConfiguration_senderHostname>`
   * :ref:`server <property_SmtpConfiguration_server>`
-  * :ref:`tls <property_SmtpConfiguration_tls>`
   * :ref:`username <property_SmtpConfiguration_username>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
@@ -49,10 +50,59 @@ Signals
 
   * :ref:`Object.completed() <signal_Object_completed>`
 
+Enumerations
+++++++++++++
+
+.. hlist::
+  :columns: 1
+
+  * :ref:`AuthMethod <enum_SmtpConfiguration_AuthMethod>`
+  * :ref:`EncryptionMode <enum_SmtpConfiguration_EncryptionMode>`
+
 
 
 Properties
 **********
+
+
+.. _property_SmtpConfiguration_authenticationMethod:
+
+.. _signal_SmtpConfiguration_authenticationMethodChanged:
+
+.. index::
+   single: authenticationMethod
+
+authenticationMethod
+++++++++++++++++++++
+
+This property holds the method to use when authenticating against the SMTP server.
+
+This property was introduced in InCore 2.7.
+
+:**› Type**: :ref:`AuthMethod <enum_SmtpConfiguration_AuthMethod>`
+:**› Default**: :ref:`SmtpConfiguration.AuthNone <enumitem_SmtpConfiguration_AuthNone>`
+:**› Signal**: authenticationMethodChanged()
+:**› Attributes**: Writable
+
+
+.. _property_SmtpConfiguration_encryptionMode:
+
+.. _signal_SmtpConfiguration_encryptionModeChanged:
+
+.. index::
+   single: encryptionMode
+
+encryptionMode
+++++++++++++++
+
+This property holds the encryption type to use when connection to the SMTP server. Encryption should only be disabled in special cases, i.e. when using an internal SMTP relay which does not require authentication. Otherwise username and password are sent unencrypted over the network.
+
+This property was introduced in InCore 2.9.
+
+:**› Type**: :ref:`EncryptionMode <enum_SmtpConfiguration_EncryptionMode>`
+:**› Default**: :ref:`SmtpConfiguration.EncryptTLS <enumitem_SmtpConfiguration_EncryptTLS>`
+:**› Signal**: encryptionModeChanged()
+:**› Attributes**: Writable
 
 
 .. _property_SmtpConfiguration_password:
@@ -124,24 +174,6 @@ This property holds the hostname of the SMTP server to use for sending mails.
 :**› Attributes**: Writable
 
 
-.. _property_SmtpConfiguration_tls:
-
-.. _signal_SmtpConfiguration_tlsChanged:
-
-.. index::
-   single: tls
-
-tls
-+++
-
-This property holds whether to encrypt the connection to the SMTP server via TLS. TLS support should only be disabled in special cases, i.e. when using an internal SMTP relay which does not require authentication. Otherwise username and password are sent unencrypted over the network.
-
-:**› Type**: Boolean
-:**› Default**: ``true``
-:**› Signal**: tlsChanged()
-:**› Attributes**: Writable
-
-
 .. _property_SmtpConfiguration_username:
 
 .. _signal_SmtpConfiguration_usernameChanged:
@@ -157,6 +189,98 @@ This property holds the username used for authenticating against the SMTP server
 :**› Type**: String
 :**› Signal**: usernameChanged()
 :**› Attributes**: Writable
+
+Enumerations
+************
+
+
+.. _enum_SmtpConfiguration_AuthMethod:
+
+.. index::
+   single: AuthMethod
+
+AuthMethod
+++++++++++
+
+This enumeration describes supported methods for authenticating against an SMTP server.
+
+This enumeration was introduced in InCore 2.7.
+
+.. index::
+   single: SmtpConfiguration.AuthNone
+.. index::
+   single: SmtpConfiguration.AuthPlain
+.. index::
+   single: SmtpConfiguration.AuthLogin
+.. index::
+   single: SmtpConfiguration.AuthCramMd5
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+
+      .. _enumitem_SmtpConfiguration_AuthNone:
+  * - ``SmtpConfiguration.AuthNone``
+    - ``0``
+    - 
+
+      .. _enumitem_SmtpConfiguration_AuthPlain:
+  * - ``SmtpConfiguration.AuthPlain``
+    - ``1``
+    - 
+
+      .. _enumitem_SmtpConfiguration_AuthLogin:
+  * - ``SmtpConfiguration.AuthLogin``
+    - ``2``
+    - 
+
+      .. _enumitem_SmtpConfiguration_AuthCramMd5:
+  * - ``SmtpConfiguration.AuthCramMd5``
+    - ``3``
+    - 
+
+
+.. _enum_SmtpConfiguration_EncryptionMode:
+
+.. index::
+   single: EncryptionMode
+
+EncryptionMode
+++++++++++++++
+
+
+
+.. index::
+   single: SmtpConfiguration.EncryptNone
+.. index::
+   single: SmtpConfiguration.EncryptSSL
+.. index::
+   single: SmtpConfiguration.EncryptTLS
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+
+      .. _enumitem_SmtpConfiguration_EncryptNone:
+  * - ``SmtpConfiguration.EncryptNone``
+    - ``0``
+    - 
+
+      .. _enumitem_SmtpConfiguration_EncryptSSL:
+  * - ``SmtpConfiguration.EncryptSSL``
+    - ``1``
+    - 
+
+      .. _enumitem_SmtpConfiguration_EncryptTLS:
+  * - ``SmtpConfiguration.EncryptTLS``
+    - ``2``
+    - 
 
 Example
 *******

@@ -20,9 +20,10 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 1
+  :columns: 2
 
   * :ref:`autoSubscribe <property_MqttAbstractSubscription_autoSubscribe>`
+  * :ref:`enabled <property_MqttAbstractSubscription_enabled>`
   * :ref:`error <property_MqttAbstractSubscription_error>`
   * :ref:`errorString <property_MqttAbstractSubscription_errorString>`
   * :ref:`qos <property_MqttAbstractSubscription_qos>`
@@ -81,6 +82,26 @@ This property holds whether to subscribe the topics automatically whenever the a
 :**› Type**: Boolean
 :**› Default**: ``true``
 :**› Signal**: autoSubscribeChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MqttAbstractSubscription_enabled:
+
+.. _signal_MqttAbstractSubscription_enabledChanged:
+
+.. index::
+   single: enabled
+
+enabled
++++++++
+
+This property holds whether the subscription is enabled. If disabled, the topics are not subscribed and unsubscribed if subscribed before.
+
+This property was introduced in InCore 2.7.
+
+:**› Type**: Boolean
+:**› Default**: ``true``
+:**› Signal**: enabledChanged()
 :**› Attributes**: Writable
 
 

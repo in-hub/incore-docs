@@ -175,7 +175,7 @@ error
 This property holds the most recent error occurred while connecting to an MQTT broker.
 
 :**› Type**: :ref:`Error <enum_MqttClient_Error>`
-:**› Default**: :ref:`MqttClient.NoError <enumitem_MqttClient_NoError>`
+:**› Default**: \enumitem{MqttClient::Error::}
 :**› Signal**: errorChanged()
 :**› Attributes**: Readonly
 
@@ -193,6 +193,7 @@ errorString
 This property holds the current human readable error string corresponding to the current value in the :ref:`error <property_MqttClient_error>` property. It may include additional information such as failure reasons or locations.
 
 :**› Type**: String
+:**› Default**: ``Unknown error: an unknown error occurred.``
 :**› Signal**: errorStringChanged()
 :**› Attributes**: Readonly
 
@@ -262,7 +263,7 @@ port
 This property holds the port to connect to the MQTT broker.
 
 :**› Type**: SignedInteger
-:**› Default**: ``0``
+:**› Default**: ``1883``
 :**› Signal**: portChanged()
 :**› Attributes**: Writable
 

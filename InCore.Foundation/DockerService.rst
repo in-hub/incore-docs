@@ -21,6 +21,7 @@ Properties
 .. hlist::
   :columns: 2
 
+  * :ref:`bridgeIp <property_DockerService_bridgeIp>`
   * :ref:`containers <property_DockerService_containers>`
   * :ref:`error <property_DockerService_error>`
   * :ref:`errorString <property_DockerService_errorString>`
@@ -43,6 +44,8 @@ Methods
 
   * :ref:`login() <method_DockerService_login>`
   * :ref:`logout() <method_DockerService_logout>`
+  * :ref:`removeAllFiles() <method_DockerService_removeAllFiles>`
+  * :ref:`removeAllFilesExceptVolumes() <method_DockerService_removeAllFilesExceptVolumes>`
   * :ref:`SystemService.restart() <method_SystemService_restart>`
   * :ref:`SystemService.start() <method_SystemService_start>`
   * :ref:`SystemService.stop() <method_SystemService_stop>`
@@ -73,6 +76,26 @@ Enumerations
 
 Properties
 **********
+
+
+.. _property_DockerService_bridgeIp:
+
+.. _signal_DockerService_bridgeIpChanged:
+
+.. index::
+   single: bridgeIp
+
+bridgeIp
+++++++++
+
+This property holds an IP address including an IP prefix to use for the ``docker0`` bridge.
+
+This property was introduced in InCore 1.1.
+
+:**› Type**: String
+:**› Default**: ``172.17.0.0/16``
+:**› Signal**: bridgeIpChanged()
+:**› Attributes**: Writable
 
 
 .. _property_DockerService_containers:
@@ -213,6 +236,38 @@ logout()
 This method logs out from a Docker :ref:`registry <property_DockerService_registry>`.
 
 This method was introduced in InCore 1.1.
+
+
+
+.. _method_DockerService_removeAllFiles:
+
+.. index::
+   single: removeAllFiles
+
+removeAllFiles()
+++++++++++++++++
+
+This method completely removes all Docker-related data, i.e. containers, images, volumes and orphaned files.
+
+This method was introduced in InCore 2.9.
+
+:**› Returns**: Boolean
+
+
+
+.. _method_DockerService_removeAllFilesExceptVolumes:
+
+.. index::
+   single: removeAllFilesExceptVolumes
+
+removeAllFilesExceptVolumes()
++++++++++++++++++++++++++++++
+
+This method removes all Docker-related persistent data, i.e. containers, images and orphaned files but keeps volumes.
+
+This method was introduced in InCore 2.9.
+
+:**› Returns**: Boolean
 
 
 Signals

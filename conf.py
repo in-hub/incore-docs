@@ -51,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'InCore'
-copyright = '2023, in.hub GmbH'
+copyright = '2025, in.hub GmbH'
 author = 'in.hub GmbH'
 
 title = os.getenv('TITLE', 'InCore Documentation')
@@ -60,7 +60,7 @@ title = os.getenv('TITLE', 'InCore Documentation')
 # built documents.
 #
 # The short X.Y version.
-version = '2.7.3'
+version = '2.9.2'
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -105,13 +105,15 @@ html_theme_options = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+html_css_files = [
+	'theme_overrides.css',
+]
 
 
 def setup(app):
 	from incore.lexers import InCoreQmlLexer
 	from sphinx.highlighting import lexers
 	lexers['qml'] = InCoreQmlLexer()
-	app.add_css_file("theme_overrides.css")
 
 
 # -- Options for HTMLHelp output ------------------------------------------

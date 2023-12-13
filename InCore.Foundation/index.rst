@@ -114,6 +114,7 @@ Objects
 	Storage
 	System
 	SystemConfiguration
+	SystemJournal
 	SystemService
 	TcpServer
 	TcpSocket

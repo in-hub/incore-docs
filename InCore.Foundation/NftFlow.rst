@@ -99,7 +99,7 @@ This property holds the destination address to transmit traffic to for this flow
 destinationPorts
 ++++++++++++++++
 
-This property holds the source ports used by flow implementations, e.g. ``[ 80, 443 ]``.
+This property holds the destination ports used by flow implementations, e.g. ``[ 80, 443 ]``.
 
 :**› Type**: Variant
 :**› Signal**: destinationPortsChanged()

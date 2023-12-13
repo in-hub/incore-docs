@@ -24,6 +24,7 @@ Properties
   :columns: 2
 
   * :ref:`readOnly <property_OpcUaServerValueNode_readOnly>`
+  * :ref:`timestamp <property_OpcUaServerValueNode_timestamp>`
   * :ref:`unit <property_OpcUaServerValueNode_unit>`
   * :ref:`value <property_OpcUaServerValueNode_value>`
   * :ref:`valueType <property_OpcUaServerValueNode_valueType>`
@@ -78,6 +79,26 @@ This property holds whether the :ref:`value <property_OpcUaServerValueNode_value
 :**› Type**: Boolean
 :**› Default**: ``false``
 :**› Signal**: readOnlyChanged()
+:**› Attributes**: Writable
+
+
+.. _property_OpcUaServerValueNode_timestamp:
+
+.. _signal_OpcUaServerValueNode_timestampChanged:
+
+.. index::
+   single: timestamp
+
+timestamp
++++++++++
+
+This property holds the timestamp of the value to write next or the last read value.
+
+This property was introduced in InCore 2.7.
+
+:**› Type**: SignedBigInteger
+:**› Default**: ``0``
+:**› Signal**: timestampChanged()
 :**› Attributes**: Writable
 
 

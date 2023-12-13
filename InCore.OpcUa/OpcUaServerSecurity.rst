@@ -21,17 +21,21 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 2
+  :columns: 3
 
-  * :ref:`anonymousLoginAllowed <property_OpcUaServerSecurity_anonymousLoginAllowed>`
   * :ref:`certificateFile <property_OpcUaServerSecurity_certificateFile>`
-  * :ref:`issuerListFiles <property_OpcUaServerSecurity_issuerListFiles>`
   * :ref:`nonDiscoveryAccessRequiresEncryption <property_OpcUaServerSecurity_nonDiscoveryAccessRequiresEncryption>`
-  * :ref:`policies <property_OpcUaServerSecurity_policies>`
   * :ref:`privateKeyFile <property_OpcUaServerSecurity_privateKeyFile>`
-  * :ref:`revocationListFiles <property_OpcUaServerSecurity_revocationListFiles>`
-  * :ref:`trustListFiles <property_OpcUaServerSecurity_trustListFiles>`
+  * :ref:`secureChannelIssuerListFiles <property_OpcUaServerSecurity_secureChannelIssuerListFiles>`
+  * :ref:`secureChannelRevocationListFiles <property_OpcUaServerSecurity_secureChannelRevocationListFiles>`
+  * :ref:`secureChannelTrustListFiles <property_OpcUaServerSecurity_secureChannelTrustListFiles>`
+  * :ref:`securityPolicies <property_OpcUaServerSecurity_securityPolicies>`
+  * :ref:`sessionIssuerListFiles <property_OpcUaServerSecurity_sessionIssuerListFiles>`
+  * :ref:`sessionRevocationListFiles <property_OpcUaServerSecurity_sessionRevocationListFiles>`
+  * :ref:`sessionTrustListFiles <property_OpcUaServerSecurity_sessionTrustListFiles>`
   * :ref:`userLoginRequiresEncryption <property_OpcUaServerSecurity_userLoginRequiresEncryption>`
+  * :ref:`userTokenPolicies <property_OpcUaServerSecurity_userTokenPolicies>`
+  * :ref:`verifyApplicationUri <property_OpcUaServerSecurity_verifyApplicationUri>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
 
@@ -60,30 +64,13 @@ Enumerations
 .. hlist::
   :columns: 1
 
-  * :ref:`Policies <enum_OpcUaServerSecurity_Policies>`
+  * :ref:`SecurityPolicies <enum_OpcUaServerSecurity_SecurityPolicies>`
+  * :ref:`UserTokenPolicies <enum_OpcUaServerSecurity_UserTokenPolicies>`
 
 
 
 Properties
 **********
-
-
-.. _property_OpcUaServerSecurity_anonymousLoginAllowed:
-
-.. _signal_OpcUaServerSecurity_anonymousLoginAllowedChanged:
-
-.. index::
-   single: anonymousLoginAllowed
-
-anonymousLoginAllowed
-+++++++++++++++++++++
-
-This property holds whether to allow anonymous logins, i.e. without username and password.
-
-:**› Type**: Boolean
-:**› Default**: ``true``
-:**› Signal**: anonymousLoginAllowedChanged()
-:**› Attributes**: Writable
 
 
 .. _property_OpcUaServerSecurity_certificateFile:
@@ -100,23 +87,6 @@ This property holds the path to the certificate file used for security policies 
 
 :**› Type**: String
 :**› Signal**: certificateFileChanged()
-:**› Attributes**: Writable
-
-
-.. _property_OpcUaServerSecurity_issuerListFiles:
-
-.. _signal_OpcUaServerSecurity_issuerListFilesChanged:
-
-.. index::
-   single: issuerListFiles
-
-issuerListFiles
-+++++++++++++++
-
-This property holds paths to one or multiple issuer list file used for security policies other than :ref:`OpcUaServerSecurity.PolicyNone <enumitem_OpcUaServerSecurity_PolicyNone>`.
-
-:**› Type**: StringList
-:**› Signal**: issuerListFilesChanged()
 :**› Attributes**: Writable
 
 
@@ -138,24 +108,6 @@ This property holds whether the access to services other than the discovery serv
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaServerSecurity_policies:
-
-.. _signal_OpcUaServerSecurity_policiesChanged:
-
-.. index::
-   single: policies
-
-policies
-++++++++
-
-This property holds the security policies to enable.
-
-:**› Type**: :ref:`Policies <enum_OpcUaServerSecurity_Policies>`
-:**› Default**: :ref:`OpcUaServerSecurity.PolicyNone <enumitem_OpcUaServerSecurity_PolicyNone>`
-:**› Signal**: policiesChanged()
-:**› Attributes**: Writable
-
-
 .. _property_OpcUaServerSecurity_privateKeyFile:
 
 .. _signal_OpcUaServerSecurity_privateKeyFileChanged:
@@ -173,37 +125,123 @@ This property holds the path to the private key file used for security policies 
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaServerSecurity_revocationListFiles:
+.. _property_OpcUaServerSecurity_secureChannelIssuerListFiles:
 
-.. _signal_OpcUaServerSecurity_revocationListFilesChanged:
+.. _signal_OpcUaServerSecurity_secureChannelIssuerListFilesChanged:
 
 .. index::
-   single: revocationListFiles
+   single: secureChannelIssuerListFiles
 
-revocationListFiles
-+++++++++++++++++++
+secureChannelIssuerListFiles
+++++++++++++++++++++++++++++
+
+This property holds paths to one or multiple issuer list file used for security policies other than :ref:`OpcUaServerSecurity.PolicyNone <enumitem_OpcUaServerSecurity_PolicyNone>`.
+
+:**› Type**: StringList
+:**› Signal**: secureChannelIssuerListFilesChanged()
+:**› Attributes**: Writable
+
+
+.. _property_OpcUaServerSecurity_secureChannelRevocationListFiles:
+
+.. _signal_OpcUaServerSecurity_secureChannelRevocationListFilesChanged:
+
+.. index::
+   single: secureChannelRevocationListFiles
+
+secureChannelRevocationListFiles
+++++++++++++++++++++++++++++++++
 
 This property holds paths to one or multiple revocation list file used for security policies other than :ref:`OpcUaServerSecurity.PolicyNone <enumitem_OpcUaServerSecurity_PolicyNone>`.
 
 :**› Type**: StringList
-:**› Signal**: revocationListFilesChanged()
+:**› Signal**: secureChannelRevocationListFilesChanged()
 :**› Attributes**: Writable
 
 
-.. _property_OpcUaServerSecurity_trustListFiles:
+.. _property_OpcUaServerSecurity_secureChannelTrustListFiles:
 
-.. _signal_OpcUaServerSecurity_trustListFilesChanged:
+.. _signal_OpcUaServerSecurity_secureChannelTrustListFilesChanged:
 
 .. index::
-   single: trustListFiles
+   single: secureChannelTrustListFiles
 
-trustListFiles
-++++++++++++++
+secureChannelTrustListFiles
++++++++++++++++++++++++++++
 
 This property holds paths to one or multiple trust list file used for security policies other than :ref:`OpcUaServerSecurity.PolicyNone <enumitem_OpcUaServerSecurity_PolicyNone>`.
 
 :**› Type**: StringList
-:**› Signal**: trustListFilesChanged()
+:**› Signal**: secureChannelTrustListFilesChanged()
+:**› Attributes**: Writable
+
+
+.. _property_OpcUaServerSecurity_securityPolicies:
+
+.. _signal_OpcUaServerSecurity_securityPoliciesChanged:
+
+.. index::
+   single: securityPolicies
+
+securityPolicies
+++++++++++++++++
+
+This property holds the security policies to enable.
+
+:**› Type**: :ref:`SecurityPolicies <enum_OpcUaServerSecurity_SecurityPolicies>`
+:**› Default**: :ref:`OpcUaServerSecurity.SecurityPolicyNone <enumitem_OpcUaServerSecurity_SecurityPolicyNone>`
+:**› Signal**: securityPoliciesChanged()
+:**› Attributes**: Writable
+
+
+.. _property_OpcUaServerSecurity_sessionIssuerListFiles:
+
+.. _signal_OpcUaServerSecurity_sessionIssuerListFilesChanged:
+
+.. index::
+   single: sessionIssuerListFiles
+
+sessionIssuerListFiles
+++++++++++++++++++++++
+
+This property holds paths to one or multiple issuer list file used for the user token policy :ref:`OpcUaServerSecurity.UserTokenPolicyCertificate <enumitem_OpcUaServerSecurity_UserTokenPolicyCertificate>`.
+
+:**› Type**: StringList
+:**› Signal**: sessionIssuerListFilesChanged()
+:**› Attributes**: Writable
+
+
+.. _property_OpcUaServerSecurity_sessionRevocationListFiles:
+
+.. _signal_OpcUaServerSecurity_sessionRevocationListFilesChanged:
+
+.. index::
+   single: sessionRevocationListFiles
+
+sessionRevocationListFiles
+++++++++++++++++++++++++++
+
+This property holds paths to one or multiple revocation list file used for the user token policy :ref:`OpcUaServerSecurity.UserTokenPolicyCertificate <enumitem_OpcUaServerSecurity_UserTokenPolicyCertificate>`.
+
+:**› Type**: StringList
+:**› Signal**: sessionRevocationListFilesChanged()
+:**› Attributes**: Writable
+
+
+.. _property_OpcUaServerSecurity_sessionTrustListFiles:
+
+.. _signal_OpcUaServerSecurity_sessionTrustListFilesChanged:
+
+.. index::
+   single: sessionTrustListFiles
+
+sessionTrustListFiles
++++++++++++++++++++++
+
+This property holds paths to one or multiple trust list file used for the user token policy :ref:`OpcUaServerSecurity.UserTokenPolicyCertificate <enumitem_OpcUaServerSecurity_UserTokenPolicyCertificate>`.
+
+:**› Type**: StringList
+:**› Signal**: sessionTrustListFilesChanged()
 :**› Attributes**: Writable
 
 
@@ -224,26 +262,68 @@ This property holds whether to allow user logins for unencrypted connections, i.
 :**› Signal**: userLoginRequiresEncryptionChanged()
 :**› Attributes**: Writable
 
+
+.. _property_OpcUaServerSecurity_userTokenPolicies:
+
+.. _signal_OpcUaServerSecurity_userTokenPoliciesChanged:
+
+.. index::
+   single: userTokenPolicies
+
+userTokenPolicies
++++++++++++++++++
+
+This property holds the user token policies to enable.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: :ref:`UserTokenPolicies <enum_OpcUaServerSecurity_UserTokenPolicies>`
+:**› Default**: :ref:`OpcUaServerSecurity.UserTokenPolicyAnonymous <enumitem_OpcUaServerSecurity_UserTokenPolicyAnonymous>`
+:**› Signal**: userTokenPoliciesChanged()
+:**› Attributes**: Writable
+
+
+.. _property_OpcUaServerSecurity_verifyApplicationUri:
+
+.. _signal_OpcUaServerSecurity_verifyApplicationUriChanged:
+
+.. index::
+   single: verifyApplicationUri
+
+verifyApplicationUri
+++++++++++++++++++++
+
+This property holds whether the the server should verify if the client's application URI has a corresponding URI entry in the client certificate's subject alternative name.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: Boolean
+:**› Default**: ``true``
+:**› Signal**: verifyApplicationUriChanged()
+:**› Attributes**: Writable
+
 Enumerations
 ************
 
 
-.. _enum_OpcUaServerSecurity_Policies:
+.. _enum_OpcUaServerSecurity_SecurityPolicies:
 
 .. index::
-   single: Policies
+   single: SecurityPolicies
 
-Policies
-++++++++
+SecurityPolicies
+++++++++++++++++
 
 
 
 .. index::
-   single: OpcUaServerSecurity.PolicyNone
+   single: OpcUaServerSecurity.SecurityPolicyNone
 .. index::
-   single: OpcUaServerSecurity.PolicyBasic256Sha256
+   single: OpcUaServerSecurity.SecurityPolicyBasic256Sha256
 .. index::
-   single: OpcUaServerSecurity.PolicyAes128Sha256RsaOaep
+   single: OpcUaServerSecurity.SecurityPolicyAes128Sha256RsaOaep
+.. index::
+   single: OpcUaServerSecurity.SecurityPolicyAes256Sha256RsaPss
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -252,18 +332,63 @@ Policies
     - Value
     - Description
 
-      .. _enumitem_OpcUaServerSecurity_PolicyNone:
-  * - ``OpcUaServerSecurity.PolicyNone``
+      .. _enumitem_OpcUaServerSecurity_SecurityPolicyNone:
+  * - ``OpcUaServerSecurity.SecurityPolicyNone``
     - ``1``
     - 
 
-      .. _enumitem_OpcUaServerSecurity_PolicyBasic256Sha256:
-  * - ``OpcUaServerSecurity.PolicyBasic256Sha256``
+      .. _enumitem_OpcUaServerSecurity_SecurityPolicyBasic256Sha256:
+  * - ``OpcUaServerSecurity.SecurityPolicyBasic256Sha256``
     - ``2``
     - 
 
-      .. _enumitem_OpcUaServerSecurity_PolicyAes128Sha256RsaOaep:
-  * - ``OpcUaServerSecurity.PolicyAes128Sha256RsaOaep``
+      .. _enumitem_OpcUaServerSecurity_SecurityPolicyAes128Sha256RsaOaep:
+  * - ``OpcUaServerSecurity.SecurityPolicyAes128Sha256RsaOaep``
+    - ``4``
+    - 
+
+      .. _enumitem_OpcUaServerSecurity_SecurityPolicyAes256Sha256RsaPss:
+  * - ``OpcUaServerSecurity.SecurityPolicyAes256Sha256RsaPss``
+    - ``8``
+    - 
+
+
+.. _enum_OpcUaServerSecurity_UserTokenPolicies:
+
+.. index::
+   single: UserTokenPolicies
+
+UserTokenPolicies
++++++++++++++++++
+
+
+
+.. index::
+   single: OpcUaServerSecurity.UserTokenPolicyAnonymous
+.. index::
+   single: OpcUaServerSecurity.UserTokenPolicyUsername
+.. index::
+   single: OpcUaServerSecurity.UserTokenPolicyCertificate
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+
+      .. _enumitem_OpcUaServerSecurity_UserTokenPolicyAnonymous:
+  * - ``OpcUaServerSecurity.UserTokenPolicyAnonymous``
+    - ``1``
+    - 
+
+      .. _enumitem_OpcUaServerSecurity_UserTokenPolicyUsername:
+  * - ``OpcUaServerSecurity.UserTokenPolicyUsername``
+    - ``2``
+    - 
+
+      .. _enumitem_OpcUaServerSecurity_UserTokenPolicyCertificate:
+  * - ``OpcUaServerSecurity.UserTokenPolicyCertificate``
     - ``4``
     - 
 
