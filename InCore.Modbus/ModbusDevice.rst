@@ -24,6 +24,7 @@ Properties
 .. hlist::
   :columns: 1
 
+  * :ref:`activityLed <property_ModbusDevice_activityLed>`
   * :ref:`autoConnect <property_ModbusDevice_autoConnect>`
   * :ref:`error <property_ModbusDevice_error>`
   * :ref:`errorString <property_ModbusDevice_errorString>`
@@ -61,6 +62,7 @@ Enumerations
 .. hlist::
   :columns: 1
 
+  * :ref:`BusInterface <enum_ModbusDevice_BusInterface>`
   * :ref:`Error <enum_ModbusDevice_Error>`
   * :ref:`State <enum_ModbusDevice_State>`
 
@@ -68,6 +70,25 @@ Enumerations
 
 Properties
 **********
+
+
+.. _property_ModbusDevice_activityLed:
+
+.. _signal_ModbusDevice_activityLedChanged:
+
+.. index::
+   single: activityLed
+
+activityLed
++++++++++++
+
+This property holds an LED which to let blink on bus activity. Only supported for Modbus RTU.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: :ref:`LED <object_LED>`
+:**› Signal**: activityLedChanged()
+:**› Attributes**: Writable
 
 
 .. _property_ModbusDevice_autoConnect:
@@ -211,6 +232,48 @@ Enumerations
 ************
 
 
+.. _enum_ModbusDevice_BusInterface:
+
+.. index::
+   single: BusInterface
+
+BusInterface
+++++++++++++
+
+This enumeration describes supported bus interface types used for Modbus RTU-based communication
+
+This enumeration was introduced in InCore 2.8.
+
+.. index::
+   single: ModbusDevice.SerialPort
+.. index::
+   single: ModbusDevice.BuiltinRS485
+.. index::
+   single: ModbusDevice.BackplaneBus
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+
+      .. _enumitem_ModbusDevice_SerialPort:
+  * - ``ModbusDevice.SerialPort``
+    - ``0``
+    - use the serial port as specified in the :ref:`portName <property_ModbusDevice_portName>` property.
+
+      .. _enumitem_ModbusDevice_BuiltinRS485:
+  * - ``ModbusDevice.BuiltinRS485``
+    - ``1``
+    - use the builtin RS485 interface (availability depends on hardware type).
+
+      .. _enumitem_ModbusDevice_BackplaneBus:
+  * - ``ModbusDevice.BackplaneBus``
+    - ``2``
+    - use the backplane bus interface (availability depends on hardware type).
+
+
 .. _enum_ModbusDevice_Error:
 
 .. index::
@@ -239,6 +302,8 @@ This enumeration describes all possible errors which can occur when connecting t
    single: ModbusDevice.ReplyAbortedError
 .. index::
    single: ModbusDevice.UnknownError
+.. index::
+   single: ModbusDevice.BusOverloadError
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -291,6 +356,11 @@ This enumeration describes all possible errors which can occur when connecting t
   * - ``ModbusDevice.UnknownError``
     - ``8``
     - An unknown error occurred.
+
+      .. _enumitem_ModbusDevice_BusOverloadError:
+  * - ``ModbusDevice.BusOverloadError``
+    - ``9``
+    - The bus is overloaded with requests or timeouts so at least one request has been dropped.
 
 
 .. _enum_ModbusDevice_State:

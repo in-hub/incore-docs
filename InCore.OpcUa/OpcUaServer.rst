@@ -23,11 +23,17 @@ Properties
 .. hlist::
   :columns: 2
 
+  * :ref:`applicationName <property_OpcUaServer_applicationName>`
+  * :ref:`applicationUri <property_OpcUaServer_applicationUri>`
   * :ref:`enabled <property_OpcUaServer_enabled>`
+  * :ref:`manufacturerName <property_OpcUaServer_manufacturerName>`
   * :ref:`namespaces <property_OpcUaServer_namespaces>`
   * :ref:`nodeSets <property_OpcUaServer_nodeSets>`
   * :ref:`port <property_OpcUaServer_port>`
+  * :ref:`productName <property_OpcUaServer_productName>`
+  * :ref:`productUri <property_OpcUaServer_productUri>`
   * :ref:`security <property_OpcUaServer_security>`
+  * :ref:`softwareVersion <property_OpcUaServer_softwareVersion>`
   * :ref:`users <property_OpcUaServer_users>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
@@ -61,6 +67,46 @@ Properties
 **********
 
 
+.. _property_OpcUaServer_applicationName:
+
+.. _signal_OpcUaServer_applicationNameChanged:
+
+.. index::
+   single: applicationName
+
+applicationName
++++++++++++++++
+
+This property holds the name of the application which to report as part of the server status.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: String
+:**› Default**: ``SIINEOS``
+:**› Signal**: applicationNameChanged()
+:**› Attributes**: Writable
+
+
+.. _property_OpcUaServer_applicationUri:
+
+.. _signal_OpcUaServer_applicationUriChanged:
+
+.. index::
+   single: applicationUri
+
+applicationUri
+++++++++++++++
+
+This property holds the URI of the application which to report as part of the server status.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: String
+:**› Default**: ``https://www.inhub.de/siineos``
+:**› Signal**: applicationUriChanged()
+:**› Attributes**: Writable
+
+
 .. _property_OpcUaServer_enabled:
 
 .. _signal_OpcUaServer_enabledChanged:
@@ -76,6 +122,26 @@ This property holds whether the OPC UA server should listen for incoming connect
 :**› Type**: Boolean
 :**› Default**: ``true``
 :**› Signal**: enabledChanged()
+:**› Attributes**: Writable
+
+
+.. _property_OpcUaServer_manufacturerName:
+
+.. _signal_OpcUaServer_manufacturerNameChanged:
+
+.. index::
+   single: manufacturerName
+
+manufacturerName
+++++++++++++++++
+
+This property holds the name of the manufacturer which to report as part of the server status.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: String
+:**› Default**: ``in.hub GmbH``
+:**› Signal**: manufacturerNameChanged()
 :**› Attributes**: Writable
 
 
@@ -133,6 +199,46 @@ This property holds the network port number which to listen at for incoming conn
 :**› Attributes**: Writable
 
 
+.. _property_OpcUaServer_productName:
+
+.. _signal_OpcUaServer_productNameChanged:
+
+.. index::
+   single: productName
+
+productName
++++++++++++
+
+This property holds the name of the product which to report as part of the server status.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: String
+:**› Default**: ``SIINEOS``
+:**› Signal**: productNameChanged()
+:**› Attributes**: Writable
+
+
+.. _property_OpcUaServer_productUri:
+
+.. _signal_OpcUaServer_productUriChanged:
+
+.. index::
+   single: productUri
+
+productUri
+++++++++++
+
+This property holds the URI of the product which to report as part of the server status.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: String
+:**› Default**: ``https://www.inhub.de/siineos``
+:**› Signal**: productUriChanged()
+:**› Attributes**: Writable
+
+
 .. _property_OpcUaServer_security:
 
 .. index::
@@ -145,6 +251,26 @@ This property holds the security settings for the server.
 
 :**› Type**: :ref:`OpcUaServerSecurity <object_OpcUaServerSecurity>`
 :**› Attributes**: Readonly
+
+
+.. _property_OpcUaServer_softwareVersion:
+
+.. _signal_OpcUaServer_softwareVersionChanged:
+
+.. index::
+   single: softwareVersion
+
+softwareVersion
++++++++++++++++
+
+This property holds the version of the software which to report as part of the server status.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: String
+:**› Default**: ``2.8.0``
+:**› Signal**: softwareVersionChanged()
+:**› Attributes**: Writable
 
 
 .. _property_OpcUaServer_users:
@@ -230,19 +356,23 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.5
-    import InCore.OpcUa 2.5
+    import InCore.Foundation 2.8
+    import InCore.OpcUa 2.8
     
     Application {
         OpcUaServer {
             security {
-                policies: OpcUaServerSecurity.PolicyNone |
-                          OpcUaServerSecurity.PolicyBasic256Sha256 |
-                          OpcUaServerSecurity.PolicyAes128Sha256RsaOaep
-                privateKeyFile: "certs/server_key.der"
-                certificateFile: "certs/server_cert.der"
+                securityPolicies: OpcUaServerSecurity.SecurityPolicyNone | OpcUaServerSecurity.SecurityPolicyBasic256Sha256 | OpcUaServerSecurity.SecurityPolicyAes128Sha256RsaOaep | OpcUaServerSecurity.SecurityPolicyAes256Sha256RsaPss
+                userTokenPolicies: OpcUaServerSecurity.UserTokenPolicyAnonymous | OpcUaServerSecurity.UserTokenPolicyUsername | OpcUaServerSecurity.UserTokenPolicyCertificate
+                privateKeyFile: "certs/pki/private/ua-test-server.key"
+                certificateFile: "certs/pki/issued/ua-test-server.crt"
+                sessionTrustListFiles: ["certs/pki/issued/ua-test-client.crt"]
+                sessionIssuerListFiles: ["certs/pki/ca.crt"]
+                sessionRevocationListFiles: ["certs/pki/crl.pem"]
+                verifyApplicationUri: false
             }
     
+            applicationUri: "urn:open62541.server.application"
             users: [ OpcUaServerUser { name: "user"; password: "secret" } ]
     
             OpcUaServerNamespace {

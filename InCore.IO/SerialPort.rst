@@ -55,9 +55,12 @@ Methods
 +++++++
 
 .. hlist::
-  :columns: 2
+  :columns: 3
 
+  * :ref:`backplaneBusPortName() <method_SerialPort_backplaneBusPortName>`
   * :ref:`builtinRS485PortName() <method_SerialPort_builtinRS485PortName>`
+  * :ref:`configureBackplaneBusPort() <method_SerialPort_configureBackplaneBusPort>`
+  * :ref:`configureBuiltinRS485Port() <method_SerialPort_configureBuiltinRS485Port>`
   * :ref:`IoDevice.close() <method_IoDevice_close>`
   * :ref:`IoDevice.flush() <method_IoDevice_flush>`
   * :ref:`IoDevice.open() <method_IoDevice_open>`
@@ -327,6 +330,20 @@ Methods
 *******
 
 
+.. _method_SerialPort_backplaneBusPortName:
+
+.. index::
+   single: backplaneBusPortName
+
+backplaneBusPortName()
+++++++++++++++++++++++
+
+
+
+:**› Returns**: String
+
+
+
 .. _method_SerialPort_builtinRS485PortName:
 
 .. index::
@@ -340,6 +357,30 @@ This method returns the platform-specific name of the builtin RS485 port.
 This method was introduced in InCore 2.0.
 
 :**› Returns**: String
+
+
+
+.. _method_SerialPort_configureBackplaneBusPort:
+
+.. index::
+   single: configureBackplaneBusPort
+
+configureBackplaneBusPort(Boolean enabled)
+++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+.. _method_SerialPort_configureBuiltinRS485Port:
+
+.. index::
+   single: configureBuiltinRS485Port
+
+configureBuiltinRS485Port(Boolean enabled)
+++++++++++++++++++++++++++++++++++++++++++
+
+
 
 
 Signals

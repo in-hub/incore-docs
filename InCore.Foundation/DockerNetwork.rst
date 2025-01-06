@@ -21,7 +21,10 @@ Properties
 .. hlist::
   :columns: 2
 
+  * :ref:`gateways <property_DockerNetwork_gateways>`
   * :ref:`internal <property_DockerNetwork_internal>`
+  * :ref:`ipRange <property_DockerNetwork_ipRange>`
+  * :ref:`subnets <property_DockerNetwork_subnets>`
   * :ref:`DockerObject.driver <property_DockerObject_driver>`
   * :ref:`DockerObject.error <property_DockerObject_error>`
   * :ref:`DockerObject.errorString <property_DockerObject_errorString>`
@@ -66,6 +69,25 @@ Properties
 **********
 
 
+.. _property_DockerNetwork_gateways:
+
+.. _signal_DockerNetwork_gatewaysChanged:
+
+.. index::
+   single: gateways
+
+gateways
+++++++++
+
+This property holds the gateways which to assign the Docker network.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: StringList
+:**› Signal**: gatewaysChanged()
+:**› Attributes**: Writable
+
+
 .. _property_DockerNetwork_internal:
 
 .. _signal_DockerNetwork_internalChanged:
@@ -81,6 +103,44 @@ This property holds whether this network should be configured as an internal net
 :**› Type**: Boolean
 :**› Default**: ``false``
 :**› Signal**: internalChanged()
+:**› Attributes**: Writable
+
+
+.. _property_DockerNetwork_ipRange:
+
+.. _signal_DockerNetwork_ipRangeChanged:
+
+.. index::
+   single: ipRange
+
+ipRange
++++++++
+
+This property holds the IP range which to allocate for the Docker network.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: String
+:**› Signal**: ipRangeChanged()
+:**› Attributes**: Writable
+
+
+.. _property_DockerNetwork_subnets:
+
+.. _signal_DockerNetwork_subnetsChanged:
+
+.. index::
+   single: subnets
+
+subnets
++++++++
+
+This property holds the subnets which to assign the Docker network.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: StringList
+:**› Signal**: subnetsChanged()
 :**› Attributes**: Writable
 
 

@@ -27,7 +27,10 @@ Properties
   * :ref:`id <property_LicensingCertificate_id>`
   * :ref:`issueDate <property_LicensingCertificate_issueDate>`
   * :ref:`licensee <property_LicensingCertificate_licensee>`
+  * :ref:`productId <property_LicensingCertificate_productId>`
   * :ref:`productName <property_LicensingCertificate_productName>`
+  * :ref:`productSize <property_LicensingCertificate_productSize>`
+  * :ref:`productVersion <property_LicensingCertificate_productVersion>`
   * :ref:`valid <property_LicensingCertificate_valid>`
   * :ref:`version <property_LicensingCertificate_version>`
   * :ref:`Object.objectId <property_Object_objectId>`
@@ -160,6 +163,23 @@ licensee
 :**› Attributes**: Readonly
 
 
+.. _property_LicensingCertificate_productId:
+
+.. _signal_LicensingCertificate_productIdChanged:
+
+.. index::
+   single: productId
+
+productId
++++++++++
+
+
+
+:**› Type**: String
+:**› Signal**: productIdChanged()
+:**› Attributes**: Readonly
+
+
 .. _property_LicensingCertificate_productName:
 
 .. _signal_LicensingCertificate_productNameChanged:
@@ -174,6 +194,40 @@ productName
 
 :**› Type**: String
 :**› Signal**: productNameChanged()
+:**› Attributes**: Readonly
+
+
+.. _property_LicensingCertificate_productSize:
+
+.. _signal_LicensingCertificate_productSizeChanged:
+
+.. index::
+   single: productSize
+
+productSize
++++++++++++
+
+
+
+:**› Type**: SignedInteger
+:**› Signal**: productSizeChanged()
+:**› Attributes**: Readonly
+
+
+.. _property_LicensingCertificate_productVersion:
+
+.. _signal_LicensingCertificate_productVersionChanged:
+
+.. index::
+   single: productVersion
+
+productVersion
+++++++++++++++
+
+
+
+:**› Type**: String
+:**› Signal**: productVersionChanged()
 :**› Attributes**: Readonly
 
 

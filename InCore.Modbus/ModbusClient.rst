@@ -25,6 +25,7 @@ Properties
   * :ref:`numberOfRetries <property_ModbusClient_numberOfRetries>`
   * :ref:`slaves <property_ModbusClient_slaves>`
   * :ref:`timeout <property_ModbusClient_timeout>`
+  * :ref:`ModbusDevice.activityLed <property_ModbusDevice_activityLed>`
   * :ref:`ModbusDevice.autoConnect <property_ModbusDevice_autoConnect>`
   * :ref:`ModbusDevice.error <property_ModbusDevice_error>`
   * :ref:`ModbusDevice.errorString <property_ModbusDevice_errorString>`
@@ -64,6 +65,7 @@ Enumerations
 .. hlist::
   :columns: 1
 
+  * :ref:`ModbusDevice.BusInterface <enum_ModbusDevice_BusInterface>`
   * :ref:`ModbusDevice.Error <enum_ModbusDevice_Error>`
   * :ref:`ModbusDevice.State <enum_ModbusDevice_State>`
 

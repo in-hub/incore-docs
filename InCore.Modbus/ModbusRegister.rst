@@ -46,6 +46,7 @@ Methods
   :columns: 1
 
   * :ref:`pollData() <method_ModbusRegister_pollData>`
+  * :ref:`write() <method_ModbusRegister_write>`
   * :ref:`DataObject.touch() <method_DataObject_touch>`
   * :ref:`Object.deserializeProperties() <method_Object_deserializeProperties>`
   * :ref:`Object.fromJson() <method_Object_fromJson>`
@@ -233,6 +234,22 @@ pollData()
 ++++++++++
 
 This method polls the :ref:`DataObject.data <property_DataObject_data>` property. It is called automatically when using a :ref:`Polling <object_Polling>` property modifier on this property and usually does not have to be called manually.
+
+
+
+.. _method_ModbusRegister_write:
+
+.. index::
+   single: write
+
+write(Variant data)
++++++++++++++++++++
+
+This method explicitly writes the given data according to the register configuration. Use this method to always write specific values even if they have not changed (:ref:`data <property_ModbusRegister_data>` only is writte on value changes).
+
+This method was introduced in InCore 2.8.
+
+:**› Returns**: Boolean
 
 
 Signals

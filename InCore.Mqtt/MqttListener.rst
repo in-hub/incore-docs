@@ -29,6 +29,10 @@ Properties
   * :ref:`passwordFile <property_MqttListener_passwordFile>`
   * :ref:`port <property_MqttListener_port>`
   * :ref:`protocol <property_MqttListener_protocol>`
+  * :ref:`tlsCaFile <property_MqttListener_tlsCaFile>`
+  * :ref:`tlsCertificateFile <property_MqttListener_tlsCertificateFile>`
+  * :ref:`tlsCiphers <property_MqttListener_tlsCiphers>`
+  * :ref:`tlsKeyFile <property_MqttListener_tlsKeyFile>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
 
@@ -174,6 +178,82 @@ This property holds the protocol which to use for communication with clients.
 :**› Type**: :ref:`Protocol <enum_MqttListener_Protocol>`
 :**› Default**: :ref:`MqttListener.Mqtt <enumitem_MqttListener_Mqtt>`
 :**› Signal**: protocolChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MqttListener_tlsCaFile:
+
+.. _signal_MqttListener_tlsCaFileChanged:
+
+.. index::
+   single: tlsCaFile
+
+tlsCaFile
++++++++++
+
+This property holds the path to a TLS/SSL CA file used when establishing encrypted connections to the broker via secure Websockets.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: String
+:**› Signal**: tlsCaFileChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MqttListener_tlsCertificateFile:
+
+.. _signal_MqttListener_tlsCertificateFileChanged:
+
+.. index::
+   single: tlsCertificateFile
+
+tlsCertificateFile
+++++++++++++++++++
+
+This property holds the path to a TLS/SSL certificate file used when establishing encrypted connections to the broker via secure Websockets.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: String
+:**› Signal**: tlsCertificateFileChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MqttListener_tlsCiphers:
+
+.. _signal_MqttListener_tlsCiphersChanged:
+
+.. index::
+   single: tlsCiphers
+
+tlsCiphers
+++++++++++
+
+This property holds the list of allowed TLS/SSL ciphers for secure Websockets connections, each separated with a colon. Available ciphers can be obtained using the ``openssl ciphers`` command.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: String
+:**› Signal**: tlsCiphersChanged()
+:**› Attributes**: Writable
+
+
+.. _property_MqttListener_tlsKeyFile:
+
+.. _signal_MqttListener_tlsKeyFileChanged:
+
+.. index::
+   single: tlsKeyFile
+
+tlsKeyFile
+++++++++++
+
+This property holds the path to a TLS/SSL key file used when establishing encrypted connections to the broker via secure Websockets.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: String
+:**› Signal**: tlsKeyFileChanged()
 :**› Attributes**: Writable
 
 Enumerations

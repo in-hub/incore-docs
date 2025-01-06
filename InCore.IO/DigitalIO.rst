@@ -341,7 +341,7 @@ This enumeration describes all errors which can occur in DigitalIO objects. The 
       .. _enumitem_DigitalIO_HardwareDriverNotAvailable:
   * - ``DigitalIO.HardwareDriverNotAvailable``
     - ``1``
-    - No hardware driver available for the current platform.
+    - No hardware driver available for this device.
 
       .. _enumitem_DigitalIO_ConfigurationError:
   * - ``DigitalIO.ConfigurationError``
@@ -378,6 +378,18 @@ This enumeration describes the supported digital input indexes.
    single: DigitalIO.IO5
 .. index::
    single: DigitalIO.IO6
+.. index::
+   single: DigitalIO.DIN1
+.. index::
+   single: DigitalIO.DIN2
+.. index::
+   single: DigitalIO.DIN3
+.. index::
+   single: DigitalIO.DIN4
+.. index::
+   single: DigitalIO.DIN5
+.. index::
+   single: DigitalIO.DIN6
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -420,6 +432,36 @@ This enumeration describes the supported digital input indexes.
   * - ``DigitalIO.IO6``
     - ``6``
     - The 6th digital IO (only HUB-GM200 and newer).
+
+      .. _enumitem_DigitalIO_DIN1:
+  * - ``DigitalIO.DIN1``
+    - ``7``
+    - 
+
+      .. _enumitem_DigitalIO_DIN2:
+  * - ``DigitalIO.DIN2``
+    - ``8``
+    - 
+
+      .. _enumitem_DigitalIO_DIN3:
+  * - ``DigitalIO.DIN3``
+    - ``9``
+    - 
+
+      .. _enumitem_DigitalIO_DIN4:
+  * - ``DigitalIO.DIN4``
+    - ``10``
+    - 
+
+      .. _enumitem_DigitalIO_DIN5:
+  * - ``DigitalIO.DIN5``
+    - ``11``
+    - 
+
+      .. _enumitem_DigitalIO_DIN6:
+  * - ``DigitalIO.DIN6``
+    - ``12``
+    - 
 
 
 .. _example_DigitalIO:

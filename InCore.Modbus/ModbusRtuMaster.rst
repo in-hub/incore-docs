@@ -11,7 +11,6 @@ Description
 The ModbusRtuMaster object implements a Modbus RTU master which communicates with Modbus slaves via a serial port.
 
 :**› Inherits**: :ref:`ModbusClient <object_ModbusClient>`
-:**› Inherited by**: :ref:`ModbusBackplaneMaster <object_ModbusBackplaneMaster>`
 
 Overview
 ********
@@ -23,15 +22,18 @@ Properties
   :columns: 3
 
   * :ref:`baudRate <property_ModbusRtuMaster_baudRate>`
+  * :ref:`busInterface <property_ModbusRtuMaster_busInterface>`
   * :ref:`dataBits <property_ModbusRtuMaster_dataBits>`
   * :ref:`interFrameDelay <property_ModbusRtuMaster_interFrameDelay>`
   * :ref:`parity <property_ModbusRtuMaster_parity>`
   * :ref:`portName <property_ModbusRtuMaster_portName>`
+  * :ref:`queueSizeLimit <property_ModbusRtuMaster_queueSizeLimit>`
   * :ref:`stopBits <property_ModbusRtuMaster_stopBits>`
   * :ref:`turnaroundDelay <property_ModbusRtuMaster_turnaroundDelay>`
   * :ref:`ModbusClient.numberOfRetries <property_ModbusClient_numberOfRetries>`
   * :ref:`ModbusClient.slaves <property_ModbusClient_slaves>`
   * :ref:`ModbusClient.timeout <property_ModbusClient_timeout>`
+  * :ref:`ModbusDevice.activityLed <property_ModbusDevice_activityLed>`
   * :ref:`ModbusDevice.autoConnect <property_ModbusDevice_autoConnect>`
   * :ref:`ModbusDevice.error <property_ModbusDevice_error>`
   * :ref:`ModbusDevice.errorString <property_ModbusDevice_errorString>`
@@ -71,6 +73,7 @@ Enumerations
 .. hlist::
   :columns: 1
 
+  * :ref:`ModbusDevice.BusInterface <enum_ModbusDevice_BusInterface>`
   * :ref:`ModbusDevice.Error <enum_ModbusDevice_Error>`
   * :ref:`ModbusDevice.State <enum_ModbusDevice_State>`
 
@@ -95,6 +98,26 @@ This property holds the data baud rate of the serial port used for communicating
 :**› Type**: :ref:`SerialPort.BaudRate <enum_SerialPort_BaudRate>`
 :**› Default**: :ref:`SerialPort.Baud115200 <enumitem_SerialPort_Baud115200>`
 :**› Signal**: baudRateChanged()
+:**› Attributes**: Writable
+
+
+.. _property_ModbusRtuMaster_busInterface:
+
+.. _signal_ModbusRtuMaster_busInterfaceChanged:
+
+.. index::
+   single: busInterface
+
+busInterface
+++++++++++++
+
+This property holds the bus interface to use for communication. See the :ref:`BusInterface <enum_ModbusRtuMaster_BusInterface>` enumeration for details.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: :ref:`BusInterface <enum_ModbusRtuMaster_BusInterface>`
+:**› Default**: :ref:`ModbusDevice.SerialPort <enumitem_ModbusDevice_SerialPort>`
+:**› Signal**: busInterfaceChanged()
 :**› Attributes**: Writable
 
 
@@ -161,10 +184,30 @@ This property holds the parity mode of the serial port used for communicating wi
 portName
 ++++++++
 
-This property holds the name of the serial port used for communicating with the Modbus RTU slave.
+This property holds the name of the serial port used for communicating with the Modbus RTU slave. The value is ignored if :ref:`busInterface <property_ModbusRtuMaster_busInterface>` is not set to :ref:`BusInterface.SerialPort <enumitem_BusInterface_SerialPort>`.
 
 :**› Type**: String
 :**› Signal**: portNameChanged()
+:**› Attributes**: Writable
+
+
+.. _property_ModbusRtuMaster_queueSizeLimit:
+
+.. _signal_ModbusRtuMaster_queueSizeLimitChanged:
+
+.. index::
+   single: queueSizeLimit
+
+queueSizeLimit
+++++++++++++++
+
+This property holds the a limit for the internal requests queue. If its size exceeds this value further requests are dropped until the queue size is below the limit again.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: SignedInteger
+:**› Default**: ``100``
+:**› Signal**: queueSizeLimitChanged()
 :**› Attributes**: Writable
 
 

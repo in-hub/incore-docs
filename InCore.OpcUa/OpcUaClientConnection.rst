@@ -40,6 +40,7 @@ Methods
 
   * :ref:`connectToEndpoint() <method_OpcUaClientConnection_connectToEndpoint>`
   * :ref:`setAnonymousAuthentication() <method_OpcUaClientConnection_setAnonymousAuthentication>`
+  * :ref:`setCertificateAuthentication() <method_OpcUaClientConnection_setCertificateAuthentication>`
   * :ref:`setUsernameAuthentication() <method_OpcUaClientConnection_setUsernameAuthentication>`
   * :ref:`setupEncryption() <method_OpcUaClientConnection_setupEncryption>`
   * `connectToEndpoint <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connectToEndpoint-method>`_
@@ -102,6 +103,18 @@ This method was introduced in InCore 2.7.
 
 
 
+.. _method_OpcUaClientConnection_setCertificateAuthentication:
+
+.. index::
+   single: setCertificateAuthentication
+
+setCertificateAuthentication(ArrayBuffer clientCertData, ArrayBuffer clientPrivateKeyData)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
 .. _method_OpcUaClientConnection_setUsernameAuthentication:
 
 .. index::
@@ -121,8 +134,8 @@ This method was introduced in InCore 2.7.
 .. index::
    single: setupEncryption
 
-setupEncryption(ArrayBuffer clientCertificateData, ArrayBuffer trustedCertificateData, String privateKeyData)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+setupEncryption(ArrayBuffer clientCertificateData, String privateKeyData, ArrayBuffer trustedCertificateData, Boolean verifyServerCertificate)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 This method sets up connection encryption using the supplied X509 client certificate as well as the private key (the latter one in PEM format). The CA or server certificate has to be passed as trusted certificate, otherwise the client will not accept any server certificate.
 

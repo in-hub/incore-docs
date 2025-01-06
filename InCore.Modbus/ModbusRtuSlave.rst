@@ -21,15 +21,17 @@ Properties
 ++++++++++
 
 .. hlist::
-  :columns: 2
+  :columns: 3
 
   * :ref:`baudRate <property_ModbusRtuSlave_baudRate>`
+  * :ref:`busInterface <property_ModbusRtuSlave_busInterface>`
   * :ref:`dataBits <property_ModbusRtuSlave_dataBits>`
   * :ref:`parity <property_ModbusRtuSlave_parity>`
   * :ref:`portName <property_ModbusRtuSlave_portName>`
   * :ref:`stopBits <property_ModbusRtuSlave_stopBits>`
   * :ref:`ModbusServer.address <property_ModbusServer_address>`
   * :ref:`ModbusServer.registers <property_ModbusServer_registers>`
+  * :ref:`ModbusDevice.activityLed <property_ModbusDevice_activityLed>`
   * :ref:`ModbusDevice.autoConnect <property_ModbusDevice_autoConnect>`
   * :ref:`ModbusDevice.error <property_ModbusDevice_error>`
   * :ref:`ModbusDevice.errorString <property_ModbusDevice_errorString>`
@@ -70,6 +72,7 @@ Enumerations
 .. hlist::
   :columns: 1
 
+  * :ref:`ModbusDevice.BusInterface <enum_ModbusDevice_BusInterface>`
   * :ref:`ModbusDevice.Error <enum_ModbusDevice_Error>`
   * :ref:`ModbusDevice.State <enum_ModbusDevice_State>`
 
@@ -94,6 +97,26 @@ This property holds the data baud rate of the serial port used for communicating
 :**› Type**: :ref:`SerialPort.BaudRate <enum_SerialPort_BaudRate>`
 :**› Default**: :ref:`SerialPort.Baud115200 <enumitem_SerialPort_Baud115200>`
 :**› Signal**: baudRateChanged()
+:**› Attributes**: Writable
+
+
+.. _property_ModbusRtuSlave_busInterface:
+
+.. _signal_ModbusRtuSlave_busInterfaceChanged:
+
+.. index::
+   single: busInterface
+
+busInterface
+++++++++++++
+
+This property holds the bus interface to use for communication. See the :ref:`BusInterface <enum_ModbusRtuSlave_BusInterface>` enumeration for details.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: :ref:`BusInterface <enum_ModbusRtuSlave_BusInterface>`
+:**› Default**: :ref:`ModbusDevice.SerialPort <enumitem_ModbusDevice_SerialPort>`
+:**› Signal**: busInterfaceChanged()
 :**› Attributes**: Writable
 
 

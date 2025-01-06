@@ -296,7 +296,7 @@ This enumeration describes all errors which can occur in AnalogInput objects. Th
       .. _enumitem_AnalogInput_HardwareDriverNotAvailable:
   * - ``AnalogInput.HardwareDriverNotAvailable``
     - ``2``
-    - No hardware driver available for the current platform.
+    - No hardware driver available for this device.
 
 
 .. _enum_AnalogInput_Index:

@@ -30,6 +30,8 @@ Properties
   * :ref:`maximumBlockGap <property_ModbusSlave_maximumBlockGap>`
   * :ref:`maximumBlockLength <property_ModbusSlave_maximumBlockLength>`
   * :ref:`pollMode <property_ModbusSlave_pollMode>`
+  * :ref:`pollQueueSizeLimit <property_ModbusSlave_pollQueueSizeLimit>`
+  * :ref:`queuePollRequests <property_ModbusSlave_queuePollRequests>`
   * :ref:`registers <property_ModbusSlave_registers>`
   * :ref:`Object.objectId <property_Object_objectId>`
   * :ref:`Object.parent <property_Object_parent>`
@@ -234,6 +236,46 @@ This property holds the used poll mode. Setting this property to :ref:`ModbusSla
 :**› Attributes**: Writable
 
 
+.. _property_ModbusSlave_pollQueueSizeLimit:
+
+.. _signal_ModbusSlave_pollQueueSizeLimitChanged:
+
+.. index::
+   single: pollQueueSizeLimit
+
+pollQueueSizeLimit
+++++++++++++++++++
+
+This property holds the a limit for the internal poll queue. If its size exceeds this value further poll calls are ignored until the queue size is below the limit again.
+
+This property was introduced in InCore 2.8.
+
+:**› Type**: SignedInteger
+:**› Default**: ``100``
+:**› Signal**: pollQueueSizeLimitChanged()
+:**› Attributes**: Writable
+
+
+.. _property_ModbusSlave_queuePollRequests:
+
+.. _signal_ModbusSlave_queuePollRequestsChanged:
+
+.. index::
+   single: queuePollRequests
+
+queuePollRequests
++++++++++++++++++
+
+This property holds whether to queue poll requests such that a read request is only sent after a previous read request has been replied to or timed out.
+
+This property was introduced in InCore 2.9.
+
+:**› Type**: Boolean
+:**› Default**: ``false``
+:**› Signal**: queuePollRequestsChanged()
+:**› Attributes**: Writable
+
+
 .. _property_ModbusSlave_registers:
 
 .. _signal_ModbusSlave_registersChanged:
@@ -317,9 +359,11 @@ This enumeration describes all errors which can occur in ModbusSlave objects. Th
 .. index::
    single: ModbusSlave.WriteError
 .. index::
-   single: ModbusSlave.RequestError
-.. index::
    single: ModbusSlave.RegisterTypeError
+.. index::
+   single: ModbusSlave.TimeoutError
+.. index::
+   single: ModbusSlave.BusOverloadError
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -353,15 +397,20 @@ This enumeration describes all errors which can occur in ModbusSlave objects. Th
     - ``4``
     - An error occurred while writing data to the Modbus slave.
 
-      .. _enumitem_ModbusSlave_RequestError:
-  * - ``ModbusSlave.RequestError``
-    - ``5``
-    - A general error occurred while sending a request to the Modbus slave.
-
       .. _enumitem_ModbusSlave_RegisterTypeError:
   * - ``ModbusSlave.RegisterTypeError``
-    - ``6``
+    - ``5``
     - Can't send requests; ModbusRegister type is InvalidType.
+
+      .. _enumitem_ModbusSlave_TimeoutError:
+  * - ``ModbusSlave.TimeoutError``
+    - ``6``
+    - A read or write request timed out.
+
+      .. _enumitem_ModbusSlave_BusOverloadError:
+  * - ``ModbusSlave.BusOverloadError``
+    - ``7``
+    - The bus is overloaded with requests or timeouts.
 
 
 .. _enum_ModbusSlave_PollMode:

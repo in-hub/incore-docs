@@ -21,6 +21,7 @@ Properties
 .. hlist::
   :columns: 2
 
+  * :ref:`bridgeIp <property_DockerService_bridgeIp>`
   * :ref:`containers <property_DockerService_containers>`
   * :ref:`error <property_DockerService_error>`
   * :ref:`errorString <property_DockerService_errorString>`
@@ -73,6 +74,26 @@ Enumerations
 
 Properties
 **********
+
+
+.. _property_DockerService_bridgeIp:
+
+.. _signal_DockerService_bridgeIpChanged:
+
+.. index::
+   single: bridgeIp
+
+bridgeIp
+++++++++
+
+This property holds an IP address including an IP prefix to use for the ``docker0`` bridge.
+
+This property was introduced in InCore 1.1.
+
+:**› Type**: String
+:**› Default**: ``172.17.0.0/16``
+:**› Signal**: bridgeIpChanged()
+:**› Attributes**: Writable
 
 
 .. _property_DockerService_containers:

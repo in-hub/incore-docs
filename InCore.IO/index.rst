@@ -17,8 +17,10 @@ Objects
 .. toctree::
 	:maxdepth: 1
 
+	Ade9000
 	AlphasenseOpcN3
 	AnalogInput
+	AnalogOutput
 	BackplaneBus
 	BackplaneBusDevice
 	CanBus
@@ -46,6 +48,9 @@ Objects
 	SerialPortBusNode
 	SerialPortManager
 	Sht3x
+	SpiBus
+	SpiDevice
 	SystemI2cBus
+	SystemSpiBus
 	UsbPrinter
 	VL53L1X
