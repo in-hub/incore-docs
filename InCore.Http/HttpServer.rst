@@ -215,3 +215,83 @@ This enumeration describes all errors which can occur in HttpServer objects. The
     - ``1``
     - Failed to listen at the specified port.
 
+
+.. _example_HttpServer:
+
+
+Example
+*******
+
+.. code-block:: qml
+
+    import InCore.Foundation 2.9
+    import InCore.Http 2.9
+    
+    Application {
+        HttpServer {
+            port: 3000
+            HttpServerRoute {
+                path: "/sum/<arg>/<arg>"
+                function calcSum(a: int, b: int) {
+                    return "The sum of a and b is " + (a+b) + "\n"
+                }
+            }
+            HttpServerRoute {
+                path: "/item/<arg>"
+                function getItem(id: string) {
+                    return "Data for item " + id + "\n"
+                }
+            }
+            HttpServerRoute {
+                path: "/item"
+                method: HttpServerRequest.Post
+                function createItem(request) {
+                    if (request.headers["content-type"] === "application/json")
+                    {
+                        console.log("Creating new item with data:", JSON.stringify(JSON.parse(request.body)))
+                        return [HttpServerResponse.Created, "da0805fb-5953-4156-ba29-df17ed6f57b4"]
+                    }
+                }
+            }
+            HttpServerRoute {
+                path: "/specialresponse"
+                function test(request, response) {
+                    response.statusCode = HttpServerResponse.OK
+                    response.content.type = HttpContent.Json
+                    response.content.data = {"foo": 123, "bar": 456}
+                }
+            }
+            HttpServerRoute {
+                id: chunkedRoute
+                asynchronous: true
+                path: "/chunked"
+                function getItem(request, responder) {
+                    responder.writeStatus(HttpServerResponse.OK)
+                    responder.writeHeaders({"Content-Type":"text/plain"})
+                    chunkWriteTimer.responder = responder
+                    chunkWriteTimer.x = 0
+                    chunkWriteTimer.start()
+                }
+            }
+        }
+    
+        Timer {
+            id: chunkWriteTimer
+            property var responder: null
+            property int x: 0
+            interval: 1
+            running: false
+            onTriggered: {
+                if (responder)
+                {
+                    responder.writeChunk(("%1\n").arg(x++))
+                    if (x > 999)
+                    {
+                        running = false
+                        responder.finish()
+                    }
+                }
+            }
+        }
+    }
+    

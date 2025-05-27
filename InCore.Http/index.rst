@@ -18,6 +18,7 @@ Objects
 	:maxdepth: 1
 
 	HttpAuthentication
+	HttpClient
 	HttpContent
 	HttpDownload
 	HttpHeader

@@ -125,7 +125,7 @@ client
 
 
 
-:**› Type**: \enum{S7Client *}
+:**› Type**: :ref:`S7Client <object_S7Client>`
 :**› Signal**: clientChanged()
 :**› Attributes**: Writable
 

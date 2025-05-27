@@ -37,7 +37,9 @@ Methods
   * :ref:`readActivePower() <method_Ade9000_readActivePower>`
   * :ref:`readApparentPower() <method_Ade9000_readApparentPower>`
   * :ref:`readCurrent() <method_Ade9000_readCurrent>`
+  * :ref:`readPowerFactor() <method_Ade9000_readPowerFactor>`
   * :ref:`readReactivePower() <method_Ade9000_readReactivePower>`
+  * :ref:`readSequenceError() <method_Ade9000_readSequenceError>`
   * :ref:`readVoltage() <method_Ade9000_readVoltage>`
   * :ref:`SpiDevice.read() <method_SpiDevice_read>`
   * :ref:`SpiDevice.transfer() <method_SpiDevice_transfer>`
@@ -170,6 +172,20 @@ readCurrent(:ref:`Phase <enum_Ade9000_Phase>` phase)
 
 
 
+.. _method_Ade9000_readPowerFactor:
+
+.. index::
+   single: readPowerFactor
+
+readPowerFactor(:ref:`Phase <enum_Ade9000_Phase>` phase)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+:**› Returns**: Float
+
+
+
 .. _method_Ade9000_readReactivePower:
 
 .. index::
@@ -181,6 +197,20 @@ readReactivePower(:ref:`Phase <enum_Ade9000_Phase>` phase)
 
 
 :**› Returns**: Float
+
+
+
+.. _method_Ade9000_readSequenceError:
+
+.. index::
+   single: readSequenceError
+
+readSequenceError()
++++++++++++++++++++
+
+
+
+:**› Returns**: Boolean
 
 
 

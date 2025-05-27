@@ -26,9 +26,11 @@ Objects
 	OpcUaClientNodeDiscovery
 	OpcUaClientNodeId
 	OpcUaClientNodeIdType
+	OpcUaClientReadItem
 	OpcUaClientRelativeNodeId
 	OpcUaClientRelativeNodePath
 	OpcUaClientValueNode
+	OpcUaClientWriteItem
 	OpcUaConnection
 	OpcUaDataChangeFilter
 	OpcUaElementOperand

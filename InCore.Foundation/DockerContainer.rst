@@ -33,6 +33,7 @@ Properties
   * :ref:`errorString <property_DockerContainer_errorString>`
   * :ref:`hostname <property_DockerContainer_hostname>`
   * :ref:`image <property_DockerContainer_image>`
+  * :ref:`loggingDriver <property_DockerContainer_loggingDriver>`
   * :ref:`mounts <property_DockerContainer_mounts>`
   * :ref:`name <property_DockerContainer_name>`
   * :ref:`networkMode <property_DockerContainer_networkMode>`
@@ -81,6 +82,7 @@ Enumerations
   :columns: 1
 
   * :ref:`Error <enum_DockerContainer_Error>`
+  * :ref:`LoggingDriver <enum_DockerContainer_LoggingDriver>`
   * :ref:`NetworkMode <enum_DockerContainer_NetworkMode>`
   * :ref:`RestartPolicy <enum_DockerContainer_RestartPolicy>`
 
@@ -300,6 +302,26 @@ This property holds the name of the image and an optional version tag to run in 
 
 :**› Type**: String
 :**› Signal**: imageChanged()
+:**› Attributes**: Writable
+
+
+.. _property_DockerContainer_loggingDriver:
+
+.. _signal_DockerContainer_loggingDriverChanged:
+
+.. index::
+   single: loggingDriver
+
+loggingDriver
++++++++++++++
+
+This property holds which logging driver to use for forwarding/storing log messages from the container. See the :ref:`DockerContainer.LoggingDriver <enum_DockerContainer_LoggingDriver>` enumeration for details.
+
+This property was introduced in InCore 2.9.
+
+:**› Type**: :ref:`LoggingDriver <enum_DockerContainer_LoggingDriver>`
+:**› Default**: :ref:`DockerContainer.NoLogging <enumitem_DockerContainer_NoLogging>`
+:**› Signal**: loggingDriverChanged()
 :**› Attributes**: Writable
 
 
@@ -733,6 +755,55 @@ This enumeration describes all errors which can occur in DockerContainer objects
   * - ``DockerContainer.PullFailed``
     - ``14``
     - Failed to pull the specified image. Either the Docker registry is not reachable or the image does not exist.
+
+
+.. _enum_DockerContainer_LoggingDriver:
+
+.. index::
+   single: LoggingDriver
+
+LoggingDriver
++++++++++++++
+
+This enumeration describes the supported logging drivers for Docker containers. See the `official Docker documentation on logging drivers policies <https://docs.docker.com/engine/logging/configure/>`_ for details.
+
+This enumeration was introduced in InCore 2.9.
+
+.. index::
+   single: DockerContainer.NoLogging
+.. index::
+   single: DockerContainer.LocalLogging
+.. index::
+   single: DockerContainer.JournaldLogging
+.. index::
+   single: DockerContainer.JsonFileLogging
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+
+      .. _enumitem_DockerContainer_NoLogging:
+  * - ``DockerContainer.NoLogging``
+    - ``0``
+    - Do not process any log messages of the container.
+
+      .. _enumitem_DockerContainer_LocalLogging:
+  * - ``DockerContainer.LocalLogging``
+    - ``1``
+    - Write log messages to the `local storage <https://docs.docker.com/engine/logging/drivers/local/>`_.
+
+      .. _enumitem_DockerContainer_JournaldLogging:
+  * - ``DockerContainer.JournaldLogging``
+    - ``2``
+    - Write log messages to the `systemd journal <https://docs.docker.com/engine/logging/drivers/journald/>`_.
+
+      .. _enumitem_DockerContainer_JsonFileLogging:
+  * - ``DockerContainer.JsonFileLogging``
+    - ``3``
+    - Write log messages to a `container-specific JSON file <https://docs.docker.com/engine/logging/drivers/json-file/>`_.
 
 
 .. _enum_DockerContainer_NetworkMode:

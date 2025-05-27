@@ -238,8 +238,8 @@ Methods
 .. index::
    single: del
 
-del()
-+++++
+del(JSValue callback, JSValue errorCallback)
+++++++++++++++++++++++++++++++++++++++++++++
 
 This method sends a HTTP request with the `DELETE` method to the server. It's mainly used for deleting resources at the given URL.
 
@@ -252,8 +252,8 @@ See `RFC2616 Section 9.7 <https://tools.ietf.org/html/rfc2616#section-9.7>`_ for
 .. index::
    single: get
 
-get()
-+++++
+get(JSValue responseCallback, JSValue errorCallback)
+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 This method sends a HTTP request with the `GET` method to the server. It's mainly used for downloading resources at the given URL.
 
@@ -266,8 +266,8 @@ See `RFC2616 Section 9.3 <https://tools.ietf.org/html/rfc2616#section-9.3>`_ for
 .. index::
    single: post
 
-post()
-++++++
+post(JSValue callback, JSValue errorCallback)
++++++++++++++++++++++++++++++++++++++++++++++
 
 This method sends a HTTP request with the `POST` method to the server. It's mainly used for annotation of existing resources, providing a block of data, such as the result of submitting a form, to a data-handling process or extending a database through an append operation.
 
@@ -280,8 +280,8 @@ See `RFC2616 Section 9.5 <https://tools.ietf.org/html/rfc2616#section-9.5>`_ for
 .. index::
    single: put
 
-put()
-+++++
+put(JSValue callback, JSValue errorCallback)
+++++++++++++++++++++++++++++++++++++++++++++
 
 This method sends a HTTP request with the `PUT` method to the server. It's mainly used for storing resources under the given URL.
 
@@ -596,15 +596,14 @@ Example
 
 .. code-block:: qml
 
-    import InCore.Foundation 2.5
-    import InCore.Http 2.5
+    import InCore.Foundation 2.9
+    import InCore.Http 2.9
     
     Application {
     
         HttpRequest {
             id: simpleRequest
-            url: "https://inhub.de"
-            onResponseReceived: console.log("Response for GET:", response.statusCode, response.content.data)
+            url: "https://www.inhub.de/"
         }
     
         HttpRequest {
@@ -629,9 +628,9 @@ Example
         }
     
         onCompleted: {
-            simpleRequest.get();
-            postTest.post();
-            putTest.put();
+            simpleRequest.get((response) => console.log("Response for GET:", response.statusCode, response.content.data))
+            postTest.post()
+            putTest.put()
         }
     }
     
