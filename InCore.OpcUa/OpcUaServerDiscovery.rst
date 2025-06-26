@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-serverdiscovery.html#->`_ documentation.
+Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/qt-5/qml-qtopcua-serverdiscovery.html#->`_ documentation.
 
 
 Overview
@@ -20,10 +20,10 @@ Properties
 .. hlist::
   :columns: 1
 
-  * `connection <https://doc.qt.io/QtOPCUA/qml-qtopcua-serverdiscovery.html#connection-prop>`_
-  * `count <https://doc.qt.io/QtOPCUA/qml-qtopcua-serverdiscovery.html#count-prop>`_
-  * `discoveryUrl <https://doc.qt.io/QtOPCUA/qml-qtopcua-serverdiscovery.html#discoveryUrl-prop>`_
-  * `status <https://doc.qt.io/QtOPCUA/qml-qtopcua-serverdiscovery.html#status-prop>`_
+  * `connection <https://doc.qt.io/qt-5/qml-qtopcua-serverdiscovery.html#connection-prop>`_
+  * `count <https://doc.qt.io/qt-5/qml-qtopcua-serverdiscovery.html#count-prop>`_
+  * `discoveryUrl <https://doc.qt.io/qt-5/qml-qtopcua-serverdiscovery.html#discoveryUrl-prop>`_
+  * `status <https://doc.qt.io/qt-5/qml-qtopcua-serverdiscovery.html#status-prop>`_
 
 Methods
 +++++++
@@ -31,7 +31,7 @@ Methods
 .. hlist::
   :columns: 1
 
-  * `at <https://doc.qt.io/QtOPCUA/qml-qtopcua-serverdiscovery.html#at-method>`_
+  * `at <https://doc.qt.io/qt-5/qml-qtopcua-serverdiscovery.html#at-method>`_
 
 
 
@@ -47,7 +47,7 @@ Properties
 connection
 ++++++++++
 
-Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-serverdiscovery.html#connection-prop>`_ documentation.
+Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/qt-5/qml-qtopcua-serverdiscovery.html#connection-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -60,7 +60,7 @@ Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/QtOPC
 count
 +++++
 
-Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-serverdiscovery.html#count-prop>`_ documentation.
+Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/qt-5/qml-qtopcua-serverdiscovery.html#count-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -73,7 +73,7 @@ Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/QtOPC
 discoveryUrl
 ++++++++++++
 
-Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-serverdiscovery.html#discoveryUrl-prop>`_ documentation.
+Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/qt-5/qml-qtopcua-serverdiscovery.html#discoveryUrl-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -86,7 +86,7 @@ Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/QtOPC
 status
 ++++++
 
-Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-serverdiscovery.html#status-prop>`_ documentation.
+Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/qt-5/qml-qtopcua-serverdiscovery.html#status-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -102,8 +102,8 @@ Methods
 at(SignedInteger row)
 +++++++++++++++++++++
 
-Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-serverdiscovery.html#at-method>`_ documentation.
+Please refer to the `Qt OPC UA ServerDiscovery QML type <https://doc.qt.io/qt-5/qml-qtopcua-serverdiscovery.html#at-method>`_ documentation.
 
-:**› Returns**: `OpcUaClientApplicationDescription <https://doc.qt.io/QtOPCUA/qml-qtopcua-applicationdescription.html>`_
+:**› Returns**: `OpcUaClientApplicationDescription <https://doc.qt.io/qt-5/qml-qtopcua-applicationdescription.html>`_
 
 

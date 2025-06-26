@@ -100,7 +100,7 @@ This property holds whether the broker should listen for incoming connections on
 listeners
 +++++++++
 
-This property holds a list of objects. This can be used for objects that require a CloudOfThingsClient as parent.
+This property holds a list of :ref:`MqttListener <object_MqttListener>` objects which define the actual connectivity options of the broker.
 
 This property was introduced in InCore 2.6.
 

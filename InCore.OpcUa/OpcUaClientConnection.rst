@@ -21,16 +21,16 @@ Properties
 .. hlist::
   :columns: 2
 
-  * `authenticationInformation <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#authenticationInformation-prop>`_
-  * `availableBackends <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#availableBackends-prop>`_
-  * `backend <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#backend-prop>`_
-  * `connected <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connected-prop>`_
-  * `connection <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connection-prop>`_
-  * `currentEndpoint <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#currentEndpoint-prop>`_
-  * `defaultConnection <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#defaultConnection-prop>`_
-  * `namespaces <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#namespaces-prop>`_
-  * `supportedSecurityPolicies <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#supportedSecurityPolicies-prop>`_
-  * `supportedUserTokenTypes <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#supportedUserTokenTypes-prop>`_
+  * `authenticationInformation <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#authenticationInformation-prop>`_
+  * `availableBackends <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#availableBackends-prop>`_
+  * `backend <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#backend-prop>`_
+  * `connected <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#connected-prop>`_
+  * `connection <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#connection-prop>`_
+  * `currentEndpoint <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#currentEndpoint-prop>`_
+  * `defaultConnection <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#defaultConnection-prop>`_
+  * `namespaces <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#namespaces-prop>`_
+  * `supportedSecurityPolicies <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#supportedSecurityPolicies-prop>`_
+  * `supportedUserTokenTypes <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#supportedUserTokenTypes-prop>`_
 
 Methods
 +++++++
@@ -43,13 +43,13 @@ Methods
   * :ref:`setCertificateAuthentication() <method_OpcUaClientConnection_setCertificateAuthentication>`
   * :ref:`setUsernameAuthentication() <method_OpcUaClientConnection_setUsernameAuthentication>`
   * :ref:`setupEncryption() <method_OpcUaClientConnection_setupEncryption>`
-  * `connectToEndpoint <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connectToEndpoint-method>`_
-  * `disconnectFromEndpoint <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#disconnectFromEndpoint-method>`_
-  * `readNodeAttributes <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#readNodeAttributes-method>`_
-  * `setAuthenticationInformation <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#setAuthenticationInformation-method>`_
-  * `setConnection <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#setConnection-method>`_
-  * `setDefaultConnection <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#setDefaultConnection-method>`_
-  * `writeNodeAttributes <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#writeNodeAttributes-method>`_
+  * `connectToEndpoint <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#connectToEndpoint-method>`_
+  * `disconnectFromEndpoint <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#disconnectFromEndpoint-method>`_
+  * `readNodeAttributes <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#readNodeAttributes-method>`_
+  * `setAuthenticationInformation <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#setAuthenticationInformation-method>`_
+  * `setConnection <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#setConnection-method>`_
+  * `setDefaultConnection <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#setDefaultConnection-method>`_
+  * `writeNodeAttributes <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#writeNodeAttributes-method>`_
 
 Signals
 +++++++
@@ -57,8 +57,8 @@ Signals
 .. hlist::
   :columns: 1
 
-  * `readNodeAttributesFinished <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#readNodeAttributesFinished-signal>`_
-  * `writeNodeAttributesFinished <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#writeNodeAttributesFinished-signal>`_
+  * `readNodeAttributesFinished <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#readNodeAttributesFinished-signal>`_
+  * `writeNodeAttributesFinished <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#writeNodeAttributesFinished-signal>`_
 
 Enumerations
 ++++++++++++

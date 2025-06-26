@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA EventFilter QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-eventfilter.html#->`_ documentation.
+Please refer to the `Qt OPC UA EventFilter QML type <https://doc.qt.io/qt-5/qml-qtopcua-eventfilter.html#->`_ documentation.
 
 
 Overview
@@ -20,8 +20,8 @@ Properties
 .. hlist::
   :columns: 1
 
-  * `select <https://doc.qt.io/QtOPCUA/qml-qtopcua-eventfilter.html#select-prop>`_
-  * `where <https://doc.qt.io/QtOPCUA/qml-qtopcua-eventfilter.html#where-prop>`_
+  * `select <https://doc.qt.io/qt-5/qml-qtopcua-eventfilter.html#select-prop>`_
+  * `where <https://doc.qt.io/qt-5/qml-qtopcua-eventfilter.html#where-prop>`_
 
 
 
@@ -37,7 +37,7 @@ Properties
 select
 ++++++
 
-Please refer to the `Qt OPC UA EventFilter QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-eventfilter.html#select-prop>`_ documentation.
+Please refer to the `Qt OPC UA EventFilter QML type <https://doc.qt.io/qt-5/qml-qtopcua-eventfilter.html#select-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -50,7 +50,7 @@ Please refer to the `Qt OPC UA EventFilter QML type <https://doc.qt.io/QtOPCUA/q
 where
 +++++
 
-Please refer to the `Qt OPC UA EventFilter QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-eventfilter.html#where-prop>`_ documentation.
+Please refer to the `Qt OPC UA EventFilter QML type <https://doc.qt.io/qt-5/qml-qtopcua-eventfilter.html#where-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 

@@ -69,7 +69,7 @@ browseNodeId
 
 This property holds the node ID of the OPC/UA node whose children to discover.
 
-:**› Type**: `OpcUaNodeId <https://doc.qt.io/QtOPCUA/qml-qtopcua-nodeid.html>`_
+:**› Type**: `OpcUaNodeId <https://doc.qt.io/qt-5/qml-qtopcua-nodeid.html>`_
 :**› Signal**: browseNodeIdChanged()
 :**› Attributes**: Writable
 
@@ -103,9 +103,9 @@ This property was introduced in InCore 2.7.
 nodes
 +++++
 
-This property holds the discovered OPC/UA nodes. Depending on the respective node class, each instance is either of type :ref:`OpcUaClientValueNode <object_OpcUaClientValueNode>` for value nodes, :ref:`OpcUaClientMethodNode <object_OpcUaClientMethodNode>` for method nodes or :ref:`OpcUaClientNode <object_OpcUaClientNode>` in all other cases.
+This property holds the discovered OPC UA nodes.
 
-:**› Type**: :ref:`List <object_List>`\<:ref:`OpcUaNode <enum_OpcUaClientNodeDiscovery_OpcUaNode>`>
+:**› Type**: :ref:`List <object_List>`\<:ref:`OpcUaBrowseNode <object_OpcUaBrowseNode>`>
 :**› Signal**: nodesChanged()
 :**› Attributes**: Readonly
 

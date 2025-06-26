@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#->`_ documentation.
+Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#->`_ documentation.
 
 
 Overview
@@ -20,14 +20,14 @@ Properties
 .. hlist::
   :columns: 2
 
-  * `filter <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#filter-prop>`_
-  * `monitored <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#monitored-prop>`_
-  * `publishingInterval <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#publishingInterval-prop>`_
-  * `serverTimestamp <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#serverTimestamp-prop>`_
-  * `sourceTimestamp <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#sourceTimestamp-prop>`_
-  * `value <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#value-prop>`_
-  * `valueType <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#valueType-prop>`_
-  * `writable <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#writable-prop>`_
+  * `filter <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#filter-prop>`_
+  * `monitored <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#monitored-prop>`_
+  * `publishingInterval <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#publishingInterval-prop>`_
+  * `serverTimestamp <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#serverTimestamp-prop>`_
+  * `sourceTimestamp <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#sourceTimestamp-prop>`_
+  * `value <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#value-prop>`_
+  * `valueType <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#valueType-prop>`_
+  * `writable <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#writable-prop>`_
 
 Methods
 +++++++
@@ -35,10 +35,10 @@ Methods
 .. hlist::
   :columns: 1
 
-  * `setMonitored <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#setMonitored-method>`_
-  * `setPublishingInterval <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#setPublishingInterval-method>`_
-  * `setValue <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#setValue-method>`_
-  * `setValueType <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#setValueType-method>`_
+  * `setMonitored <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#setMonitored-method>`_
+  * `setPublishingInterval <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#setPublishingInterval-method>`_
+  * `setValue <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#setValue-method>`_
+  * `setValueType <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#setValueType-method>`_
 
 Signals
 +++++++
@@ -46,7 +46,7 @@ Signals
 .. hlist::
   :columns: 1
 
-  * `dataChangeOccurred <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#dataChangeOccurred-signal>`_
+  * `dataChangeOccurred <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#dataChangeOccurred-signal>`_
 
 
 
@@ -62,7 +62,7 @@ Properties
 filter
 ++++++
 
-Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#filter-prop>`_ documentation.
+Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#filter-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -75,7 +75,7 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 monitored
 +++++++++
 
-Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#monitored-prop>`_ documentation.
+Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#monitored-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -88,7 +88,7 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 publishingInterval
 ++++++++++++++++++
 
-Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#publishingInterval-prop>`_ documentation.
+Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#publishingInterval-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -101,7 +101,7 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 serverTimestamp
 +++++++++++++++
 
-Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#serverTimestamp-prop>`_ documentation.
+Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#serverTimestamp-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -114,7 +114,7 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 sourceTimestamp
 +++++++++++++++
 
-Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#sourceTimestamp-prop>`_ documentation.
+Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#sourceTimestamp-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -127,7 +127,7 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 value
 +++++
 
-Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#value-prop>`_ documentation.
+Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#value-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -140,7 +140,7 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 valueType
 +++++++++
 
-Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#valueType-prop>`_ documentation.
+Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#valueType-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -153,7 +153,7 @@ Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml
 writable
 ++++++++
 
-Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#writable-prop>`_ documentation.
+Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#writable-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -169,7 +169,7 @@ Signals
 dataChangeOccurred(Variant value)
 +++++++++++++++++++++++++++++++++
 
-Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-valuenode.html#dataChangeOccurred-signal>`_ documentation.
+Please refer to the `Qt OPC UA ValueNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-valuenode.html#dataChangeOccurred-signal>`_ documentation.
 
 
 Example

@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA LiteralOperand QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-literaloperand.html#->`_ documentation.
+Please refer to the `Qt OPC UA LiteralOperand QML type <https://doc.qt.io/qt-5/qml-qtopcua-literaloperand.html#->`_ documentation.
 
 
 Overview
@@ -20,8 +20,8 @@ Properties
 .. hlist::
   :columns: 1
 
-  * `type <https://doc.qt.io/QtOPCUA/qml-qtopcua-literaloperand.html#type-prop>`_
-  * `value <https://doc.qt.io/QtOPCUA/qml-qtopcua-literaloperand.html#value-prop>`_
+  * `type <https://doc.qt.io/qt-5/qml-qtopcua-literaloperand.html#type-prop>`_
+  * `value <https://doc.qt.io/qt-5/qml-qtopcua-literaloperand.html#value-prop>`_
 
 
 
@@ -37,7 +37,7 @@ Properties
 type
 ++++
 
-Please refer to the `Qt OPC UA LiteralOperand QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-literaloperand.html#type-prop>`_ documentation.
+Please refer to the `Qt OPC UA LiteralOperand QML type <https://doc.qt.io/qt-5/qml-qtopcua-literaloperand.html#type-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -50,7 +50,7 @@ Please refer to the `Qt OPC UA LiteralOperand QML type <https://doc.qt.io/QtOPCU
 value
 +++++
 
-Please refer to the `Qt OPC UA LiteralOperand QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-literaloperand.html#value-prop>`_ documentation.
+Please refer to the `Qt OPC UA LiteralOperand QML type <https://doc.qt.io/qt-5/qml-qtopcua-literaloperand.html#value-prop>`_ documentation.
 
 :**› Attributes**: Writable
 

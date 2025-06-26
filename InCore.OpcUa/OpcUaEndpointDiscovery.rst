@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdiscovery.html#->`_ documentation.
+Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/qt-5/qml-qtopcua-endpointdiscovery.html#->`_ documentation.
 
 
 Overview
@@ -20,10 +20,10 @@ Properties
 .. hlist::
   :columns: 1
 
-  * `connection <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdiscovery.html#connection-prop>`_
-  * `count <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdiscovery.html#count-prop>`_
-  * `serverUrl <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdiscovery.html#serverUrl-prop>`_
-  * `status <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdiscovery.html#status-prop>`_
+  * `connection <https://doc.qt.io/qt-5/qml-qtopcua-endpointdiscovery.html#connection-prop>`_
+  * `count <https://doc.qt.io/qt-5/qml-qtopcua-endpointdiscovery.html#count-prop>`_
+  * `serverUrl <https://doc.qt.io/qt-5/qml-qtopcua-endpointdiscovery.html#serverUrl-prop>`_
+  * `status <https://doc.qt.io/qt-5/qml-qtopcua-endpointdiscovery.html#status-prop>`_
 
 Methods
 +++++++
@@ -31,7 +31,7 @@ Methods
 .. hlist::
   :columns: 1
 
-  * `at <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdiscovery.html#at-method>`_
+  * `at <https://doc.qt.io/qt-5/qml-qtopcua-endpointdiscovery.html#at-method>`_
 
 
 
@@ -47,7 +47,7 @@ Properties
 connection
 ++++++++++
 
-Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdiscovery.html#connection-prop>`_ documentation.
+Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/qt-5/qml-qtopcua-endpointdiscovery.html#connection-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -60,7 +60,7 @@ Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/QtO
 count
 +++++
 
-Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdiscovery.html#count-prop>`_ documentation.
+Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/qt-5/qml-qtopcua-endpointdiscovery.html#count-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -73,7 +73,7 @@ Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/QtO
 serverUrl
 +++++++++
 
-Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdiscovery.html#serverUrl-prop>`_ documentation.
+Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/qt-5/qml-qtopcua-endpointdiscovery.html#serverUrl-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -86,7 +86,7 @@ Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/QtO
 status
 ++++++
 
-Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdiscovery.html#status-prop>`_ documentation.
+Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/qt-5/qml-qtopcua-endpointdiscovery.html#status-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -102,9 +102,9 @@ Methods
 at(SignedInteger row)
 +++++++++++++++++++++
 
-Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdiscovery.html#at-method>`_ documentation.
+Please refer to the `Qt OPC UA EndpointDiscovery QML type <https://doc.qt.io/qt-5/qml-qtopcua-endpointdiscovery.html#at-method>`_ documentation.
 
-:**› Returns**: `OpcUaClientEndpointDescription <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdescription.html>`_
+:**› Returns**: `OpcUaClientEndpointDescription <https://doc.qt.io/qt-5/qml-qtopcua-endpointdescription.html>`_
 
 
 

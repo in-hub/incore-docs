@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#->`_ documentation.
+Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#->`_ documentation.
 
 
 Overview
@@ -20,9 +20,9 @@ Properties
 .. hlist::
   :columns: 1
 
-  * `deadbandType <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#deadbandType-prop>`_
-  * `deadbandValue <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#deadbandValue-prop>`_
-  * `trigger <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#trigger-prop>`_
+  * `deadbandType <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#deadbandType-prop>`_
+  * `deadbandValue <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#deadbandValue-prop>`_
+  * `trigger <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#trigger-prop>`_
 
 Methods
 +++++++
@@ -30,9 +30,9 @@ Methods
 .. hlist::
   :columns: 1
 
-  * `setDeadbandType <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#setDeadbandType-method>`_
-  * `setDeadbandValue <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#setDeadbandValue-method>`_
-  * `setTrigger <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#setTrigger-method>`_
+  * `setDeadbandType <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#setDeadbandType-method>`_
+  * `setDeadbandValue <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#setDeadbandValue-method>`_
+  * `setTrigger <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#setTrigger-method>`_
 
 Enumerations
 ++++++++++++
@@ -40,8 +40,8 @@ Enumerations
 .. hlist::
   :columns: 1
 
-  * `DataChangeTrigger <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#DataChangeTrigger-prop>`_
-  * `DeadbandType <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#DeadbandType-prop>`_
+  * `DataChangeTrigger <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#DataChangeTrigger-prop>`_
+  * `DeadbandType <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#DeadbandType-prop>`_
 
 
 
@@ -57,7 +57,7 @@ Properties
 deadbandType
 ++++++++++++
 
-Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#deadbandType-prop>`_ documentation.
+Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#deadbandType-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -70,7 +70,7 @@ Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/QtOP
 deadbandValue
 +++++++++++++
 
-Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#deadbandValue-prop>`_ documentation.
+Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#deadbandValue-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -83,7 +83,7 @@ Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/QtOP
 trigger
 +++++++
 
-Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#trigger-prop>`_ documentation.
+Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#trigger-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -101,7 +101,7 @@ DataChangeTrigger
 
 
 
-Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#DataChangeTrigger-prop>`_ documentation.
+Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#DataChangeTrigger-prop>`_ documentation.
 
 .. _enum_OpcUaDataChangeFilter_DeadbandType:
 
@@ -113,4 +113,4 @@ DeadbandType
 
 
 
-Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-datachangefilter.html#DeadbandType-prop>`_ documentation.
+Please refer to the `Qt OPC UA DataChangeFilter QML type <https://doc.qt.io/qt-5/qml-qtopcua-datachangefilter.html#DeadbandType-prop>`_ documentation.

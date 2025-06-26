@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#->`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#->`_ documentation.
 
 :**› Inherited by**: :ref:`OpcUaClientMethodNode <object_OpcUaClientMethodNode>`, :ref:`OpcUaClientValueNode <object_OpcUaClientValueNode>`
 
@@ -21,16 +21,16 @@ Properties
 .. hlist::
   :columns: 2
 
-  * `browseName <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#browseName-prop>`_
-  * `connection <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#connection-prop>`_
-  * `description <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#description-prop>`_
-  * `displayName <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#displayName-prop>`_
-  * `errorMessage <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#errorMessage-prop>`_
-  * `eventFilter <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#eventFilter-prop>`_
-  * `nodeClass <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#nodeClass-prop>`_
-  * `nodeId <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#nodeId-prop>`_
-  * `readyToUse <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#readyToUse-prop>`_
-  * `status <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#status-prop>`_
+  * `browseName <https://doc.qt.io/qt-5/qml-qtopcua-node.html#browseName-prop>`_
+  * `connection <https://doc.qt.io/qt-5/qml-qtopcua-node.html#connection-prop>`_
+  * `description <https://doc.qt.io/qt-5/qml-qtopcua-node.html#description-prop>`_
+  * `displayName <https://doc.qt.io/qt-5/qml-qtopcua-node.html#displayName-prop>`_
+  * `errorMessage <https://doc.qt.io/qt-5/qml-qtopcua-node.html#errorMessage-prop>`_
+  * `eventFilter <https://doc.qt.io/qt-5/qml-qtopcua-node.html#eventFilter-prop>`_
+  * `nodeClass <https://doc.qt.io/qt-5/qml-qtopcua-node.html#nodeClass-prop>`_
+  * `nodeId <https://doc.qt.io/qt-5/qml-qtopcua-node.html#nodeId-prop>`_
+  * `readyToUse <https://doc.qt.io/qt-5/qml-qtopcua-node.html#readyToUse-prop>`_
+  * `status <https://doc.qt.io/qt-5/qml-qtopcua-node.html#status-prop>`_
 
 Methods
 +++++++
@@ -38,10 +38,10 @@ Methods
 .. hlist::
   :columns: 1
 
-  * `getServerTimestamp <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#getServerTimestamp-method>`_
-  * `getSourceTimestamp <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#getSourceTimestamp-method>`_
-  * `setConnection <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#setConnection-method>`_
-  * `setNodeId <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#setNodeId-method>`_
+  * `getServerTimestamp <https://doc.qt.io/qt-5/qml-qtopcua-node.html#getServerTimestamp-method>`_
+  * `getSourceTimestamp <https://doc.qt.io/qt-5/qml-qtopcua-node.html#getSourceTimestamp-method>`_
+  * `setConnection <https://doc.qt.io/qt-5/qml-qtopcua-node.html#setConnection-method>`_
+  * `setNodeId <https://doc.qt.io/qt-5/qml-qtopcua-node.html#setNodeId-method>`_
 
 Signals
 +++++++
@@ -49,7 +49,7 @@ Signals
 .. hlist::
   :columns: 1
 
-  * `eventOccurred <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#eventOccurred-signal>`_
+  * `eventOccurred <https://doc.qt.io/qt-5/qml-qtopcua-node.html#eventOccurred-signal>`_
 
 Enumerations
 ++++++++++++
@@ -57,7 +57,7 @@ Enumerations
 .. hlist::
   :columns: 1
 
-  * `Status <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#Status-prop>`_
+  * `Status <https://doc.qt.io/qt-5/qml-qtopcua-node.html#Status-prop>`_
 
 
 
@@ -73,7 +73,7 @@ Properties
 browseName
 ++++++++++
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#browseName-prop>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#browseName-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -86,7 +86,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 connection
 ++++++++++
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#connection-prop>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#connection-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -99,7 +99,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 description
 +++++++++++
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#description-prop>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#description-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -112,7 +112,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 displayName
 +++++++++++
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#displayName-prop>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#displayName-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -125,7 +125,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 errorMessage
 ++++++++++++
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#errorMessage-prop>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#errorMessage-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -138,7 +138,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 eventFilter
 +++++++++++
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#eventFilter-prop>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#eventFilter-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -151,7 +151,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 nodeClass
 +++++++++
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#nodeClass-prop>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#nodeClass-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -164,7 +164,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 nodeId
 ++++++
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#nodeId-prop>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#nodeId-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -177,7 +177,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 readyToUse
 ++++++++++
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#readyToUse-prop>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#readyToUse-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -190,7 +190,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 status
 ++++++
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#status-prop>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#status-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -206,7 +206,7 @@ Methods
 getServerTimestamp(:ref:`OpcUaNodeAttribute.NodeAttribute <enum_OpcUaNodeAttribute_NodeAttribute>`)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#getServerTimestamp-method>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#getServerTimestamp-method>`_ documentation.
 
 :**› Returns**: DateTime
 
@@ -220,7 +220,7 @@ Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtop
 getSourceTimestamp(:ref:`OpcUaNodeAttribute.NodeAttribute <enum_OpcUaNodeAttribute_NodeAttribute>`)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#getSourceTimestamp-method>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#getSourceTimestamp-method>`_ documentation.
 
 :**› Returns**: DateTime
 
@@ -237,7 +237,7 @@ Signals
 eventOccurred(List values)
 ++++++++++++++++++++++++++
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#eventOccurred-signal>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#eventOccurred-signal>`_ documentation.
 
 
 Enumerations
@@ -254,7 +254,7 @@ Status
 
 
 
-Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-node.html#Status-prop>`_ documentation.
+Please refer to the `Qt OPC UA Node QML type <https://doc.qt.io/qt-5/qml-qtopcua-node.html#Status-prop>`_ documentation.
 Example
 *******
 See :ref:`OpcUaClient example <example_OpcUaClient>` on how to use OpcUaClientNode.

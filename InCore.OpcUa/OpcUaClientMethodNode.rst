@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodnode.html#->`_ documentation.
+Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-methodnode.html#->`_ documentation.
 
 
 Overview
@@ -20,10 +20,10 @@ Properties
 .. hlist::
   :columns: 1
 
-  * `inputArguments <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodnode.html#inputArguments-prop>`_
-  * `objectNodeId <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodnode.html#objectNodeId-prop>`_
-  * `outputArguments <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodnode.html#outputArguments-prop>`_
-  * `resultStatus <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodnode.html#resultStatus-prop>`_
+  * `inputArguments <https://doc.qt.io/qt-5/qml-qtopcua-methodnode.html#inputArguments-prop>`_
+  * `objectNodeId <https://doc.qt.io/qt-5/qml-qtopcua-methodnode.html#objectNodeId-prop>`_
+  * `outputArguments <https://doc.qt.io/qt-5/qml-qtopcua-methodnode.html#outputArguments-prop>`_
+  * `resultStatus <https://doc.qt.io/qt-5/qml-qtopcua-methodnode.html#resultStatus-prop>`_
 
 Methods
 +++++++
@@ -31,8 +31,8 @@ Methods
 .. hlist::
   :columns: 1
 
-  * `callMethod <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodnode.html#callMethod-method>`_
-  * `setObjectNodeId <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodnode.html#setObjectNodeId-method>`_
+  * `callMethod <https://doc.qt.io/qt-5/qml-qtopcua-methodnode.html#callMethod-method>`_
+  * `setObjectNodeId <https://doc.qt.io/qt-5/qml-qtopcua-methodnode.html#setObjectNodeId-method>`_
 
 
 
@@ -48,7 +48,7 @@ Properties
 inputArguments
 ++++++++++++++
 
-Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodnode.html#inputArguments-prop>`_ documentation.
+Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-methodnode.html#inputArguments-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -61,7 +61,7 @@ Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qm
 objectNodeId
 ++++++++++++
 
-Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodnode.html#objectNodeId-prop>`_ documentation.
+Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-methodnode.html#objectNodeId-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -74,7 +74,7 @@ Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qm
 outputArguments
 +++++++++++++++
 
-Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodnode.html#outputArguments-prop>`_ documentation.
+Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-methodnode.html#outputArguments-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -87,7 +87,7 @@ Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qm
 resultStatus
 ++++++++++++
 
-Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodnode.html#resultStatus-prop>`_ documentation.
+Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-methodnode.html#resultStatus-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -103,7 +103,7 @@ Methods
 callMethod()
 ++++++++++++
 
-Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodnode.html#callMethod-method>`_ documentation.
+Please refer to the `Qt OPC UA MethodNode QML type <https://doc.qt.io/qt-5/qml-qtopcua-methodnode.html#callMethod-method>`_ documentation.
 
 
 

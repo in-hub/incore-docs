@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA FilterElement QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-filterelement.html#->`_ documentation.
+Please refer to the `Qt OPC UA FilterElement QML type <https://doc.qt.io/qt-5/qml-qtopcua-filterelement.html#->`_ documentation.
 
 
 Overview
@@ -20,9 +20,9 @@ Properties
 .. hlist::
   :columns: 1
 
-  * `firstOperand <https://doc.qt.io/QtOPCUA/qml-qtopcua-filterelement.html#firstOperand-prop>`_
-  * `operator <https://doc.qt.io/QtOPCUA/qml-qtopcua-filterelement.html#operator-prop>`_
-  * `secondOperand <https://doc.qt.io/QtOPCUA/qml-qtopcua-filterelement.html#secondOperand-prop>`_
+  * `firstOperand <https://doc.qt.io/qt-5/qml-qtopcua-filterelement.html#firstOperand-prop>`_
+  * `operator <https://doc.qt.io/qt-5/qml-qtopcua-filterelement.html#operator-prop>`_
+  * `secondOperand <https://doc.qt.io/qt-5/qml-qtopcua-filterelement.html#secondOperand-prop>`_
 
 Enumerations
 ++++++++++++
@@ -30,7 +30,7 @@ Enumerations
 .. hlist::
   :columns: 1
 
-  * `FilterOperator <https://doc.qt.io/QtOPCUA/qml-qtopcua-filterelement.html#FilterOperator-prop>`_
+  * `FilterOperator <https://doc.qt.io/qt-5/qml-qtopcua-filterelement.html#FilterOperator-prop>`_
 
 
 
@@ -46,7 +46,7 @@ Properties
 firstOperand
 ++++++++++++
 
-Please refer to the `Qt OPC UA FilterElement QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-filterelement.html#firstOperand-prop>`_ documentation.
+Please refer to the `Qt OPC UA FilterElement QML type <https://doc.qt.io/qt-5/qml-qtopcua-filterelement.html#firstOperand-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -59,7 +59,7 @@ Please refer to the `Qt OPC UA FilterElement QML type <https://doc.qt.io/QtOPCUA
 operator
 ++++++++
 
-Please refer to the `Qt OPC UA FilterElement QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-filterelement.html#operator-prop>`_ documentation.
+Please refer to the `Qt OPC UA FilterElement QML type <https://doc.qt.io/qt-5/qml-qtopcua-filterelement.html#operator-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -72,7 +72,7 @@ Please refer to the `Qt OPC UA FilterElement QML type <https://doc.qt.io/QtOPCUA
 secondOperand
 +++++++++++++
 
-Please refer to the `Qt OPC UA FilterElement QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-filterelement.html#secondOperand-prop>`_ documentation.
+Please refer to the `Qt OPC UA FilterElement QML type <https://doc.qt.io/qt-5/qml-qtopcua-filterelement.html#secondOperand-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -90,4 +90,4 @@ FilterOperator
 
 
 
-Please refer to the `Qt OPC UA FilterElement QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-filterelement.html#FilterOperator-prop>`_ documentation.
+Please refer to the `Qt OPC UA FilterElement QML type <https://doc.qt.io/qt-5/qml-qtopcua-filterelement.html#FilterOperator-prop>`_ documentation.

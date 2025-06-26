@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#->`_ documentation.
+Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#->`_ documentation.
 
 
 Overview
@@ -20,11 +20,11 @@ Properties
 .. hlist::
   :columns: 1
 
-  * `browseName <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#browseName-prop>`_
-  * `includeSubtypes <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#includeSubtypes-prop>`_
-  * `isInverse <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#isInverse-prop>`_
-  * `ns <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#ns-prop>`_
-  * `referenceType <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#referenceType-prop>`_
+  * `browseName <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#browseName-prop>`_
+  * `includeSubtypes <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#includeSubtypes-prop>`_
+  * `isInverse <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#isInverse-prop>`_
+  * `ns <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#ns-prop>`_
+  * `referenceType <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#referenceType-prop>`_
 
 Methods
 +++++++
@@ -32,11 +32,11 @@ Methods
 .. hlist::
   :columns: 1
 
-  * `setBrowseName <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#setBrowseName-method>`_
-  * `setIncludeSubtypes <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#setIncludeSubtypes-method>`_
-  * `setIsInverse <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#setIsInverse-method>`_
-  * `setNodeNamespace <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#setNodeNamespace-method>`_
-  * `setReferenceType <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#setReferenceType-method>`_
+  * `setBrowseName <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#setBrowseName-method>`_
+  * `setIncludeSubtypes <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#setIncludeSubtypes-method>`_
+  * `setIsInverse <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#setIsInverse-method>`_
+  * `setNodeNamespace <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#setNodeNamespace-method>`_
+  * `setReferenceType <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#setReferenceType-method>`_
 
 
 
@@ -52,7 +52,7 @@ Properties
 browseName
 ++++++++++
 
-Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#browseName-prop>`_ documentation.
+Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#browseName-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -65,7 +65,7 @@ Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOP
 includeSubtypes
 +++++++++++++++
 
-Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#includeSubtypes-prop>`_ documentation.
+Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#includeSubtypes-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -78,7 +78,7 @@ Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOP
 isInverse
 +++++++++
 
-Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#isInverse-prop>`_ documentation.
+Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#isInverse-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -91,7 +91,7 @@ Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOP
 ns
 ++
 
-Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#ns-prop>`_ documentation.
+Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#ns-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -104,7 +104,7 @@ Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOP
 referenceType
 +++++++++++++
 
-Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodepath.html#referenceType-prop>`_ documentation.
+Please refer to the `Qt OPC UA RelativeNodePath QML type <https://doc.qt.io/qt-5/qml-qtopcua-relativenodepath.html#referenceType-prop>`_ documentation.
 
 :**› Attributes**: Writable
 

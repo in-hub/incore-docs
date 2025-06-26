@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA MethodArgument QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodargument.html#->`_ documentation.
+Please refer to the `Qt OPC UA MethodArgument QML type <https://doc.qt.io/qt-5/qml-qtopcua-methodargument.html#->`_ documentation.
 
 
 Overview
@@ -20,8 +20,8 @@ Properties
 .. hlist::
   :columns: 1
 
-  * `type <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodargument.html#type-prop>`_
-  * `value <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodargument.html#value-prop>`_
+  * `type <https://doc.qt.io/qt-5/qml-qtopcua-methodargument.html#type-prop>`_
+  * `value <https://doc.qt.io/qt-5/qml-qtopcua-methodargument.html#value-prop>`_
 
 Methods
 +++++++
@@ -29,8 +29,8 @@ Methods
 .. hlist::
   :columns: 1
 
-  * `setType <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodargument.html#setType-method>`_
-  * `setValue <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodargument.html#setValue-method>`_
+  * `setType <https://doc.qt.io/qt-5/qml-qtopcua-methodargument.html#setType-method>`_
+  * `setValue <https://doc.qt.io/qt-5/qml-qtopcua-methodargument.html#setValue-method>`_
 
 
 
@@ -46,7 +46,7 @@ Properties
 type
 ++++
 
-Please refer to the `Qt OPC UA MethodArgument QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodargument.html#type-prop>`_ documentation.
+Please refer to the `Qt OPC UA MethodArgument QML type <https://doc.qt.io/qt-5/qml-qtopcua-methodargument.html#type-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -59,7 +59,7 @@ Please refer to the `Qt OPC UA MethodArgument QML type <https://doc.qt.io/QtOPCU
 value
 +++++
 
-Please refer to the `Qt OPC UA MethodArgument QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-methodargument.html#value-prop>`_ documentation.
+Please refer to the `Qt OPC UA MethodArgument QML type <https://doc.qt.io/qt-5/qml-qtopcua-methodargument.html#value-prop>`_ documentation.
 
 :**› Attributes**: Writable
 

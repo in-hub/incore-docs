@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#->`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#->`_ documentation.
 
 :**› Inherited by**: :ref:`OpcUaClientConnection <object_OpcUaClientConnection>`
 
@@ -21,16 +21,16 @@ Properties
 .. hlist::
   :columns: 2
 
-  * `authenticationInformation <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#authenticationInformation-prop>`_
-  * `availableBackends <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#availableBackends-prop>`_
-  * `backend <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#backend-prop>`_
-  * `connected <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connected-prop>`_
-  * `connection <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connection-prop>`_
-  * `currentEndpoint <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#currentEndpoint-prop>`_
-  * `defaultConnection <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#defaultConnection-prop>`_
-  * `namespaces <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#namespaces-prop>`_
-  * `supportedSecurityPolicies <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#supportedSecurityPolicies-prop>`_
-  * `supportedUserTokenTypes <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#supportedUserTokenTypes-prop>`_
+  * `authenticationInformation <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#authenticationInformation-prop>`_
+  * `availableBackends <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#availableBackends-prop>`_
+  * `backend <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#backend-prop>`_
+  * `connected <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#connected-prop>`_
+  * `connection <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#connection-prop>`_
+  * `currentEndpoint <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#currentEndpoint-prop>`_
+  * `defaultConnection <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#defaultConnection-prop>`_
+  * `namespaces <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#namespaces-prop>`_
+  * `supportedSecurityPolicies <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#supportedSecurityPolicies-prop>`_
+  * `supportedUserTokenTypes <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#supportedUserTokenTypes-prop>`_
 
 Methods
 +++++++
@@ -38,13 +38,13 @@ Methods
 .. hlist::
   :columns: 1
 
-  * `connectToEndpoint <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connectToEndpoint-method>`_
-  * `disconnectFromEndpoint <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#disconnectFromEndpoint-method>`_
-  * `readNodeAttributes <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#readNodeAttributes-method>`_
-  * `setAuthenticationInformation <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#setAuthenticationInformation-method>`_
-  * `setConnection <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#setConnection-method>`_
-  * `setDefaultConnection <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#setDefaultConnection-method>`_
-  * `writeNodeAttributes <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#writeNodeAttributes-method>`_
+  * `connectToEndpoint <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#connectToEndpoint-method>`_
+  * `disconnectFromEndpoint <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#disconnectFromEndpoint-method>`_
+  * `readNodeAttributes <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#readNodeAttributes-method>`_
+  * `setAuthenticationInformation <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#setAuthenticationInformation-method>`_
+  * `setConnection <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#setConnection-method>`_
+  * `setDefaultConnection <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#setDefaultConnection-method>`_
+  * `writeNodeAttributes <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#writeNodeAttributes-method>`_
 
 Signals
 +++++++
@@ -52,8 +52,8 @@ Signals
 .. hlist::
   :columns: 1
 
-  * `readNodeAttributesFinished <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#readNodeAttributesFinished-signal>`_
-  * `writeNodeAttributesFinished <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#writeNodeAttributesFinished-signal>`_
+  * `readNodeAttributesFinished <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#readNodeAttributesFinished-signal>`_
+  * `writeNodeAttributesFinished <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#writeNodeAttributesFinished-signal>`_
 
 
 
@@ -69,7 +69,7 @@ Properties
 authenticationInformation
 +++++++++++++++++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#authenticationInformation-prop>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#authenticationInformation-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -82,7 +82,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 availableBackends
 +++++++++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#availableBackends-prop>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#availableBackends-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -95,7 +95,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 backend
 +++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#backend-prop>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#backend-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -108,7 +108,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 connected
 +++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connected-prop>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#connected-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -121,7 +121,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 connection
 ++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connection-prop>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#connection-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -134,7 +134,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 currentEndpoint
 +++++++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#currentEndpoint-prop>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#currentEndpoint-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -147,7 +147,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 defaultConnection
 +++++++++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#defaultConnection-prop>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#defaultConnection-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -160,7 +160,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 namespaces
 ++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#namespaces-prop>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#namespaces-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -173,7 +173,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 supportedSecurityPolicies
 +++++++++++++++++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#supportedSecurityPolicies-prop>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#supportedSecurityPolicies-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -186,7 +186,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 supportedUserTokenTypes
 +++++++++++++++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#supportedUserTokenTypes-prop>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#supportedUserTokenTypes-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -199,10 +199,10 @@ Methods
 .. index::
    single: connectToEndpoint
 
-connectToEndpoint(`OpcUaClientEndpointDescription <https://doc.qt.io/QtOPCUA/qml-qtopcua-endpointdescription.html>`_ endpointDescription)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+connectToEndpoint(`OpcUaClientEndpointDescription <https://doc.qt.io/qt-5/qml-qtopcua-endpointdescription.html>`_ endpointDescription)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#connectToEndpoint-method>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#connectToEndpoint-method>`_ documentation.
 
 
 
@@ -214,7 +214,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 disconnectFromEndpoint()
 ++++++++++++++++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#disconnectFromEndpoint-method>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#disconnectFromEndpoint-method>`_ documentation.
 
 
 
@@ -226,7 +226,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 readNodeAttributes(JSValue value)
 +++++++++++++++++++++++++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#readNodeAttributes-method>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#readNodeAttributes-method>`_ documentation.
 
 :**› Returns**: Boolean
 
@@ -240,7 +240,7 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 writeNodeAttributes(JSValue value)
 ++++++++++++++++++++++++++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#writeNodeAttributes-method>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#writeNodeAttributes-method>`_ documentation.
 
 :**› Returns**: Boolean
 
@@ -257,7 +257,7 @@ Signals
 readNodeAttributesFinished(Variant value)
 +++++++++++++++++++++++++++++++++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#readNodeAttributesFinished-signal>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#readNodeAttributesFinished-signal>`_ documentation.
 
 
 
@@ -269,6 +269,6 @@ Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qm
 writeNodeAttributesFinished(Variant value)
 ++++++++++++++++++++++++++++++++++++++++++
 
-Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-connection.html#writeNodeAttributesFinished-signal>`_ documentation.
+Please refer to the `Qt OPC UA Connection QML type <https://doc.qt.io/qt-5/qml-qtopcua-connection.html#writeNodeAttributesFinished-signal>`_ documentation.
 
 

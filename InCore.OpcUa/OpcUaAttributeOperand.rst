@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-attributeoperand.html#->`_ documentation.
+Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/qt-5/qml-qtopcua-attributeoperand.html#->`_ documentation.
 
 
 Overview
@@ -20,11 +20,11 @@ Properties
 .. hlist::
   :columns: 1
 
-  * `alias <https://doc.qt.io/QtOPCUA/qml-qtopcua-attributeoperand.html#alias-prop>`_
-  * `browsePath <https://doc.qt.io/QtOPCUA/qml-qtopcua-attributeoperand.html#browsePath-prop>`_
-  * `indexRange <https://doc.qt.io/QtOPCUA/qml-qtopcua-attributeoperand.html#indexRange-prop>`_
-  * `nodeAttribute <https://doc.qt.io/QtOPCUA/qml-qtopcua-attributeoperand.html#nodeAttribute-prop>`_
-  * `typeId <https://doc.qt.io/QtOPCUA/qml-qtopcua-attributeoperand.html#typeId-prop>`_
+  * `alias <https://doc.qt.io/qt-5/qml-qtopcua-attributeoperand.html#alias-prop>`_
+  * `browsePath <https://doc.qt.io/qt-5/qml-qtopcua-attributeoperand.html#browsePath-prop>`_
+  * `indexRange <https://doc.qt.io/qt-5/qml-qtopcua-attributeoperand.html#indexRange-prop>`_
+  * `nodeAttribute <https://doc.qt.io/qt-5/qml-qtopcua-attributeoperand.html#nodeAttribute-prop>`_
+  * `typeId <https://doc.qt.io/qt-5/qml-qtopcua-attributeoperand.html#typeId-prop>`_
 
 
 
@@ -40,7 +40,7 @@ Properties
 alias
 +++++
 
-Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-attributeoperand.html#alias-prop>`_ documentation.
+Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/qt-5/qml-qtopcua-attributeoperand.html#alias-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -53,7 +53,7 @@ Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/QtOP
 browsePath
 ++++++++++
 
-Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-attributeoperand.html#browsePath-prop>`_ documentation.
+Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/qt-5/qml-qtopcua-attributeoperand.html#browsePath-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -66,7 +66,7 @@ Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/QtOP
 indexRange
 ++++++++++
 
-Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-attributeoperand.html#indexRange-prop>`_ documentation.
+Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/qt-5/qml-qtopcua-attributeoperand.html#indexRange-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -79,7 +79,7 @@ Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/QtOP
 nodeAttribute
 +++++++++++++
 
-Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-attributeoperand.html#nodeAttribute-prop>`_ documentation.
+Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/qt-5/qml-qtopcua-attributeoperand.html#nodeAttribute-prop>`_ documentation.
 
 :**› Attributes**: Writable
 
@@ -92,7 +92,7 @@ Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/QtOP
 typeId
 ++++++
 
-Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-attributeoperand.html#typeId-prop>`_ documentation.
+Please refer to the `Qt OPC UA AttributeOperand QML type <https://doc.qt.io/qt-5/qml-qtopcua-attributeoperand.html#typeId-prop>`_ documentation.
 
 :**› Attributes**: Writable
 

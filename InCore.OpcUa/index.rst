@@ -8,7 +8,7 @@
 Description
 -----------
 
-The OPC UA module provides a full OPC UA client and server implementation based on `open62541 <https://open62541.org/>`_ and the `Qt OPC UA module <https://doc.qt.io/QtOPCUA/qtopcua-index.html>`_. Please refer to the `Qt OPC UA QML Types <https://doc.qt.io/QtOPCUA/qtopcua-qmlmodule.html>`_ documentation for further information.
+The OPC UA module provides a full OPC UA client and server implementation based on `open62541 <https://open62541.org/>`_ and the `Qt OPC UA module <https://doc.qt.io/qt-5/qtopcua-index.html>`_. Please refer to the `Qt OPC UA QML Types <https://doc.qt.io/qt-5/qtopcua-qmlmodule.html>`_ documentation for further information.
 
 
 Objects
@@ -18,6 +18,7 @@ Objects
 	:maxdepth: 1
 
 	OpcUaAttributeOperand
+	OpcUaBrowseNode
 	OpcUaClient
 	OpcUaClientConnection
 	OpcUaClientMethodArgument

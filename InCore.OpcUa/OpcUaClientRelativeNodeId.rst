@@ -8,7 +8,7 @@
 Description
 ***********
 
-Please refer to the `Qt OPC UA RelativeNodeId QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodeid.html#->`_ documentation.
+Please refer to the `Qt OPC UA RelativeNodeId QML type <https://doc.qt.io/qt-5/qml-qtopcua-relativenodeid.html#->`_ documentation.
 
 
 Overview
@@ -20,8 +20,8 @@ Properties
 .. hlist::
   :columns: 1
 
-  * `path <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodeid.html#path-prop>`_
-  * `startNode <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodeid.html#startNode-prop>`_
+  * `path <https://doc.qt.io/qt-5/qml-qtopcua-relativenodeid.html#path-prop>`_
+  * `startNode <https://doc.qt.io/qt-5/qml-qtopcua-relativenodeid.html#startNode-prop>`_
 
 Methods
 +++++++
@@ -29,7 +29,7 @@ Methods
 .. hlist::
   :columns: 1
 
-  * `setStartNode <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodeid.html#setStartNode-method>`_
+  * `setStartNode <https://doc.qt.io/qt-5/qml-qtopcua-relativenodeid.html#setStartNode-method>`_
 
 
 
@@ -45,7 +45,7 @@ Properties
 path
 ++++
 
-Please refer to the `Qt OPC UA RelativeNodeId QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodeid.html#path-prop>`_ documentation.
+Please refer to the `Qt OPC UA RelativeNodeId QML type <https://doc.qt.io/qt-5/qml-qtopcua-relativenodeid.html#path-prop>`_ documentation.
 
 :**› Attributes**: Readonly
 
@@ -58,7 +58,7 @@ Please refer to the `Qt OPC UA RelativeNodeId QML type <https://doc.qt.io/QtOPCU
 startNode
 +++++++++
 
-Please refer to the `Qt OPC UA RelativeNodeId QML type <https://doc.qt.io/QtOPCUA/qml-qtopcua-relativenodeid.html#startNode-prop>`_ documentation.
+Please refer to the `Qt OPC UA RelativeNodeId QML type <https://doc.qt.io/qt-5/qml-qtopcua-relativenodeid.html#startNode-prop>`_ documentation.
 
 :**› Attributes**: Writable
 

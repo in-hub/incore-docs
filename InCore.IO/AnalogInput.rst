@@ -373,6 +373,8 @@ This enumeration describes supported modes for an analog input interface.
    single: AnalogInput.Mode20V
 .. index::
    single: AnalogInput.Mode20mA
+.. index::
+   single: AnalogInput.Mode24V
 .. list-table::
   :widths: auto
   :header-rows: 1
@@ -405,6 +407,11 @@ This enumeration describes supported modes for an analog input interface.
   * - ``AnalogInput.Mode20mA``
     - ``4``
     - Measure an input current in the range [4..20mA].
+
+      .. _enumitem_AnalogInput_Mode24V:
+  * - ``AnalogInput.Mode24V``
+    - ``5``
+    - Measure an input current in the range [0..24V].
 
 
 .. _example_AnalogInput:
